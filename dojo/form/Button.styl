@@ -1,0 +1,183 @@
+/* Button | DropDownButton | ComboButton | ToggleButton
+ * 
+ * Styling Buttons mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitButton
+ * 		.dijitDropDownButton
+ * 		.dijitComboButton
+ * 		.dijitButtonNode - common button/arrow wrapper shared across all three button types 
+ *
+ * 2. Button text
+ * 		.dijitButtonText
+ * 
+ * 3. Arrows - only for DropDownButton and ComboButton
+ * 	     There are total four directions arrows - down, left, right, up:
+ * 		.dijitArrowButtonInner - down arrow by default
+ *      .dijitLeftArrowButton .dijitArrowButtonInner - left arrow
+ *      .dijitRightArrowButton .dijitArrowButtonInner - right arrow
+ *      .dijitUpArrowButton .dijitArrowButtonInner - up arrow
+ * 
+ * 4. States - Hover, Active, Disabled, e.g.
+ * 		.dijitButtonHover .dijitButtonNode
+ * 		.dijitButtonActive .dijitButtonNode
+ * 		.dijitButtonDisabled .dijitButtonNode
+ *      
+ *      .dijitDisabled .dijitArrowButtonInner  - disabled arrow states 
+ */
+
+@import "../../variables"
+
+.{$theme-name} .dijitButtonNode {
+	transition-property: background-color
+ 	transition-duration: .3s
+}
+
+.{$theme-name} .dijitButton .dijitButtonNode,
+.{$theme-name} .dijitDropDownButton .dijitButtonNode,
+.{$theme-name} .dijitComboButton .dijitButtonNode,
+.{$theme-name} .dijitToggleButton .dijitButtonNode {
+	button-style()
+}
+
+/* Other colors */
+
+create-alternative-buttons($button-alternative-colors)
+
+
+/*arrow styles for down/up/left/right directions*/
+
+.{$theme-name} .dijitDropDownButton .dijitArrowButtonInner{
+	margin-left: $padding * 3
+}
+
+.{$theme-name} .dijitDropDownButton .dijitArrowButtonInner,
+.{$theme-name} .dijitArrowButton  {
+	icon-core-style()
+}
+
+.{$theme-name} .dijitDropDownButton .dijitArrowButtonInner:before,
+.{$theme-name} .dijitArrowButton:before {
+	content: "\f0d7"
+}
+
+.{$theme-name} .dijitLeftArrowButton:before {
+	content: "\f0d9"
+}
+
+.{$theme-name} .dijitRightArrowButton:before {
+	content: "\f0da"
+}
+
+.{$theme-name} .dijitUpArrowButton:before {
+	content: "\f0d8"
+}
+
+.{$theme-name} .dijitButtonText {
+	padding: 0 $padding
+	text-align: center
+}
+
+/* hover status */
+.{$theme-name} .dijitButtonHover .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonHover .dijitButtonNode,
+.{$theme-name} .dijitComboButton .dijitButtonNodeHover, 
+.{$theme-name} .dijitComboButton .dijitDownArrowButtonHover,
+.{$theme-name} .dijitToggleButtonHover .dijitButtonNode{
+	button-hover-style()
+}
+
+if($button-alternative-colors-hover){
+	create-alternative-buttons-hover($button-alternative-colors-hover)
+}
+
+/* active, checked status */
+.{$theme-name} .dijitButtonActive .dijitButtonNode, 
+.{$theme-name} .dijitDropDownButtonActive .dijitButtonNode,
+.{$theme-name} .dijitComboButtonActive .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonActive .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonChecked .dijitButtonNode {
+	button-active-style();
+}
+
+if($button-alternative-colors-active){
+	create-alternative-buttons-active($button-alternative-colors-active)
+}
+
+/* disabled status */
+.{$theme-name} .dijitButtonDisabled,
+.{$theme-name} .dijitDropDownButtonDisabled,
+.{$theme-name} .dijitComboButtonDisabled,
+.{$theme-name} .dijitToggleButtonDisabled
+ {
+	border-color: $disabled-border-color;
+	$button-disabled-background-image;
+	outline: none;
+}
+
+.{$theme-name} .dijitButtonDisabled .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonDisabled .dijitButtonNode,
+.{$theme-name} .dijitComboButtonDisabled .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonDisabled .dijitButtonNode { 
+	button-disabled-style();
+}
+.{$theme-name} .dijitButtonDisabled.dojo-btn-primary .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonDisabled.dojo-btn-primary .dijitButtonNode,
+.{$theme-name} .dijitComboButtonDisabled.dojo-btn-primary .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonDisabled.dojo-btn-primary .dijitButtonNode { 
+	background-image: none;
+	_background-image: none;	// IE6 can't handle background-color and background-image at once.
+}
+.{$theme-name} .dijitButtonDisabled.dojo-btn-success .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonDisabled.dojo-btn-success .dijitButtonNode,
+.{$theme-name} .dijitComboButtonDisabled.dojo-btn-success .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonDisabled.dojo-btn-success .dijitButtonNode { 
+	background-image: none;
+	_background-image: none;	// IE6 can't handle background-color and background-image at once.
+}
+.{$theme-name} .dijitButtonDisabled.dojo-btn-info .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonDisabled.dojo-btn-info .dijitButtonNode,
+.{$theme-name} .dijitComboButtonDisabled.dojo-btn-info .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonDisabled.dojo-btn-info .dijitButtonNode { 
+	background-image: none;
+	_background-image: none;	// IE6 can't handle background-color and background-image at once.
+}
+.{$theme-name} .dijitButtonDisabled.dojo-btn-warning .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonDisabled.dojo-btn-warning .dijitButtonNode,
+.{$theme-name} .dijitComboButtonDisabled.dojo-btn-warning .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonDisabled.dojo-btn-warning .dijitButtonNode { 
+	background-image: none
+	_background-image: none	// IE6 can't handle background-color and background-image at once.
+}
+.{$theme-name} .dijitButtonDisabled.dojo-btn-danger .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonDisabled.dojo-btn-danger .dijitButtonNode,
+.{$theme-name} .dijitComboButtonDisabled.dojo-btn-danger .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonDisabled.dojo-btn-danger .dijitButtonNode { 
+	background-image: none
+	_background-image: none	// IE6 can't handle background-color and background-image at once.
+}
+.{$theme-name} .dijitButtonDisabled.dojo-btn-inverse .dijitButtonNode,
+.{$theme-name} .dijitDropDownButtonDisabled.dojo-btn-inverse .dijitButtonNode,
+.{$theme-name} .dijitComboButtonDisabled.dojo-btn-inverse .dijitButtonNode,
+.{$theme-name} .dijitToggleButtonDisabled.dojo-btn-inverse .dijitButtonNode { 
+	background-image: none
+	_background-image: none	// IE6 can't handle background-color and background-image at once.
+}
+
+
+
+.{$theme-name} .dijitComboButtonDisabled .dijitArrowButton{ 
+	border-left-width: 0
+}
+/* for ComboButton */
+.{$theme-name} table.dijitComboButton {
+	border-collapse: separate	/* override dijit.css so that ComboBox rounded corners work */
+}
+
+.{$theme-name} .dijitComboButton .dijitStretch {
+	border-radius: $border-radius 0 0 $border-radius
+}
+.{$theme-name} .dijitComboButton .dijitArrowButton {
+	border-radius: 0 $border-radius $border-radius 0
+	border-left-width: 0
+}

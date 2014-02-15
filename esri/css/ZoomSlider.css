@@ -1,0 +1,369 @@
+icon-core-style {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+/* zoom sliders */
+/* simple zoom slider */
+.esriSimpleSlider {
+  position: absolute;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+}
+.esriSimpleSliderTL {
+  top: 12px;
+  left: 12px;
+}
+.esriSimpleSliderTR {
+  top: 12px;
+  right: 12px;
+}
+.esriSimpleSliderBL {
+  bottom: 55px;
+  left: 12px;
+}
+.esriSimpleSliderBR {
+  bottom: 45px;
+  right: 12px;
+}
+.esriSimpleSlider div {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 4px 12px;
+  color: #2b2e34;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: linear-gradient(#fcfcfc, #f5f5f5);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  font-family: verdana, helvetica;
+  color: #2b2e34;
+  text-shadow: none;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  border: 0 none;
+  padding: 0;
+}
+.esriSimpleSlider div:hover {
+  border: 0 none;
+}
+.esriSimpleSlider div:active {
+  border: 0 none;
+}
+.esriSimpleSlider div.disabled,
+.esriSimpleSlider div.disabled:hover,
+.esriSimpleSlider div.disabled:active {
+  color: #969696;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #f5f5f5;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: default;
+  opacity: 0.65;
+  border: 0 none;
+}
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.esriSimpleSliderVertical .esriSimpleSliderDecrementButton {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton:hover,
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton:active {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.esriSimpleSliderVertical .esriSimpleSliderDecrementButton,
+.esriSimpleSliderVertical .esriSimpleSliderDecrementButton:hover,
+.esriSimpleSliderVertical .esriSimpleSliderDecrementButton:active {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.esriSimpleSliderHorizontal.esriSimpleSliderBL {
+  left: 12px;
+}
+.esriSimpleSliderHorizontal.esriSimpleSliderBR {
+  right: 12px;
+}
+.esriSimpleSliderHorizontal .esriSimpleSliderIncrementButton,
+.esriSimpleSliderHorizontal .esriSimpleSliderIncrementButton:hover,
+.esriSimpleSliderHorizontal .esriSimpleSliderIncrementButton:active {
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  float: left;
+}
+.esriSimpleSliderHorizontal .esriSimpleSliderDecrementButton,
+.esriSimpleSliderHorizontal .esriSimpleSliderDecrementButton:hover,
+.esriSimpleSliderHorizontal .esriSimpleSliderDecrementButton:active {
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  float: right;
+}
+.esriSimpleSliderHorizontal .esriSimpleSliderDecrementButton.dj_ie67Fix {
+  float: none;
+  text-align: center;
+}
+/* large zoom slider */
+.dijitSlider.esriLargeSlider {
+  position: absolute;
+  border: 1px solid #b4b4b4;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #f9f9f9;
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+}
+.esriLargeSliderTL {
+  top: 12px;
+  left: 12px;
+}
+.esriLargeSliderTR {
+  top: 12px;
+  right: 12px;
+}
+.esriLargeSliderBL {
+  bottom: 55px;
+  left: 12px;
+}
+.esriLargeSliderBR {
+  bottom: 45px;
+  right: 12px;
+}
+/* this theme does not support labeling */
+.esriLargeSlider tr td:last-child {
+  display: none;
+}
+.esriLargeSlider.dijitSliderH tr:last-child {
+  display: none;
+}
+.esriLargeSlider tr td.dijitSliderButtonContainerH {
+  display: inherit;
+}
+.esriLargeSliderVertical {
+  height: 200px;
+}
+.esriLargeSliderHorizontal {
+  width: 200px;
+}
+.esriLargeSliderHorizontal.esriLargeSliderBL {
+  left: 12px;
+}
+.esriLargeSliderHorizontal.esriLargeSliderBR {
+  right: 12px;
+}
+.esriLargeSliderHorizontal .esriLargeSliderTicks {
+  height: 0;
+}
+.esriLargeSliderVertical .esriLargeSliderTicks {
+  width: 0;
+}
+.esriLargeSliderHorizontal .esriLargeSliderLabels {
+  height: 2em;
+  font-size: 50%;
+}
+.esriLargeSliderVertical .esriLargeSliderLabels {
+  width: 2em;
+  font-size: 50%;
+}
+.dijitSliderButtonContainer {
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.map .dijitSliderButtonContainerV,
+.map .dijitSliderButtonContainerH {
+  padding: 0;
+}
+.map .dijitSliderBarContainerH {
+  margin: 8px 12px;
+  border-left: #fdfdfd 1px solid;
+  border-right: #e9e9e9 1px solid;
+}
+.map .dijitSliderMoveableV {
+  margin-top: -3px;
+}
+.map .dijitSliderMoveableH {
+  left: auto;
+}
+.map .dijitSliderBar.dijitSliderRemainingBar {
+  background: #808080;
+  border: 1px solid transparent;
+  width: 6px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 2px #555 inset;
+  -moz-box-shadow: 1px 2px 2px #555 inset;
+  box-shadow: 1px 2px 2px #555 inset;
+}
+.map .dijitSliderBar.dijitSliderRemainingBarH {
+  height: 6px;
+}
+.map .dijitSliderBar.dijitSliderProgressBar,
+.map .dijitSlider .dijitSliderBottomBumper {
+  background: #007ac2;
+  border: 1px solid transparent;
+  width: 6px;
+  -moz-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
+  -webkit-box-shadow: 1px 2px 2px #555 inset;
+  -moz-box-shadow: 1px 2px 2px #555 inset;
+  box-shadow: 1px 2px 2px #555 inset;
+}
+.map .dijitSliderBar.dijitSliderProgressBarV {
+  border-bottom: 0;
+  border-top: 0;
+}
+.map .dijitSliderBar.dijitSliderProgressBarH {
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  height: 6px;
+}
+.map .dijitSliderHover .dijitSliderBar.dijitSliderProgressBar,
+.map .dijitSliderActive .dijitSliderBar.dijitSliderProgressBar,
+.map .dijitSliderHover .dijitSliderBar.dijitSliderRemainingBar,
+.map .dijitSliderActive .dijitSliderBar.dijitSliderRemainingBar {
+  border-color: #007ac2;
+}
+.map .dijitSliderIncrementIconV,
+.map .dijitSliderDecrementIconV,
+.map .dijitSliderIncrementIconH,
+.map .dijitSliderDecrementIconH {
+  background: #f9f9f9;
+  padding: 2px;
+  border: 0;
+  color: #2b2e34;
+  text-shadow: none;
+  font-size: 18px;
+  font-family: verdana, helvetica;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.map .dijitSliderIncrementIconV {
+  border-bottom: #e9e9e9 1px solid;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: 18px;
+}
+.map .dijitSliderDecrementIconH {
+  border-right: #e9e9e9 1px solid;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.map .dijitSliderDecrementIconV {
+  border-top: #e9e9e9 1px solid;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 18px;
+}
+.map .dijitSliderIncrementIconH {
+  border-left: #e9e9e9 1px solid;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.map .dijitSliderHover .dijitSliderIncrementIconV,
+.map .dijitSliderActive .dijitSliderIncrementIconV,
+.map .dijitSliderHover .dijitSliderIncrementIconH,
+.map .dijitSliderActive .dijitSliderIncrementIconH {
+  background: transparent;
+}
+.map .dijitSliderHover .dijitSliderDecrementIconV,
+.map .dijitSliderActive .dijitSliderDecrementIconV,
+.map .dijitSliderHover .dijitSliderDecrementIconH,
+.map .dijitSliderActive .dijitSliderDecrementIconH {
+  background: transparent;
+}
+/* dojo has a bug that the increment button's hover and active states are added decrement classes,
+And decrement button's hover and active states are added increment classes in the vertical mode.*/
+.map .dijitSliderIncrementIconV.dijitSliderDecrementButtonHover,
+.map .dijitSliderDecrementIconV.dijitSliderIncrementButtonHover,
+.map .dijitSliderIncrementIconH.dijitSliderIncrementButtonHover,
+.map .dijitSliderDecrementIconH.dijitSliderDecrementButtonHover {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: background 0.1s linear 0s;
+}
+.map .dijitSliderIncrementIconV.dijitSliderDecrementButtonActive,
+.map .dijitSliderDecrementIconV.dijitSliderIncrementButtonActive,
+.map .dijitSliderIncrementIconH.dijitSliderIncrementButtonActive,
+.map .dijitSliderDecrementIconH.dijitSliderDecrementButtonActive {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: none;
+  outline: none;
+}
+.map .dijitSliderHover .dijitSliderIncrementIconV,
+.map .dijitSliderActive .dijitSliderIncrementIconV,
+.map .dijitSliderIncrementIconV.dijitSliderDecrementButtonHover,
+.map .dijitSliderIncrementIconV.dijitSliderDecrementButtonActive {
+  border-width: 0 0 1px 0;
+}
+.map .dijitSliderHover .dijitSliderIncrementIconH,
+.map .dijitSliderActive .dijitSliderIncrementIconH,
+.map .dijitSliderIncrementIconH.dijitSliderDecrementButtonHover,
+.map .dijitSliderIncrementIconH.dijitSliderDecrementButtonActive {
+  border-width: 0 0 0 1px;
+}
+.map .dijitSliderHover .dijitSliderDecrefmentIconV,
+.map .dijitSliderActive .dijitSliderDecrementIconV,
+.map .dijitSliderDecrementIconV.dijitSliderIncrementButtonHover,
+.map .dijitSliderDecrementIconV.dijitSliderIncrementButtonActive {
+  border-width: 1px 0 0 0;
+}
+.map .dijitSliderHover .dijitSliderDecrementIconH,
+.map .dijitSliderActive .dijitSliderDecrementIconH,
+.map .dijitSliderDecrementIconH.dijitSliderIncrementButtonHover,
+.map .dijitSliderDecrementIconH.dijitSliderIncrementButtonActive {
+  border-width: 0 1px 0 0;
+}
+.map .dijitSliderButtonInner {
+  visibility: visible;
+}
+.map .dijitSliderBumper {
+  display: none;
+}

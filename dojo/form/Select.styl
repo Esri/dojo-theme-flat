@@ -1,0 +1,102 @@
+/* Select
+ * 
+ * Styling Select mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitSelect - for border, background-color
+ * 		.dijitButtonContents - for border
+ *
+ * 2. Arrow
+ * 		.dijitArrowButton - for border, padding and background-color|image
+ * 		.dijitArrowButtonInner - for border, background-color|image, display and width|height
+ * 
+ * 3. Menu
+ * 		.dijitSelectMenu .* - for border, padding
+ * 
+ * 4. Various states
+ * 		.dijitSelectHover|.dijitSelectFocused|.dijitSelectDisabled .* - for border, padding and background-color|image 
+ */
+
+@import "../../variables"
+
+.{$theme-name} .dijitSelect{
+	border: $button-border
+	border-radius: $button-border-radius
+	box-shadow: $button-shadow
+}
+
+/* normal */
+
+.{$theme-name} .dijitSelect .dijitButtonContents,
+.{$theme-name} .dijitSelect .dijitArrowButton {
+	button-style()
+	border:0
+	padding: $select-padding
+	border-radius: 0 $button-border-radius $button-border-radius 0
+	box-shadow: none
+}
+
+.{$theme-name} .dijitSelect .dijitArrowButton {
+	border-left: 0
+}
+
+.{$theme-name} .dijitSelect .dijitButtonContents{
+	padding:0
+	border-radius: $button-border-radius 0 0 $button-border-radius
+}
+
+/* hover */
+
+.{$theme-name} .dijitSelectHover{
+	border: $button-hover-border
+	box-shadow: $button-hover-shadow
+}
+
+.{$theme-name} .dijitSelectHover .dijitButtonContents,
+.{$theme-name} .dijitSelectHover .dijitArrowButton {
+	button-hover-style()
+	border:0
+	padding: $select-padding
+	box-shadow: none
+}
+
+.{$theme-name} .dijitSelectHover .dijitButtonContents{
+	padding:0
+}
+
+/* focused */
+
+.{$theme-name} .dijitSelectFocused {
+	border: $select-focus-border
+	box-shadow: $select-focus-box-shadow
+}
+
+.{$theme-name} .dijitSelectFocused .dijitButtonContents,
+.{$theme-name} .dijitSelectFocused .dijitArrowButton {
+	background: $select-focus-background
+	box-shadow: $select-focus-box-shadow
+	border:0
+}
+
+/* disable */
+
+.{$theme-name} .dijitSelectDisabled{
+	border: $button-disabled-border
+	box-shadow: $button-disabled-shadow
+	opacity:0.65
+}
+
+.{$theme-name} .dijitSelectDisabled .dijitButtonContents,
+.{$theme-name} .dijitSelectDisabled .dijitArrowButton {
+	button-disabled-style()
+	border:0
+	opacity:1
+}
+
+/* Dropdown menu styles for select (most of menu styles are defined in Menu.styl) */
+
+.{$theme-name} .dijitSelectMenu td.dijitMenuItemIconCell,
+.{$theme-name} .dijitSelectMenu td.dijitMenuArrowCell { 
+	/* so that arrow and icon cells from MenuItem are not displayed */
+	display: none
+}

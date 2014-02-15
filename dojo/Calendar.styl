@@ -1,0 +1,253 @@
+/* Calendar
+ * 
+ * Styling Calendar mainly includes:
+ * 
+ * 1. Calendar container
+ * 		.dijitCalendar - main container
+ * 		.dijitCalendarHover / .dijitCalendarActive - states e.g. hover,active
+ * 
+ * 2. Month
+ * 		.dijitCalendarMonthContainer
+ * 		.dijitCalendarMonthLabel
+ *      .dijitCalendarDecrease / .dijitCalendarDecrease - icons for switching to previous/next month
+ *      .dijitCalendarArrowActive .dijitCalendarDecrease - states e.g. hover,active
+ * 
+ * 3. Date
+ * 		.dijitCalendarDayLabelTemplate - week day column header e.g. S M T W T F S
+ * 		.dijitCalendarDateTemplate - date label wrapper
+ * 		.dijitCalendarPreviousMonth .dijitCalendarDateLabel - special labels for previous or next month
+ *      .dijitCalendarSelectedDate .dijitCalendarDateLabel - styles for selected date
+ * 		.dijitCalendarDisabledDate .dijitCalendarDateLabel - styles for disabled date
+ * 		.dijitCalendarActiveDate .dijitCalendarDateLabel - states e.g. hover,active
+ * 
+ * 4. Year
+ * 		.dijitCalendarYearContainer
+ * 		.dijitCalendarYearLabel
+ * 		.dijitCalendarPreviousYear /.dijitCalendarNextYear
+ *      .dijitCalendarNextYearHover / .dijitCalendarPreviousYearHover - states e.g. hover,active
+ *      
+ * 5. Dropdown Month Menu
+ * 		.dijitCalendarMonthMenu - menu container     
+ * 		.dijitCalendarMonthMenu .dijitCalendarMonthLabel - month label in menu item
+ * 		.dijitCalendarMonthMenu .dijitCalendarMonthLabelHover - menu item hover state
+ */
+
+@import "../variables"
+
+.{$theme-name} .dijitCalendar {
+	background: $calendar-background
+	padding: $calendar-padding + 2 $calendar-padding + 1 $calendar-padding - 1 $calendar-padding + 1
+	border: $calendar-border
+	border-collapse: separate	// in case user CSS has set border-collapse: collapse for tables
+	border-radius: $calendar-border-radius
+	text-align:center
+	color: $calendar-text-color
+	text-shadow: $calendar-text-shadow
+}
+
+.{$theme-name} .dijitCalendarMonthContainer th {
+	text-align:center
+	vertical-align:middle
+	margin: $calendar-padding + 1 0
+}
+
+.{$theme-name} .dijitCalendarMonthLabel {
+	padding: 0 $calendar-padding
+}
+
+/* next/previous month arrows */
+
+.{$theme-name} .dijitCalendarIncrementControl {
+	border-bottom: $dijit-arrow-thickness solid transparent
+	border-right: $dijit-arrow-thickness solid $dijit-arrow-color
+	border-top: $dijit-arrow-thickness solid transparent
+}
+
+.{$theme-name} .dijitCalendarIncrease {
+	border-bottom:  $dijit-arrow-thickness solid transparent
+	border-left:  $dijit-arrow-thickness solid $dijit-arrow-color
+	border-top:  $dijit-arrow-thickness solid transparent
+	border-right: 0
+}
+
+.{$theme-name} .dijitCalendarArrow, .{$theme-name} .dijitCalendarNextYear, .{$theme-name} .dijitCalendarPreviousYear {
+}
+
+.{$theme-name} .dijitCalendarArrowHover,
+.{$theme-name} .dijitCalendarArrow:hover,
+.{$theme-name} .dijitCalendarNextYearHover, .{$theme-name} .dijitCalendarNextYear:hover,
+.{$theme-name} .dijitCalendarPreviousYearHover, .{$theme-name} .dijitCalendarPreviousYear:hover  {
+	button-style()
+	padding: $padding - 3 $padding + 2 $padding - 2 $padding + 2
+}
+
+.{$theme-name} .dijitCalendarArrowActive,
+.{$theme-name} .dijitCalendarArrow:active,
+.{$theme-name} .dijitCalendarNextYearActive, .{$theme-name} .dijitCalendarNextYear:active
+.{$theme-name} .dijitCalendarPreviousYearActive, .{$theme-name} .dijitCalendarPreviousYear:active  {
+	button-active-style()
+}
+
+.{$theme-name} .dijitA11ySideArrow {
+	/* text +/- labels instead of arrow icons, for high contrast mode */
+	display: none
+}
+
+.{$theme-name} .dijitCalendarDayLabelTemplate {
+	padding-bottom: 0
+	text-align:center
+	border-bottom: $calendar-border
+	padding:$padding * 2 $padding - 1 $padding + 1
+}
+
+/* day */
+
+.{$theme-name} .dijitCalendarDayLabel {
+	background: $calendar-day-cell-background
+	border: $calendar-day-cell-border
+	color: $calendar-day-cell-text-color
+	padding:0 $calendar-padding 0 $calendar-padding
+	font-weight: bold
+	text-align: center
+}
+
+/* date */
+
+.{$theme-name} .dijitCalendarDateTemplate {
+	text-align:center
+	background: $calendar-date-pane-background
+	border-bottom: 0
+	padding-top:0
+	font-size:0.909em
+	font-weight:bold
+	letter-spacing:.05em
+	text-align:center
+}
+
+.{$theme-name} .dijitCalendarPreviousMonth,
+.{$theme-name} .dijitCalendarNextMonth {
+	background: $calendar-date-pane-prev-next-month-background
+	border-bottom: 0
+}
+
+.{$theme-name} .dijitCalendarDateTemplate .dijitCalendarDateLabel {
+	text-decoration: none
+	display: block
+	background: $calendar-date-cell-background
+	padding: $calendar-date-cell-padding
+	border: $calendar-date-cell-border
+	color: $calendar-date-cell-text-color
+	text-shadow: $calendar-date-cell-text-shadow
+	border-radius: $calendar-date-cell-border-radius
+	transition-property: background-color, border
+ 	transition-duration: .35s
+}
+
+.{$theme-name} .dijitCalendarPreviousMonth .dijitCalendarDateLabel,
+.{$theme-name} .dijitCalendarNextMonth .dijitCalendarDateLabel{
+	color: $calendar-date-cell-prev-next-month-text-color
+	border: 0
+}
+
+.{$theme-name} .dijitCalendarYearContainer {
+	vertical-align:middle
+}
+.{$theme-name} .dijitCalendarYearControl {
+	padding: 1px 2px 2px 2px
+}
+.{$theme-name} .dijitCalendarYearLabel {
+	padding: $calendar-padding 0 0 0
+	margin: 0
+	font-size: 1.17em
+}
+.{$theme-name} .dijitCalendarYearLabel span {
+	/* trying to center next/current/previous year vertically, doesn't work on IE6/7 though */
+	vertical-align:middle
+}
+.{$theme-name} .dijitCalendarSelectedYear {
+	padding: 0 $calendar-padding - 1
+}
+.{$theme-name} .dijitCalendarNextYear,
+.{$theme-name} .dijitCalendarPreviousYear {
+	padding: $padding - 3 $padding + 2 $padding - 2 $padding + 2;
+	color: lighten($text-color, 50);
+	border: 1px solid transparent;
+	line-height: $line-height;
+	font-size: 90%;
+}
+.{$theme-name} .dijitCalendarSelectedYear {
+	color:$text-color;
+}
+/* End Normal Calendar Style */
+/* Hovered Calendar Style */
+.{$theme-name} .dijitCalendarHoveredDate .dijitCalendarDateLabel,
+.{$theme-name} .dijitCalendarEnabledDate:hover .dijitCalendarDateLabel {
+	background-color:$highlight-color;
+	color:$selected-text-color;
+	transition-duration: .2s;
+	border:solid 1px $highlight-color;
+	text-shadow: $inverse-text-shadow;
+}
+
+/* End Hovered Calendar Style */
+/* Active Calendar Style */
+
+.{$theme-name} .dijitCalendarActiveDate .dijitCalendarDateLabel,
+.{$theme-name} .dijitCalendarEnabledDate:active .dijitCalendarDateLabel {
+	background-color: darken($highlight-color, 15%);
+	transition-duration: .1s;
+}
+.dj_ie6 .{$theme-name} .dijitCalendarActiveDate .dijitCalendarDateLabel {
+	background-image:none;
+}
+/* End Active Calendar Style */
+/* Selected Calendar Style */
+.{$theme-name} .dijitCalendarSelectedDate .dijitCalendarDateLabel {
+	color:$selected-text-color;
+	background-color: $highlight-color;
+	border: 0;
+    box-shadow($button-active-shadow);
+	text-shadow: $inverse-text-shadow;
+}
+/* End Selected Calendar Style */
+/* Disabled Calendar Style*/
+.{$theme-name} .dijitCalendarDisabledDate .dijitCalendarDateLabel {
+	color: $disabled-text-color;
+	text-decoration:line-through;
+}
+
+/* End Disabled Calendar Style */
+
+/* Styling for month DropDownButton */
+
+.{$theme-name} .dijitCalendar .dijitDropDownButton {
+	margin: 0;
+}
+.{$theme-name} .dijitCalendar .dijitButtonText {
+
+}
+.{$theme-name} .dijitCalendar .dijitDropDownButton .dijitButtonNode {
+	padding: $padding - 3 $disabled-text-color * 3 $disabled-text-color - 2;
+}
+.{$theme-name} .dijitCalendar .dijitDropDownButtonHover .dijitButtonNode,
+.{$theme-name} .dijitCalendar .dijitDropDownButton:hover .dijitButtonNode {
+}
+
+/* Styling for month drop down list */
+
+.{$theme-name} .dijitCalendarMonthMenu {
+	border-color: $border-color;
+	background-color: $menu-background-color;
+	text-align:center;
+	background-image: none;
+	padding: $padding + 1 0; 
+}
+.{$theme-name} .dijitCalendarMonthMenu .dijitCalendarMonthLabel {
+	padding: $padding;	
+}
+.{$theme-name} .dijitCalendarMonthMenu .dijitCalendarMonthLabelHover,
+.{$theme-name} .dijitCalendarMonthMenu .dijitCalendarMonthLabel:hover {
+	color: $text-color;
+	background: darken($primary-color, 3%);
+	linear-gradient(lighten($highlight-color,4) 0, darken($highlight-color,6) 100%);
+}

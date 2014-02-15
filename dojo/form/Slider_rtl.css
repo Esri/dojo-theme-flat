@@ -1,0 +1,29 @@
+/*
+.{$theme-name} .dijitSliderRtl .dijitSliderProgressBarH,
+.{$theme-name} .dijitSliderRtl .dijitSliderRemainingBarH,
+.{$theme-name} .dijitSliderRtl .dijitSliderLeftBumper,
+.{$theme-name} .dijitSliderRtl .dijitSliderRightBumper,
+.{$theme-name} .dijitSliderRtl .dijitSliderTopBumper {
+	background-position: top right
+}
+
+.{$theme-name} .dijitSliderRtl .dijitSliderProgressBarV,
+.{$theme-name} .dijitSliderRtl .dijitSliderRemainingBarV,
+.{$theme-name} .dijitSliderRtl .dijitSliderBottomBumper {
+	background-position: bottom right
+}
+*/
+.$theme-name .dijitSliderRtl .dijitSliderLeftBumper {
+  border-left-width: 0;
+  border-right-width: 1px;
+}
+.$theme-name .dijitSliderRtl .dijitSliderRightBumper {
+  border-left-width: 1px;
+  border-right-width: 0;
+}
+.$theme-name .dijitSliderRtl .dijitSliderIncrementIconH {
+  background-position: -357px 50%;
+}
+.$theme-name .dijitSliderRtl .dijitSliderDecrementIconH {
+  background-position: -251px 50%;
+}

@@ -1,0 +1,412 @@
+.esriHistogramTimeSlider {
+	display: none;
+}
+
+	.esriHistogramTimeSlider .dijitSliderRightBumper {
+		display: none !important;
+	}
+
+	.esriHistogramTimeSlider .dijitSliderLeftBumper {
+		display: none !important;
+	}
+
+	.esriHistogramTimeSlider .claro .dijitToolbar .dijitButtonNode {
+		color: #444444 !important;
+	}
+
+	.esriHistogramTimeSlider #toolbarContainer .dijitToolbar {
+		background: #dcdcdc !important;
+		border-bottom: 1px solid #989898 !important;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CCCCCC', GradientType=0) !important;
+		background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#CCC)) !important;
+		background: -moz-linear-gradient(top, #fff, #CCC) !important;
+	}
+
+	.esriHistogramTimeSlider #timeSliderDiv {
+		left: 7px !important;
+	}
+
+	.esriHistogramTimeSlider div#chartsContainer {
+		width: 100%;
+		height: 100%;
+		padding-bottom: 3px;
+	}
+
+	.esriHistogramTimeSlider div#overviews {
+		position: relative;
+		width: 100%;
+		height: 35px;
+		border-right: 1px #666 solid;
+		border-left: 1px #666 solid;
+	}
+
+	.esriHistogramTimeSlider div#overview, div#overviewBlockers, div#overviewAnnotation {
+		width: 100%;
+		height: 35px;
+	}
+
+	.esriHistogramTimeSlider div#overviewBlockers, div#overviewAnnotation {
+		position: absolute;
+		top: 0;
+	}
+
+	.esriHistogramTimeSlider div#overviewBlockers, div#overviewAnnotation {
+		pointer-events: none;
+	}
+
+	.esriHistogramTimeSlider div#focusChartHolder {
+		width: 96%;
+		height: 90px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+
+	.esriHistogramTimeSlider div#focus, div#focusAnnotation {
+		width: 100%;
+		height: 90px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.esriHistogramTimeSlider div#focus {
+		border-right: 1px #666 solid;
+		border-left: 1px #666 solid;
+		overflow: hidden;
+	}
+
+	.esriHistogramTimeSlider div#focusContainer {
+		height: 90px;
+		overflow: hidden;
+	}
+
+	.esriHistogramTimeSlider div#overviewContainer {
+		width: 96%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 10px;
+		padding-right: 10px;
+	}
+
+	.esriHistogramTimeSlider div#focusRange {
+		color: #999;
+		font-size: 14px;
+		font-family: Helvetica;
+		margin-right: 10px;
+		position: relative;
+		top: 7px;
+		text-align: right;
+		float: right;
+	}
+
+	.esriHistogramTimeSlider button#hideOverview {
+		width: 31px;
+		height: 18px;
+		cursor: pointer;
+		overflow: visible;
+		border: none;
+		float: left;
+		background-image: url("../images/HistogramTimeSlider/hide.png");
+		margin-right: 5px;
+		margin-top: 0px;
+	}
+
+	.esriHistogramTimeSlider div#playModeChooser {
+		margin-top: 4px;
+	}
+
+	.esriHistogramTimeSlider button#hideOverview:hover {
+		background-image: url("../images/HistogramTimeSlider/hide_over.png");
+	}
+
+	.esriHistogramTimeSlider button#play {
+		border: none;
+		background: none;
+		cursor: pointer;
+		float: left;
+	}
+
+	.esriHistogramTimeSlider .tsPlayButton {
+		background-position: 0px 0px !important;
+		width: 18px !important;
+		height: 18px !important;
+		overflow: visible !important;
+		border: none !important;
+		margin-top: 3px !important;
+		background-image: url("../images/HistogramTimeSlider/play.png") !important;
+		float: left !important;
+	}
+
+	.esriHistogramTimeSlider div#playInternal {
+		width: 18px;
+		height: 18px;
+		overflow: visible;
+		border: none;
+		margin-top: 3px;
+		background-image: url("../images/HistogramTimeSlider/play.png");
+		float: left;
+	}
+
+	.esriHistogramTimeSlider .play {
+		cursor: pointer;
+	}
+
+	.esriHistogramTimeSlider div#playInternal.pause {
+		background-image: url("../images/HistogramTimeSlider/pause.png");
+	}
+
+	.esriHistogramTimeSlider button#play:hover div#playInternal {
+		background-image: url("../images/HistogramTimeSlider/play_over.png");
+	}
+
+		.esriHistogramTimeSlider button#play:hover div#playInternal.pause {
+			background-image: url("../images/HistogramTimeSlider/pause_over.png");
+		}
+
+	.esriHistogramTimeSlider button#play:hover h1#temporalTitle {
+		color: black;
+	}
+
+	.esriHistogramTimeSlider button#page_left, button#page_right {
+		width: 18px;
+		height: 31px;
+		cursor: pointer;
+		overflow: visible;
+		margin-top: 30px;
+		border: 0px solid;
+	}
+
+	.esriHistogramTimeSlider button#page_left {
+		position: absolute;
+		right: 6px;
+	}
+
+	.esriHistogramTimeSlider button#page_right {
+		margin-left: 6px;
+	}
+
+	.esriHistogramTimeSlider button#page_left {
+		background-image: url("../images/HistogramTimeSlider/page_left.png");
+	}
+
+	.esriHistogramTimeSlider button#page_right {
+		background-image: url("../images/HistogramTimeSlider/page_right.png");
+	}
+
+		.esriHistogramTimeSlider button#page_right:hover {
+			background-image: url("../images/HistogramTimeSlider/page_right_over.png");
+		}
+
+	.esriHistogramTimeSlider button#page_left:hover {
+		background-image: url("../images/HistogramTimeSlider/page_left_over.png");
+	}
+
+	.esriHistogramTimeSlider div#focusContainer {
+		width: 100%;
+		position: relative;
+	}
+
+	.esriHistogramTimeSlider div#focusControls {
+		width: 100%;
+		height: 30px;
+		background: #dcdcdc;
+		border-bottom: 1px solid #989898;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CCCCCC', GradientType=0);
+		background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#CCC));
+		background: -moz-linear-gradient(top, #fff, #CCC);
+	}
+
+	.esriHistogramTimeSlider .dijitRuleContainer {
+		display: none !important;
+	}
+
+	.esriHistogramTimeSlider div#overviewControls {
+		height: 18px;
+		position: relative;
+		margin-top: 4px;
+		padding-left: 25px;
+	}
+
+	.esriHistogramTimeSlider div#focusControls {
+		position: relative;
+	}
+
+	.esriHistogramTimeSlider div#pageHolder_left, div#pageHolder_right {
+		width: 25px;
+		height: 100%;
+		overflow: visible;
+	}
+
+	.esriHistogramTimeSlider div#pageHolder_left {
+		position: absolute;
+		left: 0;
+		top: 0;
+		box-shadow: 6px 0px 10px 1px rgba(0,0,0,.4);
+		-moz-box-shadow: 6px 0px 10px 1px rgba(0,0,0,.4);
+		-webkit-box-shadow: 6px 0px 10px 1px rgba(0,0,0,.4);
+	}
+
+	.esriHistogramTimeSlider div#pageHolder_right {
+		position: absolute;
+		right: -2px;
+		top: 0;
+		box-shadow: -6px 0px 10px 1px rgba(0,0,0,.4);
+		-moz-box-shadow: -6px 0px 10px 1px rgba(0,0,0,.4);
+		-webkit-box-shadow: -6px 0px 10px 1px rgba(0,0,0,.4);
+	}
+
+	.esriHistogramTimeSlider div#resolutionChooser {
+		position: absolute;
+		right: 12px;
+		top: 5px;
+	}
+
+	.esriHistogramTimeSlider .fg-buttonset {
+		float: left;
+	}
+
+		.esriHistogramTimeSlider .fg-buttonset .fg-button {
+			float: left;
+		}
+
+	.esriHistogramTimeSlider .fg-buttonset-single .fg-button, .esriHistogramTimeSlider .fg-buttonset-multi .fg-button {
+		margin-right: -1px;
+	}
+
+	.esriHistogramTimeSlider button.fg-button {
+		cursor: pointer;
+	}
+
+		.esriHistogramTimeSlider button.fg-button.ui-state-active {
+			cursor: auto;
+		}
+
+	.esriHistogramTimeSlider h1#temporalTitle {
+		width: 40px;
+		position: relative;
+		top: 8px;
+	}
+
+	.esriHistogramTimeSlider h1#temporalTitle, h1#overviewTitle, p#overviewRange {
+		color: #999;
+		font-family: Helvetica;
+		font-size: 12px;
+		font-weight: normal;
+		margin-bottom: 0;
+		float: left;
+		margin-right: 6px;
+		margin-top: 2px;
+	}
+
+	.esriHistogramTimeSlider div#temporalTitle {
+		color: #999;
+		font-family: Helvetica;
+		font-size: 12px;
+		font-weight: normal;
+		margin-bottom: 0;
+		float: left;
+		margin-right: 6px;
+		vertical-align: top;
+		margin-left: 3px;
+	}
+
+g.chart.highlight {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.esriHistogramTimeSlider div#temporal {
+	width: 100%;
+	height: 189px;
+}
+
+.esriHistogramTimeSlider div#temporal_controls {
+	background-color: white;
+	box-shadow: 0px 12px 26px -15px rgba(0, 0, 0, .4);
+	-moz-box-shadow: 0px 12px 26px -15px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0px 12px 26px -15px rgba(0, 0, 0, .4);
+	border-left: 1px solid #EEE;
+	border-right: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+}
+
+.esriHistogramTimeSlider button#show_hide {
+	width: 15px;
+	height: 16px;
+	cursor: pointer;
+	overflow: visible;
+	border: none;
+	float: right;
+	margin-right: 4px;
+	margin-top: 4px;
+}
+
+button.fg-button {
+	border-radius: 0;
+	border: 1px solid #ccc;
+	background-color: white !important;
+	line-height: 15px;
+}
+
+.esriHistogramTimeSlider button.ui-state-active {
+	background: #98D48B;
+	background: -moz-linear-gradient(top, #98D48B 0%, #4CA035 10%, #2E7A0F 50%, #1E6B00 50%, #194C00 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#98D48B), color-stop(10%,#4CA035), color-stop(50%,#2E7A0F), color-stop(50%,#1E6B00), color-stop(100%,#194C00));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98D48B', endColorstr='#1D5A00',GradientType=0 );
+	color: white;
+}
+
+.esriHistogramTimeSlider button.ui-state-disabled {
+	background-color: #ddd !important;
+	background: #ddd !important;
+	color: #999;
+	cursor: auto;
+}
+
+.esriHistogramTimeSlider button.ui-corner-left {
+	border-bottom-left-radius: 5px;
+	padding-top: 1px;
+	border-top-left-radius: 5px;
+	max-height: 20px;
+}
+
+.esriHistogramTimeSlider button.ui-corner-right {
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	max-height: 20px;
+}
+
+.esriHistogramTimeSlider div#focusTip {
+	border: 1px solid #09c;
+	background-color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
+	-moz-box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
+	-webkit-box-shadow: 2px 2px 2px 1px rgba(0,0,0,.2);
+	display: none;
+	padding: 3px;
+}
+
+.esriHistogramTimeSlider span.dateText {
+	color: #444;
+}
+
+.esriHistogramTimeSlider .ts {
+	padding-top: 28px !important;
+	margin: 8px !important;
+	width: 100% !important;
+	margin-left: 0px !important;
+}
+
+.esriHistogramTimeSlider div#overviewSlider {
+	width: 100%;
+	height: 0px;
+	background-color: transparent;
+	position: absolute;
+	bottom: 10px;
+	border: none !important;
+}

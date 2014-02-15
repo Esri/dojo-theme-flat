@@ -1,0 +1,167 @@
+@import "../../variables"
+
+/* 'dijitTextBox' refers to 'dijit(TextBox|DateTextBox|CurrencyTextBox|...)' */
+
+.{$theme-name} .dijitTextBox,
+.{$theme-name} .dijitInputInner {
+	color: $text-color
+	line-height: $line-height
+}
+
+// workaround for FireFox to use correct line height
+.dj_gecko .{$theme-name} .dijitInputInner {
+	height: $line-height
+}
+
+.{$theme-name} .dijitTextBox .dijitInputField .dijitPlaceHolder {
+	padding: $input-padding
+}
+
+.{$theme-name} .dijitTextArea {
+	padding:  $input-padding $input-padding + 2px
+}
+
+.{$theme-name} .dijitSelect .dijitInputField,
+.{$theme-name} .dijitTextBox .dijitInputField {
+	padding: 0  $input-padding
+	margin:0 2px
+}
+
+.{$theme-name} .dijitTextBox {
+	background: $input-background
+	border: $input-border
+	box-shadow: $input-shadow
+	border-radius: $input-border-radius
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s
+}
+
+/* hover */
+
+.{$theme-name} .dijitTextBoxHover,
+.{$theme-name} .dijitTextBoxHover .dijitButtonNode {
+	border: $input-hover-border
+	box-shadow: $input-hover-shadow	
+	transition-duration: .25s
+}
+
+
+/* focused */
+
+.{$theme-name} .dijitTextBoxFocused,
+.{$theme-name} .dijitTextBoxFocused .dijitButtonNode {
+	background: $input-focused-background
+	border: $input-focused-border
+	box-shadow: $input-focused-shadow	
+	transition-duration: .1s
+}
+
+.{$theme-name} .dijitTextBoxErrorFocused,
+.{$theme-name} .dijitTextBoxErrorFocused .dijitButtonNode {
+	background: $input-focused-error-background
+	border: $input-focused-error-border
+	box-shadow: $input-focused-error-shadow	
+}
+
+/* disabled */
+.{$theme-name} .dijitTextBoxDisabled,
+.{$theme-name} .dijitTextBoxDisabled .dijitButtonNode {
+	background: $input-disabled-background
+	border:	$input-disabled-border
+	box-shadow: $input-disabled-shadow
+}
+
+.{$theme-name} .dijitTextBoxDisabled,
+.{$theme-name} .dijitTextBoxDisabled .dijitInputInner {
+	color: $disabled-text-color
+}
+
+/* error */
+
+.{$theme-name} .dijitTextBoxError,
+.{$theme-name} .dijitTextBoxError .dijitButtonNode {
+	background: $input-error-background
+	border: $input-error-border
+	box-shadow: $input-error-shadow
+}
+
+/* error: icon */
+
+.{$theme-name} .dijitValidationTextBoxError .dijitValidationContainer {
+	background-color: $input-error-icon-background-color
+	background-image: url("../" + $image-form-error)
+	background-position: center center
+	background-repeat: no-repeat
+	width: $input-error-icon-width
+}
+
+.{$theme-name} .dijitValidationTextBoxError .dijitValidationIcon {
+	width: 0
+	background-color: transparent !important /* so the INPUT doesn't obscure the border in rtl+a11y */
+}
+
+/*========================= Select and Combobox =========================*/
+
+.{$theme-name} .dijitSelectLabel,
+.{$theme-name} .dijitTextBox .dijitInputInner,
+.{$theme-name} .dijitValidationTextBox .dijitValidationContainer {
+	padding: $input-padding $input-padding - 2px
+}
+
+/* dropdown arrows */
+
+.{$theme-name} .dijitSelect .dijitArrowButtonInner,
+.{$theme-name} .dijitComboBox .dijitArrowButtonInner {
+	margin: 0
+	width:0
+	height: 0
+}
+
+.{$theme-name} .dijitToolbar .dijitComboBox .dijitArrowButtonInner {
+	border: none
+}
+
+.{$theme-name} .dijitComboBox .dijitButtonNode {
+	button-style()
+	border-radius: 0 $input-border-radius $input-border-radius 0
+}
+
+.{$theme-name} .dijitSelect .dijitButtonNode.dijitArrowButton,
+.{$theme-name} .dijitComboBox .dijitButtonNode.dijitArrowButton {
+	padding-left: $input-padding * 3
+	padding-right: $input-padding * 3
+}
+
+.{$theme-name} .dijitComboBoxOpenOnClickHover .dijitButtonNode,
+.{$theme-name} .dijitComboBox .dijitDownArrowButtonHover {
+	button-hover-style()
+}
+
+/* Arrow Button change when drop down is open */
+
+.{$theme-name} .dijitComboBox .dijitHasDropDownOpen {	// .dijitHasDropDown is on dijitArrowButton node
+	button-hover-style()
+}	
+
+/* disabled */
+
+.{$theme-name} .dijitComboBoxDisabled .dijitButtonNode{
+	button-disabled-style()
+}
+
+/*========================= DateTextBox =========================*/
+/* dateTextBox dijitArrowButtonInner, display a calendar icon instead of an arrow*/
+.{$theme-name} .dijitDateTextBox .dijitArrowButton:before {
+	content: "\f073" 
+}
+
+/*========================= Multiple Select =========================*/
+/* (Dojo does not have any styles for multiple select by default, the flexibility of styling it is really limited) */
+
+.{$theme-name} select  {
+	padding: $input-padding 0;
+	border: $input-border
+	box-shadow: $input-shadow
+}
+.{$theme-name} select option{
+	padding: $input-padding $input-padding * 2
+}

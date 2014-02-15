@@ -1,0 +1,113 @@
+/* RadioButton
+ * 
+ * Styling RadioButton mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitRadio|.dijitRadioIcon - for border, padding, width|height and background image
+ * 
+ * 2. RadioButton within ToggleButton
+ * 		.dijitToggleButton|.dijitToggleButtonChecked .* - for background image
+ * 
+ * 3. Checked state
+ * 		.dijitRadioChecked - for checked background-color|image
+ * 		.dijitToggleButtonChecked - for border, background-color|image, display and width|height
+ * 
+ * 4. Hover state
+ * 		.dijitRadioHover|.dijitRadioCheckedHover - for background image
+ * 
+ * 5. Disabled state
+ * 		.dijitRadioDisabled|.dijitRadioCheckedDisabled - for background image
+ */
+
+@import "../../variables"
+
+.{$theme-name} .dijitRadio,
+.{$theme-name} .dijitRadioIcon	{		/* inside a toggle button */
+	/* background-image: url("../" + $image-form-checkbox-and-radios) */ /* checkbox sprite image */
+	background-repeat: no-repeat
+	background-color: $radio-background-color
+	box-shadow: $radio-box-shadow
+	border-radius: $radio-border-radius
+	width: $radio-width
+	height: $radio-height
+	padding: $radio-padding
+	position: relative
+}
+
+/* normal */
+
+.{$theme-name} .dijitRadio{
+	/* background-position: -105px */
+}
+
+.{$theme-name} .dijitToggleButton .dijitRadioIcon {
+	/* background-position: -107px  */
+}
+
+/* checked */
+
+.{$theme-name} .dijitRadioChecked{
+	/* background-position: -90px */
+}
+
+.{$theme-name} .dijitToggleButtonChecked .dijitRadioIcon {
+	/* background-position: -92px */
+}
+
+/* the checked icon */
+.{$theme-name} .dijitRadioChecked:after,
+.{$theme-name} .dijitToggleButtonChecked .dijitRadioIcon:after,
+.{$theme-name} .dijitRadioCheckedDisabled:after {
+	background: $radio-checked-icon-background
+	content: ""
+	display: block
+	height: $radio-checked-icon-height
+	width: $radio-checked-icon-width
+	position: absolute
+	left: ($radio-width - $radio-checked-icon-width) * 0.5
+	top: ($radio-height - $radio-checked-icon-height) * 0.5
+	border-radius: $radio-checked-icon-border-radius
+	box-shadow: $radio-checked-icon-box-shadow
+}
+
+/* hover */
+
+.{$theme-name} .dijitRadioHover {
+	/* hovering over an unselected enabled radio button */
+	/* background-position: -135px */
+	background-color: $radio-hover-unchecked-background-color
+	border: $radio-hover-unchecked-border
+	box-shadow: $radio-hover-unchecked-box-shadow
+}
+
+.{$theme-name} .dijitRadioCheckedHover{
+	/* background-position: -120px */
+}
+
+.{$theme-name} .dijitRadioCheckedHover:after {
+	background: $radio-hover-checked-icon-background
+	box-shadow: $radio-hover-checked-icon-box-shadow
+}
+
+/* disabled */
+
+.{$theme-name} .dijitRadioCheckedDisabled {
+	/* selected but disabled */
+	/* background-position: -150px */
+	opacity:0.65
+}
+
+.{$theme-name} .dijitRadioCheckedDisabled:after,
+.{$theme-name} .dijitToggleButtonCheckedDisabled .dijitRadioIcon:after {
+	background: $radio-disabled-checked-icon-background
+	box-shadow: $radio-disabled-checked-icon-box-shadow
+}
+
+
+.{$theme-name} .dijitRadioDisabled {
+	/* background-position: -165px */
+	background-color: $radio-disabled-background-color
+	border: $radio-disabled-border
+	box-shadow: $radio-disabled-box-shadow
+	opacity:0.65
+}

@@ -1,0 +1,103 @@
+div.esriRenderingRuleContainer {
+	font-family: verdana,helvetica;
+	font-size: 12px;
+}
+
+.esriRenderingRuleTable {
+	table-layout: fixed;
+	border-collapse: separate;
+	text-align: left;
+	border-spacing: 0px 10px;
+}
+
+.esriRenderingRuleCol1 {
+	width: 33%;
+}
+
+.esriRenderingRuleCol2 {
+	width: 33%;
+}
+
+.esriRenderingRuleCol3 {
+	width: 33%;
+}
+
+.esriRenderingRuleHeadingLabel {
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.esriRenderingRuleEnhancementHeadingLabel {
+	font-weight: bold;
+	padding-bottom: 25px;
+}
+
+.esriRenderingRuleApply {
+	text-align: center;
+}
+
+.esriRenderingRuleRasterFunctionList {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.esriRenderingRuleBandIdsRedList {
+	padding: 0px;
+	margin: 0px;
+	color: Black;
+	width: 100%;
+}
+
+.esriRenderingRuleBandIdsGreenList {
+	padding: 0px;
+	margin: 0px;
+	color: Black;
+	width: 100%;
+}
+
+.esriRenderingRuleBandIdsBlueList {
+	padding: 0px;
+	margin: 0px;
+	color: Black;
+	width: 100%;
+}
+
+.esriRenderingRuleFixedInput {
+	padding-left: 10px;
+	width: 50px;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.esriRenderingRuleMsgLabel {
+	font-size: 11px;
+	float: right;
+	font: Verdana;
+}
+
+.esriRenderingRuleStretchMethodList {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.esriRenderingRuleGammaSlider {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.esriRenderingRuleDraCheckbox {
+	float: left;
+}
+
+.esriRenderingRuleDraLabel {
+	padding-left: 5px;
+}
+
+.esriRenderingRuleApplyButton {
+	text-align: center;
+	float: center;
+	font-family: inherit;
+	font-size: inherit;
+}

@@ -1,0 +1,13 @@
+icon-core-style {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.flat .dijitTabContainerTop-tabs .dijitTabRtl,
+.flat .dijitTabContainerBottom-tabs .dijitTabRtl {
+  margin-right: 0;
+  margin-left: 1px;
+}

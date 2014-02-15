@@ -1,0 +1,13 @@
+/* claro/form/Common_rtl.css */
+icon-core-style {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.flat .dijitTextBoxRtlError .dijitValidationContainer {
+  border-left-width: 0 !important;
+  border-right-width: 1px !important;
+}

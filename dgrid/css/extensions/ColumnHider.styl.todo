@@ -1,0 +1,51 @@
+@import "../../../variables";
+
+.dgrid-hider-toggle {
+	background-position: 0 -192px;
+	cursor: pointer;
+	position: absolute;
+	right: (21px - 16px) * 0.5; /* scrollbar's width minus width of the icon and divide this value by 2, which is the spacing it needs to center the icon */
+	top: 50%;
+	margin-top: -16px * 0.5;
+}
+
+.dgrid-hider-menu {
+	position: absolute;
+	top: 0;
+	right: (21px - 16px) * 0.5 + 16px;
+	width: 184px;
+	border-radius($border-radius);
+	box-shadow($container-shadow);
+	border: 1px solid $border-color;
+	background-color: $container-background-color;
+	z-index: 99999;
+	padding: $padding;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.dgrid-hider-menu-row {
+	position: relative;
+	padding: $padding;
+}
+.dgrid-hider-menu-check {
+	position: absolute;
+	top: $padding;
+	left: $padding;
+	padding: 0;
+}
+.dgrid-hider-menu-label {
+	display: block;
+	padding-left: 16px + $padding; /* width of a checkbox plus value of the default padding */
+}
+
+html.has-quirks .dgrid-hider-menu-check,
+html.has-ie-6-7 .dgrid-hider-menu-check {
+	/* IE < 8 seems to ignore padding: 0, so counteract */
+	top: 0;
+	left: 0;
+}
+
+#dgrid-css-extensions-ColumnHider-loaded {
+	display: none;
+}

@@ -1,0 +1,579 @@
+/* Button | DropDownButton | ComboButton | ToggleButton
+ * 
+ * Styling Buttons mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitButton
+ * 		.dijitDropDownButton
+ * 		.dijitComboButton
+ * 		.dijitButtonNode - common button/arrow wrapper shared across all three button types 
+ *
+ * 2. Button text
+ * 		.dijitButtonText
+ * 
+ * 3. Arrows - only for DropDownButton and ComboButton
+ * 	     There are total four directions arrows - down, left, right, up:
+ * 		.dijitArrowButtonInner - down arrow by default
+ *      .dijitLeftArrowButton .dijitArrowButtonInner - left arrow
+ *      .dijitRightArrowButton .dijitArrowButtonInner - right arrow
+ *      .dijitUpArrowButton .dijitArrowButtonInner - up arrow
+ * 
+ * 4. States - Hover, Active, Disabled, e.g.
+ * 		.dijitButtonHover .dijitButtonNode
+ * 		.dijitButtonActive .dijitButtonNode
+ * 		.dijitButtonDisabled .dijitButtonNode
+ *      
+ *      .dijitDisabled .dijitArrowButtonInner  - disabled arrow states 
+ */
+icon-core-style,
+.flat .dijitDropDownButton .dijitArrowButtonInner,
+.flat .dijitArrowButton {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.flat .dijitButtonNode {
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.flat .dijitButton .dijitButtonNode,
+.flat .dijitDropDownButton .dijitButtonNode,
+.flat .dijitComboButton .dijitButtonNode,
+.flat .dijitToggleButton .dijitButtonNode {
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 4px 12px;
+  color: #2b2e34;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: linear-gradient(#fcfcfc, #f5f5f5);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+}
+/* Other colors */
+.flat .dijitButton.dojo-btn-primary .dijitButtonNode,
+.flat .dijitDropDownButton.dojo-btn-primary .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-primary .dijitButtonNode,
+.flat .dijitToggleButton.dojo-btn-primary .dijitButtonNode,
+.flat .dijitComboBox.dojo-btn-primary .dijitButtonNode,
+.flat .dijitSelect.dojo-btn-primary .dijitButtonContents,
+.flat .dijitSelect.dojo-btn-primary .dijitButtonNode,
+.flat .dijitSpinner.dojo-btn-primary .dijitArrowButton,
+.flat .dojo-btn-primary .esriSimpleSlider div,
+.flat .dojo-btn-primary .esriAddBookmark,
+.flat .dojo-btn-primary .esriButton .dijitButtonNode,
+.flat .dojo-btn-primary .esriToggleButton .dijitButtonNode {
+  background-color: #007ac2;
+  background-image: linear-gradient(to bottom, #0080cb, #007ac2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButton.dojo-btn-success .dijitButtonNode,
+.flat .dijitDropDownButton.dojo-btn-success .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-success .dijitButtonNode,
+.flat .dijitToggleButton.dojo-btn-success .dijitButtonNode,
+.flat .dijitComboBox.dojo-btn-success .dijitButtonNode,
+.flat .dijitSelect.dojo-btn-success .dijitButtonContents,
+.flat .dijitSelect.dojo-btn-success .dijitButtonNode,
+.flat .dijitSpinner.dojo-btn-success .dijitArrowButton,
+.flat .dojo-btn-success .esriSimpleSlider div,
+.flat .dojo-btn-success .esriAddBookmark,
+.flat .dojo-btn-success .esriButton .dijitButtonNode,
+.flat .dojo-btn-success .esriToggleButton .dijitButtonNode {
+  background-color: #35ac46;
+  background-image: linear-gradient(to bottom, #37b349, #35ac46);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButton.dojo-btn-info .dijitButtonNode,
+.flat .dijitDropDownButton.dojo-btn-info .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-info .dijitButtonNode,
+.flat .dijitToggleButton.dojo-btn-info .dijitButtonNode,
+.flat .dijitComboBox.dojo-btn-info .dijitButtonNode,
+.flat .dijitSelect.dojo-btn-info .dijitButtonContents,
+.flat .dijitSelect.dojo-btn-info .dijitButtonNode,
+.flat .dijitSpinner.dojo-btn-info .dijitArrowButton,
+.flat .dojo-btn-info .esriSimpleSlider div,
+.flat .dojo-btn-info .esriAddBookmark,
+.flat .dojo-btn-info .esriButton .dijitButtonNode,
+.flat .dojo-btn-info .esriToggleButton .dijitButtonNode {
+  background-color: #007ac2;
+  background-image: linear-gradient(to bottom, #0080cb, #007ac2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButton.dojo-btn-warning .dijitButtonNode,
+.flat .dijitDropDownButton.dojo-btn-warning .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-warning .dijitButtonNode,
+.flat .dijitToggleButton.dojo-btn-warning .dijitButtonNode,
+.flat .dijitComboBox.dojo-btn-warning .dijitButtonNode,
+.flat .dijitSelect.dojo-btn-warning .dijitButtonContents,
+.flat .dijitSelect.dojo-btn-warning .dijitButtonNode,
+.flat .dijitSpinner.dojo-btn-warning .dijitArrowButton,
+.flat .dojo-btn-warning .esriSimpleSlider div,
+.flat .dojo-btn-warning .esriAddBookmark,
+.flat .dojo-btn-warning .esriButton .dijitButtonNode,
+.flat .dojo-btn-warning .esriToggleButton .dijitButtonNode {
+  background-color: #f89927;
+  background-image: linear-gradient(to bottom, #f89c2d, #f89927);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButton.dojo-btn-danger .dijitButtonNode,
+.flat .dijitDropDownButton.dojo-btn-danger .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-danger .dijitButtonNode,
+.flat .dijitToggleButton.dojo-btn-danger .dijitButtonNode,
+.flat .dijitComboBox.dojo-btn-danger .dijitButtonNode,
+.flat .dijitSelect.dojo-btn-danger .dijitButtonContents,
+.flat .dijitSelect.dojo-btn-danger .dijitButtonNode,
+.flat .dijitSpinner.dojo-btn-danger .dijitArrowButton,
+.flat .dojo-btn-danger .esriSimpleSlider div,
+.flat .dojo-btn-danger .esriAddBookmark,
+.flat .dojo-btn-danger .esriButton .dijitButtonNode,
+.flat .dojo-btn-danger .esriToggleButton .dijitButtonNode {
+  background-color: #da4d1e;
+  background-image: linear-gradient(to bottom, #e05020, #da4d1e);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButton.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitDropDownButton.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitToggleButton.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitComboBox.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitSelect.dojo-btn-inverse .dijitButtonContents,
+.flat .dijitSelect.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitSpinner.dojo-btn-inverse .dijitArrowButton,
+.flat .dojo-btn-inverse .esriSimpleSlider div,
+.flat .dojo-btn-inverse .esriAddBookmark,
+.flat .dojo-btn-inverse .esriButton .dijitButtonNode,
+.flat .dojo-btn-inverse .esriToggleButton .dijitButtonNode {
+  background-color: rgba(0,0,0,0.65);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.25));
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+/*arrow styles for down/up/left/right directions*/
+.flat .dijitDropDownButton .dijitArrowButtonInner {
+  margin-left: 12px;
+}
+.flat .dijitDropDownButton .dijitArrowButtonInner:before,
+.flat .dijitArrowButton:before {
+  content: "\f0d7";
+}
+.flat .dijitLeftArrowButton:before {
+  content: "\f0d9";
+}
+.flat .dijitRightArrowButton:before {
+  content: "\f0da";
+}
+.flat .dijitUpArrowButton:before {
+  content: "\f0d8";
+}
+.flat .dijitButtonText {
+  padding: 0 4px;
+  text-align: center;
+}
+/* hover status */
+.flat .dijitButtonHover .dijitButtonNode,
+.flat .dijitDropDownButtonHover .dijitButtonNode,
+.flat .dijitComboButton .dijitButtonNodeHover,
+.flat .dijitComboButton .dijitDownArrowButtonHover,
+.flat .dijitToggleButtonHover .dijitButtonNode {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: background 0.1s linear 0s;
+}
+.flat .dijitButtonHover.dojo-btn-primary .dijitButtonNode,
+.flat .dijitDropDownButtonHover.dojo-btn-primary .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-primary .dijitButtonNodeHover,
+.flat .dijitToggleButtonHover.dojo-btn-primary .dijitButtonNode,
+.flat .dijitComboBoxHover.dojo-btn-primary .dijitButtonNode,
+.flat .dijitSelectHover.dojo-btn-primary .dijitButtonContents,
+.flat .dijitSelectHover.dojo-btn-primary .dijitButtonNode,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-primary .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-primary .dijitArrowButton,
+.flat .dijitSpinner.dojo-btn-primary .dijitUpArrowButtonHover,
+.flat .dijitSpinner.dojo-btn-primary .dijitDownArrowButtonHover,
+.flat .dojo-btn-primary .esriSimpleSlider div:hover,
+.flat .dojo-btn-primary .esriAddBookmark:hover,
+.flat .dojo-btn-primary .esriButtonHover .dijitButtonNode,
+.flat .dojo-btn-primary .esriToggleButtonHover .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #0084d2, #0070b2);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonHover.dojo-btn-success .dijitButtonNode,
+.flat .dijitDropDownButtonHover.dojo-btn-success .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-success .dijitButtonNodeHover,
+.flat .dijitToggleButtonHover.dojo-btn-success .dijitButtonNode,
+.flat .dijitComboBoxHover.dojo-btn-success .dijitButtonNode,
+.flat .dijitSelectHover.dojo-btn-success .dijitButtonContents,
+.flat .dijitSelectHover.dojo-btn-success .dijitButtonNode,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-success .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-success .dijitArrowButton,
+.flat .dijitSpinner.dojo-btn-success .dijitUpArrowButtonHover,
+.flat .dijitSpinner.dojo-btn-success .dijitDownArrowButtonHover,
+.flat .dojo-btn-success .esriSimpleSlider div:hover,
+.flat .dojo-btn-success .esriAddBookmark:hover,
+.flat .dojo-btn-success .esriButtonHover .dijitButtonNode,
+.flat .dojo-btn-success .esriToggleButtonHover .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #38b74a, #319e40);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonHover.dojo-btn-info .dijitButtonNode,
+.flat .dijitDropDownButtonHover.dojo-btn-info .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-info .dijitButtonNodeHover,
+.flat .dijitToggleButtonHover.dojo-btn-info .dijitButtonNode,
+.flat .dijitComboBoxHover.dojo-btn-info .dijitButtonNode,
+.flat .dijitSelectHover.dojo-btn-info .dijitButtonContents,
+.flat .dijitSelectHover.dojo-btn-info .dijitButtonNode,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-info .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-info .dijitArrowButton,
+.flat .dijitSpinner.dojo-btn-info .dijitUpArrowButtonHover,
+.flat .dijitSpinner.dojo-btn-info .dijitDownArrowButtonHover,
+.flat .dojo-btn-info .esriSimpleSlider div:hover,
+.flat .dojo-btn-info .esriAddBookmark:hover,
+.flat .dojo-btn-info .esriButtonHover .dijitButtonNode,
+.flat .dojo-btn-info .esriToggleButtonHover .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #0084d2, #0070b2);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonHover.dojo-btn-warning .dijitButtonNode,
+.flat .dijitDropDownButtonHover.dojo-btn-warning .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-warning .dijitButtonNodeHover,
+.flat .dijitToggleButtonHover.dojo-btn-warning .dijitButtonNode,
+.flat .dijitComboBoxHover.dojo-btn-warning .dijitButtonNode,
+.flat .dijitSelectHover.dojo-btn-warning .dijitButtonContents,
+.flat .dijitSelectHover.dojo-btn-warning .dijitButtonNode,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-warning .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-warning .dijitArrowButton,
+.flat .dijitSpinner.dojo-btn-warning .dijitUpArrowButtonHover,
+.flat .dijitSpinner.dojo-btn-warning .dijitDownArrowButtonHover,
+.flat .dojo-btn-warning .esriSimpleSlider div:hover,
+.flat .dojo-btn-warning .esriAddBookmark:hover,
+.flat .dojo-btn-warning .esriButtonHover .dijitButtonNode,
+.flat .dojo-btn-warning .esriToggleButtonHover .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #f89e32, #f78e11);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonHover.dojo-btn-danger .dijitButtonNode,
+.flat .dijitDropDownButtonHover.dojo-btn-danger .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-danger .dijitButtonNodeHover,
+.flat .dijitToggleButtonHover.dojo-btn-danger .dijitButtonNode,
+.flat .dijitComboBoxHover.dojo-btn-danger .dijitButtonNode,
+.flat .dijitSelectHover.dojo-btn-danger .dijitButtonContents,
+.flat .dijitSelectHover.dojo-btn-danger .dijitButtonNode,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-danger .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-danger .dijitArrowButton,
+.flat .dijitSpinner.dojo-btn-danger .dijitUpArrowButtonHover,
+.flat .dijitSpinner.dojo-btn-danger .dijitDownArrowButtonHover,
+.flat .dojo-btn-danger .esriSimpleSlider div:hover,
+.flat .dojo-btn-danger .esriAddBookmark:hover,
+.flat .dojo-btn-danger .esriButtonHover .dijitButtonNode,
+.flat .dojo-btn-danger .esriToggleButtonHover .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #e15324, #c9471c);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonHover.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitDropDownButtonHover.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-inverse .dijitButtonNodeHover,
+.flat .dijitToggleButtonHover.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitComboBoxHover.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitSelectHover.dojo-btn-inverse .dijitButtonContents,
+.flat .dijitSelectHover.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-inverse .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-inverse .dijitArrowButton,
+.flat .dijitSpinner.dojo-btn-inverse .dijitUpArrowButtonHover,
+.flat .dijitSpinner.dojo-btn-inverse .dijitDownArrowButtonHover,
+.flat .dojo-btn-inverse .esriSimpleSlider div:hover,
+.flat .dojo-btn-inverse .esriAddBookmark:hover,
+.flat .dojo-btn-inverse .esriButtonHover .dijitButtonNode,
+.flat .dojo-btn-inverse .esriToggleButtonHover .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #34383f, #282a30);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+/* active, checked status */
+.flat .dijitButtonActive .dijitButtonNode,
+.flat .dijitDropDownButtonActive .dijitButtonNode,
+.flat .dijitComboButtonActive .dijitButtonNode,
+.flat .dijitToggleButtonActive .dijitButtonNode,
+.flat .dijitToggleButtonChecked .dijitButtonNode {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: none;
+  outline: none;
+}
+.flat .dijitButtonActive.dojo-btn-primary .dijitButtonNode,
+.flat .dijitDropDownButtonActive.dojo-btn-primary .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-primary .dijitButtonNodeActive,
+.flat .dijitToggleButtonActive.dojo-btn-primary .dijitButtonNode,
+.flat .dijitComboBoxActive.dojo-btn-primary .dijitButtonNode,
+.flat .dijitSelectActive.dojo-btn-primary .dijitButtonContents,
+.flat .dijitSelectActive.dojo-btn-primary .dijitArrowButton,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-primary .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-primary .dijitArrowButton,
+.flat .dijitComboBox.dojo-btn-primary .dijitButtonNode.dijitHasDropDownOpen,
+.flat .dijitSpinner.dojo-btn-primary .dijitUpArrowButtonActive,
+.flat .dijitSpinner.dojo-btn-primary .dijitDownArrowButtonActive,
+.flat .dojo-btn-primary .esriSimpleSlider div:active,
+.flat .dojo-btn-primary .esriAddBookmark:active,
+.flat .dojo-btn-primary .esriButtonActive .dijitButtonNode,
+.flat .dojo-btn-primary .esriButtonChecked .dijitButtonNode,
+.flat .dojo-btn-primary .esriToggleButtonActive .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #0084d2, #0070b2);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonActive.dojo-btn-success .dijitButtonNode,
+.flat .dijitDropDownButtonActive.dojo-btn-success .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-success .dijitButtonNodeActive,
+.flat .dijitToggleButtonActive.dojo-btn-success .dijitButtonNode,
+.flat .dijitComboBoxActive.dojo-btn-success .dijitButtonNode,
+.flat .dijitSelectActive.dojo-btn-success .dijitButtonContents,
+.flat .dijitSelectActive.dojo-btn-success .dijitArrowButton,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-success .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-success .dijitArrowButton,
+.flat .dijitComboBox.dojo-btn-success .dijitButtonNode.dijitHasDropDownOpen,
+.flat .dijitSpinner.dojo-btn-success .dijitUpArrowButtonActive,
+.flat .dijitSpinner.dojo-btn-success .dijitDownArrowButtonActive,
+.flat .dojo-btn-success .esriSimpleSlider div:active,
+.flat .dojo-btn-success .esriAddBookmark:active,
+.flat .dojo-btn-success .esriButtonActive .dijitButtonNode,
+.flat .dojo-btn-success .esriButtonChecked .dijitButtonNode,
+.flat .dojo-btn-success .esriToggleButtonActive .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #38b74a, #319e40);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonActive.dojo-btn-info .dijitButtonNode,
+.flat .dijitDropDownButtonActive.dojo-btn-info .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-info .dijitButtonNodeActive,
+.flat .dijitToggleButtonActive.dojo-btn-info .dijitButtonNode,
+.flat .dijitComboBoxActive.dojo-btn-info .dijitButtonNode,
+.flat .dijitSelectActive.dojo-btn-info .dijitButtonContents,
+.flat .dijitSelectActive.dojo-btn-info .dijitArrowButton,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-info .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-info .dijitArrowButton,
+.flat .dijitComboBox.dojo-btn-info .dijitButtonNode.dijitHasDropDownOpen,
+.flat .dijitSpinner.dojo-btn-info .dijitUpArrowButtonActive,
+.flat .dijitSpinner.dojo-btn-info .dijitDownArrowButtonActive,
+.flat .dojo-btn-info .esriSimpleSlider div:active,
+.flat .dojo-btn-info .esriAddBookmark:active,
+.flat .dojo-btn-info .esriButtonActive .dijitButtonNode,
+.flat .dojo-btn-info .esriButtonChecked .dijitButtonNode,
+.flat .dojo-btn-info .esriToggleButtonActive .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #0084d2, #0070b2);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonActive.dojo-btn-warning .dijitButtonNode,
+.flat .dijitDropDownButtonActive.dojo-btn-warning .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-warning .dijitButtonNodeActive,
+.flat .dijitToggleButtonActive.dojo-btn-warning .dijitButtonNode,
+.flat .dijitComboBoxActive.dojo-btn-warning .dijitButtonNode,
+.flat .dijitSelectActive.dojo-btn-warning .dijitButtonContents,
+.flat .dijitSelectActive.dojo-btn-warning .dijitArrowButton,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-warning .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-warning .dijitArrowButton,
+.flat .dijitComboBox.dojo-btn-warning .dijitButtonNode.dijitHasDropDownOpen,
+.flat .dijitSpinner.dojo-btn-warning .dijitUpArrowButtonActive,
+.flat .dijitSpinner.dojo-btn-warning .dijitDownArrowButtonActive,
+.flat .dojo-btn-warning .esriSimpleSlider div:active,
+.flat .dojo-btn-warning .esriAddBookmark:active,
+.flat .dojo-btn-warning .esriButtonActive .dijitButtonNode,
+.flat .dojo-btn-warning .esriButtonChecked .dijitButtonNode,
+.flat .dojo-btn-warning .esriToggleButtonActive .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #f89e32, #f78e11);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.215) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.215) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.215) inset;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonActive.dojo-btn-danger .dijitButtonNode,
+.flat .dijitDropDownButtonActive.dojo-btn-danger .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-danger .dijitButtonNodeActive,
+.flat .dijitToggleButtonActive.dojo-btn-danger .dijitButtonNode,
+.flat .dijitComboBoxActive.dojo-btn-danger .dijitButtonNode,
+.flat .dijitSelectActive.dojo-btn-danger .dijitButtonContents,
+.flat .dijitSelectActive.dojo-btn-danger .dijitArrowButton,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-danger .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-danger .dijitArrowButton,
+.flat .dijitComboBox.dojo-btn-danger .dijitButtonNode.dijitHasDropDownOpen,
+.flat .dijitSpinner.dojo-btn-danger .dijitUpArrowButtonActive,
+.flat .dijitSpinner.dojo-btn-danger .dijitDownArrowButtonActive,
+.flat .dojo-btn-danger .esriSimpleSlider div:active,
+.flat .dojo-btn-danger .esriAddBookmark:active,
+.flat .dojo-btn-danger .esriButtonActive .dijitButtonNode,
+.flat .dojo-btn-danger .esriButtonChecked .dijitButtonNode,
+.flat .dojo-btn-danger .esriToggleButtonActive .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #e15324, #c9471c);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.flat .dijitButtonActive.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitDropDownButtonActive.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitComboButton.dojo-btn-inverse .dijitButtonNodeActive,
+.flat .dijitToggleButtonActive.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitComboBoxActive.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitSelectActive.dojo-btn-inverse .dijitButtonContents,
+.flat .dijitSelectActive.dojo-btn-inverse .dijitArrowButton,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-inverse .dijitButtonContents,
+.flat .dijitSelect.dijitSelectOpened.dojo-btn-inverse .dijitArrowButton,
+.flat .dijitComboBox.dojo-btn-inverse .dijitButtonNode.dijitHasDropDownOpen,
+.flat .dijitSpinner.dojo-btn-inverse .dijitUpArrowButtonActive,
+.flat .dijitSpinner.dojo-btn-inverse .dijitDownArrowButtonActive,
+.flat .dojo-btn-inverse .esriSimpleSlider div:active,
+.flat .dojo-btn-inverse .esriAddBookmark:active,
+.flat .dojo-btn-inverse .esriButtonActive .dijitButtonNode,
+.flat .dojo-btn-inverse .esriButtonChecked .dijitButtonNode,
+.flat .dojo-btn-inverse .esriToggleButtonActive .dijitButtonNode {
+  background-image: linear-gradient(to bottom, #34383f, #282a30);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+/* disabled status */
+.flat .dijitButtonDisabled,
+.flat .dijitDropDownButtonDisabled,
+.flat .dijitComboButtonDisabled,
+.flat .dijitToggleButtonDisabled,
+ {
+  border-color: #b4b4b4;
+$button-disabled-background-image
+  outline: none;
+}
+.flat .dijitButtonDisabled .dijitButtonNode,
+.flat .dijitDropDownButtonDisabled .dijitButtonNode,
+.flat .dijitComboButtonDisabled .dijitButtonNode,
+.flat .dijitToggleButtonDisabled .dijitButtonNode {
+  color: #969696;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #f5f5f5;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: default;
+  opacity: 0.65;
+}
+.flat .dijitButtonDisabled.dojo-btn-primary .dijitButtonNode,
+.flat .dijitDropDownButtonDisabled.dojo-btn-primary .dijitButtonNode,
+.flat .dijitComboButtonDisabled.dojo-btn-primary .dijitButtonNode,
+.flat .dijitToggleButtonDisabled.dojo-btn-primary .dijitButtonNode {
+  background-image: none;
+  _background-image: none;
+}
+.flat .dijitButtonDisabled.dojo-btn-success .dijitButtonNode,
+.flat .dijitDropDownButtonDisabled.dojo-btn-success .dijitButtonNode,
+.flat .dijitComboButtonDisabled.dojo-btn-success .dijitButtonNode,
+.flat .dijitToggleButtonDisabled.dojo-btn-success .dijitButtonNode {
+  background-image: none;
+  _background-image: none;
+}
+.flat .dijitButtonDisabled.dojo-btn-info .dijitButtonNode,
+.flat .dijitDropDownButtonDisabled.dojo-btn-info .dijitButtonNode,
+.flat .dijitComboButtonDisabled.dojo-btn-info .dijitButtonNode,
+.flat .dijitToggleButtonDisabled.dojo-btn-info .dijitButtonNode {
+  background-image: none;
+  _background-image: none;
+}
+.flat .dijitButtonDisabled.dojo-btn-warning .dijitButtonNode,
+.flat .dijitDropDownButtonDisabled.dojo-btn-warning .dijitButtonNode,
+.flat .dijitComboButtonDisabled.dojo-btn-warning .dijitButtonNode,
+.flat .dijitToggleButtonDisabled.dojo-btn-warning .dijitButtonNode {
+  background-image: none;
+  _background-image: none;
+}
+.flat .dijitButtonDisabled.dojo-btn-danger .dijitButtonNode,
+.flat .dijitDropDownButtonDisabled.dojo-btn-danger .dijitButtonNode,
+.flat .dijitComboButtonDisabled.dojo-btn-danger .dijitButtonNode,
+.flat .dijitToggleButtonDisabled.dojo-btn-danger .dijitButtonNode {
+  background-image: none;
+  _background-image: none;
+}
+.flat .dijitButtonDisabled.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitDropDownButtonDisabled.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitComboButtonDisabled.dojo-btn-inverse .dijitButtonNode,
+.flat .dijitToggleButtonDisabled.dojo-btn-inverse .dijitButtonNode {
+  background-image: none;
+  _background-image: none;
+}
+.flat .dijitComboButtonDisabled .dijitArrowButton {
+  border-left-width: 0;
+}
+/* for ComboButton */
+.flat table.dijitComboButton {
+  border-collapse: separate;
+/* override dijit.css so that ComboBox rounded corners work */
+}
+.flat .dijitComboButton .dijitStretch {
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+.flat .dijitComboButton .dijitArrowButton {
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  border-left-width: 0;
+}

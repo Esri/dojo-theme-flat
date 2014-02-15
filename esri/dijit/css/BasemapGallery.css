@@ -1,0 +1,75 @@
+icon-core-style {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.esriBasemapGallery {
+  background: transparent;
+  border: 0 none;
+  padding: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.esriBasemapGalleryNode {
+  float: left;
+  margin: 8px 4px 0 4px;
+}
+.esriBasemapGalleryNode a {
+  background: #fff;
+  border: 1px solid #b4b4b4;
+  display: inline-block;
+  padding: 2px;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+}
+.esriBasemapGallerySelectedNode a:after {
+  background: url("../images/basemapSelected.png") no-repeat center center #007ac2;
+  bottom: 2px;
+  content: "";
+  display: block;
+  height: 20px;
+  position: absolute;
+  right: 2px;
+  width: 30px;
+}
+.esriBasemapGalleryNode a img {
+  vertical-align: middle;
+}
+.esriBasemapGalleryLabelContainer {
+  background: transparent;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+.esriBasemapGalleryThumbnail {
+  height: 67px;
+  width: 100px;
+  border: 4px solid #fff;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  margin: 0;
+}
+.esriBasemapGallerySelectedNode .esriBasemapGalleryThumbnail {
+  background: #fff;
+  border: 4px solid #007ac2;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+}

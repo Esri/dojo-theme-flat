@@ -1,0 +1,184 @@
+/* Accordion
+ * 
+ * Styling AccordionContainer basically means styling the accordion pane (dijitAccordionInnerContainer)
+ * and the title inside of it (dijitAccordionTitle).   There are 4 basic states to style:
+ * 
+ * 1. closed pane (and default styling): 
+ * 		.dijitAccordionInnerContainer - container for each accordion child
+ * 		.dijitAccordionTitle - title for each accordion child
+ *
+ * 2. active closed pane (ie, mouse down on a title bar)
+ * 		.dijitAccordionInnerContainerActive - for background-color, border
+ * 		.dijitAccordionInnerContainerActive dijitAccordionTitle - for text color
+ * 
+ * 3. open pane (expanded child)
+ *		.dijitAccordionChildWrapper - wraps around the child widget (typically ContentPane)
+ *			setting a margin so that there's blue trim all the way around the child
+ *
+ * 		These rules need to override the closed pane active:
+ *
+ * 		.dijitAccordionInnerContainerSelected - for background-color, border
+ * 		.dijitAccordionInnerContainerSelected .dijitAccordionTitle - for text color
+ * 
+ * 4. hovered pane, open or closed
+ * 		The selectors below affect hovering over both a closed pane (ie, hovering a title bar),
+ * 		and hovering over an open pane.   Also, treat mouse down on an open pane as a hover:
+ *
+ * 		.dijitAccordionInnerContainerHover, .dijitAccordionInnerContainerSelectedActive - for background-color, border
+ * 		.dijitAccordionInnerContainerHover .dijitAccordionTitle - for text color
+ */
+
+@import "../../variables"
+
+.{$theme-name} .dijitAccordionContainer {
+	border:none
+	border-radius: $accordion-border-radius
+	box-shadow: $accordion-box-shadow
+}
+
+.{$theme-name} .dijitAccordionInnerContainer {
+	background: $accordion-background
+	border: $accordion-border
+	border-radius: $accordion-pane-border-radius
+	transition-property: background-color, border
+	transition-duration: .3s
+	transition-timing-function: linear
+}
+
+.{$theme-name} .dijitAccordionInnerContainer+.dijitAccordionInnerContainer	{
+	margin-top: $accordion-spacing
+	position: relative
+}
+
+.geodesign .dijitAccordionInnerContainer+.dijitAccordionInnerContainer:before {
+	content: ""
+	height: 1px
+	width: 100%
+	background: $accordion-separator-top-color
+	border-bottom: 1px solid $accordion-separator-bottom-color
+	position: absolute
+	top: 0
+	z-index: 101
+}
+
+if($accordion-pane-border-radius == "none" || $accordion-pane-border-radius[0] == "0"){
+	.{$theme-name} .dijitAccordionInnerContainer:first-child,
+	.{$theme-name} .dijitAccordionInnerContainer:first-child .dijitAccordionTitle {
+		border-radius: $accordion-border-radius $accordion-border-radius 0 0
+	}
+	.{$theme-name} .dijitAccordionInnerContainer:last-child,
+	.{$theme-name} .dijitAccordionInnerContainer:last-child .dijitAccordionTitle {
+		border-radius: 0 0 $accordion-border-radius $accordion-border-radius
+	}
+}
+
+.{$theme-name} .dijitAccordionTitle {
+	background: $accordion-title-bar-background
+	padding: $accordion-title-bar-padding
+	line-height: $line-height
+	min-height: @line-height
+	color: $accordion-title-bar-text-color
+	text-shadow: $accordion-title-bar-text-shadow
+	font-weight: normal
+	border-radius: $accordion-pane-border-radius
+	box-shadow: $accordion-title-bar-box-shadow
+	border-top: $accordion-title-bar-border-top	
+}
+.{$theme-name} .dijitAccordionInnerContainer:first-child .dijitAccordionTitle {
+	border-top: 0 none
+}
+.{$theme-name} .dijitAccordionTitle .arrowTextUp,
+.{$theme-name} .dijitAccordionTitle .arrowTextDown {
+	display: none
+	float: right
+	font-size: 120%
+	font-weight: bold
+	font-family: arial
+	text-align: center
+	width: 1em
+}
+
+.{$theme-name} .dijitAccordionTitle .arrowTextUp {
+	display: block
+}
+
+.{$theme-name} .dijitAccordionContainer .dijitAccordionChildWrapper {
+	background-color: $accordion-content-background
+	border: $accordion-content-border
+	margin: 0 $accordion-content-margin $accordion-content-margin
+	position: relative
+	z-index: 1
+	clear: both
+}
+	
+.{$theme-name} .dijitAccordionContainer .dijitAccordionContainer-child {
+	padding: $accordion-content-padding
+	background: $accordion-content-background
+}
+
+/* Hovering open or closed pane */
+
+.{$theme-name} .dijitAccordionInnerContainerHover .dijitAccordionTitle {
+	background: $accordion-title-bar-hover-background
+	color: $accordion-title-bar-hover-text-color
+	text-shadow: $accordion-title-bar-hover-text-shadow
+	box-shadow: $accordion-title-bar-hover-box-shadow
+}
+
+/* Active state for closed pane */
+
+.{$theme-name} .dijitAccordionInnerContainerActive .dijitAccordionTitle {
+	background: $accordion-title-bar-active-background
+	color: $accordion-title-bar-active-text-color
+	text-shadow: $accordion-title-bar-active-text-shadow
+	box-shadow: $accordion-title-bar-active-box-shadow
+}
+
+/* Selected pane */
+
+.{$theme-name} .dijitAccordionInnerContainer.dijitAccordionInnerContainerSelected .dijitAccordionTitle {
+	border-radius: 0
+	position: relative
+	z-index: 10
+}
+
+.{$theme-name} .dijitAccordionInnerContainerSelected .dijitAccordionTitle {
+	color: $accordion-title-bar-checked-text-color
+	text-shadow: $accordion-title-bar-checked-text-shadow
+	background: $accordion-title-bar-checked-background
+	border-bottom: $accordion-border if $accordion-content-border[0] == 0 || $accordion-content-border[0] == "none"
+	border-radius: 0
+	box-shadow: $accordion-title-bar-checked-box-shadow	
+}
+
+.{$theme-name} .dijitAccordionInnerContainerSelected .dijitAccordionTitle .arrowTextUp {
+	display: none
+}
+
+.{$theme-name} .dijitAccordionInnerContainerSelected .dijitAccordionTitle .arrowTextDown {
+	display: block
+}
+
+if($accordion-has-down-arrow) {
+	.{$theme-name} .dijitAccordionInnerContainerSelected .dijitAccordionTitle .dijitAccordionArrow {
+		border-color: $accordion-down-arrow-border-color transparent transparent
+		border-style: solid solid none
+		border-width: $accordion-down-arrow-border-size $accordion-down-arrow-border-size 0
+		bottom: - $accordion-down-arrow-border-size
+		height: 0
+		left: 40px
+		position: absolute
+		width: 0
+	}
+	.{$theme-name} .dijitAccordionInnerContainerSelected .dijitAccordionTitle .dijitAccordionArrow:after {
+		border-color: $accordion-down-arrow-color transparent transparent
+		border-style: solid solid none
+		border-width: $accordion-down-arrow-border-size $accordion-down-arrow-border-size 0
+		content: ""
+		height: 0
+		left: - $accordion-down-arrow-border-size
+		position: absolute
+		top: - ($accordion-down-arrow-border-size + 1px)
+		width: 0
+	}
+}

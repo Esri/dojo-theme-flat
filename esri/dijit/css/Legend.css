@@ -1,0 +1,54 @@
+icon-core-style {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.esriLegendService {
+  padding-top: 4px;
+  margin-bottom: 4px;
+  border-top: 1px solid #b4b4b4;
+}
+.esriLegendService:first-child {
+  padding-top: 0;
+  border: 0;
+}
+.esriLegendService:last-child {
+  margin-bottom: 0;
+}
+.esriLegendServiceLabel {
+  display: block;
+  font-weight: bold;
+  color: #2b2e34;
+  padding-bottom: 8px;
+  position: relative;
+  width: 100%;
+}
+.esriLegendServiceLabel:after {
+  border-top: 1px dashed #c7c7c7;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.esriLegendLayerLabel {
+  color: #8d94a1;
+  padding-left: 8px;
+}
+.esriLegendLayer {
+  padding-left: 8px;
+}
+.esriLegendGroupLayer {
+  padding-top: 8px;
+}
+.esriLegendLeft {
+  padding-left: 12px;
+}
+.esriLegendRight {
+  padding-right: 12px;
+}

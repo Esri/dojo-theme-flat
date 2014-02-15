@@ -1,0 +1,52 @@
+/* map */
+@import url("map_base.css");
+/* Zoom Slider */
+@import url("ZoomSlider.css");
+/* edit */
+@import url("../toolbars/css/edit.css");
+/* AttributeInspector */
+@import url("../dijit/css/AttributeInspector.css");
+/* BasemapGallery */
+@import url("../dijit/css/BasemapGallery.css");
+/* Bookmarks */
+@import url("../dijit/css/Bookmarks.css");
+/* Directions */
+@import url("../dijit/css/Directions.css");
+/* Gallery */
+@import url("../dijit/css/Gallery.css");
+/* Geocoder */
+@import url("../dijit/css/Geocoder.css");
+/* Gauge */
+@import url("../dijit/css/Gauge.css");
+/* InfoWindow */
+@import url("../dijit/css/InfoWindow.css");
+/* Legend */
+@import url("../dijit/css/Legend.css");
+/* Measurement */
+@import url("../dijit/css/Measurement.css");
+/* OverviewMap */
+@import url("../dijit/css/OverviewMap.css");
+/* Popup */
+@import url("../dijit/css/Popup.css");
+/* PopupMobile */
+@import url("../dijit/css/PopupMobile.css");
+/* Print */
+@import url("../dijit/css/Print.css");
+/* Scalebar */
+@import url("../dijit/css/Scalebar.css");
+/* override certain dojo styles */
+@import url("dojo_override.css");
+/* TimeSlider */
+@import url("../dijit/css/TimeSlider.css");
+/* temporal */
+@import url("../dijit/css/temporal.css");
+/* drawingToolbar */
+@import url("../dijit/editing/css/drawingToolbar.css");
+/* editor */
+@import url("../dijit/editing/css/editor.css");
+/* override dojox datagrid */
+@import url("dojox_datagrid_override.css");
+/* TemplatePicker */
+@import url("../dijit/editing/css/TemplatePicker.css");
+/* analysis */
+@import url("../dijit/analysis/css/analysis.css");

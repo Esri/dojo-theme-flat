@@ -1,0 +1,43 @@
+/* ContentPane 
+ *	
+ * .dijitContentPane
+ * 	set padding for basic content pane
+ * 	
+ * Nested layouts:
+ * 
+ * .dijitTabContainerTop-dijitContentPane,
+ * .dijitTabContainerLeft-dijitContentPane,
+ * .dijitTabContainerBottom-dijitContentPane,
+ * .dijitTabContainerRight-dijitContentPane
+ * 	set background-color and padding of ContentPanes nested within TabContainer (can do top, left, bottom, or right) or Accordion Container
+ *
+ * .dijitAccordionContainer-dijitContentPane
+ * 	set background-color and padding of ContentPane nested within Accordion
+ *
+ * .dijitSplitContainer-dijitContentPane, 
+ *	set background-color and padding of ContentPane nested within a SplitContainer 
+ *
+ * .dijitBorderContainer-dijitContentPane
+ *	set background-color and padding of ContentPane nested within a BorderContainer 
+ */
+
+@import "../../variables"
+
+.{$theme-name} .dijitContentPane {
+	background: $contentpane-background	
+	padding: $contentpane-padding
+	border-radius: $contentpane-border-radius
+	box-shadow: $contentpane-box-shadow
+}		
+
+/* contentpane in other layouts */
+.{$theme-name} .dijitTabContainerTop-dijitContentPane,
+.{$theme-name} .dijitTabContainerLeft-dijitContentPane,
+.{$theme-name} .dijitTabContainerBottom-dijitContentPane,
+.{$theme-name} .dijitTabContainerRight-dijitContentPane,
+.{$theme-name} .dijitAccordionContainer-dijitContentPane {
+	background: $contentpane-nested-background
+	padding: $contentpane-nested-padding
+    left: 0 !important
+    top: 0 !important
+}

@@ -1,0 +1,161 @@
+icon-core-style {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.esriMeasurement {
+  background: #fff;
+  padding: 4px 8px;
+  border: 0 none;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 2px #fff inset, 0 0 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 0 2px #fff inset, 0 0 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px #fff inset, 0 0 2px rgba(0,0,0,0.2);
+  color: #2b2e34;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+}
+.esriMeasurement div:first-child {
+  display: none !important;
+}
+.distanceIcon {
+  background-image: url("../images/Measure_Distance16.png");
+  width: 16px;
+  height: 16px;
+}
+.areaIcon {
+  background-image: url("../images/Measure_Area16.png");
+  width: 16px;
+  height: 16px;
+}
+.locationIcon {
+  background-image: url("../images/Measure_Point16.png");
+  width: 16px;
+  height: 16px;
+}
+.esriButton {
+  float: left;
+}
+.esriButton + .esriButton {
+  margin-left: -1px;
+}
+.esriButton .dijitButtonNode {
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 4px 12px;
+  color: #2b2e34;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: linear-gradient(#fcfcfc, #f5f5f5);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+  float: left;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.esriButton:first-child .dijitButtonNode {
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+.esriButton:nth-child(3) .dijitButtonNode {
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+.esriButtonHover .dijitButtonNode {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: background 0.1s linear 0s;
+}
+.esriButtonActive .dijitButtonNode {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: none;
+  outline: none;
+}
+.esriButtonChecked .dijitButtonNode {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: none;
+  outline: none;
+  background: #007ac2;
+  color: #fff;
+}
+.esriToggleButton .dijitButtonNode {
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 4px 12px;
+  color: #2b2e34;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: linear-gradient(#fcfcfc, #f5f5f5);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+}
+.esriToggleButtonHover .dijitButtonNode,
+.esriToggleButtonOpened .dijitButtonNode {
+  color: #2b2e34;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: linear-gradient(#fff 0%, #f0f0f0 100%);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  transition: background 0.1s linear 0s;
+}
+.esriToggleButtonDisabled .dijitButtonNode {
+  color: #969696;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #f5f5f5;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: default;
+  opacity: 0.65;
+}
+.esriUnitButton .dijitButtonText {
+  font-size: 16px !important;
+}
+.esriToggleButton .dijitButtonNode .dijitArrowButtonInner {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.esriToggleButton .dijitButtonNode .dijitArrowButtonInner:before {
+  content: "\f0d7";
+}
+.resultLabel {
+  margin-top: 8px;
+  margin-bottom: $map-measurement-result-label-margin-bottom;
+  border-bottom: 1px solid #b4b4b4;
+}
+.result {
+  padding: 4px;
+}

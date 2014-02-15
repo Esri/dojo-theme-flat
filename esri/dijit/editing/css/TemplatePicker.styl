@@ -1,0 +1,91 @@
+@import "../../../../variables"
+
+.templatePicker {
+	border: $map-template-picker-border;
+	padding: $map-template-picker-padding;
+	border-radius: $map-template-picker-border-radius;
+}
+
+.templatePicker .tooltip {
+	width: 100px;
+	position: absolute;
+	border: 1px solid #7EABCD;
+	background-color: white;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+.templatePicker .grid .dojoxGridHeader {
+	display: none;
+}
+
+/* overwrite dojox datagrid styles */
+
+.templatePicker .dojoxGrid {
+	background: $map-template-picker-background;
+	font-size: 0.85em;
+}
+
+.templatePicker .dojoxGridScrollbox {
+	background: $map-template-picker-background;
+}
+
+.templatePicker .dojoxGridRow {
+	background: $map-template-picker-background;
+	border: $map-template-picker-border;
+}
+
+/* Row */
+
+.templatePicker .grid .dojoxGridRow {
+	padding: $map-template-picker-row-padding;
+}
+
+.templatePicker .grid .dojoxGridRowOdd {
+	background: $map-template-picker-background;
+}
+
+.templatePicker .grid .dojoxGridRowOver {
+}
+
+.templatePicker .grid .dojoxGridRowOver .dojoxGridCell {
+	background: $map-template-picker-background;
+}
+
+.templatePicker .grid .dojoxGridRowSelected {
+}
+
+/* Cell */
+
+.templatePicker .grid .dojoxGridCell {
+	border: $map-template-picker-cell-border;
+	padding: $map-template-picker-cell-padding;
+	border-radius: $map-template-picker-cell-border-radius;
+	outline: none;
+}
+
+.templatePicker .grid .dojoxGridCellOver {
+	background: $map-template-picker-cell-hover-background;
+}
+
+
+.templatePicker .grid .dojoxGridCellFocus {
+}
+
+.templatePicker .grid .selectedItem {
+	background: $map-template-picker-cell-selected-background;
+	border: $map-template-picker-cell-selected-border;
+	box-shadow: $map-template-picker-cell-selected-box-shadow;
+}
+
+.templatePicker .grid .groupLabel {
+	text-align: center;
+}
+
+.templatePicker .grid .item {
+	cursor: default;
+}
+
+.templatePicker .grid .dojoxGridRowTable tr {
+	vertical-align: top;
+}

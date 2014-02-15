@@ -1,0 +1,43 @@
+.esriTimeSlider {
+	width: 100%;
+	z-index: 999;
+	position: relative;
+}
+
+	.esriTimeSlider .tsButton {
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-image: url(../images/time_slider_sprite.png);
+	}
+
+	.esriTimeSlider .tsPlayButton {
+		background-position: -32px -0px;
+	}
+
+	.esriTimeSlider .tsPauseButton {
+		background-position: -16px -0px;
+	}
+
+	.esriTimeSlider .tsPrevButton {
+		background-position: -48px -0px;
+	}
+
+	.esriTimeSlider .tsNextButton {
+		background-position: 0px 0px;
+	}
+
+	.esriTimeSlider .ts {
+		padding: 10px 3px 3px 3px;
+		margin: 3px;
+	}
+
+	.esriTimeSlider .tsTicks {
+		height: 10px;
+		margin-bottom: -5px;
+	}
+
+	.esriTimeSlider .tsLabels {
+		font-size: .7em;
+		margin-top: 5px;
+	}

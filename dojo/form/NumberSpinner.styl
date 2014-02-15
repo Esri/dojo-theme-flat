@@ -1,0 +1,122 @@
+/* NumberSpinner - namespace "dijitSpinner"
+ * 
+ * Styling NumberSpinner mainly includes:
+ * 
+ * 1. Arrows
+ * 		Outer containers: .dijitSpinnerButtonContainer|.dijitSpinnerButtonInner  - for border, padding and position
+ * 		Arrows: .dijitArrowButton|.dijitUpArrowButton.|dijitDownArrowButton
+ * 		Inner container: .dijitArrowButtonInner - for border, padding, width|height and background image
+ * 
+ * 2. Hover state
+ * 		.dijitUpArrowButtonHover|.dijitDownArrowButtonHover .*  - for background color|image
+ * 
+ * 3. Active state
+ * 		.dijitUpArrowButtonActive|.dijitDownArrowButtonActive .*  - for border, padding, margin and background color|image
+ * 
+ * 4. Focused state
+ * 		.dijitSpinnerFocused .* - for background color|image
+ * 
+ * 5. Disabled state
+ * 		.dijitSpinnerDisabled .* - for background color|image
+ */
+
+@import "../../variables"
+
+.{$theme-name} .dijitSpinnerButtonContainer {
+	overflow: hidden
+	position: relative
+	width: auto
+	padding: 0
+	border-left: $numberspinner-button-border
+}
+
+.{$theme-name} .dijitSpinner .dijitSpinnerButtonInner {
+	width: $numberspinner-button-width
+	padding: $numberspinner-button-inner-padding
+	margin: 0
+}
+
+/* button */
+.{$theme-name} .dijitSpinner .dijitArrowButton {
+	button-style()
+	border-radius: 0
+	border: 0
+	width:auto
+	overflow: hidden
+	left: 0
+	right: 0
+	padding: $numberspinner-button-padding
+}
+
+.{$theme-name} .dijitSpinner .dijitArrowButton:before {
+	content: none // remove arrow icons from dijitArrowButton nodes
+}
+
+.{$theme-name} .dijitSpinner .dijitUpArrowButton {
+    border-top-right-radius: $button-border-radius
+}
+
+.{$theme-name} .dijitSpinner .dijitDownArrowButton {
+	border-bottom-right-radius: $button-border-radius
+	border-top: $numberspinner-button-border
+}
+
+/* hover */
+
+.{$theme-name} .dijitSpinner .dijitUpArrowButtonHover,
+.{$theme-name} .dijitSpinner .dijitDownArrowButtonHover {
+	button-hover-style()
+	border: 0
+}
+
+.{$theme-name} .dijitSpinner .dijitDownArrowButtonHover {
+	border-top: $numberspinner-button-border
+}
+
+/* active */
+
+.{$theme-name} .dijitSpinner .dijitDownArrowButtonActive,
+.{$theme-name} .dijitSpinner .dijitUpArrowButtonActive {
+	button-active-style()
+	border: 0
+}
+
+.{$theme-name} .dijitSpinner .dijitDownArrowButtonActive {
+	border-top: $numberspinner-button-border
+}
+
+/* disabled */
+
+.{$theme-name} .dijitSpinnerDisabled .dijitDownArrowButton,
+.{$theme-name} .dijitSpinnerDisabled .dijitUpArrowButton {
+	button-disabled-style()
+	border: 0
+}
+.{$theme-name} .dijitSpinnerDisabled .dijitDownArrowButton {
+	border-top: $numberspinner-button-border
+}
+
+/* up & down arrows */
+
+.{$theme-name} .dijitSpinner .dijitArrowButtonInner {
+	height: 0
+	width:0
+	margin-top: $numberspinner-arrow-padding
+	/* up arrow */
+	display: block
+}
+.{$theme-name} .dijitSpinner .dijitArrowButtonInner:before {
+	content: "\f0d8"
+}
+
+.{$theme-name} .dijitSpinner .dijitDownArrowButton .dijitArrowButtonInner {
+	
+}
+
+.{$theme-name} .dijitSpinner .dijitDownArrowButton .dijitArrowButtonInner:before {
+	content: "\f0d7"
+}
+
+.{$theme-name} .dijitSpinner .dijitArrowButtonInner .dijitInputField {
+	padding: 0
+}

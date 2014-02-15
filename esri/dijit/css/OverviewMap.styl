@@ -1,0 +1,116 @@
+@import "variables";
+
+.esriOverviewMap {
+	position: absolute;
+	z-index: 99;
+}
+
+.esriOverviewMap .ovwContainer {
+	position: absolute;
+	display: none;
+	background-color: $container-background-color;
+	padding: $padding * 0.5;
+	border: 1px solid $border-color;
+	box-shadow($container-shadow);
+	border-radius($border-radius);
+}
+
+.esriOverviewMap .map {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #FFF;
+	border-radius($border-radius - 1);
+}
+
+.esriOverviewMap .ovwHighlight {
+	position: absolute;
+	display: none;
+	z-index: 99;
+	cursor: move;
+	border-radius($border-radius);
+}
+
+.esriOverviewMap .ovwButton {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.esriOverviewMap .ovwMaximizer {
+	display: none;
+}
+
+.esriOverviewMap .ovwDisabledButton {
+	display: none !important;
+}
+
+.esriOverviewMap .ovwMaximize {
+	background: url(../images/overview.png) 0px -130px;
+}
+
+.esriOverviewMap .ovwRestore {
+	background: url(../images/overview.png) 0px -104px;
+}
+
+.esriOverviewMap.ovwTL {
+	top: $padding;
+	left: $padding;
+}
+
+.esriOverviewMap.ovwTR {
+	top: $padding;
+	right: $padding;
+}
+
+.esriOverviewMap.ovwBL {
+	bottom: $padding;
+	left: $padding;
+}
+
+.esriOverviewMap.ovwBR {
+	bottom: $padding;
+	right: $padding;
+}
+
+.esriOverviewMap.ovwTL .ovwContainer {
+	top: 0px;
+	left: 0px;
+}
+
+.esriOverviewMap.ovwTR .ovwContainer {
+	top: 0px;
+	right: 0px;
+}
+
+.esriOverviewMap.ovwBL .ovwContainer {
+	bottom: 0px;
+	left: 0px;
+}
+
+.esriOverviewMap.ovwBR .ovwContainer {
+	bottom: 0px;
+	right: 0px;
+}
+
+.esriOverviewMap.ovwTL .ovwShow, .esriOverviewMap.ovwBR .ovwHide {
+	background: url(../images/overview.png) 0px -26px;
+}
+
+.esriOverviewMap.ovwTR .ovwShow, .esriOverviewMap.ovwBL .ovwHide {
+	background: url(../images/overview.png) 0px 0px;
+}
+
+.esriOverviewMap.ovwBL .ovwShow, .esriOverviewMap.ovwTR .ovwHide {
+	background: url(../images/overview.png) 0px -78px;
+}
+
+.esriOverviewMap.ovwBR .ovwShow, .esriOverviewMap.ovwTL .ovwHide {
+	background: url(../images/overview.png) 0px -52px;
+}
+
+.esriOverviewMap .bingLogo-lg {
+	display: none;
+}

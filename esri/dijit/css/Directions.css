@@ -1,0 +1,760 @@
+.simpleDirections .esriStopsContainer {
+	margin: 0;
+}
+
+.simpleDirections .esriStopsButtons {
+	margin: 0;
+}
+
+.simpleDirections .esriStopsReverse {
+	margin: 0;
+	width: 21px;
+	height: 21px;
+	background: url(../images/Directions/reverse.png) no-repeat center center;
+	cursor: pointer;
+}
+
+.dojoDndMove .simpleDirections .esriStopsReverse {
+	display: none;
+}
+
+.simpleDirections .esriStopsReverse:hover {
+	opacity: 0.7;
+}
+
+.simpleDirections .esriStopsRemovable .esriStop .esriStopIconRemove {
+	display: block;
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+	background: url(../images/Directions/remove-destination.png) no-repeat center center;
+}
+
+	.simpleDirections .esriStopsRemovable .esriStop .esriStopIconRemove:hover {
+		opacity: 0.7;
+	}
+
+.simpleDirections .esriStopsAddDestination {
+	display: none;
+}
+
+.simpleDirections .esriStopsAdd .esriStopsAddDestination {
+	display: inline-block;
+	*display: inline;
+	_display: inline;
+	zoom: 1;
+	margin: 0 5px 5px 0;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: 11px;
+	line-height: 16px;
+	white-space: nowrap;
+	vertical-align: bottom;
+}
+
+.simpleDirections .esriStopsAddDestination:hover, .simpleDirections .esriStopsAddDestination:focus {
+	text-decoration: none;
+}
+
+.simpleDirections .esriStopsGetDirectionsContainer {
+	margin: 0 0 10px 0;
+}
+
+.simpleDirections .esriStopsGetDirections {
+	color: #444444;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #8b8b8b;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background: #F2F2F2;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #F2F2F2 0%, #D1D1D1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F2F2F2), color-stop(100%,#D1D1D1));
+	background: -webkit-linear-gradient(top, #F2F2F2 0%,#D1D1D1 100%);
+	background: -o-linear-gradient(top, #F2F2F2 0%,#D1D1D1 100%);
+	background: -ms-linear-gradient(top, #F2F2F2 0%,#D1D1D1 100%);
+	background: linear-gradient(to bottom, #F2F2F2 0%,#D1D1D1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2F2', endColorstr='#D1D1D1',GradientType=0 );
+	margin: 0;
+	font-size: 11px;
+	line-height: 16px;
+	display: block;
+	padding: 5px 10px;
+	outline: 0;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: normal;
+	white-space: nowrap;
+	text-decoration: none;
+	float: right;
+}
+
+	.simpleDirections .esriStopsGetDirections:hover, .simpleDirections .esriStopsGetDirections:focus {
+		background: #E5E6E6;
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top, #E5E6E6 0%, #A0A1A1 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E5E6E6), color-stop(100%,#A0A1A1));
+		background: -webkit-linear-gradient(top, #E5E6E6 0%,#A0A1A1 100%);
+		background: -o-linear-gradient(top, #E5E6E6 0%,#A0A1A1 100%);
+		background: -ms-linear-gradient(top, #E5E6E6 0%,#A0A1A1 100%);
+		background: linear-gradient(to bottom, #E5E6E6 0%,#A0A1A1 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E5E6E6', endColorstr='#A0A1A1',GradientType=0 );
+		;
+	}
+
+.simpleDirections .esriStopsOptionsButton {
+	display: none;
+	margin: 0 0 5px 0;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: 11px;
+	line-height: 16px;
+	white-space: nowrap;
+	vertical-align: bottom;
+}
+
+	.simpleDirections .esriStopsOptionsButton:hover, .simpleDirections .esriStopsOptionsButton:focus {
+		text-decoration: none;
+	}
+
+.simpleDirections .esriStopsOptionsEnabled .esriStopsOptionsButton {
+	display: inline-block;
+	*display: inline;
+	_display: inline;
+	zoom: 1;
+}
+
+.simpleDirections .esriStopsOptionsMenu {
+	display: none;
+	margin: 0;
+}
+
+	.simpleDirections .esriStopsOptionsMenu input {
+		margin: 0 5px 0 0;
+	}
+
+.simpleDirections .esriStops {
+	margin: 0 0 8px 0;
+	padding: 0;
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 2px;
+}
+
+.simpleDirections .esriStop td {
+	vertical-align: middle;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.simpleDirections .esriStop .esriStopIconColumn {
+	width: 21px;
+	padding-right: 5px;
+}
+
+.simpleDirections .esriStop .esriStopGeocoderColumn {
+}
+
+.simpleDirections .esriStop .esriStopReverseColumn {
+	width: 21px;
+	padding-left: 5px;
+}
+
+.simpleDirections .esriStopsRemovable .esriStopReverseColumn {
+	display: none;
+}
+
+.simpleDirections .esriStop .esriStopIconRemoveColumn {
+	display: none;
+	width: 21px;
+	padding-left: 5px;
+}
+
+.simpleDirections .esriStopsRemovable .esriStopIconRemoveColumn {
+	display: table-cell;
+	*display: block;
+	_display: block;
+}
+
+.simpleDirections .esriStop .esriStopIcon {
+	width: 21px;
+	height: 21px;
+	text-align: center;
+	color: #fff;
+	font-size: 11px;
+	line-height: 21px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.simpleDirections .esriStop .esriStopIcon {
+	background: url(../images/Directions/maneuvers/esriDMTStop.png) no-repeat center center;
+}
+
+.simpleDirections .esriStopOrigin .esriStopIcon {
+	background: url(../images/Directions/maneuvers/esriDMTStopOrigin.png) no-repeat center center;
+}
+
+.simpleDirections .esriStopDestination .esriStopIcon {
+	background: url(../images/Directions/maneuvers/esriDMTStopDestination.png) no-repeat center center;
+}
+
+.simpleDirections .esriRoutesError {
+	padding: 10px 0;
+}
+
+.simpleDirections .esriRoutes table {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.simpleDirections .esriRouteIconColumn {
+	width: 21px;
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #8b8b8b;
+}
+
+.simpleDirections .esriRouteTextColumn {
+	padding: 10px 5px 10px 0;
+	vertical-align: top;
+	border-bottom: 1px solid #8b8b8b;
+}
+
+.simpleDirections .esriRouteIconColumn .esriRouteIcon {
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 21px;
+	width: 21px;
+	margin: 0;
+	line-height: 21px;
+	vertical-align: middle;
+	font-size: 11px;
+	text-align: center;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.esriPopup .esriInfoWindowRoute {
+	display: block;
+	padding-left: 26px;
+	min-height: 21px;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.esriPopup .esriDMTDepart .esriInfoWindowRoute, .esriPopup .esriDMTStop .esriInfoWindowRoute {
+	padding-left: 0;
+	background: none;
+}
+
+.esriDMTUnknown .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTUnknown.png);
+}
+
+.esriDMTStop .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTStop.png);
+}
+
+.esriDMTStraight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTStraight.png);
+}
+
+.esriDMTBearLeft .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTBearLeft.png);
+}
+
+.esriDMTBearRight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTBearRight.png);
+}
+
+.esriDMTTurnLeft .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTTurnLeft.png);
+}
+
+.esriDMTTurnRight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTTurnRight.png);
+}
+
+.esriDMTSharpLeft .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTSharpLeft.png);
+}
+
+.esriDMTSharpRight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTSharpRight.png);
+}
+
+.esriDMTUTurn .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTUTurn.png);
+}
+
+.esriDMTFerry .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTFerry.png);
+}
+
+.esriDMTRoundabout .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTRoundabout.png);
+}
+
+.esriDMTHighwayMerge .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTHighwayMerge.png);
+}
+
+.esriDMTHighwayExit .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTHighwayExit.png);
+}
+
+.esriDMTHighwayChange .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTHighwayChange.png);
+}
+
+.esriDMTForkCenter .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTForkCenter.png);
+}
+
+.esriDMTForkLeft .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTForkLeft.png);
+}
+
+.esriDMTForkRight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTForkRight.png);
+}
+
+.esriDMTDepart .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTDepart.png);
+}
+
+.esriDMTTripItem .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTTripItem.png);
+}
+
+.esriDMTEndOfFerry .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTEndOfFerry.png);
+}
+
+.esriDMTRampRight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTRampRight.png);
+}
+
+.esriDMTRampLeft .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTRampLeft.png);
+}
+
+.esriDMTTurnLeftRight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTTurnLeftRight.png);
+}
+
+.esriDMTTurnRightLeft .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTTurnRightLeft.png);
+}
+
+.esriDMTTurnRightRight .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTTurnRightRight.png);
+}
+
+.esriDMTTurnLeftLeft .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTTurnLeftLeft.png);
+}
+
+.esriDMTPedestrianRamp .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTPedestrianRamp.png);
+}
+
+.esriDMTElevator .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTElevator.png);
+}
+
+.esriDMTEscalator .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTEscalator.png);
+}
+
+.esriDMTStairs .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTStairs.png);
+}
+
+.esriDMTDoorPassage .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTDoorPassage.png);
+}
+
+.esriDMTStopOrigin .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTStopOrigin.png);
+}
+
+.esriDMTStopDestination .esriRouteIcon {
+	background-image: url(../images/Directions/maneuvers/esriDMTStopDestination.png);
+}
+
+.simpleDirections .esriRouteZoom {
+	cursor: pointer;
+}
+
+.simpleDirections .esriDMTStopDestination .esriRouteIconColumn, .simpleDirections .esriDMTStopDestination .esriRouteTextColumn {
+	border-bottom: 0;
+}
+
+.simpleDirections .esriRouteZoom:hover {
+	background: #fafafa;
+}
+
+.simpleDirections .esriRouteInfo {
+	color: #666666;
+}
+
+	.simpleDirections .esriRouteInfo strong {
+		color: #333;
+	}
+
+.simpleDirections .esriDMTStopDestination .esriRouteInfo {
+	border: 0;
+}
+
+.simpleDirections .esriRouteLength {
+	font-size: 11px;
+	line-height: 14px;
+}
+
+.simpleDirections .esriResultsContainer {
+	background: #fff;
+}
+
+.simpleDirections .esriResultsLoading .esriResultsContainer {
+	height: 32px;
+	background: url(../images/Directions/loading-32.gif) no-repeat center center;
+}
+
+.simpleDirections .esriResultsRouteName {
+	margin: 10px 0;
+	display: none;
+}
+
+.simpleDirections .esriResultsSummary {
+	margin: 0;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+.simpleDirections .esriResultsButtonsContainer {
+	margin: 0 0 10px 0;
+}
+
+.simpleDirections .esriResultsViewFullRoute {
+	text-decoration: underline;
+	font-size: 11px;
+	line-height: 16px;
+	cursor: pointer;
+	margin: 0 5px 0 0;
+	padding: 5px 0 0 0;
+	float: left;
+}
+
+	.simpleDirections .esriResultsViewFullRoute:hover, .simpleDirections .esriResultsViewFullRoute:focus {
+		text-decoration: none;
+	}
+
+.simpleDirections .esriResultsPrint {
+	float: right;
+	width: 16px;
+	height: 16px;
+	background: url(../images/Directions/print.png) no-repeat center center;
+	margin: 0;
+	padding: 10px 5px;
+	cursor: pointer;
+}
+
+	.simpleDirections .esriResultsPrint:hover, .simpleDirections .esriResultsPrint:focus {
+		opacity: 0.7;
+	}
+
+.simpleDirections .esriGeocoderContainer {
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 0;
+}
+
+.simpleDirections ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+
+.simpleDirections .esriGeocoder {
+	display: block;
+	margin: 0;
+	padding: 6px;
+	border: 1px solid #8b8b8b;
+	background: #f6f6f6;
+	background: url(data:image/svg+xml; base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2ZjZmNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZWZlZmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #fefefe 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #fefefe 0%,#ffffff 100%);
+	background: -o-linear-gradient(top, #fefefe 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #fefefe 0%,#ffffff 100%);
+	background: linear-gradient(to bottom, #fefefe 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#ffffff',GradientType=0 );
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.simpleDirections .esriGeocoderActive, .simpleDirections .esriGeocoderMenuActive {
+	border-bottom: 1px solid #fff;
+}
+
+.simpleDirections .esriGeocoder input {
+	outline: 0;
+	border: 0;
+	margin: 0;
+	background: #fff;
+	width: 100%;
+	font-size: 12px;
+	line-height: 16px;
+	height: 16px;
+	padding: 0;
+}
+
+.simpleDirections .esriGeocoderResults {
+	display: none;
+	z-index: 99;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	margin: -1px 0 0 0;
+	padding: 0;
+	background: #fff;
+}
+
+	.simpleDirections .esriGeocoderResults ul {
+		border: 1px solid #8b8b8b;
+		border-top: 0;
+	}
+
+.simpleDirections .esriGeocoderResult {
+	display: block;
+	cursor: pointer;
+	padding: 6px;
+	font-size: 12px;
+	line-height: 14px;
+	outline: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+
+	.simpleDirections .esriGeocoderResult:hover, .simpleDirections .esriGeocoderResultEven:focus, .simpleDirections .esriGeocoderResultOdd:focus {
+		background-color: #d9e7fa;
+	}
+
+	.simpleDirections .esriGeocoderResult .esriGeocoderResultPartial {
+		font-weight: bold;
+	}
+
+.simpleDirections .esriGeocoderIcon {
+	display: none;
+}
+
+.esriGeocoder .esriGeocoderClearFloat {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.dojoDndAvatar {
+	display: none;
+}
+
+.dj_a11y .dojoDndAvatar {
+	display: none;
+}
+
+.simpleDirections .dojoDndItem {
+	margin: 0;
+	padding: 0;
+}
+
+	.simpleDirections .dojoDndItem td {
+		border: 0;
+		vertical-align: middle;
+	}
+
+.simpleDirections .dojoDndItemOver, .simpleDirections .dojoDndItemAnchor {
+	background-image: none;
+	background-color: transparent;
+	cursor: default;
+}
+
+.simpleDirections .dojoDndMove {
+	cursor: move;
+}
+
+.simpleDirections .dojoDndHandle {
+	cursor: move;
+}
+
+.simpleDirections .dojoDndIgnore {
+	cursor: default;
+}
+
+.simpleDirections .dojoDndItemBefore td {
+	border: 0;
+	padding-top: 2px;
+	border-top: 2px dashed #ccc;
+}
+
+.simpleDirections .dojoDndItemAfter td {
+	border: 0;
+	padding-bottom: 2px;
+	border-bottom: 2px dashed #ccc;
+}
+
+.simpleDirections .dojoDndItemBefore .esriStopReverseColumn {
+	border: none;
+}
+
+.simpleDirections .dojoDndItemAfter .esriStopReverseColumn {
+	border: none;
+}
+
+.simpleDirections .esriClear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.simpleDirections .esriPrintPage {
+	padding: 30px 0;
+	margin: 20px auto;
+	font-family: arial,sans-serif;
+	font-size: 13px;
+}
+
+.simpleDirections .esriPrintBar {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	height: 50px;
+	background: #fafafa;
+	border-bottom: 1px solid #000;
+}
+
+.simpleDirections .esriPrintButton {
+	color: #444444;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #8b8b8b;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background: #F2F2F2;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #F2F2F2 0%, #D1D1D1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F2F2F2), color-stop(100%,#D1D1D1));
+	background: -webkit-linear-gradient(top, #F2F2F2 0%,#D1D1D1 100%);
+	background: -o-linear-gradient(top, #F2F2F2 0%,#D1D1D1 100%);
+	background: -ms-linear-gradient(top, #F2F2F2 0%,#D1D1D1 100%);
+	background: linear-gradient(to bottom, #F2F2F2 0%,#D1D1D1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2F2', endColorstr='#D1D1D1',GradientType=0 );
+	margin: 10px 20px;
+	font-size: 11px;
+	line-height: 16px;
+	display: block;
+	padding: 5px 10px;
+	outline: 0;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: normal;
+	white-space: nowrap;
+	text-decoration: none;
+	float: right;
+}
+
+	.simpleDirections .esriPrintButton:hover, .simpleDirections .esriPrintButton:focus {
+		background: #E5E6E6;
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top, #E5E6E6 0%, #A0A1A1 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E5E6E6), color-stop(100%,#A0A1A1));
+		background: -webkit-linear-gradient(top, #E5E6E6 0%,#A0A1A1 100%);
+		background: -o-linear-gradient(top, #E5E6E6 0%,#A0A1A1 100%);
+		background: -ms-linear-gradient(top, #E5E6E6 0%,#A0A1A1 100%);
+		background: linear-gradient(to bottom, #E5E6E6 0%,#A0A1A1 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E5E6E6', endColorstr='#A0A1A1',GradientType=0 );
+		;
+	}
+
+.simpleDirections .esriPrintMain {
+	background: #FFF;
+	border: solid 1px #000;
+	margin: 0 auto;
+	padding: 20px;
+	width: 720px;
+}
+
+.simpleDirections .esriPrintHeader {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.simpleDirections .esriPrintName {
+	font-weight: bold;
+	font-size: 120%;
+	margin: 10px 0 5px 0;
+}
+
+.simpleDirections .esriPrintStopLabel {
+	color: #000;
+	display: inline-block;
+	font-size: 11px;
+	width: 21px;
+	height: 21px;
+	line-height: 21px;
+	border: 1px solid #000;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.simpleDirections .esriPrintLength {
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+.simpleDirections .esriPrintNotes {
+	width: auto;
+	margin: 0 0 10px 0;
+	max-width: 100%;
+	min-width: 20%;
+}
+
+.simpleDirections .esriPrintDirections {
+	margin: 0;
+}
+
+	.simpleDirections .esriPrintDirections table {
+		border-collapse: collapse;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+.simpleDirections .esriPrintFooter {
+	font-size: 80%;
+}

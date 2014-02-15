@@ -1,0 +1,106 @@
+@import "../../../variables"
+
+.LayerSwipe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.LayerSwipe .handleContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.LayerSwipe .vertical {
+	position: absolute;
+	border-left: $map-layer-swipe-bar-border;
+	border-right: $map-layer-swipe-bar-border;
+	background: $map-layer-swipe-bar-vertical-background;
+	width: $map-layer-swipe-bar-vertical-width;
+	height: 100%;
+	padding: 0!important;
+	margin: 0;
+	z-index: 30;
+	cursor: col-resize;
+}
+
+.LayerSwipe .vertical:hover {
+	background: $map-layer-swipe-bar-vertical-Hover-background;
+}
+
+.LayerSwipe .vertical .handle {
+	width: $map-layer-swipe-handle-vertical-width;
+	height: $map-layer-swipe-handle-vertical-height;
+	margin: $map-layer-swipe-handle-vertical-margin;
+	position: absolute;
+	z-index: 30;
+	top: 50%;
+	left: 50%;
+	background: $map-layer-swipe-handle-vertical-background;
+	border-radius: $map-layer-swipe-handle-border-radius;
+	border: $map-layer-swipe-handle-vertical-border;
+	text-align: center;
+	line-height: @height;
+	box-shadow: $map-layer-swipe-handle-box-shadow;
+}
+
+.LayerSwipe .vertical .handle:before {
+    color: $map-layer-swipe-handle-vertical-icon-color;
+    content: $map-layer-swipe-handle-vertical-icon;
+    font-family: fontawesome;
+	font-size: $map-layer-swipe-handle-vertical-icon-size;
+}
+
+.LayerSwipe .horizontal {
+	position: absolute;
+	border-top: $map-layer-swipe-bar-horizontal-border;
+	border-bottom: $map-layer-swipe-bar-horizontal-border;
+	background: $map-layer-swipe-bar-horizontal-background;
+	width: 100%;
+	height: $map-layer-swipe-bar-horizontal-height;
+	padding: 0!important;
+	margin: 0;
+	z-index: 30;
+	cursor: row-resize;
+}
+
+.LayerSwipe .horizontal:hover {
+	background: $map-layer-swipe-bar-horizontal-Hover-background
+}
+
+.LayerSwipe .horizontal .handle {
+	width: $map-layer-swipe-handle-horizontal-width;
+	height: $map-layer-swipe-handle-horizontal-height;
+	margin: $map-layer-swipe-handle-horizontal-margin;
+	position: absolute;
+	z-index: 30;
+	top: 50%;
+	left: 50%;
+	background: $map-layer-swipe-handle-horizontal-background;
+	border-radius: $map-layer-swipe-handle-border-radius;
+	border: $map-layer-swipe-handle-horizontal-border;
+	text-align: center;
+	line-height: @height;
+	box-shadow: $map-layer-swipe-handle-box-shadow;
+}
+
+.LayerSwipe .scope {
+	border: 0;
+	height: 261px;
+	overflow: hidden;
+	position: absolute;
+	width: 261px;
+	cursor: move;
+	top: 0;
+	left: 0;
+	z-index: 30;
+	background-color: transparent;
+	background-image: url(../images/scope.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.LayerSwipe .scope .handleContainer {
+	display: none;
+}
