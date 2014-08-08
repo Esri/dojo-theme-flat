@@ -1,0 +1,9 @@
+.dijitRtl .dijitEditorIconUndo:before {
+  content: "\f01e";
+}
+.dijitRtl .dijitEditorIconRedo:before {
+  content: "\f0e2";
+}
+.dijitRtl .dijitEditorIconTabIndent:before {
+  content: "\f060";
+}

@@ -1,0 +1,61 @@
+@import "../../../variables";
+
+.dgrid-hider-toggle {
+	_icon-core-style();
+	width: $dgrid-extension-columnhider-icon-width;
+	border: 0 none;
+	background: transparent;
+	padding: 0;
+	cursor: pointer;
+	position: absolute;
+	right: (21px - $dgrid-extension-columnhider-icon-width) * 0.5; /* scrollbar's width minus width of the icon and divide this value by 2, which is the spacing it needs to center the icon */
+	top: 50%;
+	margin-top: - $dgrid-extension-columnhider-icon-width * 0.5;
+
+	&:before {
+		content: "\f142";
+	}
+}
+
+.dgrid-hider-menu {
+	min-width: $dgrid-extension-columnhider-menu-min-width;
+	padding: $dgrid-extension-columnhider-menu-padding;
+	border: $dgrid-extension-columnhider-menu-border;
+	background-color: $dgrid-extension-columnhider-menu-background;
+	position: absolute;
+	top: 0;
+	right: (21px - $dgrid-extension-columnhider-icon-width) * 0.5 + $dgrid-extension-columnhider-icon-width;
+	z-index: 99999;
+	border-radius: $dgrid-extension-columnhider-menu-border-radius;
+	box-shadow: $dgrid-extension-columnhider-menu-box-shadow;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.dgrid-hider-menu-row {
+	position: relative;
+	padding: $dgrid-extension-columnhider-menu-box-row-padding;
+}
+
+.dgrid-hider-menu-check {
+	position: absolute;
+	top: $dgrid-extension-columnhider-menu-box-row-padding;
+	left: $dgrid-extension-columnhider-menu-box-row-padding;
+	padding: 0;
+}
+
+.dgrid-hider-menu-label {
+	display: block;
+	padding-left: $dgrid-extension-columnhider-icon-width + $dgrid-extension-columnhider-menu-box-row-padding; /* width of a checkbox plus value of the default padding */
+}
+
+html.has-quirks .dgrid-hider-menu-check,
+html.has-ie-6-7 .dgrid-hider-menu-check {
+	/* IE < 8 seems to ignore padding: 0, so counteract */
+	top: 0;
+	left: 0;
+}
+
+#dgrid-css-extensions-ColumnHider-loaded {
+	display: none;
+}

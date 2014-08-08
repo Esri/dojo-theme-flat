@@ -1,0 +1,368 @@
+/* esriSimpleSlider | esriLargeSlider
+ * 
+ * Styling ZoomSlider mainly includes:
+ * 
+ * 1. Containers
+ * 		.esriSimpleSlider - simple zoom slider
+ *		.esriLargeSlider - large zoom slider (inherited from dijit/form/Slider)
+ *
+ * 2. Positions
+ *		Simple zoom slider:
+ * 			.esriSimpleSliderTL - top left
+ *			.esriSimpleSliderTR	- top right
+ *			.esriSimpleSliderBL	- below left
+ *			.esriSimpleSliderBR	- below right
+ *		Large zoom slider:
+ * 			.esriLargeSliderTL - top left
+ *			.esriLargeSliderTR - top right
+ *			.esriLargeSliderBL - below left
+ *			.esriLargeSliderBR - below right
+ * 
+ * 3. Orientations
+ *		Simple zoom slider:
+ *			.esriSimpleSliderVertical - vertical
+ *			.esriSimpleSliderHorizontal - horizontal
+ *		Large zoom slider:
+ *			.esriLargeSliderVertical - vertical
+ *			.esriLargeSliderHorizontal - horizontal
+ * 
+ * 4. Buttons
+ *		Simple zoom slider:
+ *			.esriSimpleSlider div
+ *		Large zoom slider:
+ *			.dijitSliderIncrementIconV
+ *			.dijitSliderDecrementIconV
+ *			.dijitSliderIncrementIconH
+ *			.dijitSliderDecrementIconH
+ * 5. States - Hover, Active, Disabled, e.g.
+ *		Simple zoom slider:
+ * 			.esriSimpleSlider div &[:hover | :active | .disabled]
+ *		Large zoom slider:
+ *			.dijitSliderIncrementIconV.dijitSliderDecrementButtonHover
+ *			.dijitSliderDecrementIconV.dijitSliderIncrementButtonHover
+ *			.dijitSliderIncrementIconH.dijitSliderIncrementButtonHover
+ *			.dijitSliderDecrementIconH.dijitSliderDecrementButtonHover
+ *			.dijitSliderIncrementIconV.dijitSliderDecrementButtonActive
+ *			.dijitSliderDecrementIconV.dijitSliderIncrementButtonActive
+ *			.dijitSliderIncrementIconH.dijitSliderIncrementButtonActive
+ *			.dijitSliderDecrementIconH.dijitSliderDecrementButtonActive
+ */
+
+@import "../../variables";
+
+/* simple zoom slider */
+
+.esriSimpleSlider {
+	position: absolute;
+	text-align: center;
+	border: $map-simple-zoom-slider-border;
+	background: $map-simple-zoom-slider-background;
+	cursor: pointer;
+	user-select: none;
+	border-radius: $map-simple-zoom-slider-border-radius;
+	box-shadow: $map-simple-zoom-slider-box-shadow;
+
+	/* Buttons */
+
+	div {
+		background: $map-simple-zoom-slider-button-background;
+		width: $map-simple-zoom-slider-button-width;
+		height: $map-simple-zoom-slider-button-height;
+		_icon-core-style();
+		font-size: 0;
+		line-height: @height;
+		border: 0 none;
+		padding:0;
+		user-select: none;
+		
+		&:hover {
+			background: $map-simple-zoom-slider-button-hover-background;
+		}
+
+		&:active {
+			background: $map-simple-zoom-slider-button-active-background;
+		}
+		&.disabled,
+		&.disabled:hover,
+		&.disabled:active {
+			opacity: $disabled-opacity;
+		}
+	}
+	.esriSimpleSliderIncrementButton:before {
+		content: "\f067";
+		font-size: 14px;
+	}
+	.esriSimpleSliderDecrementButton:before {
+		content: "\f068";
+		font-size: 14px;
+	}
+}
+
+/* simple zoom slider: positioning */
+
+.esriSimpleSliderTL {
+	top: $map-zoom-slider-padding;
+	left: $map-zoom-slider-padding;
+}
+
+.esriSimpleSliderTR {
+	top: $map-zoom-slider-padding;
+	right: $map-zoom-slider-padding;
+}
+
+.esriSimpleSliderBL {
+	bottom: 55px; //space for scale bar
+	left: $map-zoom-slider-padding;
+}
+
+.esriSimpleSliderBR {
+	bottom: 45px; //space for logo
+	right: $map-zoom-slider-padding;
+}
+
+/* simple zoom slider: vertical */
+
+.esriSimpleSliderVertical {
+	.esriSimpleSliderIncrementButton {
+		border-bottom: 0;
+		border-radius: $map-simple-zoom-slider-border-radius $map-simple-zoom-slider-border-radius 0 0;
+		position: relative;
+		padding-bottom: 1px;
+
+		&:after {
+			content: "";
+			height: 1px;
+			background: $map-simple-zoom-slider-buttons-separator-color;
+			position: absolute;
+			bottom: 0;
+			left: 4px;
+			right: 4px;
+		}
+	}
+	.esriSimpleSliderDecrementButton {
+		border-radius: 0 0 $map-simple-zoom-slider-border-radius $map-simple-zoom-slider-border-radius;
+	}
+}
+
+/* simple zoom slider: horizontal */
+
+.esriSimpleSliderHorizontal {
+	&.esriSimpleSliderBL {
+		left: $map-zoom-slider-padding;
+	}
+	&.esriSimpleSliderBR {
+		right: $map-zoom-slider-padding;
+	}
+	&.esriSimpleSliderIncrementButton {
+		border-radius: 0 $map-simple-zoom-slider-border-radius $map-simple-zoom-slider-border-radius 0;
+		float: right;
+	}
+	.esriSimpleSliderDecrementButton {
+		border-right: 0;
+		border-radius: $map-simple-zoom-slider-border-radius 0 0 $map-simple-zoom-slider-border-radius;
+		float: left;
+		position: relative;
+		padding-right: 1px;
+
+		&:after {
+			content: "";
+			width: 1px;
+			background: $map-simple-zoom-slider-buttons-separator-color;
+			position: absolute;
+			bottom: 0;
+			top: 4px;
+			bottom: 4px;
+			right: 0;
+		}
+	}
+}
+
+/* large zoom slider */
+
+.esriLargeSlider {
+	position: absolute;
+	border: $map-large-zoom-slider-border;
+	border-radius: $map-large-zoom-slider-border-radius;
+	background: $map-large-zoom-slider-background;
+	box-shadow: $map-large-zoom-slider-box-shadow;
+
+	
+	tr td:last-child {
+		display: none; // Hide Labeling: this theme does not support labeling 
+	}
+	tr td.dijitSliderButtonContainerH {
+		display: inherit;
+	}
+	&.dijitSliderH tr:last-child {
+		display: none; // Hide Labeling: this theme does not support labeling
+	}
+
+}
+
+/* large zoom slider: positioning */
+
+.esriLargeSliderTL {
+	top: $map-zoom-slider-padding;
+	left: $map-zoom-slider-padding;
+}
+
+.esriLargeSliderTR {
+	top: $map-zoom-slider-padding;
+	right: $map-zoom-slider-padding;
+}
+
+.esriLargeSliderBL {
+	bottom: 55px;
+	left: $map-zoom-slider-padding;
+}
+
+.esriLargeSliderBR {
+	bottom: 45px;
+	right: $map-zoom-slider-padding;
+}
+
+
+/* large zoom slider: vertical */
+
+.esriLargeSliderVertical {
+	height: $map-vertical-large-zoom-slider-height;
+
+	.esriLargeSliderTicks {
+		width: 0;
+	}
+	.esriLargeSliderLabels {
+		width: 0;
+		font-size: 0; 
+	}
+}
+
+/* large zoom slider: Horizontal */
+
+.esriLargeSliderHorizontal {
+	width: $map-horizontal-large-zoom-slider-width;
+	
+	&.esriLargeSliderBL {
+		left: $map-zoom-slider-padding;
+	}
+	&.esriLargeSliderBR {
+		right: $map-zoom-slider-padding
+	}
+	&.esriLargeSliderTicks {
+		height: 0;
+	}
+	&.esriLargeSliderLabels {
+		height: 0;
+		font-size: 0;
+	}
+}
+
+.esriLargeSlider {
+	.dijitSliderButtonContainerV,
+	.dijitSliderButtonContainerH {
+		padding: 0;
+	}
+
+	/* remaining bar */
+
+	.dijitSliderBar {
+		&.dijitSliderRemainingBar {
+			width: $map-large-zoom-slider-bar-width;
+			background: $map-large-zoom-slider-remaining-bar-background;
+			border: $map-large-zoom-slider-remaining-bar-border;
+			border-radius: $map-large-zoom-slider-remaining-bar-border-radius;
+			box-shadow: $map-large-zoom-slider-remaining-bar-box-shadow;
+		}
+		&.dijitSliderRemainingBarH {
+			height: $map-large-zoom-slider-bar-width;
+		}
+	}
+
+	/* progress bar */
+
+	.dijitSliderBar {
+		&.dijitSliderProgressBar {
+			width: $map-large-zoom-slider-bar-width;
+			background: $map-large-zoom-slider-highlight-color;
+			border: $map-large-zoom-slider-progress-bar-border;
+			border-radius: 0 0 $map-large-zoom-slider-progress-bar-border-radius $map-large-zoom-slider-progress-bar-border-radius;
+		}
+		&.dijitSliderProgressBarH {
+			border-radius: $map-large-zoom-slider-progress-bar-border-radius 0 0 $map-large-zoom-slider-progress-bar-border-radius;
+			height: $map-large-zoom-slider-bar-width;
+		}
+	}
+
+	/* bar: hover & active */
+
+	.dijitSliderHover .dijitSliderBar.dijitSliderProgressBar,
+	.dijitSliderActive .dijitSliderBar.dijitSliderProgressBar,
+	.dijitSliderHover .dijitSliderBar.dijitSliderRemainingBar,
+	.dijitSliderActive .dijitSliderBar.dijitSliderRemainingBar {
+		border-color: $map-large-zoom-slider-active-border-color;
+	}
+
+	/* increment & decrement buttons */
+
+	.dijitSliderIncrementIconV,
+	.dijitSliderDecrementIconV,
+	.dijitSliderIncrementIconH,
+	.dijitSliderDecrementIconH {
+		background: $map-large-zoom-slider-button-background;
+		padding: $map-large-zoom-slider-button-padding;
+		border:0;
+	}
+
+	/* increment & decrement buttons: vertical */
+
+	.dijitSliderIncrementIconV {
+		border-bottom: $map-large-zoom-slider-increment-button-border-bottom;
+		border-radius: $map-large-zoom-slider-border-radius $map-large-zoom-slider-border-radius 0 0;
+		margin-bottom: $padding*3;
+	}
+
+	.dijitSliderDecrementIconV {
+		border-top: $map-large-zoom-slider-decrement-button-border-top;
+		border-radius: 0 0 $map-large-zoom-slider-border-radius $map-large-zoom-slider-border-radius;
+		margin-top: $padding*3;
+	}
+
+	/* increment & decrement buttons: horizontal */
+
+	.dijitSliderDecrementIconH {
+		border-right: $map-large-zoom-slider-increment-button-border-right;
+		border-radius: $map-large-zoom-slider-border-radius 0 0 $map-large-zoom-slider-border-radius;
+		margin-right: $padding*3;
+	}
+
+	.dijitSliderIncrementIconH {
+		border-left: $map-large-zoom-slider-decrement-button-border-left;
+		border-radius: 0 $map-large-zoom-slider-border-radius $map-large-zoom-slider-border-radius 0;
+		margin-left: $padding*3;
+	}
+
+	/* increment & decrement buttons: hover */
+	
+	.dijitSliderIncrementIconV.dijitSliderDecrementButtonHover,
+	.dijitSliderDecrementIconV.dijitSliderIncrementButtonHover,
+	.dijitSliderIncrementIconH.dijitSliderIncrementButtonHover,
+	.dijitSliderDecrementIconH.dijitSliderDecrementButtonHover {
+		background: $map-large-zoom-slider-button-hover-background;
+		box-shadow: none;
+	}
+
+	/* increment & decrement buttons: active */
+
+	.dijitSliderIncrementIconV.dijitSliderDecrementButtonActive,
+	.dijitSliderDecrementIconV.dijitSliderIncrementButtonActive,
+	.dijitSliderIncrementIconH.dijitSliderIncrementButtonActive,
+	.dijitSliderDecrementIconH.dijitSliderDecrementButtonActive {
+		background: $map-large-zoom-slider-button-active-background;
+		box-shadow: none;
+	}
+	.dijitSliderButtonInner {
+		visibility: visible;
+	}
+	.dijitSliderBumper {
+		display: none;
+	}
+}

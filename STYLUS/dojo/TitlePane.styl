@@ -1,0 +1,85 @@
+/* TitlePane 
+ * 
+ * Styling TitlePane means styling the TitlePane title and its content container  (dijitTitlePane)
+ * 
+ * TitlePane title:
+ * 1. TitlePane title (default styling): 
+ * 		.dijitTitlePaneTitle - TitlePane's title div style: background-color, border
+ *
+ * 2. hovered TitlePane title (ie, mouse hover on a title bar)
+ * 		.dijitTitlePaneTitleHover - styles when mouse hover on the title div
+ * 
+ * 3. active TitlePane title (ie, mouse down on a title bar)
+ * 		.dijitTitlePaneTitleActive - styles when mouse down on the title div
+ * 
+ * 
+ * TitlePane Content Container:
+ * 1. outer/inner container: 
+ * 		.dijitTitlePaneContentOuter / dijitTitlePaneContentInner - styles for the content outer div
+ */
+
+@import "../variables";
+
+.dijitTitlePaneTitle {
+	button-style();
+	if($titlepane-has-border-radius) {
+		border-radius: $titlepane-border-radius $titlepane-border-radius 0 0;
+	} else {
+		border-radius: 0;
+	}
+}
+
+.dijitTitlePaneTitleHover {
+	button-hover-style();
+	box-shadow: none;
+}
+
+.dijitTitlePaneTitleActive {
+	button-active-style();
+}
+
+//.dijitTitlePaneTitleFocus {
+//}
+
+.dijitTitlePane {
+	.dijitArrowNode {
+		_icon-core-style();
+		text-align: center;
+		&:before {
+			content:"\f078";
+			font-size: 12px;
+		}
+	}
+
+	.dijitClosed {
+		if($titlepane-has-border-radius) {
+			border-radius: $titlepane-border-radius;
+		} else {
+			border-radius: 0;
+		}
+		.dijitArrowNode:before {
+			content: "\f077";
+		}
+	}
+}
+
+.dijitTitlePaneContentOuter {
+	background: $titlepane-content-background;
+	border: $titlepane-content-border;
+	border-top: none;
+	if($titlepane-has-border-radius) {
+		border-radius: 0 0 $titlepane-border-radius $titlepane-border-radius;
+	} else {
+		border-radius: 0;
+	}
+}
+
+.dijitTitlePaneContentInner {
+	padding: $titlepane-content-padding;
+}
+
+.dijitTitlePaneTextNode {
+	margin-left: $padding*2;
+	margin-right: $padding*2;
+	vertical-align:text-top;
+}

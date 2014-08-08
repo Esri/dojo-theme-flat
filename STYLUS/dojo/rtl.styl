@@ -1,0 +1,96 @@
+@import "../variables";
+
+.dijitRtl .dijitPlaceHolder {
+	left: auto;
+	right: 0;
+}
+
+.dijitMenuItemRtl {
+	text-align: right;
+}
+
+.dijitTextBoxRtl .dijitValidationContainer,
+.dijitTextBoxRtl .dijitSpinnerButtonContainer,
+.dijitComboBoxRtl .dijitArrowButtonContainer {
+	border-right-width: 1px !important;
+	border-left-width: 0 !important;
+}
+
+.dijitComboBoxRtl .dijitArrowButtonContainer {
+	border-radius: $button-border-radius 0 0 $button-border-radius;
+}
+
+.dijitDropDownButtonRtl .dijitArrowButtonInner {
+	margin-left: auto;
+	margin-right: $padding*3;
+}
+
+/* Select */
+
+.dijitSelectRtl {
+	.dijitButtonText {
+		float: right;
+		padding: 0 $input-padding*3 0 0;
+	}
+	.dijitButtonContents {
+		border-style: none none none solid;
+		text-align: right;
+	}
+}
+
+.dijitTextBoxRtl .dijitSpinnerButtonContainer,
+.dijitValidationTextBoxRtl .dijitValidationContainer,
+.dijitTextBoxRtl .dijitArrowButtonContainer {
+	float: left;
+}
+
+div.dijitNumberTextBoxRtl {
+	text-align: right;
+}
+
+.dijitSpinnerRtl .dijitSpinnerButtonContainer .dijitArrowButton {
+	right: 0;
+	left: auto;
+}
+
+.dijitRtl .dijitContentPaneLoading .dijitIconLoading,
+.dijitRtl .dijitContentPaneError .dijitIconError {
+	margin-right: 0;
+	margin-left: 9px;
+}
+
+.dijitTabControllerRtl,
+.dijitTabControllerRtl .nowrapTabStrip {
+    text-align: right;  
+}
+
+.dijitTabRtl .dijitTabCloseButton {
+	margin-left: 0;
+	margin-right: $tab-padding;
+}
+
+.dijitColorPaletteRtl .dijitColorPaletteUnder {
+	left: auto;
+	right: 0;
+}
+
+.dijitTreeRtl  {
+	text-align: right;
+}
+
+.dijitTreeRtl .dijitTreeContainer {
+	float: right;	
+}
+
+.dijitRtl .dojoDndHorizontal .dojoDndItemBefore {
+    border-width: 0 2px 0 0;
+    padding: 2px 0 2px 2px;
+}
+.dijitRtl .dojoDndHorizontal .dojoDndItemAfter {
+    border-width: 0 0 0 2px;
+    padding: 2px 2px 2px 0;
+}
+.dijitTextBoxRtlError .dijitValidationContainer {
+  border-left-width: 0;
+  border-right-width: 1px;
+}

@@ -1,0 +1,47 @@
+/* Legend
+ * 
+ * Styling Legend includes:
+ * 
+ * 1. Containers
+ * 		.esriLegendService
+ *		.esriLegendServiceLabel - title of service
+ *		.esriLegendLayerLabel - title of layer
+ *		.esriLegendLayer
+ *		.esriLegendGroupLayer
+ */
+
+@import "../../../variables";
+
+.esriLegendService {
+	padding-top: $map-legend-service-padding-top;
+	padding-bottom: $map-legend-service-padding-bottom;
+	border-bottom: $map-legend-service-separator;
+}
+
+.esriLegendServiceLabel {
+	display: block;
+	font-weight: bold;
+	position: relative;
+	width: 100%;
+}
+
+.esriLegendLayerLabel {
+	color: $map-legend-layer-name-text-color;
+	padding-left: $map-legend-padding * 2;
+}
+
+.esriLegendLayer {
+	padding-left: $map-legend-padding * 2;
+}
+
+.esriLegendGroupLayer {
+	padding-top: $map-legend-padding * 2;
+}
+
+.esriLegendLeft {
+	padding-left: $map-legend-padding * 3;
+}
+
+.esriLegendRight {
+	padding-right: $map-legend-padding * 3;
+}

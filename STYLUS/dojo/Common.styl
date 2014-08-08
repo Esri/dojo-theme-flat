@@ -1,0 +1,101 @@
+@import "../variables";
+
+.dijitPopup {
+	border-radius: $popup-border-radius;
+	//box-shadow: $popup-box-shadow;
+}
+
+.dijitTooltipDialogPopup {
+	/* exception popups: do not use a shadow on these because they aren't rectangular */
+	box-shadow: none;
+}
+
+/* Drag and Drop */
+
+.dojoDndItem {
+	border: $dnd-item-border;
+	cursor: pointer;
+	transition-duration: .25s;
+	transition-property: background-color, border-color, opacity;
+}
+
+.dojoDndItemOver {
+	background: $dnd-hover-background;
+	border-radius: $dnd-hover-border-radius;
+}
+
+.dojoDndItemAnchor {
+	background: $dnd-anchor-background;
+	border: $dnd-anchor-border;
+	border-radius: $dnd-anchor-border-radius;
+}
+
+.dojoDndItemSelected {
+}
+
+.dojoDndItemBefore {
+	background: transparent;
+	padding-top: 2px;
+	border-top: 1px solid $dnd-avatar-item-insert-indicator-color;
+}
+
+.dojoDndItemAfter {
+	background: transparent;
+	padding-bottom: 2px;
+	border-bottom: 1px solid $dnd-avatar-item-insert-indicator-color;
+}
+
+/* Avatar */
+
+table.dojoDndAvatar {
+	display: block;
+}
+
+.dojoDndAvatarHeader {
+	td	{ 
+		display: none;
+	}
+	&:before {
+		_icon-core-style();
+		display: table-cell;
+	}
+}
+
+.dojoDndMove .dojoDndAvatarHeader {
+	&:before {
+		color: $red-color;
+		content: "\f05e";
+	}
+}
+
+.dojoDndCopy .dojoDndAvatarHeader {
+	&:before {
+		color: $red-color;
+		content: "\f05e";
+	}
+}
+
+.dojoDndMove .dojoDndAvatarCanDrop .dojoDndAvatarHeader	{
+	&:before {
+		color: $green-color;
+		content: "\f060";
+	}
+}
+
+.dojoDndCopy .dojoDndAvatarCanDrop .dojoDndAvatarHeader	{
+	&:before {
+		color: $green-color;
+		content: "\f060";
+	}
+}
+
+.dojoDndAvatarItem {
+	border-radius: $dnd-avatar-item-border-radius;
+	td {
+		padding: $dnd-avatar-item-padding;
+		> * {
+			background: $dnd-avatar-item-background;
+			box-shadow: $dnd-avatar-item-box-shadow;
+		}
+	}
+}

@@ -1,0 +1,73 @@
+/* RadioButton
+ * 
+ * Styling RadioButton mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitRadio|.dijitRadioIcon
+ * 
+ * 2. RadioButton within ToggleButton
+ * 		.dijitToggleButton|.dijitToggleButtonChecked
+ * 
+ * 3. Checked state
+ * 		.dijitRadioChecked
+ * 		.dijitToggleButtonChecked
+ * 
+ * 4. Hover state
+ * 		.dijitRadioHover|.dijitRadioCheckedHover
+ * 
+ * 5. Disabled state
+ * 		.dijitRadioDisabled|.dijitRadioCheckedDisabled
+ */
+.dijitRadio,
+.dijitRadioIcon {
+/* inside a toggle button */
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  width: 20px;
+  height: 20px;
+  color: #f5f5f5;
+  font-size: 20px;
+  position: relative;
+}
+.dijitRadio:before,
+.dijitRadioIcon:before,
+.dijitRadio:after,
+.dijitRadioIcon:after {
+  display: block;
+  width: 100%;
+  text-align: center;
+  content: "\f111";
+}
+.dijitRadio:after,
+.dijitRadioIcon:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\f10c";
+  color: #d0d0d0;
+}
+.dijitRadio input,
+.dijitRadioIcon input {
+  position: absolute;
+  top: 0;
+}
+/* checked */
+.dijitRadioChecked:after {
+  content: "\f192";
+  color: #007ac2;
+}
+/* hover */
+/* over unchecked */
+.dijitRadioHover:after {
+  color: #12a7ff;
+}
+/* disabled */
+.dijitRadioDisabled {
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  filter: alpha(opacity=65);
+}

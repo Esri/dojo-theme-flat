@@ -1,0 +1,195 @@
+/* esriOverviewMap
+ * 
+ * Styling esriOverviewMap includes:
+ * 
+ * 1. Containers
+ * 		.esriOverviewMap
+ *		.ovwContainer
+ *		.map - contains the overview map
+ *		.ovwHighlight - contains the draggable overview box
+ *
+ * 2. Positions
+ *		.ovwTL - top left
+ *		.ovwTR - top right
+ *		.ovwBL - below left
+ *		.ovwBR - below right
+ *
+ * 3. Buttons
+ *		.ovwButton:
+ *			.ovwMaximize
+ *			.ovwRestore
+ *
+ * 4. States - Hover, Active, e.g.
+ *		.ovwButton: [hover | active]
+ */
+.esriOverviewMap {
+  position: absolute;
+  z-index: 99;
+/* buttons */
+/* buttons separator */
+/* positions */
+}
+.esriOverviewMap .ovwContainer {
+  position: absolute;
+  display: none;
+  background: #f5f5f5;
+  padding: 4px;
+  border: 0 none;
+  -webkit-box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.esriOverviewMap .map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.esriOverviewMap .ovwHighlight {
+  position: absolute;
+  display: none;
+  z-index: 99;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  cursor: move;
+}
+.esriOverviewMap .ovwButton {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  background: #f5f5f5 !important;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
+}
+.esriOverviewMap .ovwButton:hover {
+  background: #e9e9e9 !important;
+}
+.esriOverviewMap .ovwButton:active {
+  background: #ddd !important;
+}
+.esriOverviewMap .ovwMaximizer {
+  display: none;
+}
+.esriOverviewMap .ovwDisabledButton {
+  display: none !important;
+}
+.esriOverviewMap .ovwMaximize {
+  background-image: none;
+}
+.esriOverviewMap .ovwMaximize:before {
+  content: "\f065";
+}
+.esriOverviewMap .ovwRestore {
+  background-image: none;
+}
+.esriOverviewMap .ovwRestore:before {
+  content: "\f066";
+}
+.esriOverviewMap.ovwTL .ovwButton.ovwMaximizer:after,
+.esriOverviewMap.ovwTR .ovwButton.ovwMaximizer:after {
+  content: "";
+  display: block;
+  border-top: 1px solid #d0d0d0;
+  position: absolute;
+  top: 0;
+  left: 4px;
+  right: 4px;
+}
+.esriOverviewMap.ovwBL .ovwButton.ovwMaximizer:after,
+.esriOverviewMap.ovwBR .ovwButton.ovwMaximizer:after {
+  content: "";
+  display: block;
+  border-top: 1px solid #d0d0d0;
+  position: absolute;
+  bottom: 0;
+  left: 4px;
+  right: 4px;
+}
+.esriOverviewMap.ovwTL {
+  top: 4px;
+  left: 4px;
+}
+.esriOverviewMap.ovwTL .ovwContainer {
+  top: 0px;
+  left: 0px;
+  border-bottom: 0 none;
+  border-right: 0 none;
+  padding-bottom: 4px;
+  padding-right: 4px;
+}
+.esriOverviewMap.ovwTR {
+  top: 4px;
+  right: 4px;
+}
+.esriOverviewMap.ovwTR .ovwContainer {
+  top: 0px;
+  right: 0px;
+  border-bottom: 0 none;
+  border-left: 0 none;
+  padding-bottom: 4px;
+  padding-left: 4px;
+}
+.esriOverviewMap.ovwBL {
+  bottom: 4px;
+  left: 4px;
+}
+.esriOverviewMap.ovwBL .ovwContainer {
+  bottom: 0px;
+  left: 0px;
+  border-top: 0 none;
+  border-right: 0 none;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+.esriOverviewMap.ovwBR {
+  bottom: 4px;
+  right: 4px;
+}
+.esriOverviewMap.ovwBR .ovwContainer {
+  bottom: 0px;
+  right: 0px;
+  border-top: 0 none;
+  border-left: 0 none;
+  padding-top: 4px;
+  padding-left: 4px;
+}
+.esriOverviewMap.ovwTL .ovwShow,
+.esriOverviewMap.ovwBR .ovwHide,
+.esriOverviewMap.ovwTR .ovwShow,
+.esriOverviewMap.ovwBL .ovwHide {
+  background-image: none;
+  font-size: 20px;
+}
+.esriOverviewMap.ovwTL .ovwShow:before,
+.esriOverviewMap.ovwBR .ovwHide:before,
+.esriOverviewMap.ovwTR .ovwShow:before,
+.esriOverviewMap.ovwBL .ovwHide:before {
+  content: "\f103";
+}
+.esriOverviewMap.ovwBL .ovwShow,
+.esriOverviewMap.ovwTR .ovwHide,
+.esriOverviewMap.ovwBR .ovwShow,
+.esriOverviewMap.ovwTL .ovwHide {
+  background-image: none;
+  font-size: 20px;
+}
+.esriOverviewMap.ovwBL .ovwShow:before,
+.esriOverviewMap.ovwTR .ovwHide:before,
+.esriOverviewMap.ovwBR .ovwShow:before,
+.esriOverviewMap.ovwTL .ovwHide:before {
+  content: "\f102";
+}
+.esriOverviewMap .bingLogo-lg {
+  display: none;
+}

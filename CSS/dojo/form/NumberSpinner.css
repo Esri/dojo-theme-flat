@@ -1,0 +1,122 @@
+/* NumberSpinner - namespace "dijitSpinner"
+ * 
+ * Styling NumberSpinner mainly includes:
+ * 
+ * 1. Arrows
+ * 		Outer containers: .dijitSpinnerButtonContainer|.dijitSpinnerButtonInner  - for border, padding and position
+ * 		Arrows: .dijitArrowButton|.dijitUpArrowButton.|dijitDownArrowButton
+ * 		Inner container: .dijitArrowButtonInner - for border, padding, width|height and background image
+ * 
+ * 2. Hover state
+ * 		.dijitUpArrowButtonHover|.dijitDownArrowButtonHover .*  - for background color|image
+ * 
+ * 3. Active state
+ * 		.dijitUpArrowButtonActive|.dijitDownArrowButtonActive .*  - for border, padding, margin and background color|image
+ * 
+ * 4. Focused state
+ * 		.dijitSpinnerFocused .* - for background color|image
+ * 
+ * 5. Disabled state
+ * 		.dijitSpinnerDisabled .* - for background color|image
+ */
+.dijitSpinner .dijitSpinnerButtonContainer {
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  padding: 0;
+  border: 1px solid #d0d0d0;
+}
+.dijitSpinner .dijitSpinnerButtonInner {
+  width: 28px;
+  padding: 4px;
+  margin: 0;
+}
+.dijitSpinner .dijitArrowButton {
+  padding: 4px 12px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  width: auto;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+.dijitSpinner .dijitArrowButton:before {
+  content: none;
+}
+.dijitSpinner .dijitUpArrowButton {
+  border-top-right-radius: 2px;
+}
+.dijitSpinner .dijitDownArrowButton {
+  border-bottom-right-radius: 2px;
+  border-top: 1px solid #d0d0d0;
+}
+.dijitSpinner .dijitUpArrowButtonHover,
+.dijitSpinner .dijitDownArrowButtonHover {
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  transition: all 0.1s;
+  background: #e1e1e1;
+  background: -webkit-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -moz-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -o-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -ms-linear-gradient(#f6f6f6, #e1e1e1);
+  background: linear-gradient(#f6f6f6, #e1e1e1);
+}
+.dijitSpinner .dijitDownArrowButtonActive,
+.dijitSpinner .dijitUpArrowButtonActive {
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  outline: none;
+  background: #d0d0d0;
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+}
+.dijitSpinner .dijitArrowButtonInner {
+  line-height: 14px;
+  display: block;
+}
+.dijitSpinner .dijitArrowButtonInner .dijitInputField {
+  padding: 0;
+}
+.dijitSpinner .dijitArrowButtonInner:before {
+  content: "\f0d8";
+}
+.dijitSpinner .dijitDownArrowButton .dijitArrowButtonInner:before {
+  content: "\f0d7";
+}
+/* disabled */
+.dijitSpinnerDisabled .dijitDownArrowButton,
+.dijitSpinnerDisabled .dijitUpArrowButton {
+  cursor: default;
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  filter: alpha(opacity=65);
+}

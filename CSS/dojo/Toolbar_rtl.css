@@ -1,0 +1,12 @@
+/* Toolbar RTL */
+.dijitToolbar .dijitToggleButtonRtl,
+.dijitToolbar .dijitButtonRtl,
+.dijitToolbar .dijitDropDownButtonRtl,
+.dijitToolbar .dijitComboButtonRtl {
+  margin-left: 4px;
+  margin-right: auto;
+}
+.dijitToolbar .dijitDropDownButtonRtl .dijitArrowButtonInner {
+  margin-left: auto;
+  margin-right: 4px;
+}

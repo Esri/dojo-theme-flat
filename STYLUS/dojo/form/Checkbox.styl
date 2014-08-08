@@ -1,0 +1,83 @@
+/* CheckBox
+ * 
+ * Styling CheckBox mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitCheckBox
+ * 
+ * 2. CheckBox within ToggleButton
+ * 		.dijitCheckBoxIcon
+ * 
+ * 3. States - Checked, Hover, Disabled.
+ *		.dijitCheckBoxChecked
+ * 		.dijitCheckBoxHover
+ * 		.dijitCheckBoxCheckedHover
+ * 		.dijitCheckBoxDisabled
+ *		.dijitCheckBoxCheckedDisabled
+ */
+
+
+@import "../../variables";
+
+.dijitCheckBox {
+	background-color: $checkbox-background-color;
+	border: $checkbox-border;
+	width: $checkbox-width;
+	height: $checkbox-height;
+	padding: $checkbox-padding;
+	box-shadow: $checkbox-box-shadow;
+	border-radius: $checkbox-border-radius;
+	text-align: center;
+	position: relative;
+
+	input {
+		position: absolute;
+		top: 0;
+	}
+}
+
+/* Icon */
+
+.dijitCheckBoxIcon,
+.dijitCheckBoxChecked,
+.dijitCheckBoxCheckedDisabled {
+	&:before {
+		_icon-core-style();
+		font-size: $checkbox-icon-size;
+		content: "\f00c";
+	}
+}
+
+/* This is the checkbox icon within a widget, e.g. toggle button */
+.dijitCheckBoxIcon {
+	padding: $checkbox-icon-padding;
+}
+
+/* checked */
+
+.dijitCheckBoxChecked {
+	color:$checkbox-checked-icon-color;
+	background-color: $checkbox-checked-background-color;
+	border: $checkbox-checked-border;
+}
+
+/* hover */
+
+/* over unchecked */
+.dijitCheckBoxHover {
+	background-color: $checkbox-hover-unchecked-background-color;
+	border: $checkbox-hover-unchecked-border;
+}
+
+/* over checked */
+.dijitCheckBoxCheckedHover {
+	background-color: $checkbox-hover-checked-background-color;
+	border: $checkbox-hover-checked-border;
+}
+
+/* disabled */
+
+.dijitCheckBoxDisabled,
+.dijitCheckBoxCheckedDisabled {
+	opacity: $disabled-opacity;
+}

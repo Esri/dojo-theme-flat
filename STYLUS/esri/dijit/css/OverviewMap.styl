@@ -1,0 +1,214 @@
+/* esriOverviewMap
+ * 
+ * Styling esriOverviewMap includes:
+ * 
+ * 1. Containers
+ * 		.esriOverviewMap
+ *		.ovwContainer
+ *		.map - contains the overview map
+ *		.ovwHighlight - contains the draggable overview box
+ *
+ * 2. Positions
+ *		.ovwTL - top left
+ *		.ovwTR - top right
+ *		.ovwBL - below left
+ *		.ovwBR - below right
+ *
+ * 3. Buttons
+ *		.ovwButton:
+ *			.ovwMaximize
+ *			.ovwRestore
+ *
+ * 4. States - Hover, Active, e.g.
+ *		.ovwButton: [hover | active]
+ */
+
+@import "../../../variables";
+
+.esriOverviewMap {
+	position: absolute;
+	z-index: 99;
+	
+	.ovwContainer {
+		position: absolute;
+		display: none;
+		background: $map-overviewmap-background;
+		padding: $map-overviewmap-padding;
+		border: $map-overviewmap-border;
+		box-shadow: $map-overviewmap-box-shadow;
+		border-radius: $map-overviewmap-border-radius;
+	}
+	.map {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background: $map-overviewmap-map-background;
+		border-radius: $map-overviewmap-map-border-radius;
+	}
+	.ovwHighlight {
+		position: absolute;
+		display: none;
+		z-index: 99;
+		border-radius: $map-overviewmap-highlight-border-radius;
+		cursor: move;
+	}
+
+	/* buttons */
+
+	.ovwButton {
+		_icon-core-style();
+		position: relative;
+		width: $map-overviewmap-button-width;
+		height: $map-overviewmap-button-height;
+		padding: $map-overviewmap-button-padding;
+		background: $map-overviewmap-button-background !important;
+		text-align: center;
+		cursor: pointer;
+		z-index: 99;
+
+		&:hover {
+			background: $map-overviewmap-button-hover-background !important;
+		}
+		&:active {
+			background: $map-overviewmap-button-active-background !important;
+		}
+	}
+	.ovwMaximizer {
+		display: none;
+	}
+	.ovwDisabledButton {
+		display: none !important;
+	}
+	.ovwMaximize {
+		background-image: none;
+
+		&:before {
+			content: "\f065";
+		}
+	}
+	.ovwRestore {
+		background-image: none;
+
+		&:before {
+			content: "\f066";
+		}
+	}
+
+	/* buttons separator */
+
+	&.ovwTL,
+	&.ovwTR {
+		.ovwButton.ovwMaximizer {
+			&:after {
+				content: "";
+				display: block;
+				border-top: 1px solid $map-overviewmap-button-separator-color;
+				position: absolute;
+				top: 0;
+				left: 4px;
+				right: 4px;
+			}
+		}
+	}
+
+	&.ovwBL,
+	&.ovwBR {
+		.ovwButton.ovwMaximizer {
+			&:after {
+				content: "";
+				display: block;
+				border-top: 1px solid $map-overviewmap-button-separator-color;
+				position: absolute;
+				bottom: 0;
+				left: 4px;
+				right: 4px;
+			}
+		}
+	}
+
+	/* positions */
+
+	&.ovwTL {
+		top: $padding;
+		left: $padding;
+
+		.ovwContainer {
+			top: 0px;
+			left: 0px;
+			border-bottom: $map-overviewmap-border;
+			border-right: $map-overviewmap-border;
+			padding-bottom: $map-overviewmap-padding;
+			padding-right: $map-overviewmap-padding;
+		}
+	}
+
+	&.ovwTR {
+		top: $padding;
+		right: $padding;
+
+		.ovwContainer {
+			top: 0px;
+			right: 0px;
+			border-bottom: $map-overviewmap-border;
+			border-left: $map-overviewmap-border;
+			padding-bottom: $map-overviewmap-padding;
+			padding-left: $map-overviewmap-padding;
+		}
+	}
+
+	&.ovwBL {
+		bottom: $padding;
+		left: $padding;
+		
+		.ovwContainer {
+			bottom: 0px;
+			left: 0px;
+			border-top: $map-overviewmap-border;
+			border-right: $map-overviewmap-border;
+			padding-top: $map-overviewmap-padding;
+			padding-right: $map-overviewmap-padding;
+		}
+	}
+
+	&.ovwBR {
+		bottom: $padding;
+		right: $padding;
+
+		.ovwContainer {
+			bottom: 0px;
+			right: 0px;
+			border-top: $map-overviewmap-border;
+			border-left: $map-overviewmap-border;
+			padding-top: $map-overviewmap-padding;
+			padding-left: $map-overviewmap-padding;
+		}
+	}
+
+	&.ovwTL .ovwShow, 
+	&.ovwBR .ovwHide,
+	&.ovwTR .ovwShow, 
+	&.ovwBL .ovwHide {
+		background-image: none;
+		font-size: 20px;
+
+		&:before {
+			content: "\f103";
+		}
+	}
+
+	&.ovwBL .ovwShow, 
+	&.ovwTR .ovwHide,
+	&.ovwBR .ovwShow, 
+	&.ovwTL .ovwHide {
+		background-image: none;
+		font-size: 20px;
+
+		&:before {
+			content: "\f102";
+		}
+	}
+
+	.bingLogo-lg {
+		display: none;
+	}
+}

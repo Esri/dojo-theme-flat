@@ -1,0 +1,116 @@
+/* esriBookmarks
+ * 
+ * Styling esriBookmarks includes:
+ * 
+ * 1. Containers
+ * 		.esriBookmarks
+ *		.esriBookmarkList - container of .esriBookmarkTable
+ *		.esriBookmarkTable - Tabular view for bookmarks
+ *		.esriBookmarkLabel
+ *		.esriBookmarkEditBox - Textbox when editing a bookmark
+ * 2. Buttons
+ *		.esriBookmarkItem
+ *		.esriAddBookmark - "Add Bookmark" button
+ *
+ * 3. States - Hover, Active, Highlight, e.g.
+ *		.esriBookmarkHighlight - highlight (Hover, Active and Selected)
+ *		.esriAddBookmark:[hover | active]
+ */
+ 
+@import "../../../variables";
+
+.esriBookmarks {
+	background: $map-bookmarks-background;
+	border:$map-bookmarks-border;
+	padding: $map-bookmarks-padding;
+}
+
+.esriBookmarkList {
+	margin-bottom: $map-bookmarks-list-margin-bottom;
+	border-bottom: $map-bookmarks-list-border-bottom;
+}
+
+.esriBookmarkTable {
+	width: 100%;
+	margin: 0 auto;
+	border-collapse:collapse;
+	border-spacing: 0px;
+	
+	td {
+		padding: 0;
+	}
+}
+
+.esriBookmarkItem {
+	display: inline-block;
+	width: 100%;
+	padding: $map-bookmark-item-padding;	
+
+	> div {
+		position: relative;
+	}
+	&.esriBookmarkHighlight {
+		background: $map-bookmark-item-highlight-background;
+
+		.esriBookmarkLabel {
+			color: $map-bookmark-item-highlight-text-color;
+		}
+	}
+	&.esriAddBookmark {
+		button-style();
+		width: $map-bookmark-add-button-width;
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		
+		&:hover {
+			button-hover-style();
+		}
+		&:active {
+			button-active-style();
+		}
+	}
+}
+
+.esriBookmarkLabel {
+	float: left;
+	margin-left: $map-bookmark-item-label-margin-left;
+	line-height: $line-height;
+	color: $map-bookmarks-item-text-color;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.esriBookmarkEditImage,
+.esriBookmarkRemoveImage {
+	float: right;
+	display: inline-block;
+	height: $line-height + $padding * 2;
+	width: @height;
+	background: transparent;
+	line-height: @height;
+	text-align: center;
+	font-family: "FontAwesome";
+	margin-top: - $padding;
+	cursor: pointer;
+}
+
+.esriBookmarkEditImage:before {
+	content: "\f040";
+}
+
+.esriBookmarkRemoveImage:before {
+	content: "\f00d";
+	color: $red-color;
+}
+
+.esriBookmarkEditBox {
+	line-height: $line-height;
+	position: absolute;
+	top: -1px !important;						// minus the width of the top border
+	left: $map-bookmark-item-label-margin-left !important;			// to overwrite the left property that is dynamically added
+}

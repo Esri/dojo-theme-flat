@@ -1,0 +1,99 @@
+/* Map
+ * 
+ * This mainly includes:
+ * 
+ * 1. Pan Buttons
+ * 		.fixedPan - including two modes: 1. dark (default) 2. white (needs to add class name "dark" to ".map" container)
+ *
+ * 2. Tooltip
+ *		.tooltip
+ */
+
+@import "../../variables";
+
+/* map fixed pan buttons */
+
+.map {
+	.container {
+		.fixedPan {
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			background-image: url("../images/map/fixed-pan-sprite.png");
+			overflow: hidden;
+			cursor: pointer;
+			opacity: $fixedpan-opacity;
+		
+			&:hover {
+				opacity: $fixedpan-hovered-opacity;
+			}
+		}
+
+		.panUp {
+			background-position: -15px 0px;
+			top: $map-padding;
+			width: 23px;
+		}
+		.panDown {
+			background-position: -15px -38px;
+			bottom: $map-padding;
+			width: 23px;
+		}
+		.panLeft {
+			background-position: -52px -15px;
+			left: $map-padding;
+			height: 23px;
+		}
+		.panRight {
+			background-position: -38px -15px;
+			right: $map-padding;
+			height: 23px;
+		}
+
+		.panUpperLeft {
+			background-position: 0 0
+			left: $map-padding
+			top: $map-padding
+		}
+		.panUpperRight {
+			background-position: -38px 0px;
+			right: $map-padding;
+			top: $map-padding;
+		}
+		.panLowerLeft {
+			background-position: 0 -38px;
+			left: $map-padding;
+			bottom: $map-padding;
+		}
+		.panLowerRight {
+			background-position: -38px -38px;
+			right: $map-padding;
+			bottom: $map-padding;
+		}
+	}
+	&.dark {
+		
+		/* change to white arrows for pan buttons. a "dark" class needs to be added to the map container to use this style */
+		
+		.container .fixedPan {
+			background-image: url("../images/map/fixed-pan-sprite-white.png");
+		}
+	}
+
+	/* map tooltip */
+
+	.tooltip {
+		min-width: 100px;
+		position: absolute;
+		border: $map-tooltip-border;
+		background: $map-tooltip-background;
+		color: $map-tooltip-text-color;
+		text-shadow: $map-tooltip-text-shadow;
+		padding: $map-tooltip-padding;
+		font-size: $map-tooltip-font-size;
+		z-index: 9999;
+		border-radius: $map-tooltip-border-radius;
+		box-shadow: $map-tooltip-box-shadow;
+		opacity: $map-$tooltip-opacity;
+	}
+}

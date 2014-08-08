@@ -1,0 +1,218 @@
+/* Tree 
+ * 
+ * Styling Tree mostly means styling the TreeRow (dijitTreeRow)
+ * There are 4 basic states to style:
+ * 
+ * Tree Row:
+ * 1. tree row (default styling): 
+ * 		.dijitTreeRow - styles for each row of the tree
+ *
+ * 2. hovered tree row (mouse hover on a tree row)
+ * 		.dijitTreeRowHover - styles when mouse over on one row
+ * 
+ * 3. active tree row (mouse down on a tree row)
+ * 		.dijitTreeRowActive - styles when mouse down on one row
+ * 
+ * 4. selected tree row
+ * 		dijitTreeRowSelected - style when the row has been selected
+ * 
+ * Tree Expando:
+ * 	    dijitTreeExpando - the expando at the left of the text of each tree row
+ * 
+ * Drag and Drop on TreeNodes: (insert line on dijitTreeContent node so it'll aligned w/ target element)
+ * 		.dijitTreeNode .dojoDndItemBefore/.dojoDndItemAfter - use border style simulate a separate line
+ */
+.dijitTreeIsRoot {
+  background: transparent;
+}
+.dijitTreeRow,
+.dijitTreeNode .dojoDndItemBefore,
+.dijitTreeNode .dojoDndItemAfter {
+  padding: 8px 0;
+  border: 0 none;
+  line-height: 20px;
+  -webkit-transition-property: background-color, border-color;
+  -moz-transition-property: background-color, border-color;
+  -o-transition-property: background-color, border-color;
+  -ms-transition-property: background-color, border-color;
+  transition-property: background-color, border-color;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  -ms-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* Hover */
+.dijitTreeRowHover {
+  background: #f5f5f5;
+  border: 0 none;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  -ms-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+}
+/* Active */
+.dijitTreeRowActive {
+  background: #f5f5f5;
+  border: 0 none;
+}
+/* Selected */
+.dijitTreeRowSelected,
+.dijitTreeRowHover.dijitTreeRowSelected,
+.dijitTreeRowActive.dijitTreeRowSelected {
+  color: #fff;
+  background: #007ac2;
+  border: 0 none;
+}
+/* Focused */
+/*
+.dijitTreeRowFocused {
+}
+*/
+/* expando (open/closed) icon */
+.dijitTreeExpando {
+  font-family: FontAwesome;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.dijitTreeExpandoOpened:before {
+  content: "\f078";
+  cursor: pointer;
+}
+.dijitTreeExpandoClosed:before {
+  content: "\f054";
+  cursor: pointer;
+}
+/*
+.dijitTreeRowHover .dijitTreeExpandoOpened {
+}
+
+.dijitTreeRowHover .dijitTreeExpandoClosed {
+}
+*/
+.dijitTreeExpandoLoading:before {
+  content: "\f021";
+  -webkit-animation: spinning 2s linear infinite;
+  -moz-animation: spinning 2s linear infinite;
+  -o-animation: spinning 2s linear infinite;
+  -ms-animation: spinning 2s linear infinite;
+  animation: spinning 2s linear infinite;
+}
+.dj_ie8 .dijitTreeExpandoLoading,
+.dj_ie9 .dijitTreeExpandoLoading {
+  background: url("images/loadingAnimation.gif") no-repeat;
+}
+.dj_ie8 .dijitTreeExpandoLoading:before,
+.dj_ie9 .dijitTreeExpandoLoading:before {
+  content: "";
+}
+/* DnD */
+/* No Nodes with class name "dojoDndItemBefore" or "dojoDndItemAfter"
+   found when dragging a tree node?! 
+*/
+/*
+.dijitTreeNode {
+	.dojoDndItemBefore .dijitTreeContent {
+		border-top: 2px solid $dnd-avatar-item-insert-indicator-color;
+	}
+	.dojoDndItemAfter .dijitTreeContent {
+		border-bottom: 2px solid $dnd-avatar-item-insert-indicator-color;
+	}
+}
+*/
+@-moz-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

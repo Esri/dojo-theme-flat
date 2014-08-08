@@ -1,0 +1,443 @@
+/* esriPopup
+ * 
+ * Styling esriPopup includes:
+ * 
+ * 1. Containers
+ * 		.esriPopup
+ *		.esriPopupWrapper
+ *		.sizer
+ *		.titlePane
+ *		.esriViewPopup
+ *
+ * 2. Buttons
+ *		.titleButton
+ *		.esriAddBookmark - "Add Bookmark" button
+ *
+ * 3. States - Hover, Active, Highlight, e.g.
+ *		.esriBookmarkHighlight - highlight (Hover, Active and Selected)
+ *		.esriAddBookmark:[hover | active]
+ */
+ 
+@import "../../../variables";
+
+.esriPopup {
+	position: absolute;
+	z-index: 40;
+	border-radius: $map-popup-border-radius;
+	
+	.esriPopupWrapper {
+		border: $map-popup-border;
+		padding:0;
+		background: $map-popup-background;
+		box-shadow: $map-popup-box-shadow;
+		border-radius: $map-popup-border-radius;
+	}
+	.hidden {
+		display: none;
+	}
+	.sizer {
+		width: $map-popup-default-width;
+		height: auto;
+	}
+	a, 
+	a:visited {
+		color: $map-popup-link-color;
+		text-decoration: none;
+		&:hover,
+		&:active {
+			text-decoration: underline;
+		}
+	}
+	a:hover,
+	a:active {
+		text-decoration: underline;
+	}
+
+	/* Title Pane */
+
+	.titlePane {
+		background: $map-popup-title-bar-background;
+		color: $map-popup-title-bar-text-color;
+		font-size: $map-popup-title-bar-font-size;
+		line-height: $line-height;
+		padding: $map-popup-title-bar-padding;
+		padding-right: auto;
+		border-radius: $map-popup-border-radius $map-popup-border-radius 0 0;
+		cursor: default;
+		border: 0;
+		border-bottom: 1px solid $map-popup-title-bar-separator-color;
+
+		.spinner {
+			float: left;
+			width: 16px;
+			height: 16px;
+			margin-top: $padding/2;
+			margin-right: $padding;
+			background: url(../images/ajax-loader.gif) no-repeat;
+			background-position: 0px 0px;
+			cursor: pointer;
+		}
+	}
+	.titleButton {
+		background: url(../images/popup.png) no-repeat;
+		position: absolute;
+		top: ($padding * 4 + $line-height - 17px) * 0.5;
+		cursor: pointer;
+		
+		&.prev, &.next, &.maximize, &.restore, &.close {
+			height: 17px;
+		}
+
+		&.prev, &.next {
+			width: 9px;
+		}
+		&.maximize, &.restore {
+			width: 11px;
+		}
+		&.close {
+			width: 12px;
+		}
+		&.prev {
+			right: $padding * 3 + 12px + 11px + 9px + $padding * 2 * 3;
+			background-position: 0 -198px;
+		}
+		&.next {
+			right: $padding * 3 + 12px +11px + $padding * 2 * 2;
+			background-position: 0 -417px;
+		}
+		&.maximize {
+			right: $padding * 3 + 12px + $padding * 2;
+			top: ($padding * 4 + $line-height - 17px) * 0.5;
+			background-position: 0 -819px;
+		}
+		&.restore {
+			right: $padding * 3 + 12px + $padding * 2;
+			top: ($padding * 4 + $line-height - 17px) * 0.5;
+			background-position: 0 -836px;
+		}
+		&.close {
+			right: $padding * 3;
+			background-position: 0 -802px;
+		}
+	}
+
+	/* Content Pane */
+
+	.contentPane {
+		position: relative;
+		max-height: $map-popup-content-max-height;
+		overflow: auto;
+		padding: $map-popup-content-padding;
+		background: $map-popup-content-background;
+		border: 0;
+		border-top: $map-popup-cotent-separator-top;
+		border-bottom: $map-popup-cotent-separator-bottom;
+	}
+
+	/* Action Pane */
+
+	.actionsPane {
+		padding: $map-popup-action-bar-padding;
+		background: $map-popup-action-bar-background;
+		border:0;
+		border-top: $map-popup-action-bar-separator-top;
+		border-radius: 0 0 $map-popup-border-radius $map-popup-border-radius;
+
+		.action {
+			margin-right: $map-popup-action-bar-actions-spacing;
+		}
+	}
+
+	/* Pointers (Anchors) */
+
+	.pointer,
+	.outerPointer {
+		height: 0;
+		width: 0;
+		background: transparent;
+		border-style: solid;
+		border-color: #fff;
+		border-width: 8px;
+//		background: url(../images/popup.png) no-repeat;
+		position: absolute;
+		transform: none;
+		box-shadow: none;
+	}
+
+	.pointer {
+		&.top {
+			left: 50%;
+			top: -12px;
+			margin-left: -12px;
+			border-width: 12px;
+			border-right-color: transparent;
+			border-left-color: transparent;
+			border-top: 0 none;
+			background: transparent;
+		}
+		&.bottom {
+			left: 50%;
+			bottom: -12px;
+			margin-left: -12px;
+			border-width: 12px;
+			border-right-color: transparent;
+			border-left-color: transparent;
+			border-bottom: 0 none;
+		}
+		&.right {
+			top: 50%;
+			right: 4px;
+			margin-top: -12px;
+			border-width: 12px;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			border-right: 0 none;
+		}
+		&.left {
+			top: 50%;
+			left: 4px;
+			margin-top: -12px;
+			border-width: 12px;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			border-left: 0 none;
+		}
+		&.topLeft {
+			left: 13px;
+			top: -15px;
+			border-right-color: transparent;
+			border-top-color: transparent;
+			background: transparent;
+		}
+		&.topRight {
+			right: 13px;
+			top: -15px;
+			border-left-color: transparent;
+			border-top-color: transparent;
+			background: transparent;
+		}
+		&.bottomRight {
+			right: 13px;
+			bottom: -15px;
+			border-left-color: transparent;
+			border-bottom-color: transparent;
+		}
+		&.bottomLeft {
+			left: 13px;
+			bottom: -15px;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+		}
+	}
+
+	.outerPointer {
+		&.right {
+			top: 50%;
+			right: 4px;
+			margin-top: -12px;
+			border-width: 12px;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			border-right: 0 none;
+		}
+		&.left {
+			top: 50%;
+			left: 4px;
+			margin-top: -12px;
+			border-width: 12px;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			border-left: 0 none;
+		}
+	}
+}
+
+/* View Popup */
+
+.esriViewPopup {
+	line-height: $map-popup-cotent-line-height;
+
+	.header {
+		font-weight: $map-popup-cotent-header-font-weight;
+	}
+	.hzLine {
+		border: none;
+		border-bottom: $map-popup-separator-bottom;
+		margin-top: $map-popup-separator-margin;
+		margin-bottom: $map-popup-separator-margin;
+	}
+	.break {
+		height: $map-popup-separator-margin;
+	}
+	.caption {
+		font-style: italic;
+		font-size: $map-popup-caption-font-size;
+		color: $map-popup-caption-text-color;
+	}
+	.mainSection {
+		position: relative;
+	
+		.attrTable {
+			border-collapse: collapse;
+			table-layout: fixed;
+			width: 100%;
+
+			td {
+				padding: $map-popup-attribute-cell-padding;
+				white-space: normal;
+				font-size: $map-popup-cotent-font-size;
+				word-wrap: break-word;
+
+				&.attrName {
+					color: $map-popup-attribute-name-text-color;
+					padding-right: $map-popup-attribute-name-padding-right;
+				}
+			}
+		}
+	}
+	.attachmentsSection ul {
+		margin: 0px;
+		padding: 0px;
+		list-style-type: none;
+	}
+
+	/* Gallery */
+	
+	.gallery {
+		position: relative
+		width: auto;
+		height: auto;
+		max-height: none;
+		margin: 0;
+
+		.frame {
+			/* image */
+			&.image {
+				text-align: center;
+			}
+			img {
+				max-width: none;
+				max-height: none;
+				border-style: none;
+				width: 100%;
+			}
+			/* chart */
+			div.chart {
+				width: 100%;
+				height: 150px;
+			}
+		}
+		ul.summary {
+			position: absolute;
+			right: 0px;
+			bottom: -18px;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				float: left;
+				&.mediaCount {
+					margin-left: $padding;
+				}
+			}
+		}
+		.mediaHandle {
+			position: absolute;
+			top: 67px;
+			cursor: pointer;
+			background: url(../images/popup.png) no-repeat;
+
+			&.prev {
+				left: -12px;
+				background-position: 0 -198px;
+				width: 9px;
+				height: 16px;
+			}
+			&.next {
+				right: -12px;
+				background-position: 0 -417px;
+				width: 9px;
+				height: 16px;
+			}
+		}
+		.mediaIcon {
+			background: url(../images/popup.png) no-repeat;
+			&.image {
+				background-position: 0 -392px;
+				width: 15px;
+				height: 15px;
+			}
+		}
+		&.chart {
+			background-position: 0 -146px;
+			width: 19px;
+			height: 15px
+		}
+	}
+
+	.editSummarySection .break {
+		height: 10px;
+	}
+	.editSummary {
+		color: #888888;
+	}
+}
+
+/* RTL */
+
+.dj_rtl {
+	.esriPopup {
+		.titlePane {
+			padding-left: auto;
+			padding-right: $map-popup-title-bar-padding;
+
+			.spinner {
+				float: right;
+				margin-right: auto;
+				margin-left: $padding;
+			}
+		}
+		.titleButton {
+			&.prev {
+				right: auto;
+				left: $padding * 3 + 12px + 8px + 11px + 8px + 9px + 8px;
+			}
+			&.next {
+				right: auto;
+				left: $padding * 3 + 12px + 8px + 11px + 8px;
+			}
+			&.maximize {
+				right: auto;
+				left: $padding * 3 + 12px + 8px;
+			}
+			&.restore {
+				right: auto;
+				left: $padding * 3 + 12px + 8px;
+			}
+			&.close {
+				right: auto;
+				left: $padding * 3;
+			}
+		}
+		.actionsPane .action {
+			margin-right: auto;
+			margin-left: $map-popup-action-bar-actions-spacing;
+		}
+	}
+	.esriViewPopup {
+		.gallery ul.summary {
+			right: auto;
+			left: 0px;
+
+			li {
+				float: right;
+
+				&.mediaCount {
+					margin-left: auto;
+					margin-right: $padding;
+				}
+			}
+		}
+	}
+}

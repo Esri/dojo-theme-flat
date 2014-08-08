@@ -1,0 +1,69 @@
+/* Editor 
+ * 
+ * Styling Editor means styling the Editor inside iframe container (dijitEditorIFrameContainer)
+ * 
+ * 1. Editor iframe container (default styling): 
+ * 		.dijitEditorIFrameContainer - normal state styles: background-color, border, padding
+ *
+ * 2. hovered Editor iframe container (ie, mouse hover on editor)
+ * 		.dijitEditorHover .dijitEditorIFrameContainer/dijitEditorIFrame - styles when mouse hover on the container
+ * 
+ * 3. focused Editor iframe container (ie, mouse focus on the editor pane)
+ * 		.dijitEditorFocused .dijitEditorIFrameContainer/dijitEditorIFrame - styles when container focused
+ * 
+ * 3. disabled Editor iframe container 
+ * 		.dijitEditorDisabled - editor's inner iframe container disable status styles: background, border
+ */
+
+@import "../variables";
+
+.dijitEditor {
+	background: $editor-iframe-background;
+	border: $toolbar-border;
+	border-radius: $editor-border-radius;
+
+	.dijitEditorIFrameContainer {
+		border: $editor-iframe-border;
+		border-top: $editor-border;
+		padding: $editor-iframe-padding;
+		box-shadow: $editor-iframe-box-shadow;
+		transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	}
+}
+
+/* Hover */
+
+.dijitEditorHover {
+	.dijitEditorIFrameContainer,
+	.dijitEditorIFrameContainer .dijitEditorIFrame {
+		border: $editor-iframe-hover-border;
+	}
+}
+
+/* Focused */
+
+.dijitEditorFocused {
+	.dijitEditorIFrameContainer {
+		border: $editor-iframe-focused-border;
+		box-shadow: $editor-iframe-focused-box-shadow;
+	}
+	.dijitEditorIFrameContainer .dijitEditorIFrame {
+		border: $editor-iframe-focused-border;
+	}
+}
+
+/* Disabled */
+
+.dijitEditorDisabled {
+	border: $editor-disabled-border;
+	color: $editor-disabled-text-color;
+	opacity: $disabled-opacity;
+
+	.dijitEditorIFrame,
+	.dijitEditorIFrameContainer,
+	.dijitEditorIFrameContainer .dijitEditorIFrame {
+		background: $editor-iframe-disabled-background;
+		border: $editor-iframe-disabled-border;
+		box-shadow: $editor-iframe-disabled-shadow;
+	}
+}

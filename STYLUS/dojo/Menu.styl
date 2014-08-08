@@ -1,0 +1,180 @@
+/* Menu 
+
+There are three areas of styling for the Menu:  
+ 
+ 1. The menu 
+ 	There are three types of menus:
+ 	i) Context Menu
+ 	ii) Drop down Menu
+ 	iii) Navigation Menu
+ 	All three types of menus are affected by the .dijitMenu class in which you can set the background-color, padding and border
+ 	.dijitMenu affects the drop down menu in TimeTextBox, Calendar, ComboBox and FilteringSelect
+  .dijitMenuTable - for padding - also affects Select widget 	
+  	
+ 2. The menu bar
+ 	.dijitMenuBar - for border, margins, padding, background-color of the menu bar
+ 	.dijitMenuBar .dijitMenuItem - for padding, text color of menu items in the menu bar (overrides .dijitMenuItem) 
+ 	
+ 3. Menu items - items in the menu.  
+ 	.dijitMenuItem - for color
+ 	.dijitMenuItemHover, .dijitMenuItemSelected - for background-color, border, text color, padding of a menu item or menubar item that has been hovered over or selected	
+ 	.dijitMenuItemActive - for background-color of an active (mousedown) menu item
+	td.dijitMenuItemIconCell - for padding around a  menu item's icon
+	td.dijitMenuItemLabel - for padding around a menu item's label	
+	.dijitMenuSeparatorTop - for border, top border, of the separator
+	.dijitMenuSeparatorBottom - for bottom margin of the separator
+	
+	Styles specific to ComboBox and FilteringSelect widgets: 
+	.dijitComboBoxMenu .dijitMenuItem - for padding and border of a menu item in a ComboBox or FilteringSelect widget's menu
+	.dijitComboBoxMenu .dijitMenuItemSelected- for text color, background-color and border of a menu item in a ComboBox or FilteringSelect widget's menu
+
+*/
+
+@import "../variables";
+
+.dijitMenu {
+	background: $menu-background;
+	border: $menu-border;
+	border-radius: $menu-border-radius;
+	/* so adjoining borders of MenuBar/ComboBox and Menu overlap, avoiding double border */
+	margin: 0;
+	box-shadow: $popup-box-shadow;
+}
+
+.dijitMenuTable,
+.dijitComboBoxMenu {
+	padding: $menu-padding 0;
+}
+
+.dijitComboBoxMenu {
+	margin-left:0;
+	background-image: none;
+}
+
+.dijitMenuTable {
+	/* this prevents jiggling upon hover of a menu item */
+	border-collapse:separate;
+	border-spacing:0 0;
+}
+
+/* Menu Item */
+
+.dijitMenuItem,
+.dijitMenuItem td {
+	line-height: $line-height;
+	padding: $menu-item-padding;
+	white-space: nowrap;
+}
+
+/* Menu Item: Hover */
+
+.dijitMenuItemHover td,
+.dijitMenuItemHover {
+	color: $menu-item-hovered-text-color;
+	background: $menu-item-hovered-background;
+}
+
+/* Menu Item: Active */
+
+.dijitMenuItemActive td,
+.dijitMenuItemActive {
+	color: $menu-item-active-text-color;
+	background: $menu-item-active-background;
+}
+
+/* Menu Item: Selected */
+
+.dijitMenuItemSelected td,
+.dijitMenuItemSelected {
+	color: $menu-item-selected-text-color;
+	background: $menu-item-selected-background;
+}
+
+/* Menu Item Separator */
+
+.dijitMenuSeparatorTop {
+	height: auto;
+	margin-top: 1px; /* prevents spacing above/below separator */
+	border-bottom: $menu-item-separator-top;
+}
+
+.dijitMenuSeparatorBottom {
+	height: auto;
+	margin-bottom:1px;
+	border-top: $menu-item-separator-Bottom;
+}
+
+/* TODO: Menu Item Icon */
+
+td.dijitMenuItemIconCell {
+	padding: $padding;
+	margin: 0 0 0 $padding;
+}
+
+.dijitMenuExpand {
+	_icon-core-style();
+	&:before {
+		content: "\f0da";
+	}
+}
+
+/* the checked icon */
+
+.dijitCheckedMenuItemIconChar {
+	display: none;
+}
+.dijitCheckedMenuItemIcon {
+	_icon-core-style();
+
+}
+
+.dijitCheckedMenuItemChecked .dijitCheckedMenuItemIcon {
+	&:before {
+		content: "\f00c";
+	}
+}
+
+.dijitMenuPreviousButton, .dijitMenuNextButton {
+	font-style: italic;
+}
+
+/* Menu Bar */
+
+.dijitMenuBar {
+	margin: 0;
+	padding: 0;
+	background: $menubar-background;
+
+	.dijitMenuItem {  
+		padding: $menubar-item-padding;
+		margin: 0;	
+	}
+	.dijitMenuItemHover {
+		background: $menubar-item-hover-background;
+	}
+	.dijitMenuItemActive {
+		background: $menubar-item-active-background;
+	}
+	.dijitMenuItemSelected,
+	.dijitMenuItemHover.dijitMenuItemSelected,
+	.dijitMenuItemActive.dijitMenuItemSelected {
+		color: $menubar-item-selected-text-color;
+		background: $menubar-item-selected-background;
+	}
+}
+
+/* MenuBar Dropdown */
+
+.dijitMenuPopup {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+	.dijitMenu {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	.dijitMenuItem, 
+	.dijitMenuItem td {
+		padding: $menubar-popup-item-padding;
+	}
+}

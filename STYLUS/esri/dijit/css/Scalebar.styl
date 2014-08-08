@@ -1,0 +1,168 @@
+/* scalebar
+ * 
+ * Styling scalebar includes:
+ * 
+ * 1. Containers
+ * 		.scalebar
+ *		.esriScalebarRuler - Ruler (scalebarUnit = ["english" | "metric"])
+ *			.esriScalebarRulerBlock - blocks of the the ruler
+ *		.esriScalebarLine - Line (scalebarUnit = "dual")
+ *		.esriScalebarLabel - Label
+ *
+ * 2. Positions
+ *		.scalebar_top-left - top left
+ *		.scalebar_top-center - top center
+ *		.scalebar_top-right - top right
+ *		.scalebar_bottom-left - bottom left
+ *		.scalebar_bottom-center - bottom center
+ *		.scalebar_bottom-right - bottom right
+ *
+ */
+ 
+@import "../../../variables";
+
+.esriScalebar {
+	z-index: 30;
+	position: absolute;
+	width: 0px;
+	height: 20px;
+}
+
+/* positions */
+
+.scalebar_top-left {
+	left: 10px;
+	top: 10px;
+}
+
+.scalebar_top-center {
+	left: 50%;
+	top: 10px;
+}
+
+.scalebar_top-right {
+	right: 30px;
+	top: 10px;
+}
+
+.scalebar_bottom-left {
+	left: 25px;
+	bottom: 25px;
+}
+
+.scalebar_bottom-center {
+	left: 50%;
+	bottom: 25px;
+}
+
+.scalebar_bottom-right {
+	right: 100px;
+	bottom: 25px;
+}
+
+/* ruler mode */
+
+.esriScalebarRuler {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: $map-scalebar-ruler-height;
+	background: $map-scalebar-ruler-block-light-color
+	border: $map-scalebar-ruler-border;
+}
+
+.esriScalebarRulerBlock {
+	overflow: hidden;
+	position: absolute;
+	height: 50%;
+	background: $map-scalebar-ruler-block-dark-color;
+}
+
+/* positions of ruler blocks */
+
+.upper_firstpiece {
+	top: 0%
+	left: 0%
+	width: 25%
+}
+
+.upper_secondpiece {
+	top: 0%
+	left: 50%
+	width: 25%
+}
+
+.lower_firstpiece {
+	top: 50%
+	left: 25%
+	width: 25%
+}
+
+.lower_secondpiece {
+	top: 50%
+	left: 75%
+	width: 30%
+}
+
+/* line mode (scalebarUnit: "dual") */
+
+.esriScalebarLine {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: $map-scalebar-line-height;
+	border: $map-scalebar-line-thickness solid $map-scalebar-line-color;
+}
+
+// NOTE: where does this style apply to?
+.esriScalebarMetricLineBackground {
+	border: 4px solid white;
+	position: absolute;
+	left: -1px;
+	bottom: 2px;
+}
+
+.esriScalebarMetricLine {
+	border-top-style: none;
+}
+
+.esriScalebarEnglishLine {
+	border-bottom-style: none;
+	top: - $map-scalebar-line-thickness;
+}
+
+.esriScaleLabelDiv {
+	position: relative
+	top: -8px;
+	width: 100%;
+	padding: 2px;
+}
+
+.scaleLabelDiv {
+	position: relative;
+	width: 100%;
+	height: 5px;
+}
+
+.esriScalebarLabel {
+	font-size: $map-scalebar-font-size;
+	position: absolute;
+	width: 10%;
+	text-align: center;
+	color: $map-scalebar-text-color;
+	font-weight: bolder;
+	height: 5px;
+	top: -1px;
+}
+
+.esriScalebarLineLabel {
+	position: relative;
+}
+
+.esriScalebarFirstNumber {
+	left: 45%;
+}
+
+.esriScalebarSecondNumber {
+	left: 95%;
+}

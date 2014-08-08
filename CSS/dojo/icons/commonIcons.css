@@ -1,0 +1,248 @@
+.dijitIconSave,
+.dijitIconPrint,
+.dijitIconCut,
+.dijitIconCopy,
+.dijitIconClear,
+.dijitIconDelete,
+.dijitIconUndo,
+.dijitIconEdit,
+.dijitIconNewTask,
+.dijitIconEditTask,
+.dijitIconEditProperty,
+.dijitIconTask,
+.dijitIconFilter,
+.dijitIconConfigure,
+.dijitIconSearch,
+.dijitIconApplication,
+.dijitIconBookmark,
+.dijitIconChart,
+.dijitIconConnector,
+.dijitIconDatabase,
+.dijitIconDocuments,
+.dijitIconMail,
+.dijitLeaf,
+.dijitIconFile,
+.dijitIconFunction,
+.dijitIconKey,
+.dijitIconPackage,
+.dijitIconSample,
+.dijitIconTable,
+.dijitIconUsers,
+.dijitFolderClosed,
+.dijitIconFolderClosed,
+.dijitFolderOpened,
+.dijitIconFolderOpen,
+.dijitIconError,
+.dijitIconLoading {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+.dijitIconSave:before {
+  content: "\f0c7";
+}
+.dijitIconPrint:before {
+  content: "\f02f";
+}
+.dijitIconCut:before {
+  content: "\f0c4";
+}
+.dijitIconCopy:before {
+  content: "\f0c5";
+}
+.dijitIconClear:before {
+  content: "\f12d";
+}
+.dijitIconDelete:before {
+  content: "\f00d";
+}
+.dijitIconUndo:before {
+  content: "\f0e2";
+}
+.dijitIconEdit:before {
+  content: "\f044";
+}
+.dijitIconNewTask:before {
+  content: "\f067";
+}
+.dijitIconEditTask:before {
+  content: "\f044";
+}
+.dijitIconEditProperty:before {
+  content: "\f044";
+}
+.dijitIconTask:before {
+  content: "\f0f6";
+}
+.dijitIconFilter:before {
+  content: "\f0b0";
+}
+.dijitIconConfigure:before {
+  content: "\f013";
+}
+.dijitIconSearch:before {
+  content: "\f002";
+}
+.dijitIconError:before {
+  content: "\f06a";
+}
+.dijitIconApplication:before {
+  content: "\f022";
+}
+.dijitIconBookmark:before {
+  content: "\f02e";
+}
+.dijitIconChart:before {
+  content: "\f080";
+}
+.dijitIconConnector:before {
+  content: "\f0c1";
+}
+.dijitIconDatabase:before {
+  content: "\f1c0";
+}
+.dijitIconDocuments:before {
+  content: "\f02d";
+}
+.dijitIconMail:before {
+  content: "\f003";
+}
+.dijitIconFile:before,
+.dijitLeaf:before {
+  content: "\f15c";
+}
+.dijitIconFunction:before {
+  content: "\f085";
+}
+.dijitIconKey:before {
+  content: "\f084";
+}
+.dijitIconPackage:before {
+  content: "\f1b2";
+}
+.dijitIconSample:before {
+  content: "\f1b3";
+}
+.dijitIconTable:before {
+  content: "\f0ce";
+}
+.dijitIconUsers:before {
+  content: "\f0c0";
+}
+.dijitIconFolderClosed:before,
+.dijitFolderClosed:before {
+  content: "\f07b";
+}
+.dijitIconFolderOpen:before,
+.dijitFolderOpened:before {
+  content: "\f07c";
+}
+.dijitIconLoading:before {
+  content: "\f021";
+  -webkit-animation: spinning 2s linear infinite;
+  -moz-animation: spinning 2s linear infinite;
+  -o-animation: spinning 2s linear infinite;
+  -ms-animation: spinning 2s linear infinite;
+  animation: spinning 2s linear infinite;
+}
+.dj_ie8 .dijitIconLoading,
+.dj_ie9 .dijitIconLoading {
+  background: url("images/loadingAnimation_rtl.gif") no-repeat;
+  height: 20px;
+  width: 20px;
+}
+.dj_ie8 .dijitIconLoading:before,
+.dj_ie9 .dijitIconLoading:before {
+  content: "";
+}
+@-moz-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinning {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

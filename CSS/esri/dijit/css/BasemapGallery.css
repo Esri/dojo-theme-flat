@@ -1,0 +1,90 @@
+/* esriBasemapGallery
+ * 
+ * Styling esriBasemapGallery includes:
+ * 
+ * 1. Containers
+ * 		.esriBasemapGallery
+ *		.esriBasemapGalleryThumbnail - thumbnail
+ *		.esriBasemapGalleryLabelContainer - label
+ *
+ * 2. Buttons
+ *		.esriBasemapGalleryNode a - contains Basemap thumbnail and label
+ *
+ * 3. States - Hover, Active, Disabled, e.g.
+ *		.esriBasemapGalleryNode a:hover - hover
+ *		.esriBasemapGalleryNode a:active - active
+ *		.esriBasemapGallerySelectedNode - selected
+ *			.esriBasemapGallerySelectedNode a:after - checked icon
+ */
+.esriBasemapGallery {
+  background: transparent;
+}
+.esriBasemapGalleryNode {
+  float: left;
+  margin: 4px;
+  width: auto;
+}
+.esriBasemapGalleryNode a {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  display: inline-block;
+  padding: 2px;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+  -ms-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+/* Hover */
+/* Active */
+}
+.esriBasemapGalleryNode a img {
+  vertical-align: middle;
+}
+.esriBasemapGalleryNode a:hover {
+  background: #f2f2f2;
+}
+.esriBasemapGalleryNode a:active {
+  background: #e6e6e6;
+}
+.esriBasemapGalleryLabelContainer {
+  background: transparent;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+.esriBasemapGalleryThumbnail {
+  height: 67px;
+  width: 100px;
+  border: 4px solid transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+}
+/* Selected */
+.esriBasemapGallerySelectedNode .esriBasemapGalleryThumbnail {
+  border: 4px solid #007ac2;
+  margin: 0;
+}
+.esriBasemapGallerySelectedNode a:after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  height: 20px;
+  width: 30px;
+  background: #007ac2;
+  content: "\f00c";
+  color: #fff;
+  text-align: center;
+  display: block;
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+}

@@ -1,0 +1,48 @@
+/* rtl support 
+
+	IMPORTANT:
+	WebKit places the scrollbars on the RIGHT, even when in RTL mode :(
+	.dgrid-rtl is added to the domNode if the grid's isRTL is true
+	.dgrid-rtl-nonwebkit is also added to the domNode if
+		the grid's isRTL is true AND the client isn't WebKit
+*/
+.dgrid-rtl-nonwebkit .dgrid-header {
+  right: 0;
+  left: 17px;
+}
+.dgrid-rtl-nonwebkit .dgrid-header-scroll {
+  left: 0px;
+  right: auto;
+}
+.dgrid-rtl .dgrid-cell {
+  text-align: right;
+  border-right-style: none;
+  border-left-style: solid;
+}
+.dgrid-rtl .dgrid-header-row {
+  right: 0;
+}
+.dgrid-rtl .dgrid-header-scroll {
+  left: 0;
+  right: auto;
+}
+.dgrid-rtl .dgrid-sort-arrow {
+  float: left;
+}
+.dgrid-rtl .ui-icon-triangle-1-e:before {
+  content: "\f0d9";
+}
+.dgrid-rtl .dgrid-hider-menu {
+  right: auto;
+  left: 18.5px;
+}
+.dgrid-rtl .dgrid-hider-menu-check {
+  left: auto;
+  right: 8px;
+}
+.dgrid-rtl .dgrid-hider-menu-label {
+  padding-left: 0;
+  padding-right: 24px;
+/* width of a checkbox plus value of the default padding */
+  text-align: right;
+}

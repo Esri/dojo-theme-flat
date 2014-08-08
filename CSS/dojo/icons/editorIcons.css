@@ -1,0 +1,150 @@
+.dijitEditorIcon {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+/*
+.dijitDisabled .dijitEditorIcon {
+	// Does not do anything
+}
+*/
+.dijitEditorIconSave:before {
+  content: "\f0c7";
+}
+.dijitEditorIconPrint:before {
+  content: "\f02f";
+}
+.dijitEditorIconCut:before {
+  content: "\f0c4";
+}
+.dijitEditorIconCopy:before {
+  content: "\f0c5";
+}
+.dijitEditorIconPaste:before {
+  content: "\f0ea";
+}
+.dijitEditorIconDelete:before {
+  content: "\f00d";
+}
+.dijitEditorIconCancel:before {
+  content: "\f00d";
+}
+.dijitEditorIconUndo:before {
+  content: "\f0e2";
+}
+.dijitEditorIconRedo:before {
+  content: "\f01e";
+}
+.dijitEditorIconSelectAll:before {
+  content: "\f15c";
+}
+.dijitEditorIconBold:before {
+  content: "\f032";
+}
+.dijitEditorIconItalic:before {
+  content: "\f033";
+}
+.dijitEditorIconUnderline:before {
+  content: "\f0cd";
+}
+.dijitEditorIconStrikethrough:before {
+  content: "\f0cc";
+}
+.dijitEditorIconSuperscript:before {
+  content: "\f12b";
+}
+.dijitEditorIconSubscript:before {
+  content: "\f12c";
+}
+.dijitEditorIconJustifyCenter:before {
+  content: "\f037";
+}
+.dijitEditorIconJustifyFull:before {
+  content: "\f039";
+}
+.dijitEditorIconJustifyLeft:before {
+  content: "\f036";
+}
+.dijitEditorIconJustifyRight:before {
+  content: "\f038";
+}
+.dijitEditorIconIndent:before {
+  content: "\f03c";
+}
+.dijitEditorIconOutdent:before {
+  content: "\f03b";
+}
+.dijitEditorIconListBulletIndent:before {
+  content: "\f03c";
+}
+.dijitEditorIconListBulletOutdent:before {
+  content: "\f03b";
+}
+.dijitEditorIconListNumIndent:before {
+  content: "\f03c";
+}
+.dijitEditorIconListNumOutdent:before {
+  content: "\f03b";
+}
+.dijitEditorIconTabIndent:before {
+  content: "\f061";
+}
+.dijitEditorIconLeftToRight:before {
+  content: "\f0ec";
+}
+.dijitEditorIconRightToLeft:before,
+.dijitEditorIconToggleDir:before {
+  content: "\f0ec";
+}
+.dijitEditorIconBackColor:before {
+  content: "\f009";
+}
+.dijitEditorIconForeColor:before {
+  content: "\f031";
+}
+.dijitEditorIconHiliteColor:before {
+  content: "\f00a";
+}
+.dijitEditorIconNewPage:before {
+  content: "\f016";
+}
+.dijitEditorIconInsertImage:before {
+  content: "\f03e";
+}
+.dijitEditorIconInsertTable:before {
+  content: "\f0ce";
+}
+.dijitEditorIconInsertHorizontalRule:before {
+  content: "\f068";
+}
+.dijitEditorIconInsertOrderedList:before {
+  content: "\f0cb";
+}
+.dijitEditorIconInsertUnorderedList:before {
+  content: "\f0ca";
+}
+.dijitEditorIconCreateLink:before {
+  content: "\f0c1";
+}
+.dijitEditorIconUnlink:before {
+  content: "\f127";
+}
+.dijitEditorIconViewSource:before {
+  content: "\f121";
+}
+.dijitEditorIconRemoveFormat:before {
+  content: "\f12d";
+}
+.dijitEditorIconFullScreen:before {
+  content: "\f0b2";
+}
+.dijitEditorIconWikiword:before {
+  content: "\f044";
+}

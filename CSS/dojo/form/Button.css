@@ -1,0 +1,602 @@
+/* Button | DropDownButton | ComboButton | ToggleButton
+ * 
+ * Styling Buttons mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitButton
+ * 		.dijitDropDownButton
+ * 		.dijitComboButton
+ * 		.dijitButtonNode - common button/arrow wrapper shared across all three button types 
+ *
+ * 2. Button text
+ * 		.dijitButtonText
+ * 
+ * 3. Arrows - only for DropDownButton and ComboButton
+ * 	     There are total four directions arrows - down, left, right, up:
+ * 		.dijitArrowButtonInner - down arrow by default
+ *      .dijitLeftArrowButton .dijitArrowButtonInner - left arrow
+ *      .dijitRightArrowButton .dijitArrowButtonInner - right arrow
+ *      .dijitUpArrowButton .dijitArrowButtonInner - up arrow
+ * 
+ * 4. States - Hover, Active, Disabled, e.g.
+ * 		.dijitButtonHover .dijitButtonNode
+ * 		.dijitButtonActive .dijitButtonNode
+ * 		.dijitButtonDisabled .dijitButtonNode
+ *      
+ *      .dijitDisabled .dijitArrowButtonInner  - disabled arrow states 
+ */
+.dijitButtonText {
+  padding: 0 4px;
+  text-align: center;
+}
+/* Default button */
+.dijitButton .dijitButtonNode,
+.dijitDropDownButton .dijitButtonNode,
+.dijitComboButton .dijitButtonNode,
+.dijitToggleButton .dijitButtonNode {
+  padding: 4px 12px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+}
+/* Alternative button colors */
+.dijitButton.btn-alt .dijitButtonNode,
+.dijitDropDownButton.btn-alt .dijitButtonNode,
+.dijitComboButton.btn-alt .dijitButtonNode,
+.dijitToggleButton.btn-alt .dijitButtonNode,
+.dijitComboBox.btn-alt .dijitButtonNode,
+.dijitSelect.btn-alt .dijitButtonContents,
+.dijitSelect.class .dijitButtonNode,
+.dijitSpinner.btn-alt .dijitArrowButton,
+.btn-alt .esriSimpleSlider div,
+.btn-alt .esriAddBookmark,
+.btn-alt .esriButton .dijitButtonNode,
+.btn-alt .esriToggleButton .dijitButtonNode {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+.dijitButton.btn-primary .dijitButtonNode,
+.dijitDropDownButton.btn-primary .dijitButtonNode,
+.dijitComboButton.btn-primary .dijitButtonNode,
+.dijitToggleButton.btn-primary .dijitButtonNode,
+.dijitComboBox.btn-primary .dijitButtonNode,
+.dijitSelect.btn-primary .dijitButtonContents,
+.dijitSelect.btn-primary .dijitButtonNode,
+.dijitSpinner.btn-primary .dijitArrowButton,
+.btn-primary .esriSimpleSlider div,
+.btn-primary .esriAddBookmark,
+.btn-primary .esriButton .dijitButtonNode,
+.btn-primary .esriToggleButton .dijitButtonNode {
+  border: 1px solid #0068a5;
+  background: #007ac2;
+  background: -webkit-linear-gradient(#0080cb, #007ac2);
+  background: -moz-linear-gradient(#0080cb, #007ac2);
+  background: -o-linear-gradient(#0080cb, #007ac2);
+  background: -ms-linear-gradient(#0080cb, #007ac2);
+  background: linear-gradient(#0080cb, #007ac2);
+}
+.dijitButton.btn-success .dijitButtonNode,
+.dijitDropDownButton.btn-success .dijitButtonNode,
+.dijitComboButton.btn-success .dijitButtonNode,
+.dijitToggleButton.btn-success .dijitButtonNode,
+.dijitComboBox.btn-success .dijitButtonNode,
+.dijitSelect.btn-success .dijitButtonContents,
+.dijitSelect.btn-success .dijitButtonNode,
+.dijitSpinner.btn-success .dijitArrowButton,
+.btn-success .esriSimpleSlider div,
+.btn-success .esriAddBookmark,
+.btn-success .esriButton .dijitButtonNode,
+.btn-success .esriToggleButton .dijitButtonNode {
+  border: 1px solid #2d923c;
+  background: #35ac46;
+  background: -webkit-linear-gradient(#37b349, #35ac46);
+  background: -moz-linear-gradient(#37b349, #35ac46);
+  background: -o-linear-gradient(#37b349, #35ac46);
+  background: -ms-linear-gradient(#37b349, #35ac46);
+  background: linear-gradient(#37b349, #35ac46);
+}
+.dijitButton.btn-info .dijitButtonNode,
+.dijitDropDownButton.btn-info .dijitButtonNode,
+.dijitComboButton.btn-info .dijitButtonNode,
+.dijitToggleButton.btn-info .dijitButtonNode,
+.dijitComboBox.btn-info .dijitButtonNode,
+.dijitSelect.btn-info .dijitButtonContents,
+.dijitSelect.btn-info .dijitButtonNode,
+.dijitSpinner.btn-info .dijitArrowButton,
+.btn-info .esriSimpleSlider div,
+.btn-info .esriAddBookmark,
+.btn-info .esriButton .dijitButtonNode,
+.btn-info .esriToggleButton .dijitButtonNode {
+  border: 1px solid #009dce;
+  background: #00b9f2;
+  background: -webkit-linear-gradient(#00bffa, #00b9f2);
+  background: -moz-linear-gradient(#00bffa, #00b9f2);
+  background: -o-linear-gradient(#00bffa, #00b9f2);
+  background: -ms-linear-gradient(#00bffa, #00b9f2);
+  background: linear-gradient(#00bffa, #00b9f2);
+}
+.dijitButton.btn-warning .dijitButtonNode,
+.dijitDropDownButton.btn-warning .dijitButtonNode,
+.dijitComboButton.btn-warning .dijitButtonNode,
+.dijitToggleButton.btn-warning .dijitButtonNode,
+.dijitComboBox.btn-warning .dijitButtonNode,
+.dijitSelect.btn-warning .dijitButtonContents,
+.dijitSelect.btn-warning .dijitButtonNode,
+.dijitSpinner.btn-warning .dijitArrowButton,
+.btn-warning .esriSimpleSlider div,
+.btn-warning .esriAddBookmark,
+.btn-warning .esriButton .dijitButtonNode,
+.btn-warning .esriToggleButton .dijitButtonNode {
+  border: 1px solid #ec8408;
+  background: #f89927;
+  background: -webkit-linear-gradient(#f89c2d, #f89927);
+  background: -moz-linear-gradient(#f89c2d, #f89927);
+  background: -o-linear-gradient(#f89c2d, #f89927);
+  background: -ms-linear-gradient(#f89c2d, #f89927);
+  background: linear-gradient(#f89c2d, #f89927);
+}
+.dijitButton.btn-danger .dijitButtonNode,
+.dijitDropDownButton.btn-danger .dijitButtonNode,
+.dijitComboButton.btn-danger .dijitButtonNode,
+.dijitToggleButton.btn-danger .dijitButtonNode,
+.dijitComboBox.btn-danger .dijitButtonNode,
+.dijitSelect.btn-danger .dijitButtonContents,
+.dijitSelect.btn-danger .dijitButtonNode,
+.dijitSpinner.btn-danger .dijitArrowButton,
+.btn-danger .esriSimpleSlider div,
+.btn-danger .esriAddBookmark,
+.btn-danger .esriButton .dijitButtonNode,
+.btn-danger .esriToggleButton .dijitButtonNode {
+  border: 1px solid #b94119;
+  background: #da4d1e;
+  background: -webkit-linear-gradient(#e05020, #da4d1e);
+  background: -moz-linear-gradient(#e05020, #da4d1e);
+  background: -o-linear-gradient(#e05020, #da4d1e);
+  background: -ms-linear-gradient(#e05020, #da4d1e);
+  background: linear-gradient(#e05020, #da4d1e);
+}
+.dijitButton.btn-inverse .dijitButtonNode,
+.dijitDropDownButton.btn-inverse .dijitButtonNode,
+.dijitComboButton.btn-inverse .dijitButtonNode,
+.dijitToggleButton.btn-inverse .dijitButtonNode,
+.dijitComboBox.btn-inverse .dijitButtonNode,
+.dijitSelect.btn-inverse .dijitButtonContents,
+.dijitSelect.btn-inverse .dijitButtonNode,
+.dijitSpinner.btn-inverse .dijitArrowButton,
+.btn-inverse .esriSimpleSlider div,
+.btn-inverse .esriAddBookmark,
+.btn-inverse .esriButton .dijitButtonNode,
+.btn-inverse .esriToggleButton .dijitButtonNode {
+  border: 1px solid #25272c;
+  background: #2b2e34;
+  background: -webkit-linear-gradient(#31343b, #2b2e34);
+  background: -moz-linear-gradient(#31343b, #2b2e34);
+  background: -o-linear-gradient(#31343b, #2b2e34);
+  background: -ms-linear-gradient(#31343b, #2b2e34);
+  background: linear-gradient(#31343b, #2b2e34);
+}
+/* hover status */
+.dijitButtonHover .dijitButtonNode,
+.dijitDropDownButtonHover .dijitButtonNode,
+.dijitToggleButtonHover .dijitButtonNode {
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  transition: all 0.1s;
+  background: #e1e1e1;
+  background: -webkit-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -moz-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -o-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -ms-linear-gradient(#f6f6f6, #e1e1e1);
+  background: linear-gradient(#f6f6f6, #e1e1e1);
+}
+.dijitComboButton .dijitButtonNodeHover,
+.dijitComboButton .dijitDownArrowButtonHover {
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  transition: all 0.1s;
+  background: #e1e1e1;
+  background: -webkit-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -moz-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -o-linear-gradient(#f6f6f6, #e1e1e1);
+  background: -ms-linear-gradient(#f6f6f6, #e1e1e1);
+  background: linear-gradient(#f6f6f6, #e1e1e1);
+}
+/* Alternative button colors */
+.dijitButtonHover.btn-primary .dijitButtonNode,
+.dijitDropDownButtonHover.btn-primary .dijitButtonNode,
+.dijitComboButton.btn-primary .dijitButtonNodeHover,
+.dijitToggleButtonHover.btn-primary .dijitButtonNode,
+.dijitComboBoxHover.btn-primary .dijitButtonNode,
+.dijitSelectHover.btn-primary .dijitButtonContents,
+.dijitSelectHover.btn-primary .dijitButtonNode,
+.dijitSelect.dijitSelectOpened.btn-primary .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-primary .dijitArrowButton,
+.dijitSpinner.btn-primary .dijitUpArrowButtonHover,
+.dijitSpinner.btn-primary .dijitDownArrowButtonHover,
+.btn-primary .esriSimpleSlider div:hover,
+.btn-primary .esriAddBookmark:hover,
+.btn-primary .esriButtonHover .dijitButtonNode,
+.btn-primary .esriToggleButtonHover .dijitButtonNode {
+  background: #0070b2;
+  background: -webkit-linear-gradient(#0084d2, #0070b2);
+  background: -moz-linear-gradient(#0084d2, #0070b2);
+  background: -o-linear-gradient(#0084d2, #0070b2);
+  background: -ms-linear-gradient(#0084d2, #0070b2);
+  background: linear-gradient(#0084d2, #0070b2);
+}
+.dijitButtonHover.btn-success .dijitButtonNode,
+.dijitDropDownButtonHover.btn-success .dijitButtonNode,
+.dijitComboButton.btn-success .dijitButtonNodeHover,
+.dijitToggleButtonHover.btn-success .dijitButtonNode,
+.dijitComboBoxHover.btn-success .dijitButtonNode,
+.dijitSelectHover.btn-success .dijitButtonContents,
+.dijitSelectHover.btn-success .dijitButtonNode,
+.dijitSelect.dijitSelectOpened.btn-success .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-success .dijitArrowButton,
+.dijitSpinner.btn-success .dijitUpArrowButtonHover,
+.dijitSpinner.btn-success .dijitDownArrowButtonHover,
+.btn-success .esriSimpleSlider div:hover,
+.btn-success .esriAddBookmark:hover,
+.btn-success .esriButtonHover .dijitButtonNode,
+.btn-success .esriToggleButtonHover .dijitButtonNode {
+  background: #319e40;
+  background: -webkit-linear-gradient(#38b74a, #319e40);
+  background: -moz-linear-gradient(#38b74a, #319e40);
+  background: -o-linear-gradient(#38b74a, #319e40);
+  background: -ms-linear-gradient(#38b74a, #319e40);
+  background: linear-gradient(#38b74a, #319e40);
+}
+.dijitButtonHover.btn-info .dijitButtonNode,
+.dijitDropDownButtonHover.btn-info .dijitButtonNode,
+.dijitComboButton.btn-info .dijitButtonNodeHover,
+.dijitToggleButtonHover.btn-info .dijitButtonNode,
+.dijitComboBoxHover.btn-info .dijitButtonNode,
+.dijitSelectHover.btn-info .dijitButtonContents,
+.dijitSelectHover.btn-info .dijitButtonNode,
+.dijitSelect.dijitSelectOpened.btn-info .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-info .dijitArrowButton,
+.dijitSpinner.btn-info .dijitUpArrowButtonHover,
+.dijitSpinner.btn-info .dijitDownArrowButtonHover,
+.btn-info .esriSimpleSlider div:hover,
+.btn-info .esriAddBookmark:hover,
+.btn-info .esriButtonHover .dijitButtonNode,
+.btn-info .esriToggleButtonHover .dijitButtonNode {
+  background: #00aadf;
+  background: -webkit-linear-gradient(#00c3ff, #00aadf);
+  background: -moz-linear-gradient(#00c3ff, #00aadf);
+  background: -o-linear-gradient(#00c3ff, #00aadf);
+  background: -ms-linear-gradient(#00c3ff, #00aadf);
+  background: linear-gradient(#00c3ff, #00aadf);
+}
+.dijitButtonHover.btn-warning .dijitButtonNode,
+.dijitDropDownButtonHover.btn-warning .dijitButtonNode,
+.dijitComboButton.btn-warning .dijitButtonNodeHover,
+.dijitToggleButtonHover.btn-warning .dijitButtonNode,
+.dijitComboBoxHover.btn-warning .dijitButtonNode,
+.dijitSelectHover.btn-warning .dijitButtonContents,
+.dijitSelectHover.btn-warning .dijitButtonNode,
+.dijitSelect.dijitSelectOpened.btn-warning .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-warning .dijitArrowButton,
+.dijitSpinner.btn-warning .dijitUpArrowButtonHover,
+.dijitSpinner.btn-warning .dijitDownArrowButtonHover,
+.btn-warning .esriSimpleSlider div:hover,
+.btn-warning .esriAddBookmark:hover,
+.btn-warning .esriButtonHover .dijitButtonNode,
+.btn-warning .esriToggleButtonHover .dijitButtonNode {
+  background: #f78e11;
+  background: -webkit-linear-gradient(#f89e32, #f78e11);
+  background: -moz-linear-gradient(#f89e32, #f78e11);
+  background: -o-linear-gradient(#f89e32, #f78e11);
+  background: -ms-linear-gradient(#f89e32, #f78e11);
+  background: linear-gradient(#f89e32, #f78e11);
+}
+.dijitButtonHover.btn-danger .dijitButtonNode,
+.dijitDropDownButtonHover.btn-danger .dijitButtonNode,
+.dijitComboButton.btn-danger .dijitButtonNodeHover,
+.dijitToggleButtonHover.btn-danger .dijitButtonNode,
+.dijitComboBoxHover.btn-danger .dijitButtonNode,
+.dijitSelectHover.btn-danger .dijitButtonContents,
+.dijitSelectHover.btn-danger .dijitButtonNode,
+.dijitSelect.dijitSelectOpened.btn-danger .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-danger .dijitArrowButton,
+.dijitSpinner.btn-danger .dijitUpArrowButtonHover,
+.dijitSpinner.btn-danger .dijitDownArrowButtonHover,
+.btn-danger .esriSimpleSlider div:hover,
+.btn-danger .esriAddBookmark:hover,
+.btn-danger .esriButtonHover .dijitButtonNode,
+.btn-danger .esriToggleButtonHover .dijitButtonNode {
+  background: #c9471c;
+  background: -webkit-linear-gradient(#e15324, #c9471c);
+  background: -moz-linear-gradient(#e15324, #c9471c);
+  background: -o-linear-gradient(#e15324, #c9471c);
+  background: -ms-linear-gradient(#e15324, #c9471c);
+  background: linear-gradient(#e15324, #c9471c);
+}
+.dijitButtonHover.btn-inverse .dijitButtonNode,
+.dijitDropDownButtonHover.btn-inverse .dijitButtonNode,
+.dijitComboButton.btn-inverse .dijitButtonNodeHover,
+.dijitToggleButtonHover.btn-inverse .dijitButtonNode,
+.dijitComboBoxHover.btn-inverse .dijitButtonNode,
+.dijitSelectHover.btn-inverse .dijitButtonContents,
+.dijitSelectHover.btn-inverse .dijitButtonNode,
+.dijitSelect.dijitSelectOpened.btn-inverse .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-inverse .dijitArrowButton,
+.dijitSpinner.btn-inverse .dijitUpArrowButtonHover,
+.dijitSpinner.btn-inverse .dijitDownArrowButtonHover,
+.btn-inverse .esriSimpleSlider div:hover,
+.btn-inverse .esriAddBookmark:hover,
+.btn-inverse .esriButtonHover .dijitButtonNode,
+.btn-inverse .esriToggleButtonHover .dijitButtonNode {
+  background: #282a30;
+  background: -webkit-linear-gradient(#34383f, #282a30);
+  background: -moz-linear-gradient(#34383f, #282a30);
+  background: -o-linear-gradient(#34383f, #282a30);
+  background: -ms-linear-gradient(#34383f, #282a30);
+  background: linear-gradient(#34383f, #282a30);
+}
+/* active, checked status */
+.dijitButtonActive .dijitButtonNode,
+.dijitDropDownButtonActive .dijitButtonNode,
+.dijitToggleButtonActive .dijitButtonNode,
+.dijitToggleButtonChecked .dijitButtonNode {
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  outline: none;
+  background: #d0d0d0;
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+}
+.dijitComboButton .dijitButtonNodeActive,
+.dijitComboButton .dijitDownArrowButtonActive {
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  outline: none;
+  background: #d0d0d0;
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+}
+.dijitButtonActive.btn-primary .dijitButtonNode,
+.dijitDropDownButtonActive.btn-primary .dijitButtonNode,
+.dijitComboButton.btn-primary .dijitButtonNodeActive,
+.dijitToggleButtonActive.btn-primary .dijitButtonNode,
+.dijitComboBoxActive.btn-primary .dijitButtonNode,
+.dijitSelectActive.btn-primary .dijitButtonContents,
+.dijitSelectActive.btn-primary .dijitArrowButton,
+.dijitSelect.dijitSelectOpened.btn-primary .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-primary .dijitArrowButton,
+.dijitComboBox.btn-primary .dijitButtonNode.dijitHasDropDownOpen,
+.dijitSpinner.btn-primary .dijitUpArrowButtonActive,
+.dijitSpinner.btn-primary .dijitDownArrowButtonActive,
+.btn-primary .esriSimpleSlider div:active,
+.btn-primary .esriAddBookmark:active,
+.btn-primary .esriButtonActive .dijitButtonNode,
+.btn-primary .esriButtonChecked .dijitButtonNode,
+.btn-primary .esriToggleButtonActive .dijitButtonNode {
+  background: #0068a5;
+  background: -webkit-linear-gradient(#007ac2, #007ac2);
+  background: -moz-linear-gradient(#007ac2, #007ac2);
+  background: -o-linear-gradient(#007ac2, #007ac2);
+  background: -ms-linear-gradient(#007ac2, #007ac2);
+  background: linear-gradient(#007ac2, #007ac2);
+}
+.dijitButtonActive.btn-success .dijitButtonNode,
+.dijitDropDownButtonActive.btn-success .dijitButtonNode,
+.dijitComboButton.btn-success .dijitButtonNodeActive,
+.dijitToggleButtonActive.btn-success .dijitButtonNode,
+.dijitComboBoxActive.btn-success .dijitButtonNode,
+.dijitSelectActive.btn-success .dijitButtonContents,
+.dijitSelectActive.btn-success .dijitArrowButton,
+.dijitSelect.dijitSelectOpened.btn-success .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-success .dijitArrowButton,
+.dijitComboBox.btn-success .dijitButtonNode.dijitHasDropDownOpen,
+.dijitSpinner.btn-success .dijitUpArrowButtonActive,
+.dijitSpinner.btn-success .dijitDownArrowButtonActive,
+.btn-success .esriSimpleSlider div:active,
+.btn-success .esriAddBookmark:active,
+.btn-success .esriButtonActive .dijitButtonNode,
+.btn-success .esriButtonChecked .dijitButtonNode,
+.btn-success .esriToggleButtonActive .dijitButtonNode {
+  background: #2d923c;
+  background: -webkit-linear-gradient(#35ac46, #35ac46);
+  background: -moz-linear-gradient(#35ac46, #35ac46);
+  background: -o-linear-gradient(#35ac46, #35ac46);
+  background: -ms-linear-gradient(#35ac46, #35ac46);
+  background: linear-gradient(#35ac46, #35ac46);
+}
+.dijitButtonActive.btn-info .dijitButtonNode,
+.dijitDropDownButtonActive.btn-info .dijitButtonNode,
+.dijitComboButton.btn-info .dijitButtonNodeActive,
+.dijitToggleButtonActive.btn-info .dijitButtonNode,
+.dijitComboBoxActive.btn-info .dijitButtonNode,
+.dijitSelectActive.btn-info .dijitButtonContents,
+.dijitSelectActive.btn-info .dijitArrowButton,
+.dijitSelect.dijitSelectOpened.btn-info .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-info .dijitArrowButton,
+.dijitComboBox.btn-info .dijitButtonNode.dijitHasDropDownOpen,
+.dijitSpinner.btn-info .dijitUpArrowButtonActive,
+.dijitSpinner.btn-info .dijitDownArrowButtonActive,
+.btn-info .esriSimpleSlider div:active,
+.btn-info .esriAddBookmark:active,
+.btn-info .esriButtonActive .dijitButtonNode,
+.btn-info .esriButtonChecked .dijitButtonNode,
+.btn-info .esriToggleButtonActive .dijitButtonNode {
+  background: #009dce;
+  background: -webkit-linear-gradient(#00b9f2, #00b9f2);
+  background: -moz-linear-gradient(#00b9f2, #00b9f2);
+  background: -o-linear-gradient(#00b9f2, #00b9f2);
+  background: -ms-linear-gradient(#00b9f2, #00b9f2);
+  background: linear-gradient(#00b9f2, #00b9f2);
+}
+.dijitButtonActive.btn-warning .dijitButtonNode,
+.dijitDropDownButtonActive.btn-warning .dijitButtonNode,
+.dijitComboButton.btn-warning .dijitButtonNodeActive,
+.dijitToggleButtonActive.btn-warning .dijitButtonNode,
+.dijitComboBoxActive.btn-warning .dijitButtonNode,
+.dijitSelectActive.btn-warning .dijitButtonContents,
+.dijitSelectActive.btn-warning .dijitArrowButton,
+.dijitSelect.dijitSelectOpened.btn-warning .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-warning .dijitArrowButton,
+.dijitComboBox.btn-warning .dijitButtonNode.dijitHasDropDownOpen,
+.dijitSpinner.btn-warning .dijitUpArrowButtonActive,
+.dijitSpinner.btn-warning .dijitDownArrowButtonActive,
+.btn-warning .esriSimpleSlider div:active,
+.btn-warning .esriAddBookmark:active,
+.btn-warning .esriButtonActive .dijitButtonNode,
+.btn-warning .esriButtonChecked .dijitButtonNode,
+.btn-warning .esriToggleButtonActive .dijitButtonNode {
+  background: #ec8408;
+  background: -webkit-linear-gradient(#f89927, #f89927);
+  background: -moz-linear-gradient(#f89927, #f89927);
+  background: -o-linear-gradient(#f89927, #f89927);
+  background: -ms-linear-gradient(#f89927, #f89927);
+  background: linear-gradient(#f89927, #f89927);
+}
+.dijitButtonActive.btn-danger .dijitButtonNode,
+.dijitDropDownButtonActive.btn-danger .dijitButtonNode,
+.dijitComboButton.btn-danger .dijitButtonNodeActive,
+.dijitToggleButtonActive.btn-danger .dijitButtonNode,
+.dijitComboBoxActive.btn-danger .dijitButtonNode,
+.dijitSelectActive.btn-danger .dijitButtonContents,
+.dijitSelectActive.btn-danger .dijitArrowButton,
+.dijitSelect.dijitSelectOpened.btn-danger .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-danger .dijitArrowButton,
+.dijitComboBox.btn-danger .dijitButtonNode.dijitHasDropDownOpen,
+.dijitSpinner.btn-danger .dijitUpArrowButtonActive,
+.dijitSpinner.btn-danger .dijitDownArrowButtonActive,
+.btn-danger .esriSimpleSlider div:active,
+.btn-danger .esriAddBookmark:active,
+.btn-danger .esriButtonActive .dijitButtonNode,
+.btn-danger .esriButtonChecked .dijitButtonNode,
+.btn-danger .esriToggleButtonActive .dijitButtonNode {
+  background: #b94119;
+  background: -webkit-linear-gradient(#da4d1e, #da4d1e);
+  background: -moz-linear-gradient(#da4d1e, #da4d1e);
+  background: -o-linear-gradient(#da4d1e, #da4d1e);
+  background: -ms-linear-gradient(#da4d1e, #da4d1e);
+  background: linear-gradient(#da4d1e, #da4d1e);
+}
+.dijitButtonActive.btn-inverse .dijitButtonNode,
+.dijitDropDownButtonActive.btn-inverse .dijitButtonNode,
+.dijitComboButton.btn-inverse .dijitButtonNodeActive,
+.dijitToggleButtonActive.btn-inverse .dijitButtonNode,
+.dijitComboBoxActive.btn-inverse .dijitButtonNode,
+.dijitSelectActive.btn-inverse .dijitButtonContents,
+.dijitSelectActive.btn-inverse .dijitArrowButton,
+.dijitSelect.dijitSelectOpened.btn-inverse .dijitButtonContents,
+.dijitSelect.dijitSelectOpened.btn-inverse .dijitArrowButton,
+.dijitComboBox.btn-inverse .dijitButtonNode.dijitHasDropDownOpen,
+.dijitSpinner.btn-inverse .dijitUpArrowButtonActive,
+.dijitSpinner.btn-inverse .dijitDownArrowButtonActive,
+.btn-inverse .esriSimpleSlider div:active,
+.btn-inverse .esriAddBookmark:active,
+.btn-inverse .esriButtonActive .dijitButtonNode,
+.btn-inverse .esriButtonChecked .dijitButtonNode,
+.btn-inverse .esriToggleButtonActive .dijitButtonNode {
+  background: #25272c;
+  background: -webkit-linear-gradient(#2b2e34, #2b2e34);
+  background: -moz-linear-gradient(#2b2e34, #2b2e34);
+  background: -o-linear-gradient(#2b2e34, #2b2e34);
+  background: -ms-linear-gradient(#2b2e34, #2b2e34);
+  background: linear-gradient(#2b2e34, #2b2e34);
+}
+/* disabled status */
+.dijitButtonDisabled,
+.dijitDropDownButtonDisabled,
+.dijitComboButtonDisabled,
+.dijitToggleButtonDisabled {
+  outline: none;
+}
+.dijitButtonDisabled .dijitButtonNode,
+.dijitDropDownButtonDisabled .dijitButtonNode,
+.dijitComboButtonDisabled .dijitButtonNode,
+.dijitToggleButtonDisabled .dijitButtonNode {
+  cursor: default;
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  filter: alpha(opacity=65);
+}
+.dijitComboButtonDisabled .dijitArrowButton {
+  border-left-width: 0;
+}
+/* ComboButton */
+table.dijitComboButton {
+  border-collapse: separate;
+/* override dijit.css so that ComboBox rounded corners work */
+}
+table.dijitComboButton .dijitStretch {
+  -webkit-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+table.dijitComboButton .dijitArrowButton {
+  -webkit-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  border-left-width: 0;
+}
+/* ToggleButton */
+.dijitToggleButton .dijitIcon {
+  display: none;
+}
+.dijitToggleButtonChecked .dijitIcon {
+  display: inline-block;
+}
+/* arrow styles for down/up/left/right directions */
+.dijitDropDownButton .dijitArrowButtonInner {
+  margin-left: 12px;
+}
+.dijitDropDownButton .dijitArrowButtonInner,
+.dijitArrowButton {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.dijitDropDownButton .dijitArrowButtonInner:before,
+.dijitArrowButton:before {
+  content: "\f0d7";
+}
+.dijitLeftArrowButton:before {
+  content: "\f0d9";
+}
+.dijitRightArrowButton:before {
+  content: "\f0da";
+}
+.dijitUpArrowButton:before {
+  content: "\f0d8";
+}

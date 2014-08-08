@@ -1,0 +1,218 @@
+/* Calendar
+ * 
+ * Styling Calendar mainly includes:
+ * 
+ * 1. Calendar container
+ * 		.dijitCalendar - main container
+ * 		.dijitCalendarHover / .dijitCalendarActive - states e.g. hover,active
+ * 
+ * 2. Month
+ * 		.dijitCalendarMonthContainer
+ * 		.dijitCalendarMonthLabel
+ *      .dijitCalendarDecrease / .dijitCalendarDecrease - icons for switching to previous/next month
+ *      .dijitCalendarArrowActive .dijitCalendarDecrease - states e.g. hover,active
+ * 
+ * 3. Date
+ * 		.dijitCalendarDayLabelTemplate - week day column header e.g. S M T W T F S
+ * 		.dijitCalendarDateTemplate - date label wrapper
+ * 		.dijitCalendarPreviousMonth .dijitCalendarDateLabel - special labels for previous or next month
+ *      .dijitCalendarSelectedDate .dijitCalendarDateLabel - styles for selected date
+ * 		.dijitCalendarDisabledDate .dijitCalendarDateLabel - styles for disabled date
+ * 		.dijitCalendarActiveDate .dijitCalendarDateLabel - states e.g. hover,active
+ * 
+ * 4. Year
+ * 		.dijitCalendarYearContainer
+ * 		.dijitCalendarYearLabel
+ * 		.dijitCalendarPreviousYear /.dijitCalendarNextYear
+ *      .dijitCalendarNextYearHover / .dijitCalendarPreviousYearHover - states e.g. hover,active
+ *      
+ * 5. Dropdown Month Menu
+ * 		.dijitCalendarMonthMenu - menu container     
+ * 		.dijitCalendarMonthMenu .dijitCalendarMonthLabel - month label in menu item
+ * 		.dijitCalendarMonthMenu .dijitCalendarMonthLabelHover - menu item hover state
+ */
+.dijitCalendar {
+  background: #fff;
+  text-align: center;
+  padding: 4px;
+  border: 1px solid #d0d0d0;
+  border-collapse: separate;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+}
+.dijitCalendarMonthContainer th {
+  text-align: center;
+  line-height: 20px;
+  vertical-align: middle;
+  margin: 4px 0;
+}
+/* next/previous month arrows */
+.dijitCalendarIncrementControl {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.dijitCalendarDecrease:before {
+  content: "\f0d9";
+}
+.dijitCalendarIncrease:before {
+  content: "\f0da";
+}
+.dijitCalendarArrowHover,
+.dijitCalendarArrow:hover,
+.dijitCalendarNextYearHover,
+.dijitCalendarNextYear:hover,
+.dijitCalendarPreviousYearHover,
+.dijitCalendarPreviousYear:hover {
+  padding: 4px 12px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+  padding: 4px;
+}
+.dijitCalendarArrowActive,
+.dijitCalendarArrow:active,
+.dijitCalendarNextYearActive,
+.dijitCalendarNextYear:active,
+.dijitCalendarPreviousYearActive,
+.dijitCalendarPreviousYear:active {
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  outline: none;
+  background: #d0d0d0;
+  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
+  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+}
+.dijitA11ySideArrow {
+/* text +/- labels instead of arrow icons, for high contrast mode */
+  display: none;
+}
+.dijitCalendarContainer th,
+.dijitCalendarContainer td {
+  padding: 4px;
+}
+/* day */
+.dijitCalendarDayLabelTemplate {
+  text-align: center;
+  border-bottom: 1px solid #d0d0d0;
+}
+.dijitCalendarDayLabel {
+  font-weight: bold;
+  text-align: center;
+}
+/* date */
+.dijitCalendarDateTemplate {
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.dijitCalendarDateTemplate .dijitCalendarDateLabel {
+  text-decoration: none;
+  display: block;
+  padding: 2px 4px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.dijitCalendarPreviousMonth .dijitCalendarDateLabel,
+.dijitCalendarNextMonth .dijitCalendarDateLabel {
+  color: #a7acb7;
+}
+.dijitCalendarCurrentDate .dijitCalendarDateLabel {
+  border-color: #007ac2;
+}
+/* Hover */
+.dijitCalendarHoveredDate .dijitCalendarDateLabel,
+.dijitCalendarEnabledDate:hover .dijitCalendarDateLabel {
+  background: #007ac2;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+/* Active */
+.dijitCalendarActiveDate .dijitCalendarDateLabel,
+.dijitCalendarEnabledDate:active .dijitCalendarDateLabel {
+  background: #007ac2;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+/* Selected */
+.dijitCalendarSelectedDate .dijitCalendarDateLabel {
+  background: #007ac2;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+}
+/* Disabled */
+.dijitCalendarDisabledDate .dijitCalendarDateLabel {
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  filter: alpha(opacity=65);
+}
+/* year */
+.dijitCalendarYearContainer {
+  vertical-align: middle;
+}
+.dijitCalendarYearLabel {
+  padding: 4px 0 0 0;
+  margin: 0;
+  font-size: 1.15em;
+}
+.dijitCalendarYearLabel span {
+  vertical-align: middle;
+}
+.dijitCalendarSelectedYear,
+.dijitCalendarNextYear,
+.dijitCalendarPreviousYear {
+  padding: 4px;
+}
+.dijitCalendarSelectedYear {
+  color: #007ac2;
+}
+.dijitCalendarNextYear,
+.dijitCalendarPreviousYear {
+  color: #007ac2;
+  font-size: 0.9em;
+  line-height: 20px;
+  border: 1px solid transparent;
+}
+.dijitCalendarSelectedYear {
+  padding: 0 4px;
+}
+/* month dropdown */
+.dijitCalendar .dijitDropDownButton {
+  margin: 0;
+}
+.dijitCalendarMonthMenu {
+  padding: 8px 0;
+}
+.dijitCalendarMonthMenu .dijitCalendarMonthLabel {
+  padding: 4px;
+}
+.dijitCalendarMonthMenu .dijitCalendarMonthLabelHover {
+  color: #fff;
+  background: #007ac2;
+}

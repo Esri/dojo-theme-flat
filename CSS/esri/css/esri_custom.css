@@ -1,0 +1,20 @@
+/* map */
+@import url("map_base.css");
+/* Zoom Slider */
+@import url("ZoomSlider.css");
+/* BasemapGallery */
+@import url("../dijit/css/BasemapGallery.css");
+/* Bookmarks */
+@import url("../dijit/css/Bookmarks.css");
+/* Geocoder */
+@import url("../dijit/css/Geocoder.css");
+/* Legend */
+@import url("../dijit/css/Legend.css");
+/* Measurement */
+@import url("../dijit/css/Measurement.css");
+/* OverviewMap */
+@import url("../dijit/css/OverviewMap.css");
+/* Popup */
+@import url("../dijit/css/Popup.css");
+/* Scalebar */
+@import url("../dijit/css/Scalebar.css");

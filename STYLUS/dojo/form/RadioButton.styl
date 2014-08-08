@@ -1,0 +1,74 @@
+/* RadioButton
+ * 
+ * Styling RadioButton mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitRadio|.dijitRadioIcon
+ * 
+ * 2. RadioButton within ToggleButton
+ * 		.dijitToggleButton|.dijitToggleButtonChecked
+ * 
+ * 3. Checked state
+ * 		.dijitRadioChecked
+ * 		.dijitToggleButtonChecked
+ * 
+ * 4. Hover state
+ * 		.dijitRadioHover|.dijitRadioCheckedHover
+ * 
+ * 5. Disabled state
+ * 		.dijitRadioDisabled|.dijitRadioCheckedDisabled
+ */
+
+@import "../../variables";
+
+.dijitRadio,
+.dijitRadioIcon	{		/* inside a toggle button */
+	_icon-core-style();
+	width: $radio-width;
+	height: $radio-height;
+	color: $radio-background-color;
+	font-size: $radio-icon-size;
+	position: relative;
+	&:before,
+	&:after {
+		display: block;
+		width: 100%;
+		text-align: center;
+		content:"\f111";
+	}
+	&:after {
+		position: absolute;
+		top 0;
+		left: 0;
+		content:"\f10c";
+		color: $radio-border-color;
+	}
+	input {
+		position: absolute;
+		top: 0;
+	}
+}
+
+/* checked */
+
+.dijitRadioChecked {
+	&:after {
+		content: "\f192";
+		color: $radio-checked-color;
+	}
+}
+
+/* hover */
+
+/* over unchecked */
+.dijitRadioHover {
+	&:after {
+		color: $radio-hover-checked-color;
+	}
+}
+
+/* disabled */
+
+.dijitRadioDisabled {
+	opacity: $disabled-opacity;
+}

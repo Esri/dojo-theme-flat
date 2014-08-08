@@ -1,0 +1,71 @@
+/* Time Picker 
+ *
+ * Styling the Time Picker consists of the following: 
+ *
+ * 1. minor time values
+ * 		.dijitTimePickerTick - set text color, size, background color of minor values
+ * 		.dijitTimePickerTickHover - set hover style of minor time values
+ * 		dijitTimePickerTickSelected - set selected style of minor time values
+ *
+ * 2. major time values - 1:00, 2:00, times on the hour 
+ * 		set text color, size, background color, left/right margins for "zoom" affect
+ * 		.dijitTimePickerMarkerHover - to set hover style of major time values
+ * 		.dijitTimePickerMarkerSelected - set selected style of major time values
+ * 
+ * 3. up and down arrow buttons
+ * 		.dijitTimePicker .dijitButtonNode - background-color, border
+ * 		.dijitTimePicker .dijitUpArrowHover, .dijitTimePicker .dijitDownArrowHover - set background-color for hover state
+ *
+ *	Other classes provide the fundamental structure of the TimePicker and should not be modified. 
+ */
+
+@import "../variables";
+
+.dijitTimePickerPopup {
+	box-shadow: $timepicker-box-shadow;
+	height: 200px;
+}
+
+.dijitTimePicker {
+	background: $timepicker-background;
+	padding: $timepicker-padding;
+	border: $timepicker-border;
+	border-radius: $timepicker-border-radius;
+}
+
+.dijitTimePickerItem {
+	margin:0;
+}
+
+.dijitTimePickerTick {
+	/* minor value */
+	color: $timepicker-tick-text-color;
+	border: $timepicker-tick-border;
+}
+
+.dijitTimePickerMarker {
+	/* major value - 1:00, 2:00, times on the hour */
+	background: $timepicker-marker-background;
+	white-space: nowrap;
+    border: $timepicker-marker-border;
+}
+
+.dijitTimePickerTickHover,
+.dijitTimePickerMarkerHover {
+	background: $timepicker-item-hovered-background;
+	color: $timepicker-item-hovered-text-color;
+}
+
+.dijitTimePickerMarkerSelected,
+.dijitTimePickerTickSelected {
+	background: $timepicker-item-selected-background;
+	color: $timepicker-item-selected-text-color;
+}
+
+.dijitTimePickerTick,
+.dijitTimePickerMarker {
+	.dijitTimePickerItemInner {
+		padding: $timepicker-item-padding;
+		margin:0;
+	}
+}

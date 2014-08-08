@@ -1,0 +1,98 @@
+/* esriBasemapGallery
+ * 
+ * Styling esriBasemapGallery includes:
+ * 
+ * 1. Containers
+ * 		.esriBasemapGallery
+ *		.esriBasemapGalleryThumbnail - thumbnail
+ *		.esriBasemapGalleryLabelContainer - label
+ *
+ * 2. Buttons
+ *		.esriBasemapGalleryNode a - contains Basemap thumbnail and label
+ *
+ * 3. States - Hover, Active, Disabled, e.g.
+ *		.esriBasemapGalleryNode a:hover - hover
+ *		.esriBasemapGalleryNode a:active - active
+ *		.esriBasemapGallerySelectedNode - selected
+ *			.esriBasemapGallerySelectedNode a:after - checked icon
+ */
+
+@import "../../../variables";
+
+.esriBasemapGallery {
+	background: $map-basemap-gallery-background;
+}
+
+.esriBasemapGalleryNode {
+	float: left;
+	margin: $map-basemap-gallery-item-margin;
+	width: auto;
+	
+	a {
+		background: $map-basemap-gallery-item-background;
+		border: $map-basemap-gallery-item-border;
+		display: inline-block;
+		padding: $map-basemap-gallery-item-padding;
+		text-decoration: none;
+		position: relative;
+		transition: background .2s ease;
+
+		img {
+			vertical-align: middle;
+		}
+
+		/* Hover */
+
+		&:hover {
+			background: $map-basemap-gallery-item-thumbnail-hover-background;
+		}
+
+		/* Active */
+
+		&:active {
+			background: $map-basemap-gallery-item-thumbnail-active-background;
+		}
+	}
+}
+
+.esriBasemapGalleryLabelContainer {
+	background: transparent
+	text-align: center
+	width: 100%
+	overflow: hidden
+	display: block
+}
+
+.esriBasemapGalleryThumbnail {
+	height: $map-basemap-gallery-item-thumbnail-height;
+	width: $map-basemap-gallery-item-thumbnail-width;
+	border: $map-basemap-gallery-item-thumbnail-border;
+	border-radius: $map-basemap-gallery-item-thumbnail-border-radius;
+	box-shadow: $map-basemap-gallery-item-thumbnail-box-shadow;
+	margin: 0;
+}
+
+/* Selected */
+
+.esriBasemapGallerySelectedNode {
+	.esriBasemapGalleryThumbnail {
+		border: $map-basemap-gallery-item-thumbnail-selected-border;
+		margin: 0;
+	}
+
+	/* Checked Icon */
+	
+	a:after {
+		_icon-core-style();
+		height: $map-basemap-gallery-item-selected-icon-height;
+		width: $map-basemap-gallery-item-selected-icon-width;
+		background: $map-basemap-gallery-highlight-color;
+		content: "\f00c";
+		color: $white-color;
+		text-align: center;
+		display: block;
+		position: absolute;
+		right: $map-basemap-gallery-item-padding;
+		bottom: $map-basemap-gallery-item-padding;
+	}
+}

@@ -1,0 +1,153 @@
+/* Select | Combobox
+ * And minor style for DateTextBox | MultiSelect
+ *
+ * Styling Select mainly includes:
+ * 
+ * 1. Containers
+ *	Select:
+ * 		.dijitSelect
+ * 		.dijitButtonContents
+ *	Combobox:
+ *		.dijitComboBox
+ *
+ * 2. Arrow Button
+ * 		.dijitArrowButton
+ * 		.dijitArrowButtonInner
+ *		.dijitComboBox .dijitButtonNode
+ *
+ * 3. Menu
+ * 		.dijitSelectMenu
+ * 
+ * 4. States - Hover, Active, Focused, Disabled, e.g.
+ *
+ *	Select: Hover, Active, Focused, Disabled
+ * 		.dijitSelectHover
+ * 		.dijitSelectFocused
+ * 		.dijitSelectDisabled
+ *
+ *	Combobox: Hover, Focused (Open), Disabled
+ *		.dijitComboBox .dijitDownArrowButtonHover		
+ *		.dijitComboBoxOpenHover .dijitButtonNode
+ *		.dijitComboBoxDisabled .dijitButtonNode
+ *
+ */
+
+@import "../../variables";
+
+
+/* arrows */
+
+.dijitSelect,
+.dijitComboBox {
+	.dijitArrowButtonInner {
+		margin: 0;
+		width:0;
+		height: 0;
+	}
+}
+
+/*********************************************************************
+ * Select (most of styles are inherited from "form/Button")
+ *********************************************************************/
+
+.dijitSelect {
+	button-style();
+
+	.dijitButtonContents,
+	.dijitArrowButton {
+		line-height: 20px;
+		padding: $button-padding;
+		border: 0;
+		border-radius: 0 $button-border-radius $button-border-radius 0;
+	}
+	.dijitButtonContents {
+		padding:0;
+		border-radius: $button-border-radius 0 0 $button-border-radius;
+	}
+	.dijitInputField {
+		padding: 0 0 0 $input-padding*3;
+	}
+}
+
+/* hover */
+
+.dijitSelectHover {
+	button-hover-style();
+}
+
+.dijitSelectActive {
+	button-active-style();
+}
+
+/* focused */
+
+.dijitSelectFocused {
+	border: $select-focus-border;
+}
+
+/* disabled */
+
+.dijitSelectDisabled {
+	button-disabled-style();
+}
+
+/***********************************************************************
+ * Combobox (has styles inherited from "form/Textbox" and "form/Button")
+ ***********************************************************************/
+
+.dijitComboBox .dijitButtonNode {
+	button-style();
+	border-radius: 0 $input-border-radius $input-border-radius 0;
+}
+
+/* hover */
+
+.dijitComboBoxOpenHover .dijitButtonNode,
+.dijitComboBox .dijitDownArrowButtonHover {
+	button-hover-style();
+	box-shadow: none;
+}
+
+/* disabled */
+
+.dijitComboBoxDisabled .dijitButtonNode {
+	button-disabled-style();
+}
+
+// remove arrow when wrapped in a toolbar dijit
+.dijitToolbar .dijitComboBox .dijitArrowButtonInner {
+	border: none;
+}
+
+/***********************************************************************
+ * DateTextBox (Change the icon in the arrow button)
+ ***********************************************************************/
+
+.dijitDateTextBox .dijitArrowButton:before {
+	content: "\f073";
+}
+
+/***********************************************************************
+ * Multiple Select
+ ***********************************************************************/
+
+select  {
+	padding: $input-padding 0;
+	border: $input-border;
+	box-shadow: $input-shadow;
+}
+
+select option {
+	padding: $input-padding $input-padding * 2;
+}
+
+/***********************************************************************
+ * Dropdown menu styles for "Select" 
+ * Most of menu styles are defined in Menu.styl 
+ ***********************************************************************/
+
+.dijitSelectMenu td.dijitMenuItemIconCell,
+.dijitSelectMenu td.dijitMenuArrowCell { 
+	/* so that arrow and icon cells from MenuItem are not displayed */
+	display: none;
+}

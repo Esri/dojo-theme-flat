@@ -1,0 +1,110 @@
+/* Text Inputs: [TextBox | DateTextBox | CurrencyTextBox | ValidationTextBox | ...] | TextArea
+ * Mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitTextBox
+ * 		.dijitInputField - container that wraps "dijitInputInner" or "dijitPlaceHolder"
+ *
+ * 2. Textbox input
+ * 		.dijitInputInner
+ * 		.dijitPlaceHolder
+ *
+ * 3. States - Hover, Focused, Disabled, Error, Error while Focused e.g.
+ * 		.dijitTextBoxHover
+ * 		.dijitTextBoxFocused
+ * 		.dijitTextBoxDisabled
+ *      .dijitTextBoxError
+ *      .dijitTextBoxErrorFocused
+ *
+*/
+/***********************
+ * Text Inputs 
+ ***********************/
+.dijitTextBox,
+.dijitInputInner {
+  line-height: 20px;
+}
+.dijitTextBox {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1) inset;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1) inset;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  -o-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  -ms-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+.dijitTextArea {
+  padding: 4px 6px;
+}
+.dijitTextBox .dijitInputField {
+  padding: 0 4px;
+  margin: 0 2px;
+}
+.dijitTextBox .dijitInputInner,
+.dijitValidationTextBox .dijitValidationContainer,
+.dijitTextBox .dijitInputField .dijitPlaceHolder {
+  padding: 4px;
+}
+/* hover */
+.dijitTextBoxHover {
+  border: 1px solid #007ac2;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -ms-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+/* focused */
+.dijitTextBoxFocused {
+  border: 1px solid rgba(0,122,194,0.8);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -ms-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+/* disabled */
+.dijitTextBoxDisabled {
+  background: #f5f5f5;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  filter: alpha(opacity=65);
+}
+/* error */
+.dijitTextBoxError,
+.dijitTextBoxError .dijitButtonNode {
+  border: 1px solid #da4d1e;
+}
+/* error: focused */
+.dijitTextBoxErrorFocused,
+.dijitTextBoxErrorFocused .dijitButtonNode {
+  border: 1px solid #b94119;
+}
+/* error: icon */
+.dijitValidationTextBoxError .dijitValidationContainer {
+  color: #da4d1e;
+  width: 16px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+}
+.dijitValidationTextBoxError .dijitValidationContainer:before {
+  content: "\f12a";
+}
+.dijitValidationTextBoxError .dijitValidationIcon {
+  display: none;
+}
+.dj_gecko .dijitInputInner {
+  height: 20px;
+}

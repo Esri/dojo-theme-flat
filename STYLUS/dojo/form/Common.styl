@@ -1,0 +1,112 @@
+/* Text Inputs: [TextBox | DateTextBox | CurrencyTextBox | ValidationTextBox | ...] | TextArea
+ * Mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitTextBox
+ * 		.dijitInputField - container that wraps "dijitInputInner" or "dijitPlaceHolder"
+ *
+ * 2. Textbox input
+ * 		.dijitInputInner
+ * 		.dijitPlaceHolder
+ *
+ * 3. States - Hover, Focused, Disabled, Error, Error while Focused e.g.
+ * 		.dijitTextBoxHover
+ * 		.dijitTextBoxFocused
+ * 		.dijitTextBoxDisabled
+ *      .dijitTextBoxError
+ *      .dijitTextBoxErrorFocused
+ *
+*/
+
+@import "../../variables";
+
+
+/***********************
+ * Text Inputs 
+ ***********************/
+
+.dijitTextBox,
+.dijitInputInner {
+	line-height: $line-height;
+}
+
+.dijitTextBox {
+	background: $input-background;
+	border: $input-border;
+	box-shadow: $input-shadow;
+	border-radius: $input-border-radius;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+.dijitTextArea {
+	padding: $input-padding $input-padding + 2px;
+}
+
+.dijitTextBox {
+	.dijitInputField {
+		padding: 0  $input-padding;
+		margin:0 2px;
+	}
+}
+
+.dijitTextBox .dijitInputInner,
+.dijitValidationTextBox .dijitValidationContainer,
+.dijitTextBox .dijitInputField .dijitPlaceHolder {
+	padding: $input-padding;
+}
+
+/* hover */
+
+.dijitTextBoxHover {
+	border: $input-hover-border;
+	transition-duration: .25s;
+}
+
+/* focused */
+
+.dijitTextBoxFocused {
+	border: $input-focused-border;
+	box-shadow: $input-focused-shadow;	
+	transition-duration: .1s;
+}
+
+/* disabled */
+.dijitTextBoxDisabled {
+	background: $input-disabled-background;
+	box-shadow: $input-disabled-shadow;
+	opacity: $disabled-opacity;
+}
+
+/* error */
+
+.dijitTextBoxError,
+.dijitTextBoxError .dijitButtonNode {
+	border: $input-error-border;
+}
+
+/* error: focused */
+.dijitTextBoxErrorFocused,
+.dijitTextBoxErrorFocused .dijitButtonNode {
+	border: $input-focused-error-border;
+}
+
+/* error: icon */
+
+.dijitValidationTextBoxError {
+	.dijitValidationContainer {
+		color: $input-error-icon-background-color;
+		width: $input-error-icon-width;
+		_icon-core-style();
+		&:before {
+			content: "\f12a";
+		}
+	}
+	.dijitValidationIcon {
+		display: none;
+	}
+}
+
+// workaround for FireFox to use correct line height
+.dj_gecko  .dijitInputInner {
+	height: $line-height;
+}

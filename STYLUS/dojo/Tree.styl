@@ -1,0 +1,140 @@
+/* Tree 
+ * 
+ * Styling Tree mostly means styling the TreeRow (dijitTreeRow)
+ * There are 4 basic states to style:
+ * 
+ * Tree Row:
+ * 1. tree row (default styling): 
+ * 		.dijitTreeRow - styles for each row of the tree
+ *
+ * 2. hovered tree row (mouse hover on a tree row)
+ * 		.dijitTreeRowHover - styles when mouse over on one row
+ * 
+ * 3. active tree row (mouse down on a tree row)
+ * 		.dijitTreeRowActive - styles when mouse down on one row
+ * 
+ * 4. selected tree row
+ * 		dijitTreeRowSelected - style when the row has been selected
+ * 
+ * Tree Expando:
+ * 	    dijitTreeExpando - the expando at the left of the text of each tree row
+ * 
+ * Drag and Drop on TreeNodes: (insert line on dijitTreeContent node so it'll aligned w/ target element)
+ * 		.dijitTreeNode .dojoDndItemBefore/.dojoDndItemAfter - use border style simulate a separate line
+ */
+
+@import "../variables";
+
+.dijitTreeIsRoot {
+    background: $tree-background;
+}
+
+.dijitTreeRow,
+.dijitTreeNode .dojoDndItemBefore,
+.dijitTreeNode .dojoDndItemAfter {
+	padding: $tree-row-padding;
+	border: $tree-row-border;
+	line-height: $tree-row-line-height;
+	transition-property: background-color, border-color;
+	transition-duration: .15s;
+	transition-timing-function: ease-out;
+}
+
+/* Hover */
+
+.dijitTreeRowHover {
+	background: $tree-row-hover-background;
+	border: $tree-row-hover-border;
+	transition-duration: .15s;
+}
+
+/* Active */
+
+.dijitTreeRowActive {
+	background:$tree-row-active-background;
+	border: $tree-row-active-border;
+}
+
+/* Selected */
+
+.dijitTreeRowSelected,
+.dijitTreeRowHover.dijitTreeRowSelected,
+.dijitTreeRowActive.dijitTreeRowSelected {
+	color: $tree-row-selected-color;
+	background: $tree-row-selected-background;
+	border: $tree-row-selected-border;
+}
+
+/* Focused */
+
+/*
+.dijitTreeRowFocused {
+}
+*/
+
+/* expando (open/closed) icon */
+
+.dijitTreeExpando {
+	font-family: FontAwesome;
+    width: $tree-expando-icon-width;
+    height: $tree-expando-icon-height;
+	line-height: @height;
+	font-size: 12px;
+	text-align: center;
+	margin-left: $tree-expando-margin;
+	margin-right: $tree-expando-margin;
+}
+
+.dijitTreeExpandoOpened:before {
+	content: "\f078";
+	cursor: pointer;
+}
+
+.dijitTreeExpandoClosed:before {
+	content: "\f054";
+	cursor: pointer;
+}
+
+/*
+.dijitTreeRowHover .dijitTreeExpandoOpened {
+}
+
+.dijitTreeRowHover .dijitTreeExpandoClosed {
+}
+*/
+
+.dijitTreeExpandoLoading {
+	&:before {
+		content: "\f021"; 
+		animation: spinning 2s linear infinite;
+	}
+}
+
+.dj_ie8 .dijitTreeExpandoLoading,
+.dj_ie9 .dijitTreeExpandoLoading {
+	background:url('images/loadingAnimation.gif') no-repeat;
+
+	&:before {
+		content: "";
+	}
+}
+
+@keyframes spinning {
+	from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+/* DnD */
+/* No Nodes with class name "dojoDndItemBefore" or "dojoDndItemAfter"
+   found when dragging a tree node?! 
+*/
+/*
+.dijitTreeNode {
+	.dojoDndItemBefore .dijitTreeContent {
+		border-top: 2px solid $dnd-avatar-item-insert-indicator-color;
+	}
+	.dojoDndItemAfter .dijitTreeContent {
+		border-bottom: 2px solid $dnd-avatar-item-insert-indicator-color;
+	}
+}
+*/

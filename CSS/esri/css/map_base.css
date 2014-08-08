@@ -1,0 +1,88 @@
+/* Map
+ * 
+ * This mainly includes:
+ * 
+ * 1. Pan Buttons
+ * 		.fixedPan - including two modes: 1. dark (default) 2. white (needs to add class name "dark" to ".map" container)
+ *
+ * 2. Tooltip
+ *		.tooltip
+ */
+/* map fixed pan buttons */
+.map .container .fixedPan {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/map/fixed-pan-sprite.png");
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.35;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+  filter: alpha(opacity=35);
+}
+.map .container .fixedPan:hover {
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.map .container .panUp {
+  background-position: -15px 0px;
+  top: 4px;
+  width: 23px;
+}
+.map .container .panDown {
+  background-position: -15px -38px;
+  bottom: 4px;
+  width: 23px;
+}
+.map .container .panLeft {
+  background-position: -52px -15px;
+  left: 4px;
+  height: 23px;
+}
+.map .container .panRight {
+  background-position: -38px -15px;
+  right: 4px;
+  height: 23px;
+}
+.map .container .panUpperLeft {
+  background-position: 0 0;
+  left: 4px;
+  top: 4px;
+}
+.map .container .panUpperRight {
+  background-position: -38px 0px;
+  right: 4px;
+  top: 4px;
+}
+.map .container .panLowerLeft {
+  background-position: 0 -38px;
+  left: 4px;
+  bottom: 4px;
+}
+.map .container .panLowerRight {
+  background-position: -38px -38px;
+  right: 4px;
+  bottom: 4px;
+}
+.map.dark .container .fixedPan {
+  background-image: url("../images/map/fixed-pan-sprite-white.png");
+}
+.map .tooltip {
+  min-width: 100px;
+  position: absolute;
+  border: 0 none;
+  background: #2b2e34;
+  color: #fff;
+  text-shadow: $tooltip-text-shadow;
+  padding: 4px;
+  font-size: 10px;
+  z-index: 9999;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: $tooltip-box-shadow;
+  box-shadow: $tooltip-box-shadow;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}

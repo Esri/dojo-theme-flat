@@ -1,0 +1,16 @@
+@import "../../../variables";
+
+.dgrid-header .dgrid-cell {
+	display: table-cell; /* override any spurious dojoDndItem settings elsewhere */
+}
+
+.dgrid-header .dojoDndItemBefore {
+	border-left: $dgrid-extension-columnreorder-dnd-indicator !important;
+}
+.dgrid-header .dojoDndItemAfter {
+	border-right: $dgrid-extension-columnreorder-dnd-indicator !important;
+}
+
+#dgrid-css-extensions-ColumnReorder-loaded { /* load indicator for xstyle */
+	display: none;
+}

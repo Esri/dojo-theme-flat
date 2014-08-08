@@ -1,0 +1,61 @@
+.dgrid-hider-toggle {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  width: 16px;
+  border: 0 none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 2.5px;
+/* scrollbar's width minus width of the icon and divide this value by 2, which is the spacing it needs to center the icon */
+  top: 50%;
+  margin-top: -8px;
+}
+.dgrid-hider-toggle:before {
+  content: "\f142";
+}
+.dgrid-hider-menu {
+  min-width: 180px;
+  padding: 4px;
+  border: 1px solid #d0d0d0;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 18.5px;
+  z-index: 99999;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.dgrid-hider-menu-row {
+  position: relative;
+  padding: 8px;
+}
+.dgrid-hider-menu-check {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 0;
+}
+.dgrid-hider-menu-label {
+  display: block;
+  padding-left: 24px;
+/* width of a checkbox plus value of the default padding */
+}
+html.has-quirks .dgrid-hider-menu-check,
+html.has-ie-6-7 .dgrid-hider-menu-check {
+/* IE < 8 seems to ignore padding: 0, so counteract */
+  top: 0;
+  left: 0;
+}
+#dgrid-css-extensions-ColumnHider-loaded {
+  display: none;
+}

@@ -1,0 +1,38 @@
+/* Legend
+ * 
+ * Styling Legend includes:
+ * 
+ * 1. Containers
+ * 		.esriLegendService
+ *		.esriLegendServiceLabel - title of service
+ *		.esriLegendLayerLabel - title of layer
+ *		.esriLegendLayer
+ *		.esriLegendGroupLayer
+ */
+.esriLegendService {
+  padding-top: 4px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.esriLegendServiceLabel {
+  display: block;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+}
+.esriLegendLayerLabel {
+  color: #8d94a1;
+  padding-left: 8px;
+}
+.esriLegendLayer {
+  padding-left: 8px;
+}
+.esriLegendGroupLayer {
+  padding-top: 8px;
+}
+.esriLegendLeft {
+  padding-left: 12px;
+}
+.esriLegendRight {
+  padding-right: 12px;
+}

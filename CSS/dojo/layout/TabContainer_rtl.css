@@ -1,0 +1,5 @@
+.dijitTabContainerTop-tabs .dijitTabRtl,
+.dijitTabContainerBottom-tabs .dijitTabRtl {
+  margin-right: 0;
+  margin-left: -1px;
+}

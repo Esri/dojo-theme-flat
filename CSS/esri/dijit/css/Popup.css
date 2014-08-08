@@ -1,0 +1,409 @@
+/* esriPopup
+ * 
+ * Styling esriPopup includes:
+ * 
+ * 1. Containers
+ * 		.esriPopup
+ *		.esriPopupWrapper
+ *		.sizer
+ *		.titlePane
+ *		.esriViewPopup
+ *
+ * 2. Buttons
+ *		.titleButton
+ *		.esriAddBookmark - "Add Bookmark" button
+ *
+ * 3. States - Hover, Active, Highlight, e.g.
+ *		.esriBookmarkHighlight - highlight (Hover, Active and Selected)
+ *		.esriAddBookmark:[hover | active]
+ */
+.esriPopup {
+  position: absolute;
+  z-index: 40;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+/* Title Pane */
+/* Content Pane */
+/* Action Pane */
+/* Pointers (Anchors) */
+}
+.esriPopup .esriPopupWrapper {
+  border: 0 none;
+  padding: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.esriPopup .hidden {
+  display: none;
+}
+.esriPopup .sizer {
+  width: 300px;
+  height: auto;
+}
+.esriPopup a,
+.esriPopup a:visited {
+  color: #007ac2;
+  text-decoration: none;
+}
+.esriPopup a:hover,
+.esriPopup a:visited:hover,
+.esriPopup a:active,
+.esriPopup a:visited:active {
+  text-decoration: underline;
+}
+.esriPopup a:hover,
+.esriPopup a:active {
+  text-decoration: underline;
+}
+.esriPopup .titlePane {
+  background: #fff;
+  color: #2b2e34;
+  font-size: 0.9em;
+  line-height: 20px;
+  padding: 8px 12px;
+  padding-right: auto;
+  -webkit-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+  cursor: default;
+  border: 0;
+  border-bottom: 1px solid #d0d0d0;
+}
+.esriPopup .titlePane .spinner {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px/2;
+  margin-right: 4px;
+  background: url("../images/ajax-loader.gif") no-repeat;
+  background-position: 0px 0px;
+  cursor: pointer;
+}
+.esriPopup .titleButton {
+  background: url("../images/popup.png") no-repeat;
+  position: absolute;
+  top: 9.5px;
+  cursor: pointer;
+}
+.esriPopup .titleButton.prev,
+.esriPopup .titleButton.next,
+.esriPopup .titleButton.maximize,
+.esriPopup .titleButton.restore,
+.esriPopup .titleButton.close {
+  height: 17px;
+}
+.esriPopup .titleButton.prev,
+.esriPopup .titleButton.next {
+  width: 9px;
+}
+.esriPopup .titleButton.maximize,
+.esriPopup .titleButton.restore {
+  width: 11px;
+}
+.esriPopup .titleButton.close {
+  width: 12px;
+}
+.esriPopup .titleButton.prev {
+  right: 68px;
+  background-position: 0 -198px;
+}
+.esriPopup .titleButton.next {
+  right: 51px;
+  background-position: 0 -417px;
+}
+.esriPopup .titleButton.maximize {
+  right: 32px;
+  top: 9.5px;
+  background-position: 0 -819px;
+}
+.esriPopup .titleButton.restore {
+  right: 32px;
+  top: 9.5px;
+  background-position: 0 -836px;
+}
+.esriPopup .titleButton.close {
+  right: 12px;
+  background-position: 0 -802px;
+}
+.esriPopup .contentPane {
+  position: relative;
+  max-height: 300px;
+  overflow: auto;
+  padding: 8px 12px;
+  background: #fff;
+  border: 0;
+  border-top: 0 none;
+  border-bottom: 0 none;
+}
+.esriPopup .actionsPane {
+  padding: 8px 12px;
+  background: #fff;
+  border: 0;
+  border-top: 0 none;
+  -webkit-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
+}
+.esriPopup .actionsPane .action {
+  margin-right: 8px;
+}
+.esriPopup .pointer,
+.esriPopup .outerPointer {
+  height: 0;
+  width: 0;
+  background: transparent;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 8px;
+  position: absolute;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.esriPopup .pointer.top {
+  left: 50%;
+  top: -12px;
+  margin-left: -12px;
+  border-width: 12px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top: 0 none;
+  background: transparent;
+}
+.esriPopup .pointer.bottom {
+  left: 50%;
+  bottom: -12px;
+  margin-left: -12px;
+  border-width: 12px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom: 0 none;
+}
+.esriPopup .pointer.right {
+  top: 50%;
+  right: 4px;
+  margin-top: -12px;
+  border-width: 12px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right: 0 none;
+}
+.esriPopup .pointer.left {
+  top: 50%;
+  left: 4px;
+  margin-top: -12px;
+  border-width: 12px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left: 0 none;
+}
+.esriPopup .pointer.topLeft {
+  left: 13px;
+  top: -15px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  background: transparent;
+}
+.esriPopup .pointer.topRight {
+  right: 13px;
+  top: -15px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  background: transparent;
+}
+.esriPopup .pointer.bottomRight {
+  right: 13px;
+  bottom: -15px;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+.esriPopup .pointer.bottomLeft {
+  left: 13px;
+  bottom: -15px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.esriPopup .outerPointer.right {
+  top: 50%;
+  right: 4px;
+  margin-top: -12px;
+  border-width: 12px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right: 0 none;
+}
+.esriPopup .outerPointer.left {
+  top: 50%;
+  left: 4px;
+  margin-top: -12px;
+  border-width: 12px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left: 0 none;
+}
+/* View Popup */
+.esriViewPopup {
+  line-height: 1.4em;
+/* Gallery */
+}
+.esriViewPopup .header {
+  font-weight: bold;
+}
+.esriViewPopup .hzLine {
+  border: none;
+  border-bottom: 1px solid transparent;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.esriViewPopup .break {
+  height: 8px;
+}
+.esriViewPopup .caption {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #9a9b9f;
+}
+.esriViewPopup .mainSection {
+  position: relative;
+}
+.esriViewPopup .mainSection .attrTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.esriViewPopup .mainSection .attrTable td {
+  padding: 4px;
+  white-space: normal;
+  font-size: 0.9em;
+  word-wrap: break-word;
+}
+.esriViewPopup .mainSection .attrTable td.attrName {
+  color: #9a9b9f;
+  padding-right: 8px;
+}
+.esriViewPopup .attachmentsSection ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.esriViewPopup .gallery {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-height: none;
+  margin: 0;
+}
+.esriViewPopup .gallery .frame.image {
+  text-align: center;
+}
+.esriViewPopup .gallery .frame img {
+  max-width: none;
+  max-height: none;
+  border-style: none;
+  width: 100%;
+}
+.esriViewPopup .gallery .frame div.chart {
+  width: 100%;
+  height: 150px;
+}
+.esriViewPopup .gallery ul.summary {
+  position: absolute;
+  right: 0px;
+  bottom: -18px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.esriViewPopup .gallery ul.summary li {
+  float: left;
+}
+.esriViewPopup .gallery ul.summary li.mediaCount {
+  margin-left: 4px;
+}
+.esriViewPopup .gallery .mediaHandle {
+  position: absolute;
+  top: 67px;
+  cursor: pointer;
+  background: url("../images/popup.png") no-repeat;
+}
+.esriViewPopup .gallery .mediaHandle.prev {
+  left: -12px;
+  background-position: 0 -198px;
+  width: 9px;
+  height: 16px;
+}
+.esriViewPopup .gallery .mediaHandle.next {
+  right: -12px;
+  background-position: 0 -417px;
+  width: 9px;
+  height: 16px;
+}
+.esriViewPopup .gallery .mediaIcon {
+  background: url("../images/popup.png") no-repeat;
+}
+.esriViewPopup .gallery .mediaIcon.image {
+  background-position: 0 -392px;
+  width: 15px;
+  height: 15px;
+}
+.esriViewPopup .gallery.chart {
+  background-position: 0 -146px;
+  width: 19px;
+  height: 15px;
+}
+.esriViewPopup .editSummarySection .break {
+  height: 10px;
+}
+.esriViewPopup .editSummary {
+  color: #888;
+}
+/* RTL */
+.dj_rtl .esriPopup .titlePane {
+  padding-left: auto;
+  padding-right: 8px 12px;
+}
+.dj_rtl .esriPopup .titlePane .spinner {
+  float: right;
+  margin-right: auto;
+  margin-left: 4px;
+}
+.dj_rtl .esriPopup .titleButton.prev {
+  right: auto;
+  left: 68px;
+}
+.dj_rtl .esriPopup .titleButton.next {
+  right: auto;
+  left: 51px;
+}
+.dj_rtl .esriPopup .titleButton.maximize {
+  right: auto;
+  left: 32px;
+}
+.dj_rtl .esriPopup .titleButton.restore {
+  right: auto;
+  left: 32px;
+}
+.dj_rtl .esriPopup .titleButton.close {
+  right: auto;
+  left: 12px;
+}
+.dj_rtl .esriPopup .actionsPane .action {
+  margin-right: auto;
+  margin-left: 8px;
+}
+.dj_rtl .esriViewPopup .gallery ul.summary {
+  right: auto;
+  left: 0px;
+}
+.dj_rtl .esriViewPopup .gallery ul.summary li {
+  float: right;
+}
+.dj_rtl .esriViewPopup .gallery ul.summary li.mediaCount {
+  margin-left: auto;
+  margin-right: 4px;
+}
