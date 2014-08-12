@@ -1125,6 +1125,133 @@ $map-bookmark-item-label-margin-left							=						$padding*2;
 $map-bookmark-add-button-width									=						8em;
 
 /****************************************************************************************
+ * Geocoder
+ ****************************************************************************************/
+
+// NOTE: In this theme, "arcgisGeocoder" and "simpleGeocoder" are basically the same. 
+
+$map-geocoder-width												=						250px;
+$map-geocoder-background										=						$input-background;
+$map-geocoder-border											=						0 none;
+$map-geocoder-padding											=						$padding;
+$map-geocoder-text-color										=						inherit;
+$map-geocoder-font-size											=						12px;
+$map-geocoder-line-height										=						$line-height;
+$map-geocoder-box-shadow										=						$map-widget-box-shadow;
+$map-geocoder-menu-item-padding									=						$menubar-popup-item-padding;
+$map-geocoder-menu-border-radius								=						$menu-border-radius;
+$map-geocoder-menu-box-shadow									=						$popup-box-shadow;
+
+// Highlight
+$map-geocoder-highlight-text-color								=						$menu-item-selected-text-color;
+$map-geocoder-highlight-background								=						$menu-item-selected-background;
+
+// Theme: arcgisGeocoder
+$map-geocoder-arcgisgeocoder-width								=						$map-geocoder-width;
+$map-geocoder-arcgisgeocoder-background							=						$map-geocoder-background;
+$map-geocoder-arcgisgeocoder-border								=						$map-geocoder-border;
+$map-geocoder-arcgisgeocoder-padding							=						$map-geocoder-padding;
+$map-geocoder-arcgisgeocoder-text-color							=						$map-geocoder-text-color;
+$map-geocoder-arcgisgeocoder-font-size							=						$map-geocoder-font-size;
+$map-geocoder-arcgisgeocoder-line-height						=						$map-geocoder-line-height;
+$map-geocoder-arcgisgeocoder-border-radius						=						$border-radius;
+$map-geocoder-arcgisgeocoder-box-shadow							=						$map-geocoder-box-shadow;
+
+//// Results (dropdown menu)
+
+$map-geocoder-arcgisgeocoder-results-background					=						$menu-background;
+$map-geocoder-arcgisgeocoder-results-border						=						0 none;
+$map-geocoder-arcgisgeocoder-results-margin-top					=						$padding;
+$map-geocoder-arcgisgeocoder-results-border-radius				=						$map-geocoder-menu-border-radius;
+$map-geocoder-arcgisgeocoder-results-box-shadow					=						$map-geocoder-menu-box-shadow;
+
+////// Result (dropdown menu item)
+$map-geocoder-arcgisgeocoder-result-padding						=						$map-geocoder-menu-item-padding;
+
+//////// Highlight
+$map-geocoder-arcgisgeocoder-result-highlight-text-color		=						$map-geocoder-highlight-text-color;
+$map-geocoder-arcgisgeocoder-result-highlight-background		=						$map-geocoder-highlight-background;
+
+//// Geocoders (dropdown menu)
+
+$map-geocoder-arcgisgeocoder-geocoders-background				=						$menu-background;
+$map-geocoder-arcgisgeocoder-geocoders-border					=						0 none;
+$map-geocoder-arcgisgeocoder-geocoders-margin-top				=						$padding;
+$map-geocoder-arcgisgeocoder-geocoders-border-radius			=						$map-geocoder-menu-border-radius;
+$map-geocoder-arcgisgeocoder-geocoders-box-shadow				=						$map-geocoder-menu-box-shadow;
+
+////// Header
+$map-geocoder-arcgisgeocoder-geocoders-header-padding			=						$map-geocoder-menu-item-padding;
+$map-geocoder-arcgisgeocoder-geocoders-header-margin			=						0;
+$map-geocoder-arcgisgeocoder-geocoders-header-border-bottom		=						1px solid $border-color;
+$map-geocoder-arcgisgeocoder-geocoders-header-text-color		=						$gray-color;
+$map-geocoder-arcgisgeocoder-geocoders-header-font-weight		=						normal;
+
+//// Icons
+$map-geocoder-arcgisgeocoder-icon-width							=						16px;
+$map-geocoder-arcgisgeocoder-icon-height						=						$map-geocoder-arcgisgeocoder-line-height;
+$map-geocoder-arcgisgeocoder-icon-margin						=						$padding;
+$map-geocoder-arcgisgeocoder-icon-spacing-from-content			=						$padding;									// The space between the content and icon in the same line
+
+////// Colors
+$map-geocoder-arcgisgeocoder-icon-reset-color					=						$gray-color;
+$map-geocoder-arcgisgeocoder-icon-checked-color					=						$green-color;
+
+// Theme: simpleGeocoder
+$map-geocoder-simplegeocoder-width								=						$map-geocoder-width;
+$map-geocoder-simplegeocoder-background							=						$map-geocoder-background;
+$map-geocoder-simplegeocoder-border								=						$map-geocoder-border;
+$map-geocoder-simplegeocoder-padding							=						$map-geocoder-padding;
+$map-geocoder-simplegeocoder-text-color							=						$map-geocoder-text-color;
+$map-geocoder-simplegeocoder-font-size							=						$map-geocoder-font-size;
+$map-geocoder-simplegeocoder-line-height						=						$map-geocoder-line-height;
+$map-geocoder-simplegeocoder-border-radius						=						($map-geocoder-simplegeocoder-line-height + $map-geocoder-padding * 2) * .5;
+$map-geocoder-simplegeocoder-box-shadow							=						$map-geocoder-box-shadow;
+
+//// Active
+$map-geocoder-simplegeocoder-active-border-radius				=						$map-geocoder-menu-border-radius $map-geocoder-menu-border-radius 0 0;
+
+//// Results (dropdown menu)
+$map-geocoder-simplegeocoder-results-background					=						$menu-background;
+$map-geocoder-simplegeocoder-results-border						=						0 none;
+$map-geocoder-simplegeocoder-results-margin-top					=						$padding;
+$map-geocoder-simplegeocoder-results-border-radius				=						$map-geocoder-menu-border-radius;
+$map-geocoder-simplegeocoder-results-box-shadow					=						$map-geocoder-menu-box-shadow;
+
+////// Result (dropdown menu item)
+$map-geocoder-simplegeocoder-result-padding						=						$map-geocoder-menu-item-padding;
+
+//////// Highlight
+$map-geocoder-simplegeocoder-result-highlight-text-color		=						$map-geocoder-highlight-text-color;
+$map-geocoder-simplegeocoder-result-highlight-background		=						$map-geocoder-highlight-background;
+
+//// Geocoders (dropdown menu)
+
+$map-geocoder-simplegeocoder-geocoders-background				=						$menu-background;
+$map-geocoder-simplegeocoder-geocoders-border					=						0 none;
+$map-geocoder-simplegeocoder-geocoders-margin-top				=						$padding;
+$map-geocoder-simplegeocoder-geocoders-border-radius			=						$map-geocoder-menu-border-radius;
+$map-geocoder-simplegeocoder-geocoders-box-shadow				=						$map-geocoder-menu-box-shadow;
+
+////// Header
+$map-geocoder-simplegeocoder-geocoders-header-background		=						transparent;
+$map-geocoder-simplegeocoder-geocoders-header-padding			=						$map-geocoder-menu-item-padding;
+$map-geocoder-simplegeocoder-geocoders-header-margin			=						0;
+$map-geocoder-simplegeocoder-geocoders-header-border-bottom		=						1px solid $border-color;
+$map-geocoder-simplegeocoder-geocoders-header-text-color		=						$gray-color;
+$map-geocoder-simplegeocoder-geocoders-header-font-weight		=						normal;
+
+//// Icons
+$map-geocoder-simplegeocoder-icon-width							=						16px;
+$map-geocoder-simplegeocoder-icon-height						=						$map-geocoder-arcgisgeocoder-line-height;
+$map-geocoder-simplegeocoder-icon-margin						=						$padding;
+$map-geocoder-simplegeocoder-icon-spacing-from-content			=						$padding;									// The space between the content and icon in the same line
+
+////// Colors
+$map-geocoder-simplegeocoder-icon-reset-color					=						$gray-color;
+$map-geocoder-simplegeocoder-icon-checked-color					=						$green-color;
+
+/****************************************************************************************
  * Legend
  ****************************************************************************************/
 
