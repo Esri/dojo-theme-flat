@@ -66,25 +66,31 @@ Only these widgets are supported:
 ## Instructions
   * ####CSS only:
     1. Download the "CSS" folder locally
-    2. For **Dojo dijits**, Include:
+    2. For **Dojo dijits**, include:
+       
        ```HTML
        <link rel="Stylesheet" type="text/css" href="path/to/dojo/flat.css/>
        ```
        
-    3. For **dgrid**, Include:
+    3. For **dgrid**, include:
+       
        ```HTML
          <link rel="Stylesheet" type="text/css" href="path/to/dgrid/css/dgrid.css/>
          <link rel="Stylesheet" type="text/css" href="path/to/dgrid/skins/skin.css/>
        ```
        
        And other stylesheets for extensions in the "dgrid/css/extensions" folder if needed. For example, the style sheet for Pagination extension: 
+       
        ```HTML
           <link rel="Stylesheet" type="text/css" href="path/to/dgrid/css/extensions/Pagination.css/>
        ```
        
-    4. For **ArcGIS API for JS widgets**:  Include API's default style sheet:
-       * ```<link rel="Stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css/>```, and 
-       * ```<link rel="Stylesheet" type="text/css" href="path/to/esri/css/esri_custom.css/>```
+    4. For **ArcGIS API for JS widgets**, includet:
+       
+       ```HTML
+       <link rel="Stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css/>
+       <link rel="Stylesheet" type="text/css" href="path/to/esri/css/esri_custom.css/>
+       ```
        
   * ####Using Stylus files
     
