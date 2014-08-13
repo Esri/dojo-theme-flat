@@ -67,7 +67,8 @@ Only these widgets are supported:
   * ####CSS only:
     1. Download the "CSS" folder locally
     2. For **Dojo dijits**: Include:
-       * ```html<link rel="Stylesheet" type="text/css" href="path/to/dojo/flat.css/>```
+       ```HTML<link rel="Stylesheet" type="text/css" href="path/to/dojo/flat.css/>```
+       
     3. For **dgrid**: Include:
        * ```<link rel="Stylesheet" type="text/css" href="path/to/dgrid/css/dgrid.css/>```, 
        * ```<link rel="Stylesheet" type="text/css" href="path/to/dgrid/skins/skin.css/>```, and 
