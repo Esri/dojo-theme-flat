@@ -91,6 +91,8 @@ Only these widgets are supported:
        
        ```HTML
        <link rel="Stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css/>
+       ```
+       ```HTML
        <link rel="Stylesheet" type="text/css" href="path/to/esri/css/esri_custom.css/>
        ```
        
