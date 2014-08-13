@@ -1,21 +1,39 @@
-This theming framework is customized for Dojo dijits, dgrid, as well as some of the ArcGIS API for JS widgets.
+# dojo-theme-flat
 
-## Styles included:
+This theme framework is customized for Dojo dijits, dgrid, as well as some of the ArcGIS API for JS widgets using [Stylus](http://learnboost.github.io/stylus/).
+
+## Sections
+
+* [Features](#features)
+* [Requirements](#requirements)
+* [Instructions](#instructions)
+* [Resources](#resources)
+* [Issues](#issues)
+* [Contributing](#contributing)
+* [Licensing](#licensing)
+
+## Features
+
+This theme includes styles for the following components:
 
 #### Dojo Dijits:
+
   * All "dijit/form" dijits
   * All "dijit/layout" dijits
   * All other Dojo dijits (Dialog, Menu, Calendar, Toolbar, etc.)
   * RTL supported
   
 #### Dgrid:
+
   * Basic dgrid styles (dgrid.css)
   * One skin is included
   * All extensions
   * RTL supported
   
 #### ArcGIS API for JavaScript Widgets:
+
 Only these widgets are supported:
+
   * Fixed pan buttons
   * Zoom Slider
   * Basemap Gallery
@@ -26,7 +44,15 @@ Only these widgets are supported:
   * Overview Map
   * Popup
   * Scalebar
-
+  
+## Requirements
+* Using CSS files only:
+* No requirements
+* Using Stylus files:
+  * [Nodejs](http://nodejs.org/)
+  * [Stylus](https://www.npmjs.org/package/stylus) - CSS preprocessor used to compile .styl files 
+  * [Nib](http://visionmedia.github.io/nib/) - a Stylus plugin that provides cross-browser CSS3 mixins . 
+ 
 ## How to use
   * CSS only:
     1. Download the "CSS" folder locally
