@@ -65,10 +65,10 @@ Only these widgets are supported:
   * CSS only:
     1. Download the "CSS" folder locally
     2. For Dojo dijits: Include dojo/flat.css
-    3. For dgrid: Include dgrid/css/dgrid.css, dgrid/skins/skin.css, and other stylesheets for extensions in the "dgrid/css/extensions" folder if needed  
+    3. For dgrid: Include ```dgrid/css/dgrid.css```, ```dgrid/skins/skin.css```, and other stylesheets for extensions in the "dgrid/css/extensions" folder if needed  
     4. For ArcGIS API for JS widgets:  Include API's default style sheet: (for example: http://js.arcgis.com/3.10/js/esri/css/esri.css), and esri/css/esri_custom.css
   * Using Stylus files
-    1. TODO
+    1. 
     
 ## Resources
 
