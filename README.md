@@ -76,6 +76,8 @@ Only these widgets are supported:
        
        ```HTML
          <link rel="Stylesheet" type="text/css" href="path/to/dgrid/css/dgrid.css/>
+       ```
+       ```HTML
          <link rel="Stylesheet" type="text/css" href="path/to/dgrid/skins/skin.css/>
        ```
        
@@ -97,7 +99,7 @@ Only these widgets are supported:
     ##### Install required tools:
        1. Nodejs - Click [here](http://nodejs.org/) to download the installer and run it
        2. Stylus - Open command line and run ```npm install stylus -g``` 
-       3. Nib - Open command line and run ``$ npm install nib -g``` 
+       3. Nib - Open command line and run ```$ npm install nib -g```
        
     ##### Compile ```.styl``` files using command line:
        Here explains how to use command line to compile ```.styl``` files, click [here](http://learnboost.github.io/stylus/docs/executable.html) for more examples on how to compile ```.styl``` files in general. You can also use [Grunt](http://gruntjs.com/) if you are familiar with the tool.
