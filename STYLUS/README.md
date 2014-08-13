@@ -1,15 +1,3 @@
-# Theme folder structure
-
-## Sections
-
-* [Features](#features)
-* [Requirements](#requirements)
-* [Instructions](#instructions)
-* [Resources](#resources)
-* [Issues](#issues)
-* [Contributing](#contributing)
-* [Licensing](#licensing)
-
 ## Variables
 
 The variables define the colors, font properties, box properties, etc. for all the widgets. The variables consist of 2 main parts:
@@ -31,12 +19,12 @@ The variables define the colors, font properties, box properties, etc. for all t
   
 ## How variables work:
 
-				base variables
+				```base variables```
 				/
-		Dijit 1 variables
+		```Dijit 1 variables```
 			/
-		Dijit 1 .styl
+		```Dijit 1 .styl```
 			\
-			Stylus
+			```Stylus```
 			/
 		Dijit 1 .css
