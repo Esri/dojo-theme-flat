@@ -81,13 +81,19 @@ Only these widgets are supported:
        2. Stylus - Open command line and run ```npm install stylus -g``` 
        3. Nib - Open command line and run ``$ npm install nib -g``` 
        
-    #### Compile ```.styl``` files using command line
-       In your command line, run this: ```stylus -u nib -w dojo\layout -o ../css_outputs/flat/dojo/layout```
+    #### Compile ```.styl``` files using command line:
+       Here explains how to use command line to compile ```.styl``` files, click [here](http://learnboost.github.io/stylus/docs/executable.html) for more examples on how to compile ```.styl``` files in general. You can also use [Grunt](http://gruntjs.com/) if you are familiar with the tool.
 
+       1. Compile single file: 
+          ```stylus -u nib -w path\to\filename.styl -o path/to/output/foldername/```
+       2. Compile all files within a folder: 
+          ```stylus -u nib -w path\to\foldername -o path/to/output/foldername/```
 ## Resources
 
-  * TODO
-  
+  * [Stylus](http://learnboost.github.io/stylus/)
+  * [Nib](http://visionmedia.github.io/nib/)
+  * [A nice article on how to get started with Stylus](http://bootstrap.pk/tutorials/getting-started-with-stylus-css-pre-processor/)
+  * [Claro theme](https://github.com/kfranqueiro/dijit-claro-stylus) that this theme is modified from
 ## Issues
 #### Browser Support
   Only tested with Chrome (v36), FireFox (v31), IE 11 and IE 8, 9 with IE 11's emulation tool.
