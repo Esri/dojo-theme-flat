@@ -90,6 +90,7 @@ Only these widgets are supported:
           ```stylus -u nib -w path\to\filename.styl -o path/to/output/foldername/```
        2. Compile all files within a folder: 
           ```stylus -u nib -w path\to\foldername -o path/to/output/foldername/```
+          
 ## Resources
 
   * [Stylus](http://learnboost.github.io/stylus/)
