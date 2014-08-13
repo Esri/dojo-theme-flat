@@ -64,7 +64,7 @@ Only these widgets are supported:
   * [Nib](http://visionmedia.github.io/nib/) - a Stylus plugin that provides cross-browser CSS3 mixins . 
  
 ## Instructions
-  * #### CSS only:
+  * ####CSS only:
     1. Download the "CSS" folder locally
     2. For **Dojo dijits**: Include:
        * ```<link rel="Stylesheet" type="text/css" href="path/to/dojo/flat.css/>```
@@ -76,14 +76,15 @@ Only these widgets are supported:
     4. For **ArcGIS API for JS widgets**:  Include API's default style sheet:
        * ```<link rel="Stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css/>```, and 
        * ```<link rel="Stylesheet" type="text/css" href="path/to/esri/css/esri_custom.css/>```
+       
   * ####Using Stylus files
     
-    #### Install required tools:
+    ##### Install required tools:
        1. Nodejs - Click [here](http://nodejs.org/) to download the installer and run it
        2. Stylus - Open command line and run ```npm install stylus -g``` 
        3. Nib - Open command line and run ``$ npm install nib -g``` 
        
-    #### Compile ```.styl``` files using command line:
+    ##### Compile ```.styl``` files using command line:
        Here explains how to use command line to compile ```.styl``` files, click [here](http://learnboost.github.io/stylus/docs/executable.html) for more examples on how to compile ```.styl``` files in general. You can also use [Grunt](http://gruntjs.com/) if you are familiar with the tool.
 
        1. Compile single file: 
