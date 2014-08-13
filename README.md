@@ -64,7 +64,7 @@ Only these widgets are supported:
   * [Nib](http://visionmedia.github.io/nib/) - a Stylus plugin that provides cross-browser CSS3 mixins . 
  
 ## Instructions
-  * CSS only:
+  * #### CSS only:
     1. Download the "CSS" folder locally
     2. For **Dojo dijits**: Include:
        * ```<link rel="Stylesheet" type="text/css" href="path/to/dojo/flat.css/>```
@@ -76,7 +76,7 @@ Only these widgets are supported:
     4. For **ArcGIS API for JS widgets**:  Include API's default style sheet:
        * ```<link rel="Stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css/>```, and 
        * ```<link rel="Stylesheet" type="text/css" href="path/to/esri/css/esri_custom.css/>```
-  * Using Stylus files
+  * ####Using Stylus files
     
     #### Install required tools:
        1. Nodejs - Click [here](http://nodejs.org/) to download the installer and run it
