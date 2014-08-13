@@ -44,6 +44,11 @@ Only these widgets are supported:
   * Overview Map
   * Popup
   * Scalebar
+ 
+#### Icons and Colors
+
+  * Most icons are replaced with [FontAwesome](http://fortawesome.github.io/Font-Awesome/get-started/) icon fonts.
+  * Esri's branding colors are used as default.
   
 ## Requirements
 * Using CSS files only:
@@ -70,9 +75,8 @@ Only these widgets are supported:
   * TODO
   
 ## Issues
-
-* Find a bug or want to request a new feature?  Please let us know by submitting an issue.
-
+#### Browser Support
+  Only tested with Chrome (v36), FireFox (v31), IE 11 and IE 8, 9 with IE 11's emulation tool.
 
 ## Contributing
 
@@ -99,11 +103,3 @@ A copy of the license is available in the repository's
 
 [](Esri Tags: ArcGIS Defense and Intelligence Military Environment Planning Analysis Emergency Management )
 [](Esri Language: Python)
-
-## About This theme
-  * Most icons are replaced with FontAwesome icon fonts. (http://fortawesome.github.io/Font-Awesome/get-started/)
-  * Esri's branding colors are used as default.
-
-## Browser Support
-  Only tested with Chrome (v36), FireFox (v31), IE 11 and IE 8, 9 with IE 11's emulation tool.
-  
