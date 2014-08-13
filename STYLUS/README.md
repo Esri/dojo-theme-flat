@@ -17,14 +17,13 @@ The variables define the colors, font properties, box properties, etc. for all t
   * Mixin to create progress bar styles
   * Other supporting mixins
   
-## How variables work:
+## How to create your own custom theme
 
-				```base variables```
-				/
-		```Dijit 1 variables```
-			/
-		```Dijit 1 .styl```
-			\
-			```Stylus```
-			/
-		Dijit 1 .css
+There are roughly 3 levels of involvement
+  1. "I am okay with how the flat theme looks, I just want to change some basic changes according to my project branding needs."
+    * In this case, just modify the **"colors"**, **"font"**, and **"container"** sections in the ```variable.styl``` file.
+  2. "I want to customize dijits individually."
+    * This requires users to dig into dijit variables level. Search the dijit name that you wish to customize in the ```variables.styl``` file and modify the variables for that specific dijit.
+  3. "I am building my own custom theme based on my own design"
+    * This is most time consuming, which requires modification of css rules in each individual dijit .styl file. And perhaps the mixins that create styles for the buttons and icon font.
+ 
