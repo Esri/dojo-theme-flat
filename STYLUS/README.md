@@ -8,7 +8,7 @@ The variables define the colors, font properties, box properties, etc. for all t
 	3. Container
 	4. Icons
   * Dijit variables:
-	These variables are referencing the base variables and consumed by the dijit Stylus file directly.
+	These variables are referencing the base variables and consumed by the dijit Stylus files directly.
 
 ## Mixins:
 
