@@ -2,6 +2,8 @@
 
 This theme framework is customized for Dojo dijits, dgrid, as well as some of the ArcGIS API for JS widgets using [Stylus](http://learnboost.github.io/stylus/).
 
+This theme is built uppon Dojo's [Claro theme](https://github.com/kfranqueiro/dijit-claro-stylus).
+
 ## Sections
 
 * [Features](#features)
@@ -62,18 +64,40 @@ Only these widgets are supported:
   * [Nib](http://visionmedia.github.io/nib/) - a Stylus plugin that provides cross-browser CSS3 mixins . 
  
 ## Instructions
-  * CSS only:
+  * ####CSS only:
     1. Download the "CSS" folder locally
-    2. For Dojo dijits: Include dojo/flat.css
-    3. For dgrid: Include dgrid/css/dgrid.css, dgrid/skins/skin.css, and other stylesheets for extensions in the "dgrid/css/extensions" folder if needed  
-    4. For ArcGIS API for JS widgets:  Include API's default style sheet: (for example: http://js.arcgis.com/3.10/js/esri/css/esri.css), and esri/css/esri_custom.css
-  * Using Stylus files
-    1. TODO
+    2. For **Dojo dijits**: Include:
+       * ```<link rel="Stylesheet" type="text/css" href="path/to/dojo/flat.css/>```
+    3. For **dgrid**: Include:
+       * ```<link rel="Stylesheet" type="text/css" href="path/to/dgrid/css/dgrid.css/>```, 
+       * ```<link rel="Stylesheet" type="text/css" href="path/to/dgrid/skins/skin.css/>```, and 
+       * other stylesheets for extensions in the "dgrid/css/extensions" folder if needed. For example, the style sheet for Pagination extension: 
+         * ```<link rel="Stylesheet" type="text/css" href="path/to/dgrid/css/extensions/Pagination.css/>```
+    4. For **ArcGIS API for JS widgets**:  Include API's default style sheet:
+       * ```<link rel="Stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css/>```, and 
+       * ```<link rel="Stylesheet" type="text/css" href="path/to/esri/css/esri_custom.css/>```
+       
+  * ####Using Stylus files
     
+    ##### Install required tools:
+       1. Nodejs - Click [here](http://nodejs.org/) to download the installer and run it
+       2. Stylus - Open command line and run ```npm install stylus -g``` 
+       3. Nib - Open command line and run ``$ npm install nib -g``` 
+       
+    ##### Compile ```.styl``` files using command line:
+       Here explains how to use command line to compile ```.styl``` files, click [here](http://learnboost.github.io/stylus/docs/executable.html) for more examples on how to compile ```.styl``` files in general. You can also use [Grunt](http://gruntjs.com/) if you are familiar with the tool.
+
+       1. Compile single file: 
+          ```stylus -u nib -w path\to\filename.styl -o path/to/output/foldername/```
+       2. Compile all files within a folder: 
+          ```stylus -u nib -w path\to\foldername -o path/to/output/foldername/```
+          
 ## Resources
 
-  * TODO
-  
+  * [Stylus](http://learnboost.github.io/stylus/)
+  * [Nib](http://visionmedia.github.io/nib/)
+  * [A nice article on how to get started with Stylus](http://bootstrap.pk/tutorials/getting-started-with-stylus-css-pre-processor/)
+
 ## Issues
 #### Browser Support
   Only tested with Chrome (v36), FireFox (v31), IE 11 and IE 8, 9 with IE 11's emulation tool.
