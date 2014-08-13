@@ -75,8 +75,15 @@ Only these widgets are supported:
        * ```<link rel="Stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css/>```, and 
        * ```<link rel="Stylesheet" type="text/css" href="path/to/esri/css/esri_custom.css/>```
   * Using Stylus files
-    1. 
     
+    #### Install required tools:
+       1. Nodejs - Click [here](http://nodejs.org/) to download the installer and run it
+       2. Stylus - Open command line and run ```npm install stylus -g``` 
+       3. Nib - Open command line and run ``$ npm install nib -g``` 
+       
+    #### Compile ```.styl``` files using command line
+       In your command line, run this: ```stylus -u nib -w dojo\layout -o ../css_outputs/flat/dojo/layout```
+
 ## Resources
 
   * TODO
