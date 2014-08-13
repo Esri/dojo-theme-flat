@@ -1,0 +1,177 @@
+
+/*****************
+ * Mixins
+******************/
+
+isEven($value) {
+	// to calculate when the value is an even number or not
+	if ($value % 2 == 0) {
+ 		true;
+	} else { 
+ 		false;
+	}
+}
+
+half($value) {
+	// to take half of the given value
+	$value / 2;
+}
+
+/*****************
+ * Icon
+******************/
+
+_icon-core-style() {
+	font-family: $icon-font-family;
+	font-style: normal;
+	font-weight: normal;
+	font-size: $icon-size;
+	text-decoration: inherit;
+	vertical-align: bottom;
+}
+
+/*****************
+ * button
+******************/
+
+_button-color-properties(color) {
+	border: 1px solid darken(color, 15%);
+	background: color; // fallback
+	background: linear-gradient(lighten(color, 3%), color);
+}
+
+_button-color-properties-hover(color) {
+	//border: 1px solid darken(color, 25%);
+	background: darken(color, 8%); // fallback
+	background: linear-gradient(lighten(color, 5%), darken(color, 8%));
+}
+
+_button-color-properties-active(color) {
+	background: darken(color, 15%); // fallback
+	background: linear-gradient(color, color);
+}
+
+
+
+button-style() {
+	// Common button style properties
+	padding: $button-padding;
+	border-radius: $button-border-radius;
+	box-shadow: $button-shadow;
+	line-height: $line-height;
+	text-shadow: $button-text-shadow;
+	cursor: pointer;
+
+	// Get color related style properties
+	_button-color-properties($button-default-color);
+}
+
+button-hover-style() {
+	box-shadow: $button-hovered-shadow;
+	transition: all 0.1s;
+
+	_button-color-properties-hover($button-default-color);
+}
+
+button-active-style() {
+	box-shadow: $button-active-shadow;
+	transition: none;
+	outline: none;
+
+	_button-color-properties-active($button-default-color);
+}
+
+button-disabled-style() {
+	cursor: default;
+	opacity:$disabled-opacity;
+}
+
+// Alternatives colors
+
+create-alternative-buttons(colors) {
+	colors = arguments if length(arguments) >= 1;
+	
+	// Common properties for all alternative buttons
+	.dijitButton.btn-alt .dijitButtonNode,
+		.dijitDropDownButton.btn-alt .dijitButtonNode,
+		.dijitComboButton.btn-alt .dijitButtonNode,
+		.dijitToggleButton.btn-alt .dijitButtonNode,
+		.dijitComboBox.btn-alt .dijitButtonNode,
+		.dijitSelect.btn-alt .dijitButtonContents, .dijitSelect.{class} .dijitButtonNode,
+		.dijitSpinner.btn-alt .dijitArrowButton,
+		.btn-alt .esriSimpleSlider div,
+		.btn-alt .esriAddBookmark,
+		.btn-alt .esriButton .dijitButtonNode,
+		.btn-alt .esriToggleButton .dijitButtonNode {
+			for prop, index in $button-alternative-common {
+				{prop}: $button-alternative-common[prop];
+			}
+		}
+
+	for class in colors {
+		.dijitButton.{class} .dijitButtonNode,
+		.dijitDropDownButton.{class} .dijitButtonNode,
+		.dijitComboButton.{class} .dijitButtonNode,
+		.dijitToggleButton.{class} .dijitButtonNode,
+		.dijitComboBox.{class} .dijitButtonNode,
+		.dijitSelect.{class} .dijitButtonContents, .dijitSelect.{class} .dijitButtonNode,
+		.dijitSpinner.{class} .dijitArrowButton,
+		.{class} .esriSimpleSlider div,
+		.{class} .esriAddBookmark,
+		.{class} .esriButton .dijitButtonNode,
+		.{class} .esriToggleButton .dijitButtonNode {
+			_button-color-properties(colors[class]);
+		}
+	}
+}
+
+create-alternative-buttons-hover(colors) {
+	colors = arguments if length(arguments) >= 1;
+	for class in colors {
+		.dijitButtonHover.{class} .dijitButtonNode,
+		.dijitDropDownButtonHover.{class} .dijitButtonNode,
+		.dijitComboButton.{class} .dijitButtonNodeHover,
+		.dijitToggleButtonHover.{class} .dijitButtonNode,
+		.dijitComboBoxHover.{class} .dijitButtonNode,
+		.dijitSelectHover.{class} .dijitButtonContents, .dijitSelectHover.{class} .dijitButtonNode,
+		.dijitSelect.dijitSelectOpened.{class} .dijitButtonContents, .dijitSelect.dijitSelectOpened.{class} .dijitArrowButton,
+		.dijitSpinner.{class} .dijitUpArrowButtonHover, .dijitSpinner.{class} .dijitDownArrowButtonHover,
+		.{class} .esriSimpleSlider div:hover,
+		.{class} .esriAddBookmark:hover,
+		.{class} .esriButtonHover .dijitButtonNode,
+		.{class} .esriToggleButtonHover .dijitButtonNode {
+			_button-color-properties-hover(colors[class]);
+		}
+	}
+}
+
+create-alternative-buttons-active(colors) {
+	colors = arguments if length(arguments) >= 1;
+	for class in colors {
+		.dijitButtonActive.{class} .dijitButtonNode,
+		.dijitDropDownButtonActive.{class} .dijitButtonNode,
+		.dijitComboButton.{class} .dijitButtonNodeActive,
+		.dijitToggleButtonActive.{class} .dijitButtonNode,
+		.dijitComboBoxActive.{class} .dijitButtonNode,
+		.dijitSelectActive.{class} .dijitButtonContents, .dijitSelectActive.{class} .dijitArrowButton,
+		.dijitSelect.dijitSelectOpened.{class} .dijitButtonContents, .dijitSelect.dijitSelectOpened.{class} .dijitArrowButton ,
+		.dijitComboBox.{class} .dijitButtonNode.dijitHasDropDownOpen,
+		.dijitSpinner.{class} .dijitUpArrowButtonActive, .dijitSpinner.{class} .dijitDownArrowButtonActive,
+		.{class} .esriSimpleSlider div:active,
+		.{class} .esriAddBookmark:active,
+		.{class} .esriButtonActive .dijitButtonNode,
+		.{class} .esriButtonChecked .dijitButtonNode,
+		.{class} .esriToggleButtonActive .dijitButtonNode {
+			_button-color-properties-active(colors[class]);
+		}
+	}
+}
+
+/*****************
+ * Progress bar 
+ ****************/
+
+_progress-bar-color-properties(color) {
+	background: color; // fallback
+	background: linear-gradient(lighten(color, 3%), color);
+}
