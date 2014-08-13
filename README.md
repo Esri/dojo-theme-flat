@@ -2,6 +2,8 @@
 
 This theme framework is customized for Dojo dijits, dgrid, as well as some of the ArcGIS API for JS widgets using [Stylus](http://learnboost.github.io/stylus/).
 
+This theme is built uppon Dojo's [Claro theme](https://github.com/kfranqueiro/dijit-claro-stylus).
+
 ## Sections
 
 * [Features](#features)
@@ -93,7 +95,7 @@ Only these widgets are supported:
   * [Stylus](http://learnboost.github.io/stylus/)
   * [Nib](http://visionmedia.github.io/nib/)
   * [A nice article on how to get started with Stylus](http://bootstrap.pk/tutorials/getting-started-with-stylus-css-pre-processor/)
-  * [Claro theme](https://github.com/kfranqueiro/dijit-claro-stylus) that this theme is modified from
+
 ## Issues
 #### Browser Support
   Only tested with Chrome (v36), FireFox (v31), IE 11 and IE 8, 9 with IE 11's emulation tool.
