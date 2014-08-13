@@ -1,3 +1,19 @@
+/*
+ * Copyright 2014 Esri
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/************************** Main Content ******************************/
 /* Calendar
  * 
  * Styling Calendar mainly includes:
@@ -37,9 +53,7 @@
   padding: 4px;
   border: 1px solid #d0d0d0;
   border-collapse: separate;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 }
 .dijitCalendarMonthContainer th {
@@ -70,19 +84,13 @@
 .dijitCalendarPreviousYearHover,
 .dijitCalendarPreviousYear:hover {
   padding: 4px 12px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: none;
   box-shadow: none;
   line-height: 20px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.75);
   cursor: pointer;
   border: 1px solid #d0d0d0;
   background: #f5f5f5;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
   padding: 4px;
 }
@@ -92,19 +100,10 @@
 .dijitCalendarNextYear:active,
 .dijitCalendarPreviousYearActive,
 .dijitCalendarPreviousYear:active {
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
   transition: none;
   outline: none;
   background: #d0d0d0;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
 }
 .dijitA11ySideArrow {
@@ -136,7 +135,6 @@
   display: block;
   padding: 2px 4px;
   border: 1px solid transparent;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dijitCalendarPreviousMonth .dijitCalendarDateLabel,
@@ -169,8 +167,6 @@
 /* Disabled */
 .dijitCalendarDisabledDate .dijitCalendarDateLabel {
   opacity: 0.65;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
 }
 /* year */
 .dijitCalendarYearContainer {

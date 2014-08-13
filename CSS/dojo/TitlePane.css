@@ -1,3 +1,19 @@
+/*
+ * Copyright 2014 Esri
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/************************** Main Content ******************************/
 /* TitlePane 
  * 
  * Styling TitlePane means styling the TitlePane title and its content container  (dijitTitlePane)
@@ -19,54 +35,28 @@
  */
 .dijitTitlePaneTitle {
   padding: 4px 12px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: none;
   box-shadow: none;
   line-height: 20px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.75);
   cursor: pointer;
   border: 1px solid #d0d0d0;
   background: #f5f5f5;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
 }
 .dijitTitlePaneTitleHover {
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  -ms-transition: all 0.1s;
   transition: all 0.1s;
   background: #e1e1e1;
-  background: -webkit-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -moz-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -o-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -ms-linear-gradient(#f6f6f6, #e1e1e1);
   background: linear-gradient(#f6f6f6, #e1e1e1);
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .dijitTitlePaneTitleActive {
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
   transition: none;
   outline: none;
   background: #d0d0d0;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
 }
 .dijitTitlePane .dijitArrowNode {
@@ -83,7 +73,6 @@
   font-size: 12px;
 }
 .dijitTitlePane .dijitClosed {
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dijitTitlePane .dijitClosed .dijitArrowNode:before {
@@ -93,7 +82,6 @@
   background: #fff;
   border: 1px solid #d0d0d0;
   border-top: none;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
 }
 .dijitTitlePaneContentInner {

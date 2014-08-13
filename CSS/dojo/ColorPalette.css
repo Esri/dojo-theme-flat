@@ -1,3 +1,19 @@
+/*
+ * Copyright 2014 Esri
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/************************** Main Content ******************************/
 /* ColorPalette
  * 
  * Styling of the ColorPalette consists of the following:
@@ -23,7 +39,6 @@
 .dijitColorPalette {
   border: 1px solid #d0d0d0;
   background: #fff;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 /* swatch */
 }
@@ -33,7 +48,6 @@
 .dijitColorPalette .dijitColorPaletteSwatch {
   height: 15px;
   width: 15px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dijitColorPalette .dijitPaletteImg {
@@ -45,26 +59,14 @@
 }
 .dijitColorPalette .dijitPaletteCell:hover .dijitPaletteImg {
   border: 1px solid #d0d0d0;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25);
   box-shadow: 0 1px 1px rgba(0,0,0,0.25);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 .dijitColorPalette .dijitPaletteCell:active .dijitPaletteImg,
 .dijitColorPalette .dijitPaletteTable .dijitPaletteCellSelected .dijitPaletteImg {
   border: 1px solid #007ac2;
-  -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.25);
   box-shadow: 0 3px 3px rgba(0,0,0,0.25);
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }

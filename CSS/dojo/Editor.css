@@ -1,3 +1,19 @@
+/*
+ * Copyright 2014 Esri
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/************************** Main Content ******************************/
 /* Editor 
  * 
  * Styling Editor means styling the Editor inside iframe container (dijitEditorIFrameContainer)
@@ -17,19 +33,13 @@
 .dijitEditor {
   background: #fff;
   border: 1px solid #d0d0d0;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dijitEditor .dijitEditorIFrameContainer {
   border: 1px solid transparent;
   border-top: 1px solid #d0d0d0;
   padding: 4px 8px;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1) inset;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1) inset;
-  -webkit-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-  -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-  -o-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-  -ms-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
   transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 }
 /* Hover */
@@ -40,7 +50,6 @@
 /* Focused */
 .dijitEditorFocused .dijitEditorIFrameContainer {
   border: 1px solid #007ac2;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
 }
 .dijitEditorFocused .dijitEditorIFrameContainer .dijitEditorIFrame {
@@ -51,14 +60,11 @@
   border: 1px solid #d0d0d0;
   color: #9a9b9f;
   opacity: 0.65;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
 }
 .dijitEditorDisabled .dijitEditorIFrame,
 .dijitEditorDisabled .dijitEditorIFrameContainer,
 .dijitEditorDisabled .dijitEditorIFrameContainer .dijitEditorIFrame {
   background: #f5f5f5;
   border: 1px solid transparent;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }

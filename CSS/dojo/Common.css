@@ -1,36 +1,40 @@
+/*
+ * Copyright 2014 Esri
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/************************** Main Content ******************************/
 .dijitPopup {
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dijitTooltipDialogPopup {
 /* exception popups: do not use a shadow on these because they aren't rectangular */
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* Drag and Drop */
 .dojoDndItem {
   border: 1px solid transparent;
   cursor: pointer;
-  -webkit-transition-duration: 0.25s;
-  -moz-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
-  -ms-transition-duration: 0.25s;
   transition-duration: 0.25s;
-  -webkit-transition-property: background-color, border-color, opacity;
-  -moz-transition-property: background-color, border-color, opacity;
-  -o-transition-property: background-color, border-color, opacity;
-  -ms-transition-property: background-color, border-color, opacity;
   transition-property: background-color, border-color, opacity;
 }
 .dojoDndItemOver {
   background: #f5f5f5;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dojoDndItemAnchor {
   background: transparent;
   border: 1px dashed #007ac2;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dojoDndItemBefore {
@@ -76,7 +80,6 @@ table.dojoDndAvatar {
   content: "\f060";
 }
 .dojoDndAvatarItem {
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dojoDndAvatarItem td {
@@ -84,6 +87,5 @@ table.dojoDndAvatar {
 }
 .dojoDndAvatarItem td > * {
   background: #fff;
-  -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.25);
   box-shadow: 0 3px 3px rgba(0,0,0,0.25);
 }

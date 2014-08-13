@@ -1,3 +1,19 @@
+/*
+ * Copyright 2014 Esri
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/************************** Main Content ******************************/
 /* Dialog 
  * 
  * Styling Dialog includes two sections: Dialog and Tooltip & TooltipDialog
@@ -31,15 +47,12 @@
 .dijitDialog {
   background: #fff;
   border: 1px solid #d0d0d0;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 }
 /* content pane */
 .dijitDialogPaneContent {
   background: #fff;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
   padding: 8px;
   position: relative;
@@ -52,7 +65,6 @@
   position: relative;
 }
 .dijitTooltipDialog .dijitDialogPaneActionBar {
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
   margin: 8px -8px -4px;
 }
@@ -64,7 +76,6 @@
 /* outer container for the titlebar of the dialog */
   border-bottom: 1px solid #efefef;
   padding: 8px 12px;
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
 }
 .dijitDialogTitle {
@@ -88,8 +99,6 @@
   text-decoration: inherit;
   vertical-align: bottom;
   opacity: 0.65;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
 }
 .dijitDialogCloseIcon:before {
   content: "\f00d";
@@ -100,14 +109,10 @@
 .dijitDialogCloseIconHover,
 .dijitDialogCloseIconActive {
   opacity: 1;
-  -ms-filter: none;
-  filter: none;
 }
 .dijitDialogUnderlay {
   background: #000;
   opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
 }
 /* Tooltip and TooltipDialog */
 .dijitTooltip,
@@ -119,10 +124,7 @@
 .dijitTooltipContainer {
   background: #2b2e34;
   opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
   padding: 4px 8px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dijitTooltip .dijitTooltipContainer {
@@ -135,8 +137,6 @@
   width: auto;
   height: auto;
   opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
 }
 .dijitTooltipABRight .dijitTooltipConnector {
 /* above or below tooltip, but the arrow appears on the right,
@@ -195,13 +195,9 @@
 .dijitTooltipDialog .dijitTooltipContainer {
   background: #fff;
   border: 1px solid #d0d0d0;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   opacity: 1;
-  -ms-filter: none;
-  filter: none;
 }
 .dijitTooltipDialog.dijitTooltipBelow {
   padding-top: 6px;
@@ -221,8 +217,6 @@
   position: absolute;
   z-index: 2;
   opacity: 1;
-  -ms-filter: none;
-  filter: none;
 }
 .dijitTooltipDialog .dijitTooltipConnector:after {
   content: "";
