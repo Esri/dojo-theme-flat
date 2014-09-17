@@ -48,7 +48,6 @@
  */
 /************ common styles *************/
 .dijitTabContainer {
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .dijitTabPaneWrapper {
@@ -56,7 +55,6 @@
   border: 1px solid #d0d0d0;
   margin: 0;
   padding: 0;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
 }
 .dijitTabContainerTop-tabs,
@@ -73,20 +71,9 @@
   border: 1px solid #d0d0d0;
   background: #fff;
   text-align: center;
-  -webkit-transition-property: background, padding, margin;
-  -moz-transition-property: background, padding, margin;
-  -o-transition-property: background, padding, margin;
-  -ms-transition-property: background, padding, margin;
+  border-radius: none;
   transition-property: background, padding, margin;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  -ms-transition-duration: 0.2s;
   transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
   transition-timing-function: ease;
   position: relative;
   z-index: 0;
@@ -117,8 +104,6 @@
 /* tabs: disabled */
 .dijitTabDisabled {
   opacity: 0.65;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
 }
 /* tabs: strip button */
 .tabStripButton {
@@ -138,24 +123,17 @@
   line-height: 14px;
   vertical-align: middle;
   margin-left: 4px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   opacity: 0.35;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
-  filter: alpha(opacity=35);
 }
 .dijitTabCloseButton:before {
   content: "\f00d";
 }
 .dijitTabCloseButtonHover {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .dijitTabCloseButtonActive {
   opacity: 1;
-  -ms-filter: none;
-  filter: none;
 }
 /************* end common **************/
 /*************** top tabs ***************/
@@ -189,7 +167,6 @@
 /*************** end top tabs **************/
 /*************** bottom tabs ***************/
 .dijitTabPaneWrapper.dijitTabContainerBottom-container {
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
 }
 .dijitTabContainerBottom-tabs .dijitTab {
@@ -222,7 +199,6 @@
 /************ end bottom tabs ************/
 /*************** left tabs ***************/
 .dijitTabPaneWrapper.dijitTabContainerLeft-container {
-  -webkit-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
 }
 .dijitTabContainerLeft-tabs .dijitTab {
@@ -250,7 +226,6 @@
 /************** end left tabs *************/
 /*************** right tabs ***************/
 .dijitTabPaneWrapper.dijitTabContainerRight-container {
-  -webkit-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
 }
 .dijitTabContainerRight-tabs .dijitTab {
@@ -281,10 +256,6 @@
 .tabStripButton {
   background-color: transparent;
   border: 0;
-  -webkit-transition-property: background-color;
-  -moz-transition-property: background-color;
-  -o-transition-property: background-color;
-  -ms-transition-property: background-color;
   transition-property: background-color;
 }
 .dijitTabListContainer-top .tabStripButton,
@@ -328,8 +299,6 @@
 .dijitTabListContainer-top .tabStripButtonDisabled,
 .dijitTabListContainer-bottom .tabStripButtonDisabled {
   opacity: 0.65;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
 }
 /*********** end left/right scroll buttons + menu button *********/
 /*************** nested tabs ***************/
@@ -341,17 +310,8 @@
   margin: 4px;
   padding: 4px 8px;
   border: 0 none;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
-  -webkit-transition-property: background-color, border-color;
-  -moz-transition-property: background-color, border-color;
-  -o-transition-property: background-color, border-color;
-  -ms-transition-property: background-color, border-color;
   transition-property: background-color, border-color;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
 .dijitTabContainerTabListNested .dijitTabHover {
@@ -391,6 +351,5 @@
 .dijitTabPaneWrapperNested {
   border: none;
 /* prevent double border */
-  -webkit-box-shadow: none;
   box-shadow: none;
 }

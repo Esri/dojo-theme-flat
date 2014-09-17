@@ -33,21 +33,14 @@
 }
 .dijitSpinner .dijitArrowButton {
   padding: 4px 12px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: none;
   box-shadow: none;
   line-height: 20px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.75);
   cursor: pointer;
   border: 1px solid #d0d0d0;
   background: #f5f5f5;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
-  -webkit-border-radius: 0;
   border-radius: 0;
   border: 0;
   width: auto;
@@ -68,35 +61,17 @@
 }
 .dijitSpinner .dijitUpArrowButtonHover,
 .dijitSpinner .dijitDownArrowButtonHover {
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  -ms-transition: all 0.1s;
   transition: all 0.1s;
   background: #e1e1e1;
-  background: -webkit-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -moz-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -o-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -ms-linear-gradient(#f6f6f6, #e1e1e1);
   background: linear-gradient(#f6f6f6, #e1e1e1);
 }
 .dijitSpinner .dijitDownArrowButtonActive,
 .dijitSpinner .dijitUpArrowButtonActive {
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
   transition: none;
   outline: none;
   background: #d0d0d0;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
 }
 .dijitSpinner .dijitArrowButtonInner {
@@ -117,6 +92,4 @@
 .dijitSpinnerDisabled .dijitUpArrowButton {
   cursor: default;
   opacity: 0.65;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
 }

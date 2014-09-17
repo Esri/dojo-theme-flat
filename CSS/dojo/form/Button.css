@@ -35,19 +35,13 @@
 .dijitComboButton .dijitButtonNode,
 .dijitToggleButton .dijitButtonNode {
   padding: 4px 12px;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: none;
   box-shadow: none;
   line-height: 20px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.75);
   cursor: pointer;
   border: 1px solid #d0d0d0;
   background: #f5f5f5;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
 }
 /* Alternative button colors */
@@ -80,10 +74,6 @@
 .btn-primary .esriToggleButton .dijitButtonNode {
   border: 1px solid #0068a5;
   background: #007ac2;
-  background: -webkit-linear-gradient(#0080cb, #007ac2);
-  background: -moz-linear-gradient(#0080cb, #007ac2);
-  background: -o-linear-gradient(#0080cb, #007ac2);
-  background: -ms-linear-gradient(#0080cb, #007ac2);
   background: linear-gradient(#0080cb, #007ac2);
 }
 .dijitButton.btn-success .dijitButtonNode,
@@ -100,10 +90,6 @@
 .btn-success .esriToggleButton .dijitButtonNode {
   border: 1px solid #2d923c;
   background: #35ac46;
-  background: -webkit-linear-gradient(#37b349, #35ac46);
-  background: -moz-linear-gradient(#37b349, #35ac46);
-  background: -o-linear-gradient(#37b349, #35ac46);
-  background: -ms-linear-gradient(#37b349, #35ac46);
   background: linear-gradient(#37b349, #35ac46);
 }
 .dijitButton.btn-info .dijitButtonNode,
@@ -120,10 +106,6 @@
 .btn-info .esriToggleButton .dijitButtonNode {
   border: 1px solid #009dce;
   background: #00b9f2;
-  background: -webkit-linear-gradient(#00bffa, #00b9f2);
-  background: -moz-linear-gradient(#00bffa, #00b9f2);
-  background: -o-linear-gradient(#00bffa, #00b9f2);
-  background: -ms-linear-gradient(#00bffa, #00b9f2);
   background: linear-gradient(#00bffa, #00b9f2);
 }
 .dijitButton.btn-warning .dijitButtonNode,
@@ -140,10 +122,6 @@
 .btn-warning .esriToggleButton .dijitButtonNode {
   border: 1px solid #ec8408;
   background: #f89927;
-  background: -webkit-linear-gradient(#f89c2d, #f89927);
-  background: -moz-linear-gradient(#f89c2d, #f89927);
-  background: -o-linear-gradient(#f89c2d, #f89927);
-  background: -ms-linear-gradient(#f89c2d, #f89927);
   background: linear-gradient(#f89c2d, #f89927);
 }
 .dijitButton.btn-danger .dijitButtonNode,
@@ -160,10 +138,6 @@
 .btn-danger .esriToggleButton .dijitButtonNode {
   border: 1px solid #b94119;
   background: #da4d1e;
-  background: -webkit-linear-gradient(#e05020, #da4d1e);
-  background: -moz-linear-gradient(#e05020, #da4d1e);
-  background: -o-linear-gradient(#e05020, #da4d1e);
-  background: -ms-linear-gradient(#e05020, #da4d1e);
   background: linear-gradient(#e05020, #da4d1e);
 }
 .dijitButton.btn-inverse .dijitButtonNode,
@@ -180,44 +154,22 @@
 .btn-inverse .esriToggleButton .dijitButtonNode {
   border: 1px solid #25272c;
   background: #2b2e34;
-  background: -webkit-linear-gradient(#31343b, #2b2e34);
-  background: -moz-linear-gradient(#31343b, #2b2e34);
-  background: -o-linear-gradient(#31343b, #2b2e34);
-  background: -ms-linear-gradient(#31343b, #2b2e34);
   background: linear-gradient(#31343b, #2b2e34);
 }
 /* hover status */
 .dijitButtonHover .dijitButtonNode,
 .dijitDropDownButtonHover .dijitButtonNode,
 .dijitToggleButtonHover .dijitButtonNode {
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  -ms-transition: all 0.1s;
   transition: all 0.1s;
   background: #e1e1e1;
-  background: -webkit-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -moz-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -o-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -ms-linear-gradient(#f6f6f6, #e1e1e1);
   background: linear-gradient(#f6f6f6, #e1e1e1);
 }
 .dijitComboButton .dijitButtonNodeHover,
 .dijitComboButton .dijitDownArrowButtonHover {
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  -ms-transition: all 0.1s;
   transition: all 0.1s;
   background: #e1e1e1;
-  background: -webkit-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -moz-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -o-linear-gradient(#f6f6f6, #e1e1e1);
-  background: -ms-linear-gradient(#f6f6f6, #e1e1e1);
   background: linear-gradient(#f6f6f6, #e1e1e1);
 }
 /* Alternative button colors */
@@ -237,10 +189,6 @@
 .btn-primary .esriButtonHover .dijitButtonNode,
 .btn-primary .esriToggleButtonHover .dijitButtonNode {
   background: #0070b2;
-  background: -webkit-linear-gradient(#0084d2, #0070b2);
-  background: -moz-linear-gradient(#0084d2, #0070b2);
-  background: -o-linear-gradient(#0084d2, #0070b2);
-  background: -ms-linear-gradient(#0084d2, #0070b2);
   background: linear-gradient(#0084d2, #0070b2);
 }
 .dijitButtonHover.btn-success .dijitButtonNode,
@@ -259,10 +207,6 @@
 .btn-success .esriButtonHover .dijitButtonNode,
 .btn-success .esriToggleButtonHover .dijitButtonNode {
   background: #319e40;
-  background: -webkit-linear-gradient(#38b74a, #319e40);
-  background: -moz-linear-gradient(#38b74a, #319e40);
-  background: -o-linear-gradient(#38b74a, #319e40);
-  background: -ms-linear-gradient(#38b74a, #319e40);
   background: linear-gradient(#38b74a, #319e40);
 }
 .dijitButtonHover.btn-info .dijitButtonNode,
@@ -281,10 +225,6 @@
 .btn-info .esriButtonHover .dijitButtonNode,
 .btn-info .esriToggleButtonHover .dijitButtonNode {
   background: #00aadf;
-  background: -webkit-linear-gradient(#00c3ff, #00aadf);
-  background: -moz-linear-gradient(#00c3ff, #00aadf);
-  background: -o-linear-gradient(#00c3ff, #00aadf);
-  background: -ms-linear-gradient(#00c3ff, #00aadf);
   background: linear-gradient(#00c3ff, #00aadf);
 }
 .dijitButtonHover.btn-warning .dijitButtonNode,
@@ -303,10 +243,6 @@
 .btn-warning .esriButtonHover .dijitButtonNode,
 .btn-warning .esriToggleButtonHover .dijitButtonNode {
   background: #f78e11;
-  background: -webkit-linear-gradient(#f89e32, #f78e11);
-  background: -moz-linear-gradient(#f89e32, #f78e11);
-  background: -o-linear-gradient(#f89e32, #f78e11);
-  background: -ms-linear-gradient(#f89e32, #f78e11);
   background: linear-gradient(#f89e32, #f78e11);
 }
 .dijitButtonHover.btn-danger .dijitButtonNode,
@@ -325,10 +261,6 @@
 .btn-danger .esriButtonHover .dijitButtonNode,
 .btn-danger .esriToggleButtonHover .dijitButtonNode {
   background: #c9471c;
-  background: -webkit-linear-gradient(#e15324, #c9471c);
-  background: -moz-linear-gradient(#e15324, #c9471c);
-  background: -o-linear-gradient(#e15324, #c9471c);
-  background: -ms-linear-gradient(#e15324, #c9471c);
   background: linear-gradient(#e15324, #c9471c);
 }
 .dijitButtonHover.btn-inverse .dijitButtonNode,
@@ -347,10 +279,6 @@
 .btn-inverse .esriButtonHover .dijitButtonNode,
 .btn-inverse .esriToggleButtonHover .dijitButtonNode {
   background: #282a30;
-  background: -webkit-linear-gradient(#34383f, #282a30);
-  background: -moz-linear-gradient(#34383f, #282a30);
-  background: -o-linear-gradient(#34383f, #282a30);
-  background: -ms-linear-gradient(#34383f, #282a30);
   background: linear-gradient(#34383f, #282a30);
 }
 /* active, checked status */
@@ -358,36 +286,18 @@
 .dijitDropDownButtonActive .dijitButtonNode,
 .dijitToggleButtonActive .dijitButtonNode,
 .dijitToggleButtonChecked .dijitButtonNode {
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
   transition: none;
   outline: none;
   background: #d0d0d0;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
 }
 .dijitComboButton .dijitButtonNodeActive,
 .dijitComboButton .dijitDownArrowButtonActive {
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
   transition: none;
   outline: none;
   background: #d0d0d0;
-  background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -o-linear-gradient(#f5f5f5, #f5f5f5);
-  background: -ms-linear-gradient(#f5f5f5, #f5f5f5);
   background: linear-gradient(#f5f5f5, #f5f5f5);
 }
 .dijitButtonActive.btn-primary .dijitButtonNode,
@@ -408,10 +318,6 @@
 .btn-primary .esriButtonChecked .dijitButtonNode,
 .btn-primary .esriToggleButtonActive .dijitButtonNode {
   background: #0068a5;
-  background: -webkit-linear-gradient(#007ac2, #007ac2);
-  background: -moz-linear-gradient(#007ac2, #007ac2);
-  background: -o-linear-gradient(#007ac2, #007ac2);
-  background: -ms-linear-gradient(#007ac2, #007ac2);
   background: linear-gradient(#007ac2, #007ac2);
 }
 .dijitButtonActive.btn-success .dijitButtonNode,
@@ -432,10 +338,6 @@
 .btn-success .esriButtonChecked .dijitButtonNode,
 .btn-success .esriToggleButtonActive .dijitButtonNode {
   background: #2d923c;
-  background: -webkit-linear-gradient(#35ac46, #35ac46);
-  background: -moz-linear-gradient(#35ac46, #35ac46);
-  background: -o-linear-gradient(#35ac46, #35ac46);
-  background: -ms-linear-gradient(#35ac46, #35ac46);
   background: linear-gradient(#35ac46, #35ac46);
 }
 .dijitButtonActive.btn-info .dijitButtonNode,
@@ -456,10 +358,6 @@
 .btn-info .esriButtonChecked .dijitButtonNode,
 .btn-info .esriToggleButtonActive .dijitButtonNode {
   background: #009dce;
-  background: -webkit-linear-gradient(#00b9f2, #00b9f2);
-  background: -moz-linear-gradient(#00b9f2, #00b9f2);
-  background: -o-linear-gradient(#00b9f2, #00b9f2);
-  background: -ms-linear-gradient(#00b9f2, #00b9f2);
   background: linear-gradient(#00b9f2, #00b9f2);
 }
 .dijitButtonActive.btn-warning .dijitButtonNode,
@@ -480,10 +378,6 @@
 .btn-warning .esriButtonChecked .dijitButtonNode,
 .btn-warning .esriToggleButtonActive .dijitButtonNode {
   background: #ec8408;
-  background: -webkit-linear-gradient(#f89927, #f89927);
-  background: -moz-linear-gradient(#f89927, #f89927);
-  background: -o-linear-gradient(#f89927, #f89927);
-  background: -ms-linear-gradient(#f89927, #f89927);
   background: linear-gradient(#f89927, #f89927);
 }
 .dijitButtonActive.btn-danger .dijitButtonNode,
@@ -504,10 +398,6 @@
 .btn-danger .esriButtonChecked .dijitButtonNode,
 .btn-danger .esriToggleButtonActive .dijitButtonNode {
   background: #b94119;
-  background: -webkit-linear-gradient(#da4d1e, #da4d1e);
-  background: -moz-linear-gradient(#da4d1e, #da4d1e);
-  background: -o-linear-gradient(#da4d1e, #da4d1e);
-  background: -ms-linear-gradient(#da4d1e, #da4d1e);
   background: linear-gradient(#da4d1e, #da4d1e);
 }
 .dijitButtonActive.btn-inverse .dijitButtonNode,
@@ -528,10 +418,6 @@
 .btn-inverse .esriButtonChecked .dijitButtonNode,
 .btn-inverse .esriToggleButtonActive .dijitButtonNode {
   background: #25272c;
-  background: -webkit-linear-gradient(#2b2e34, #2b2e34);
-  background: -moz-linear-gradient(#2b2e34, #2b2e34);
-  background: -o-linear-gradient(#2b2e34, #2b2e34);
-  background: -ms-linear-gradient(#2b2e34, #2b2e34);
   background: linear-gradient(#2b2e34, #2b2e34);
 }
 /* disabled status */
@@ -547,8 +433,6 @@
 .dijitToggleButtonDisabled .dijitButtonNode {
   cursor: default;
   opacity: 0.65;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-  filter: alpha(opacity=65);
 }
 .dijitComboButtonDisabled .dijitArrowButton {
   border-left-width: 0;
@@ -559,11 +443,9 @@ table.dijitComboButton {
 /* override dijit.css so that ComboBox rounded corners work */
 }
 table.dijitComboButton .dijitStretch {
-  -webkit-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
 }
 table.dijitComboButton .dijitArrowButton {
-  -webkit-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
   border-left-width: 0;
 }

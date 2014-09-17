@@ -32,8 +32,6 @@
   line-height: 20px;
 }
 .arcgisGeocoder .esriGeocoderContainer * {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .arcgisGeocoder .esriGeocoderContainer ul {
@@ -48,9 +46,7 @@
   margin: 0;
   background: #fff;
   border: 0 none;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
   box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
 /* icons */
 }
@@ -82,8 +78,6 @@
 .arcgisGeocoder .esriGeocoder .esriGeocoderSearch:hover,
 .arcgisGeocoder .esriGeocoder .esriGeocoderSearch:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .arcgisGeocoder .esriGeocoder .esriGeocoderReset {
   display: none;
@@ -91,8 +85,6 @@
 .arcgisGeocoder .esriGeocoder .esriGeocoderReset:hover,
 .arcgisGeocoder .esriGeocoder .esriGeocoderReset:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .arcgisGeocoder .esriGeocoder .esriGeocoderMenuArrow {
   display: none;
@@ -104,8 +96,6 @@
 .arcgisGeocoder .esriGeocoder .esriGeocoderMenuArrow:hover,
 .arcgisGeocoder .esriGeocoder .esriGeocoderMenuArrow:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .arcgisGeocoder .esriGeocoderActive,
 .arcgisGeocoder .esriGeocoderMenuActive {
@@ -162,9 +152,7 @@
   left: 0;
   top: 100%;
   z-index: 99;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 }
 .arcgisGeocoder .esriGeocoderResult {
@@ -174,7 +162,6 @@
   white-space: nowrap;
   cursor: pointer;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 .arcgisGeocoder .esriGeocoderResult .esriGeocoderResultPartial {
@@ -202,9 +189,7 @@
   left: 0;
   top: 100%;
   z-index: 99;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 /* icons */
 }
@@ -238,8 +223,6 @@
 .arcgisGeocoder .esriGeocoderMenu .esriGeocoderMenuClose:hover,
 .arcgisGeocoder .esriGeocoderMenu .esriGeocoderMenuClose:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .arcgisGeocoder .esriGeocoderMenu .esriGeocoderSelectedCheck {
   font-family: FontAwesome;
@@ -275,8 +258,6 @@
   line-height: 20px;
 }
 .simpleGeocoder .esriGeocoderContainer * {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .simpleGeocoder .esriGeocoderContainer ul {
@@ -288,14 +269,8 @@
 .simpleGeocoder .esriGeocoder {
   background: #fff;
   border: 0 none;
-  -webkit-border-radius: 14px;
   border-radius: 14px;
-  -webkit-box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
   box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
-  -webkit-transition: border-radius 0.2s ease;
-  -moz-transition: border-radius 0.2s ease;
-  -o-transition: border-radius 0.2s ease;
-  -ms-transition: border-radius 0.2s ease;
   transition: border-radius 0.2s ease;
 /* icons */
 }
@@ -328,8 +303,6 @@
 .simpleGeocoder .esriGeocoder .esriGeocoderSearch:hover,
 .simpleGeocoder .esriGeocoder .esriGeocoderSearch:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .simpleGeocoder .esriGeocoder .esriGeocoderReset {
   margin: 4px 6px 4px 0;
@@ -339,8 +312,6 @@
 .simpleGeocoder .esriGeocoder .esriGeocoderReset:hover,
 .simpleGeocoder .esriGeocoder .esriGeocoderReset:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .simpleGeocoder .esriGeocoder .esriGeocoderMenuArrow {
   display: none;
@@ -352,13 +323,10 @@
 .simpleGeocoder .esriGeocoder .esriGeocoderMenuArrow:hover,
 .simpleGeocoder .esriGeocoder .esriGeocoderMenuArrow:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .simpleGeocoder .esriGeocoderActive,
 .simpleGeocoder .esriGeocoderMenuActive {
   border-bottom: 0;
-  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
 }
 .simpleGeocoder .esriGeocoderIcon {
@@ -404,9 +372,7 @@
   left: 0;
   top: 100%;
   z-index: 99;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 }
 .simpleGeocoder .esriGeocoderResult {
@@ -416,7 +382,6 @@
   white-space: nowrap;
   cursor: pointer;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 .simpleGeocoder .esriGeocoderResult .esriGeocoderResultPartial {
@@ -434,7 +399,6 @@
   color: #fff;
 }
 .simpleGeocoder .esriGeocoderResultLast {
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
 }
 .simpleGeocoder .esriGeocoderMenu {
@@ -448,9 +412,7 @@
   left: 0;
   top: 100%;
   z-index: 99;
-  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
-  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
 /* icons */
 }
@@ -484,8 +446,6 @@
 .simpleGeocoder .esriGeocoderMenu .esriGeocoderMenuClose:hover,
 .simpleGeocoder .esriGeocoderMenu .esriGeocoderMenuClose:focus {
   opacity: 0.75;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-  filter: alpha(opacity=75);
 }
 .simpleGeocoder .esriGeocoderMenu .esriGeocoderSelectedCheck {
   font-family: FontAwesome;

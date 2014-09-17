@@ -17,13 +17,9 @@
   overflow: hidden;
   cursor: pointer;
   opacity: 0.35;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
-  filter: alpha(opacity=35);
 }
 .map .container .fixedPan:hover {
   opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
 }
 .map .container .panUp {
   background-position: -15px 0px;
@@ -74,15 +70,11 @@
   border: 0 none;
   background: #2b2e34;
   color: #fff;
-  text-shadow: $tooltip-text-shadow;
+  text-shadow: $map-tooltip-text-shadow;
   padding: 4px;
   font-size: 10px;
   z-index: 9999;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: $tooltip-box-shadow;
-  box-shadow: $tooltip-box-shadow;
+  box-shadow: $map-tooltip-box-shadow;
   opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
 }

@@ -31,10 +31,6 @@
   padding: 2px;
   text-decoration: none;
   position: relative;
-  -webkit-transition: background 0.2s ease;
-  -moz-transition: background 0.2s ease;
-  -o-transition: background 0.2s ease;
-  -ms-transition: background 0.2s ease;
   transition: background 0.2s ease;
 /* Hover */
 /* Active */
@@ -59,9 +55,7 @@
   height: 67px;
   width: 100px;
   border: 4px solid transparent;
-  -webkit-border-radius: 0;
   border-radius: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
   margin: 0;
 }

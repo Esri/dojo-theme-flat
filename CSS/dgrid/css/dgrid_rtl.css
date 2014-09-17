@@ -1,11 +1,3 @@
-/* rtl support 
-
-	IMPORTANT:
-	WebKit places the scrollbars on the RIGHT, even when in RTL mode :(
-	.dgrid-rtl is added to the domNode if the grid's isRTL is true
-	.dgrid-rtl-nonwebkit is also added to the domNode if
-		the grid's isRTL is true AND the client isn't WebKit
-*/
 .dgrid-rtl-nonwebkit .dgrid-header {
   right: 0;
   left: 17px;
