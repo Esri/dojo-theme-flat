@@ -2,7 +2,7 @@
 
 This theme framework is customized for Dojo dijits, dgrid, as well as some of the ArcGIS API for JS widgets using [Stylus](http://learnboost.github.io/stylus/).
 
-This theme is built uppon Dojo's [Claro theme](https://github.com/kfranqueiro/dijit-claro-stylus).
+This theme is built based on Dojo's [Claro theme](https://github.com/kfranqueiro/dijit-claro-stylus).
 
 ## Sections
 
