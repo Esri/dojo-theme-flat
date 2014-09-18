@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FLAT DOJO THEME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="Stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="Stylesheet" type="text/css" href="../CSS/dojo/flat.css" />
+    <link rel="Stylesheet" type="text/css" href="../CSS/dgrid/css/dgrid.css" />
+    <link rel="Stylesheet" type="text/css" href="../CSS/dgrid/css/skins/skin.css" />
+    <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+    <link rel="Stylesheet" type="text/css" href="../CSS/esri/css/esri_custom.css" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <h2>FLAT DOJO THEME</h2>
+    </header>
+    <ul class="nav">
+        <li class="current"><a href="#" data-target-node="formContainer">Form</a></li>
+        <li><a href="#" data-target-node="layoutContainer">Layouts</a></li>
+        <li><a href="#" data-target-node="otherContainer">Other Dijits</a></li>
+        <li><a href="#" data-target-node="dgridContainer">dGrid</a></li>
+        <li><a href="#" data-target-node="esriContainer">Esri Widgets</a></li>
+    </ul>
+    <div class="content-wrapper">
+        <!--  Form  -->
+        <div id="formContainer" class="widgets-container show">
+            <div class="content-outer">
+                <div class="content-inner">
+                    <div id="formWidgetsContent"></div>
+                </div>
+            </div>
+        </div>
+        <!--  Layout  -->
+        <div id="layoutContainer" class="widgets-container">
+            <div class="content-outer">
+                <div class="content-inner">
+                    <div id="layoutWidgetsContent"></div>
+                </div>
+            </div>
+        </div>
+        <!--  Other  -->
+        <div id="otherContainer" class="widgets-container">
+            <div class="content-outer">
+                <div class="content-inner">
+                    <div id="otherWidgetsContent"></div>
+                </div>
+            </div>
+        </div>
+        <!--  dGrid  -->
+        <div id="dgridContainer" class="widgets-container">
+            <div class="content-outer">
+                <div class="content-inner">
+                    <div id="dgridWidgetContent"></div>
+                </div>
+            </div>
+        </div>
+        <!--  ESRI  -->
+        <div id="esriContainer" class="widgets-container">
+            <div class="content-outer">
+                <div class="content-inner">
+                    <div id="esriWidgetsContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="footer"></div>
+
+    <script type="text/javascript">
+        dojoConfig = {
+            async: true,
+            packages: [
+			{
+			    name: "activity",
+			    location: location.pathname.replace(/\/[^\/]+$/, '')
+			}
+            ]
+        };
+    </script>
+    <script type="text/javascript" src="http://js.arcgis.com/3.10/"></script>
+    <script type="text/javascript">
+        require(["activity/app"]);
+    </script>
+</body>
+</html>

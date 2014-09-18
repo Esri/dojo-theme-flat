@@ -1,0 +1,24 @@
+<table class="content-table">
+	<thead>
+		<tr>
+			<th style="width: 200px">Dijit Name</th>
+			<th>Normal</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- map1 -->
+		<tr>
+			<td>dgrid<br/><br/><span class="secondary">Extensions: ColumnHider, ColumnResizer, ColumnReorder, and Pagination</span>
+			</td>
+			<td>
+				<div data-dojo-attach-point="dgridNode" style="width:100%;">
+				</div>	
+                <br />
+                <br />
+                <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="iconClass:'dijitCheckBoxIcon'" data-dojo-attach-event="onChange: _showRowsPerPageDropdown">Show rows-per-page drop-down</button>
+                <button data-dojo-type="dijit/form/Button" data-dojo-attach-event="onClick: _setStore">Set to sync store</button>
+                <button data-dojo-type="dijit/form/Button" data-dojo-attach-event="onClick: _setEmptyStore">Set to sync empty store</button>
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,291 @@
+<table class="content-table">
+					<thead>
+						<tr>
+							<th style="width: 200px">Dijit Name</th>
+							<th>Dijit</th>
+							<th>Disabled</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>TextBox</td>
+							<td>
+								<input type="text"
+									data-dojo-type="dijit.form.TextBox" data-dojo-props="placeHolder:'placeholder...'" />
+							</td>
+							<td>
+								<input type="text" value="TextBox"
+									data-dojo-type="dijit.form.TextBox"
+									data-dojo-props="disabled:true"/>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>ValidationTextBox</td>
+							<td>
+								<input type="text" name="zip" required="true"
+									data-dojo-type="dijit.form.ValidationTextBox"
+									data-dojo-props="regExp:'\\d{5}', invalidMessage:'Invalid zip code.', placeholder:'enter your zip code'" />
+							</td>
+							<td>
+								<input type="text" name="zip" required="true"
+									data-dojo-type="dijit.form.ValidationTextBox"
+									data-dojo-props="placeholder:'enter your zip code', disabled:true" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>NumberTextBox</td>
+							<td>
+								<input type="text"
+									data-dojo-type="dijit.form.NumberTextBox"
+									name="elevation"
+									required="true"
+									value="3000"
+									data-dojo-props="constraints:{min:-20000,max:20000,places:0}, invalidMessage:'Invalid elevation.'" />
+							</td>
+							<td>
+								<input type="text"
+									data-dojo-type="dijit.form.NumberTextBox"
+									name="elevation"
+									required="true"
+									value="3000"
+									data-dojo-props="constraints:{min:-20000,max:20000,places:0}, invalidMessage:'Invalid elevation.', disabled:true"/>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>CurrencyTextBox</td>
+							<td>
+								<input type="text" value="54775.53" required="true"
+									data-dojo-type="dijit.form.CurrencyTextBox"
+									data-dojo-props="constraints:{fractional:true},currency:'USD',invalidMessage:'Invalid amount. Cents are required.'" />
+							</td>
+							<td>
+								<input type="text" value="54775.53" required="true"
+									data-dojo-type="dijit.form.CurrencyTextBox"
+									data-dojo-props="constraints:{fractional:true},currency:'USD',invalidMessage:'Invalid amount. Cents are required.', disabled:true" />
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>TimeTextBox</td>
+							<td>
+								<input type="text"
+									data-dojo-type="dijit.form.TimeTextBox"
+									data-dojo-props="value: 'T15:00:00', required:true"/>
+							</td>
+							<td>
+								<input type="text"
+									data-dojo-type="dijit.form.TimeTextBox"
+									data-dojo-props="value: 'T15:00:00', required:true, disabled:true"/>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>Textarea,<br /><span class="secondary">dijit/form/</span>SimpleTextarea</td>
+							<td>
+								<textarea data-dojo-type="dijit.form.Textarea" rows="4" cols="30" style="width:auto;resize:vertical">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+								</textarea>
+							</td>
+							<td>
+								<textarea data-dojo-type="dijit.form.Textarea" rows="4" cols="30" style="width:auto;resize:vertical" data-dojo-props="disabled: true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+								</textarea>
+							</td>
+						</tr>
+						<tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>Button</td>
+							<td>
+								<button data-dojo-type="dijit.form.Button" type="button">Button</button></td>
+							<td>
+								<button data-dojo-type="dijit.form.Button" type="button" data-dojo-props="disabled: true">Button</button>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>Button (Other Colors)</td>
+							<td>
+								<button data-dojo-props="'class':'btn-alt btn-primary'" data-dojo-type="dijit.form.Button" type="button">Primary</button>
+								<button data-dojo-props="'class':'btn-alt btn-success'" data-dojo-type="dijit.form.Button" type="button">Success</button>
+								<button data-dojo-props="'class':'btn-alt btn-info'" data-dojo-type="dijit.form.Button" type="button">Info</button>
+								<button data-dojo-props="'class':'btn-alt btn-warning'" data-dojo-type="dijit.form.Button" type="button">Warning</button>
+								<button data-dojo-props="'class':'btn-alt btn-danger'" data-dojo-type="dijit.form.Button" type="button">Danger</button>
+								<button data-dojo-props="'class':'btn-alt btn-inverse'" data-dojo-type="dijit.form.Button" type="button">Inverse</button>
+							</td>
+							<td>
+								<button data-dojo-props="'class':'btn-alt btn-primary', 'disabled': 'true'" data-dojo-type="dijit.form.Button" type="button">Primary</button>
+								<button data-dojo-props="'class':'btn-alt btn-success', 'disabled': 'true'" data-dojo-type="dijit.form.Button" type="button">Success</button>
+								<button data-dojo-props="'class':'btn-alt btn-info', 'disabled': 'true'" data-dojo-type="dijit.form.Button" type="button">Info</button>
+								<button data-dojo-props="'class':'btn-alt btn-warning', 'disabled': 'true'" data-dojo-type="dijit.form.Button" type="button">Warning</button>
+								<button data-dojo-props="'class':'btn-alt btn-danger', 'disabled': 'true'" data-dojo-type="dijit.form.Button" type="button">Danger</button>
+								<button data-dojo-props="'class':'btn-alt btn-inverse', 'disabled': 'true'" data-dojo-type="dijit.form.Button" type="button">Inverse</button>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>ToggleButton</td>
+							<td>
+								<button data-dojo-type="dijit.form.ToggleButton" data-dojo-props="iconClass:'dijitCheckBoxIcon', checked: true">
+									Toggle Button
+								</button>
+							</td>
+							<td>
+								<button data-dojo-type="dijit.form.ToggleButton" data-dojo-props="iconClass:'dijitCheckBoxIcon', checked: true, disabled:true">
+									Toggle Button
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>Select</td>
+							<td>
+								<select name="select1" data-dojo-type="dijit.form.Select" required>
+									<option> -- select -- </option>	
+									<option value="TN">Tennessee</option>
+										<option value="VA" selected="selected">Virginia</option>
+										<option value="WA">Washington</option>
+										<option></option>
+										<option value="FL">Florida</option>
+										<option value="CA">California</option>
+								</select>
+
+							</td>
+							<td>
+								<select name="select2" data-dojo-type="dijit.form.Select" data-dojo-props="disabled: true">
+										<option value="TN">Tennessee</option>
+										<option value="VA" selected="selected">Virginia</option>
+										<option value="WA">Washington</option>
+										<option value="FL">Florida</option>
+										<option value="CA">California</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>DropDownButton</td>
+							<td>
+								<div data-dojo-type="dijit.form.DropDownButton"  data-dojo-attach-point="dropdownbutton1">
+									<span>DropDown Button</span>
+									<div data-dojo-type="dijit.TooltipDialog">
+										DropDown Content
+									</div>
+								</div>
+							</td>
+							<td>
+								<div data-dojo-type="dijit.form.DropDownButton" data-dojo-props="disabled: true">
+									<span>DropDown Button</span>
+									<div data-dojo-type="dijit.TooltipDialog">
+										DropDown Content
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>CheckBox</td>
+							<td>
+								<input data-dojo-type="dijit.form.CheckBox" checked/>
+								<input data-dojo-type="dijit.form.CheckBox"/>
+							</td>
+							<td>
+								<input data-dojo-type="dijit.form.CheckBox" data-dojo-props="disabled: true"/>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>RadioButton</td>
+							<td>
+								<input data-dojo-type="dijit.form.RadioButton" checked/>
+								<input data-dojo-type="dijit.form.RadioButton" />
+							</td>
+							<td>
+								<input data-dojo-type="dijit.form.RadioButton" data-dojo-props="disabled: true"/>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>ComboBox</td>
+							<td>
+								<select data-dojo-type="dijit.form.ComboBox">
+									<option>Apples</option>
+									<option selected>Oranges</option>
+									<option>Pears</option>
+								</select>
+							</td>
+							<td>
+								<select data-dojo-type="dijit.form.ComboBox" data-dojo-props="disabled: true">
+									<option>Apples</option>
+									<option selected>Oranges</option>
+									<option>Pears</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>MultiSelect</td>
+							<td>
+								<select data-dojo-type="dijit.form.MultiSelect" size="4">
+										<option value="AP" selected="selected">Apples</option>
+										<option value="OR">Oranges</option>
+										<option value="PE" selected="selected">Pears</option>
+								</select>
+							</td>
+							<td>
+								<select data-dojo-type="dijit.form.MultiSelect" size="4" data-dojo-props="disabled: true">
+										<option value="AP" selected="selected">Apples</option>
+										<option value="OR">Oranges</option>
+										<option value="PE" selected="selected">Pears</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>ComboButton</td>
+							<td>
+								<div data-dojo-type="dijit.form.ComboButton"  data-dojo-attach-point="combobutton1">
+									<span>get all mail</span>
+									<div data-dojo-type="dijit.DropDownMenu">
+										<div data-dojo-type="dijit.MenuItem">Yahoo</div>
+										<div data-dojo-type="dijit.MenuItem">Google</div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div data-dojo-type="dijit.form.ComboButton" data-dojo-props="disabled: true">
+									<span>get all mail</span>
+									<div data-dojo-type="dijit.DropDownMenu">
+										<div data-dojo-type="dijit.MenuItem">Yahoo</div>
+										<div data-dojo-type="dijit.MenuItem">Google</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>DateTextBox</td>
+							<td>
+								<input data-dojo-type="dijit.form.DateTextBox" data-dojo-props='value:"2012-12-31"'/>
+							</td>
+							<td>
+								<input data-dojo-type="dijit.form.DateTextBox" data-dojo-props='value:"2012-12-31", disabled: true'/>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>HorizontalSlider</td>
+							<td>
+								<div data-dojo-attach-point="horizontalSliderNormal"></div>
+								<div data-dojo-attach-point="horizontalSliderAdvancedNormal"></div>
+							</td>
+							<td>
+								<div data-dojo-attach-point="horizontalSliderDisabled"></div>
+								<div data-dojo-attach-point="horizontalSliderAdvancedDisabled"></div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>VerticalSlider</td>
+							<td>
+								<div data-dojo-attach-point="verticalSliderNormal"></div>
+								<div data-dojo-attach-point="verticalSliderAdvancedNormal"></div>
+							</td>
+							<td>
+								<div data-dojo-attach-point="verticalSliderDisabled"></div>
+								<div data-dojo-attach-point="verticalSliderAdvancedDisabled"></div>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="secondary">dijit/form/</span>NumberSpinner</td>
+							<td>
+								<div data-dojo-attach-point="numberSpinnerNormal"></div>
+							</td>
+							<td>
+								<div data-dojo-attach-point="numberSpinnerDisabled"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>

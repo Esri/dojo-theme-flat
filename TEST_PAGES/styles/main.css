@@ -1,0 +1,291 @@
+﻿* {
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: "Open Sans", Verdana;
+    color: #333;
+    font-size: .8em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.secondary {
+    color: #999;
+}
+
+.completed,
+.in-progress,
+.almost,
+.not-started {
+    font-size: 11px;
+    color: white;
+    border-left: 1px solid #ddd;
+}
+
+.completed {
+    background: #468847;
+}
+
+.in-progress {
+    background: #F89406;
+}
+
+.almost {
+    background: #3A87AD;
+}
+
+.not-started {
+    background: #B94A48;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+}
+
+    header h2 {
+        font-size: 36px;
+        text-align: center;
+        margin: 15px;
+    }
+
+.nav {
+    width: 960px;
+    margin: 0 auto;
+}
+.nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+    .nav li {
+        float: left;
+        width: 20%;
+        margin: 0;
+        text-align: center;
+        padding: 25px 0;
+    }
+        .nav li.current {
+            position: relative;
+        }
+            .nav li.current:after {
+                content: " ";
+                display: block;
+                position: absolute;
+                height: 50%;
+                width: 0;
+                border-left: 3px dotted #00B9F2;
+                left: 50%;
+                z-index: 0;
+            }
+            .nav li.current a {
+                position: relative;
+                z-index: 1;
+            }
+        .nav li a,
+        .nav li a:visited {
+            color: #00B9F2;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 15px;
+            -webkit-transition: background-color .25s ease;
+            transition: background-color .25s ease;
+        }
+
+            .nav li a:hover {
+                background-color: #e5e5e5;
+            }
+            .nav li a:active {
+                background-color: #ddd;
+            }
+        .nav li.current a {
+            color: #fff;
+            background-color: #00B9F2;
+        }
+
+/*  */
+.content-wrapper {
+    margin: 6px auto;
+    width: 80%;
+    min-width: 960px;
+    position: relative;
+    z-index: 1;
+}
+
+.widgets-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+    .widgets-container.show {
+        display: block;
+    }
+
+.section-title {
+    background: none repeat scroll 0 0 #00B9F2;
+    color: white;
+    display: block;
+    float: left;
+    padding: 4px 15px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+    margin-bottom: 0;
+}
+
+.content-outer {
+    /*border-top:1px solid #ccc;*/
+    clear: both;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.content-inner {
+    /*border-top:1px solid white;*/
+    clear: both;
+    min-height: 50px;
+    padding: 0;
+}
+
+.content-table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0;
+    background: #fff;
+    border-collapse: collapse;
+    border-top: 2px solid #00B9F2;
+    border-bottom: 2px solid #00B9F2;
+    margin: 0;
+}
+
+.dj_ie7 .content-table,
+.dj_ie8 .content-table {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#4dffffff',GradientType=0 );
+}
+
+.content-table > tbody > tr > td,
+.content-table > thead > tr > th {
+    border-top: 1px solid #DDDDDD;
+    line-height: 20px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.content-table > thead > tr > th {
+    background: rgba(255,255,255,0.6);
+    font-size: 16px;
+}
+
+.dj_ie7 .content-table > thead > tr > th,
+.dj_ie8 .content-table > thead > tr > th {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#99ffffff',GradientType=0 );
+}
+
+.footer {
+    height: 60px;
+}
+
+/* specific containers */
+#theRotator {
+    width: 80%;
+    min-width: 940px;
+    margin: 6px auto;
+}
+
+/* point css3 animation */
+/* http://help.arcgis.com/en/webapi/javascript/arcgis/jssamples/exp_geolocate.html */
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 1.0;
+    }
+
+    45% {
+        opacity: .60;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        opacity: 1.0;
+    }
+
+    45% {
+        opacity: .60;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+#map1_graphics_layer {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: pulse;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: pulse;
+    cursor: pointer;
+}
+
+.map .esriLargeSliderTL {
+    left: 28px;
+    top: 28px;
+}
+
+.basemaps-control {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    z-index: 100;
+}
+
+.legend-control {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 100;
+}
+
+.legend-dropdown-dialog .dijitTooltipContainer {
+    max-height: 300px;
+    width: 240px;
+    overflow: auto;
+}
+
+.legend-dropdown-dialog .esriLegendService {
+    margin: 0 -6px 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.map .basemaps-control.dijitDropDownButton .dijitButtonNode,
+.map .legend-control.dijitDropDownButton .dijitButtonNode {
+    /*-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
+}
+
+.dijitTabContainerNested {
+    margin: 4px;
+}

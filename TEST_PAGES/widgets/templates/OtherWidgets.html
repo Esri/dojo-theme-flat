@@ -1,0 +1,154 @@
+<table class="content-table">
+	<thead>
+		<tr>
+			<th style="width: 200px">Dijit Name</th>
+			<th>Dijit</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- dijit/MenuBar -->				
+		<tr>
+			<td><span class="secondary">dijit/</span>MenuBar</td>
+			<td>
+				<div id="wrapper"></div>
+			</td>
+		</tr>
+		<!-- dijit/ProgressBar (normal) -->				
+		<tr>
+			<td><span class="secondary">dijit/</span>ProgressBar (normal)</td>
+			<td>
+				<div data-dojo-type="dijit/ProgressBar" style="width:300px" data-dojo-props="progress:'70'"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-success" style="width:300px" data-dojo-props="progress:'45'"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-info" style="width:300px" data-dojo-props="progress:'80'"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-warning" style="width:300px" data-dojo-props="progress:'25'"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-danger" style="width:300px" data-dojo-props="progress:'32'"></div>
+                <br />
+			</td>
+		</tr>
+		<!-- dijit/ProgressBar (indeterminate) -->		
+		<tr>
+			<td><span class="secondary">dijit/</span>ProgressBar (indeterminate)</td>
+			<td>
+				<div data-dojo-type="dijit/ProgressBar" style="width:300px" data-dojo-props="indeterminate: true"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-success" style="width:300px" data-dojo-props="indeterminate: true"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-info" style="width:300px" data-dojo-props="indeterminate: true"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-warning" style="width:300px" data-dojo-props="indeterminate: true"></div>
+                <br />
+                <div data-dojo-type="dijit/ProgressBar" class="progress-bar-danger" style="width:300px" data-dojo-props="indeterminate: true"></div>
+                <br />
+			</td>
+		</tr>
+		<!-- dijit/Dialog -->
+		<tr>
+			<td><span class="secondary">dijit/</span>Dialog</td>
+			<td>
+				<button data-dojo-type="dijit.form.Button" onclick="theDialog.show();">Open Dojo Dialog</button>
+				<div data-dojo-type="dijit.Dialog" data-dojo-id="theDialog" title="Dialog" style="width: 500px">
+					<div class="dijitDialogPaneContentArea">
+						<br />
+						Content Area
+						<br />
+						<br />
+					</div>
+					<div class="dijitDialogPaneActionBar">
+						<button data-dojo-type="dijit/form/Button" type="submit" id="ok" data-dojo-props="class:'dojo-btn-success'">OK</button>
+						<button data-dojo-type="dijit/form/Button" type="button" data-dojo-props="onClick:function(){theDialog.hide();}">
+							Cancel
+						</button>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<!-- dijit/TooltipDialog -->
+		<tr>
+			<td><span class="secondary">dijit/</span>TooltipDialog <span class="secondary">(with action bar)</span></td>
+			<td>
+				<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton1" data-dojo-props="dropDownPosition: ['below-centered']">
+					<span>below centered</span>
+				</div>
+				<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton2" data-dojo-props="dropDownPosition: ['above-centered']">
+					<span>above-centered</span>
+				</div>
+				<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton3" data-dojo-props="dropDownPosition: ['before-centered']">
+					<span>before-centered</span>
+				</div>
+				<div data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="tooltipdialogButton4" data-dojo-props="dropDownPosition: ['after-centered']">
+					<span>after centered</span>
+				</div>
+			</td>
+		</tr>
+		<!-- dijit/Tooltip -->
+		<tr>
+			<td><span class="secondary">dijit/</span>Tooltip</td>
+			<td>
+				<span data-dojo-attach-point="tooltipAbove">above | </span>
+				<span data-dojo-attach-point="tooltipAboveCentered">above centered | </span>
+				<span data-dojo-attach-point="tooltipBelow">below | </span>
+				<span data-dojo-attach-point="tooltipBelowCentered">below centered | </span>
+				<span data-dojo-attach-point="tooltipBefore">before | </span>
+				<span data-dojo-attach-point="tooltipAfter">after </span>
+			</td>
+		</tr>
+        <!-- dijit/ColorPalette -->
+		<tr>
+			<td><span class="secondary">dijit/</span>ColorPalette</td>
+			<td>
+				<div data-dojo-type="dijit/ColorPalette"></div>
+			</td>
+		</tr>
+        <!-- dijit/TitlePane -->
+		<tr>
+			<td><span class="secondary">dijit/</span>TitlePane</td>
+			<td>
+				<div data-dojo-type="dijit/TitlePane" data-dojo-props='title:"Title Pane", style:"width: 300px;"'>
+		            <p>
+                        Lorem Ipsum Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque iaculis, nulla id semper faucibus, pede tellus nonummy magna, vitae adipiscing orci arcu ut augue. Nunc condimentum, magna a vestibulum convallis, libero purus pulvinar orci, sed vestibulum urna sem ut pede. More Ipsum... Sed sollicitudin suscipit risus. Nam ullamcorper. Sed nisl lectus, pellentesque nec, malesuada eget, ornare a, libero. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+		            </p>
+	            </div>
+			</td>
+		</tr>
+        <!-- dijit/Tree -->
+		<tr>
+			<td><span class="secondary">dijit/</span>Tree</td>
+			<td>
+				<div data-dojo-attach-point="treeNode">
+	            </div>
+			</td>
+        </tr>
+        <!-- dijit/Editor -->
+        <tr>
+            <td><span class="secondary">dijit/</span>Editor</td>
+            <td>
+                <div data-dojo-attach-point="editorNode">
+                    <p>This instance is created from a div directly with default toolbar and plugins</p>
+                    The following HTML should appear as source: &lt;INPUT TYPE="IMAGE" SRC="javascript:alert('no scripting attacks')"&gt;
+                </div>
+            </td>
+		</tr>
+        <!-- dijit/InlineEditBox -->
+		<tr>
+			<td><span class="secondary">dijit/</span>InlineEditBox</td>
+			<td>
+				<div data-dojo-attach-point="InlineEditBoxNode">
+                    2000
+	            </div>
+                <span class="secondary">(Click number to edit)</span>
+			</td>
+		</tr>
+        <!-- dijit/dnd -->
+		<tr>
+			<td><span class="secondary">dojo/</span>dnd</td>
+			<td>
+                <ol data-dojo-attach-point="DnDList">
+                </ol>
+			</td>
+		</tr>
+	</tbody>
+</table>
