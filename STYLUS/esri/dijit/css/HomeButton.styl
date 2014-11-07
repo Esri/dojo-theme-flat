@@ -1,0 +1,39 @@
+@import "../../../variables";
+
+.HomeButton span {
+	display:none;
+}
+
+.HomeButton .home {
+    text-align: center;
+	border: $map-simple-zoom-slider-border;
+	background: $map-simple-zoom-slider-background;
+	cursor: pointer;
+	padding: 0;
+	width: $map-simple-zoom-slider-button-width;
+	height: $map-simple-zoom-slider-button-height;
+	user-select: none;
+	border-radius: $map-simple-zoom-slider-border-radius;
+	box-shadow: $map-simple-zoom-slider-box-shadow;
+	_icon-core-style();
+	line-height: @height;
+}
+
+.HomeButton .home:before {
+  content: "\f015";
+  font-size: 14px;
+}
+
+.HomeButton .home:hover {
+    background-color: $map-simple-zoom-slider-button-hover-background;
+}
+
+.HomeButton .home:active {
+    background-color: $map-simple-zoom-slider-button-active-background;
+}
+
+.HomeButton .loading:before {
+	content: "\f021";
+  	font-size: 14px;
+  	animation: spin 2s infinite linear;
+}
