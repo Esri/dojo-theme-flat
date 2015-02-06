@@ -65,7 +65,7 @@
   background: #fff;
 }
 /* checked */
-.dijitRadioChecked，:after,
+.dijitRadioChecked:after,
 .dijitChecked .dijitRadioIcon:after {
   width: 8px;
   height: 8px;
