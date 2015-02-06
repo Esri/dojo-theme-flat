@@ -4,6 +4,8 @@ This theme framework is customized for Dojo dijits, dgrid, as well as some of th
 
 This theme is built based on Dojo's [Claro theme](https://github.com/kfranqueiro/dijit-claro-stylus).
 
+Test pages: http://yiweima.github.io/flatdojo/
+
 ## Sections
 
 * [Features](#features)
