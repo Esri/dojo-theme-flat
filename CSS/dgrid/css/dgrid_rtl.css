@@ -1,8 +1,8 @@
-.dgrid-rtl-nonwebkit .dgrid-header {
+.dgrid-rtl-swap .dgrid-header-row {
   right: 0;
   left: 17px;
 }
-.dgrid-rtl-nonwebkit .dgrid-header-scroll {
+.dgrid-rtl-swap .dgrid-header-scroll {
   left: 0px;
   right: auto;
 }
@@ -24,6 +24,10 @@
 .dgrid-rtl .ui-icon-triangle-1-e:before {
   content: "\f0d9";
 }
+.dgrid-rtl .dgrid-hider-toggle {
+  right: auto;
+  left: 2.5px;
+}
 .dgrid-rtl .dgrid-hider-menu {
   right: auto;
   left: 18.5px;
@@ -34,7 +38,19 @@
 }
 .dgrid-rtl .dgrid-hider-menu-label {
   padding-left: 0;
-  padding-right: 24px;
-/* width of a checkbox plus value of the default padding */
+  padding-right: 24px; /* width of a checkbox plus value of the default padding */
   text-align: right;
+}
+.dgrid-rtl .dgrid-pagination .dgrid-status,
+.dgrid-rtl .dgrid-pagination .dgrid-page-size {
+  float: right;
+}
+.dgrid-rtl .dgrid-pagination .dgrid-navigation {
+  float: left;
+}
+.dgrid-rtl .dgrid-autoheight .dgrid-header {
+  left: 0;
+}
+#dgrid-css-dgrid_rtl-loaded {
+  display: none;
 }

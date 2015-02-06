@@ -1,4 +1,4 @@
-//
+﻿//
 // Copyright 2014 Esri
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,51 +37,109 @@
 
 @import "../../variables";
 
+//.dijitRadio,
+//.dijitRadioIcon	{		/* inside a toggle button */
+//	_icon-core-style();
+//	width: $radio-width;
+//	height: $radio-height;
+//	color: $radio-background-color;
+//	font-size: $radio-icon-size;
+//	position: relative;
+//	&:before,
+//	&:after {
+//		display: block;
+//		width: 100%;
+//		text-align: center;
+//		content:"\f111";
+//	}
+//	&:after {
+//		position: absolute;
+//		top 0;
+//		left: 0;
+//		content:"\f10c";
+//		color: $radio-border-color;
+//	}
+//	input {
+//		position: absolute;
+//		top: 0;
+//	}
+//}
+
 .dijitRadio,
 .dijitRadioIcon	{		/* inside a toggle button */
-	_icon-core-style();
-	width: $radio-width;
-	height: $radio-height;
-	color: $radio-background-color;
-	font-size: $radio-icon-size;
+	width: $radio-width - 2px;
+	height: $radio-height - 2px;
+	border: 1px solid $radio-checked-color;
+	border-radius: 50%;
 	position: relative;
-	&:before,
+	overflow: visible;
+
 	&:after {
+		content: " ";
 		display: block;
-		width: 100%;
-		text-align: center;
-		content:"\f111";
-	}
-	&:after {
-		position: absolute;
-		top 0;
-		left: 0;
-		content:"\f10c";
-		color: $radio-border-color;
-	}
-	input {
+		width: 0;
+		height: 0;
+		background: $radio-checked-color;
+		border-radius: 50%;
+		opacity: 0;
+		margin: ($radio-width - 2px) * .5;
 		position: absolute;
 		top: 0;
+		left: 0;
+		transition: all 0.15s ease-in-out;
 	}
+}
+
+
+/* This is the radio icon within a widget, e.g. toggle button */
+
+.dijitButtonNode .dijitRadioIcon {
+	border: 1px solid $border-color;
+	position: relative;
+	top: ($line-height - $radio-height) * .5;
+}
+
+.btn-alt { 
+	.dijitButtonNode .dijitRadioIcon {
+		border-color: $white-color;
+		border-color: alpha($white-color, 0.85);
+	}
+
+	&.dijitChecked .dijitRadioIcon {
+		&:after {
+			background: $white-color;
+		}
+	}
+
 }
 
 /* checked */
 
-.dijitRadioChecked {
+//.dijitRadioChecked {
+//	&:after {
+//		content: "\f192";
+//		color: $radio-checked-color;
+//	}
+//}
+
+.dijitRadioChecked，
+.dijitChecked .dijitRadioIcon {
 	&:after {
-		content: "\f192";
-		color: $radio-checked-color;
+		width: $radio-width - 2px - 6px;
+		height: @width;
+		margin: 3px;
+		opacity: 1;
 	}
 }
 
 /* hover */
 
 /* over unchecked */
-.dijitRadioHover {
-	&:after {
-		color: $radio-hover-checked-color;
-	}
-}
+//.dijitRadioHover {
+//	&:after {
+//		color: $radio-hover-checked-color;
+//	}
+//}
 
 /* disabled */
 

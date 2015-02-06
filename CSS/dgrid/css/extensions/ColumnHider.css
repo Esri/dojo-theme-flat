@@ -11,13 +11,14 @@
   padding: 0;
   cursor: pointer;
   position: absolute;
-  right: 2.5px;
-/* scrollbar's width minus width of the icon and divide this value by 2, which is the spacing it needs to center the icon */
-  top: 50%;
-  margin-top: -8px;
+  right: 2.5px; /* scrollbar's width minus width of the icon and divide this value by 2, which is the spacing it needs to center the icon */
+  top: 8px;
 }
 .dgrid-hider-toggle:before {
   content: "\f142";
+}
+.ui-icon.dgrid-hider-toggle {
+  background-image: none;
 }
 .dgrid-hider-menu {
   min-width: 180px;
@@ -28,7 +29,9 @@
   top: 0;
   right: 18.5px;
   z-index: 99999;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
+  -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   overflow-x: hidden;
   overflow-y: auto;
@@ -45,8 +48,7 @@
 }
 .dgrid-hider-menu-label {
   display: block;
-  padding-left: 24px;
-/* width of a checkbox plus value of the default padding */
+  padding-left: 24px; /* width of a checkbox plus value of the default padding */
 }
 html.has-quirks .dgrid-hider-menu-check,
 html.has-ie-6-7 .dgrid-hider-menu-check {

@@ -25,12 +25,16 @@
 	cursor: pointer;
 	position: absolute;
 	right: (21px - $dgrid-extension-columnhider-icon-width) * 0.5; /* scrollbar's width minus width of the icon and divide this value by 2, which is the spacing it needs to center the icon */
-	top: 50%;
-	margin-top: - $dgrid-extension-columnhider-icon-width * 0.5;
+	top: $dgrid-header-padding;
+	//margin-top: - $dgrid-extension-columnhider-icon-width * 0.5;
 
 	&:before {
 		content: "\f142";
 	}
+}
+
+.ui-icon.dgrid-hider-toggle {
+	background-image: none;
 }
 
 .dgrid-hider-menu {

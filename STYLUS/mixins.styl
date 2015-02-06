@@ -50,7 +50,7 @@ _icon-core-style() {
 ******************/
 
 _button-color-properties(color) {
-	border: 1px solid darken(color, 15%);
+	border-color: darken(color, 15%);
 	background: color; // fallback
 	background: linear-gradient(lighten(color, 3%), color);
 }
@@ -70,6 +70,8 @@ _button-color-properties-active(color) {
 
 button-style() {
 	// Common button style properties
+	border-style: solid;
+	border-width: 1px;
 	padding: $button-padding;
 	border-radius: $button-border-radius;
 	box-shadow: $button-shadow;
@@ -101,7 +103,7 @@ button-disabled-style() {
 	opacity:$disabled-opacity;
 }
 
-// Alternatives colors
+// Alternative colors
 
 create-alternative-buttons(colors) {
 	colors = arguments if length(arguments) >= 1;
@@ -112,7 +114,7 @@ create-alternative-buttons(colors) {
 		.dijitComboButton.btn-alt .dijitButtonNode,
 		.dijitToggleButton.btn-alt .dijitButtonNode,
 		.dijitComboBox.btn-alt .dijitButtonNode,
-		.dijitSelect.btn-alt .dijitButtonContents, .dijitSelect.{class} .dijitButtonNode,
+		.dijitSelect.btn-alt .dijitButtonContents, .dijitSelect.btn-alt .dijitButtonNode,
 		.dijitSpinner.btn-alt .dijitArrowButton,
 		.btn-alt .esriSimpleSlider div,
 		.btn-alt .esriAddBookmark,
@@ -178,6 +180,25 @@ create-alternative-buttons-active(colors) {
 		.{class} .esriButtonChecked .dijitButtonNode,
 		.{class} .esriToggleButtonActive .dijitButtonNode {
 			_button-color-properties-active(colors[class]);
+		}
+	}
+}
+
+
+/*****************
+ * TextBox
+******************/
+
+// Alternative colors (Textboxes in Select, ComboBox, NumberSpinner, TimeTextBox and DateTextBox)
+
+create-alternative-textboxes(colors) {
+	colors = arguments if length(arguments) >= 1;
+	
+	for class in colors {
+		.dijitSelect.{class},
+		.dijitComboBox.{class},
+		.dijitSpinner.{class} {
+			border-color: colors[class];
 		}
 	}
 }

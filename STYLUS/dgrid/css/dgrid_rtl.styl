@@ -16,8 +16,9 @@
 
 @import "../../variables";
 
-.dgrid-rtl-nonwebkit {
-	.dgrid-header {
+
+.dgrid-rtl-swap {
+	.dgrid-header-row {
 		right: 0;
 		left: 17px;
 	}
@@ -59,7 +60,14 @@
 	}
 
 	/* Extensions */
+	
 	/* Column Hider */
+	
+	.dgrid-hider-toggle {
+		right: auto;
+		left: (21px - $dgrid-extension-columnhider-icon-width) * 0.5;
+	}
+
 	.dgrid-hider-menu {
 		right: auto;
 		left: (21px - $dgrid-extension-columnhider-icon-width) * 0.5 + $dgrid-extension-columnhider-icon-width;
@@ -75,4 +83,36 @@
 		padding-right: $dgrid-extension-columnhider-icon-width + $dgrid-extension-columnhider-menu-box-row-padding; /* width of a checkbox plus value of the default padding */;
 		text-align: right;
 	}
+
+	/* Pagination */
+	
+	.dgrid-pagination {
+		.dgrid-status,
+		.dgrid-page-size {
+			float: right;
+		}
+		.dgrid-navigation {
+			float: left;
+		}
+	}
+
+	.dgrid-autoheight .dgrid-header {
+		left: 0;
+	}
 }
+
+
+#dgrid-css-dgrid_rtl-loaded { display: none; }
+
+
+//.dgrid-rtl-nonwebkit {
+//	.dgrid-header {
+//		right: 0;
+//		left: 17px;
+//	}
+//	
+//	.dgrid-header-scroll {
+//		left: 0px;
+//		right: auto;
+//	}
+//}

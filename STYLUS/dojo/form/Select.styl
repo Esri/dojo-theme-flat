@@ -68,6 +68,7 @@
 
 .dijitSelect {
 	button-style();
+	table-layout: fixed;
 
 	.dijitButtonContents,
 	.dijitArrowButton {
@@ -78,10 +79,15 @@
 	}
 	.dijitButtonContents {
 		padding:0;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		border-radius: $button-border-radius 0 0 $button-border-radius;
 	}
 	.dijitInputField {
 		padding: 0 0 0 $input-padding*3;
+	}
+	.dijitArrowButton {
+		width: 10px;
 	}
 }
 

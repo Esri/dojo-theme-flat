@@ -569,9 +569,6 @@ table.dijitComboButton .dijitArrowButton {
   border-left-width: 0;
 }
 /* ToggleButton */
-.dijitToggleButton .dijitCheckBoxIcon {
-  display: none;
-}
 .dijitToggleButtonChecked .dijitIcon {
   display: inline-block;
 }

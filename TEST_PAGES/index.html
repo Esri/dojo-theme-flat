@@ -13,7 +13,8 @@
     <link rel="Stylesheet" type="text/css" href="../CSS/dojo/flat.css" />
     <link rel="Stylesheet" type="text/css" href="../CSS/dgrid/css/dgrid.css" />
     <link rel="Stylesheet" type="text/css" href="../CSS/dgrid/css/skins/skin.css" />
-    <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+    <!--<link rel="stylesheet" href="http://js.arcgis.com/3.1/js/esri/css/esri.css">-->
+    <link rel="stylesheet" href="//js.arcgis.com/3.11/esri/css/esri.css" />
     <link rel="Stylesheet" type="text/css" href="../CSS/esri/css/esri_custom.css" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -78,6 +79,7 @@
     <script type="text/javascript">
         dojoConfig = {
             async: true,
+            parseOnLoad: true,
             packages: [
 			{
 			    name: "activity",

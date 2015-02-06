@@ -1,75 +1,140 @@
-.dijitPopup {
+/* Text Inputs: [TextBox | DateTextBox | CurrencyTextBox | ValidationTextBox | ...] | TextArea
+ * Mainly includes:
+ * 
+ * 1. Containers
+ * 		.dijitTextBox
+ * 		.dijitInputField - container that wraps "dijitInputInner" or "dijitPlaceHolder"
+ *
+ * 2. Textbox input
+ * 		.dijitInputInner
+ * 		.dijitPlaceHolder
+ *
+ * 3. States - Hover, Focused, Disabled, Error, Error while Focused e.g.
+ * 		.dijitTextBoxHover
+ * 		.dijitTextBoxFocused
+ * 		.dijitTextBoxDisabled
+ *      .dijitTextBoxError
+ *      .dijitTextBoxErrorFocused
+ *
+*/
+/***********************
+ * Text Inputs 
+ ***********************/
+.dijitTextBox,
+.dijitInputInner {
+  line-height: 20px;
+}
+.dijitTextBox {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1) inset;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1) inset;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
+  -webkit-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  -o-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  -ms-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 }
-.dijitTooltipDialogPopup {
-/* exception popups: do not use a shadow on these because they aren't rectangular */
-  box-shadow: none;
+.dijitTextArea {
+  padding: 4px 6px;
 }
-/* Drag and Drop */
-.dojoDndItem {
-  border: 1px solid transparent;
-  cursor: pointer;
+.dijitTextBox .dijitInputField {
+  padding: 0 4px;
+  margin: 0 2px;
+}
+.dijitSelect.btn-primary,
+.dijitComboBox.btn-primary,
+.dijitSpinner.btn-primary {
+  border-color: #007ac2;
+}
+.dijitSelect.btn-success,
+.dijitComboBox.btn-success,
+.dijitSpinner.btn-success {
+  border-color: #35ac46;
+}
+.dijitSelect.btn-info,
+.dijitComboBox.btn-info,
+.dijitSpinner.btn-info {
+  border-color: #00b9f2;
+}
+.dijitSelect.btn-warning,
+.dijitComboBox.btn-warning,
+.dijitSpinner.btn-warning {
+  border-color: #f89927;
+}
+.dijitSelect.btn-danger,
+.dijitComboBox.btn-danger,
+.dijitSpinner.btn-danger {
+  border-color: #da4d1e;
+}
+.dijitSelect.btn-inverse,
+.dijitComboBox.btn-inverse,
+.dijitSpinner.btn-inverse {
+  border-color: #2b2e34;
+}
+.dijitTextBox .dijitInputInner,
+.dijitValidationTextBox .dijitValidationContainer,
+.dijitTextBox .dijitInputField .dijitPlaceHolder {
+  padding: 4px;
+}
+/* hover */
+.dijitTextBoxHover {
+  border: 1px solid #007ac2;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -ms-transition-duration: 0.25s;
   transition-duration: 0.25s;
-  transition-property: background-color, border-color, opacity;
 }
-.dojoDndItemOver {
+/* focused */
+.dijitTextBoxFocused {
+  border: 1px solid rgba(0,122,194,0.8);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15) inset;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -ms-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+/* disabled */
+.dijitTextBoxDisabled {
   background: #f5f5f5;
-  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  filter: alpha(opacity=65);
 }
-.dojoDndItemAnchor {
-  background: transparent;
-  border: 1px dashed #007ac2;
-  border-radius: 2px;
+/* error */
+.dijitTextBoxError,
+.dijitTextBoxError .dijitButtonNode {
+  border: 1px solid #da4d1e;
 }
-.dojoDndItemBefore {
-  background: transparent;
-  padding-top: 2px;
-  border-top: 1px solid #007ac2;
+/* error: focused */
+.dijitTextBoxErrorFocused,
+.dijitTextBoxErrorFocused .dijitButtonNode {
+  border: 1px solid #b94119;
 }
-.dojoDndItemAfter {
-  background: transparent;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #007ac2;
-}
-/* Avatar */
-table.dojoDndAvatar {
-  display: block;
-}
-.dojoDndAvatarHeader td {
-  display: none;
-}
-.dojoDndAvatarHeader:before {
+/* error: icon */
+.dijitValidationTextBoxError .dijitValidationContainer {
+  color: #da4d1e;
+  width: 16px;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   text-decoration: inherit;
   vertical-align: bottom;
-  display: table-cell;
 }
-.dojoDndMove .dojoDndAvatarHeader:before {
-  color: #da4d1e;
-  content: "\f05e";
+.dijitValidationTextBoxError .dijitValidationContainer:before {
+  content: "\f12a";
 }
-.dojoDndCopy .dojoDndAvatarHeader:before {
-  color: #da4d1e;
-  content: "\f05e";
+.dijitValidationTextBoxError .dijitValidationIcon {
+  display: none;
 }
-.dojoDndMove .dojoDndAvatarCanDrop .dojoDndAvatarHeader:before {
-  color: #35ac46;
-  content: "\f060";
-}
-.dojoDndCopy .dojoDndAvatarCanDrop .dojoDndAvatarHeader:before {
-  color: #35ac46;
-  content: "\f060";
-}
-.dojoDndAvatarItem {
-  border-radius: 2px;
-}
-.dojoDndAvatarItem td {
-  padding: 4px 8px;
-}
-.dojoDndAvatarItem td > * {
-  background: #fff;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.25);
+.dj_gecko .dijitInputInner {
+  height: 20px;
 }

@@ -38,135 +38,100 @@
 	background: $map-measurement-background;
 	padding: $map-measurement-padding;
 	border: $map-measurement-border;
-}
 
-.esriMeasurementSeparator {
-    display: block;
-	width: 100%;
-	height: 1px;
-	padding: 0;
-	margin-top: $map-measurement-separator-margin-top;
-	margin-bottom: $map-measurement-separator-margin-bottom;
-	background: $map-measurement-separator-color;
-    font-size: 0;
-}
+	/* Button */
 
-.distanceIcon {
-	background-image: url(../images/Measure_Distance16.png);
-	width: 16px;
-	height: 16px;
-}
+	// NOTE: The Button styles are the same as dijit/form/Button styles. However, since ArcGIS API's styles are using
+	// "!important" on some of the button properties, we have to use "!important" to overwrite those
 
-.areaIcon {
-	background-image: url(../images/Measure_Area16.png);
-	width: 16px;
-	height: 16px;
-}
-
-.locationIcon {
-	background-image: url(../images/Measure_Point16.png);
-	width: 16px;
-	height: 16px;
-}
-
-/* Button */
-
-// NOTE: The Button styles are the same as dijit/form/Button styles. However, since ArcGIS API's styles are using
-// "!important" on some of the button properties, we have to use "!important" to overwrite those
-
-.esriButton {
-	float: none;
-	width: 33%;
-	box-sizing: border-box;
+	.esriButton {
+		float: none;
+		width: 33%;
+		box-sizing: border-box;
 	
-	+ .esriButton {
-		margin-left: -2px;				// minus the width of the left border
-	}
+		+ .esriButton {
+			margin-left: -4px;				// minus the width of the left border
+		}
 	
-	.dijitButtonNode {
-		button-style();
-		height: $map-measurement-button-height;
-		width: 100%;
-		padding: $padding 0 !important;	// Override esri's default padding, which uses "!important"
-		border: $map-measurement-button-border !important;		// Override esri's default border, which uses "!important"
-		float: left;
-		border-radius: 0;
-	}
+		.dijitButtonNode {
+			button-style();
+			height: $map-measurement-button-height;
+			width: 100%;
+			padding: $padding 0 !important;	// Override esri's default padding, which uses "!important"
+			border: $map-measurement-button-border !important;		// Override esri's default border, which uses "!important"
+			float: left;
+			border-radius: 0;
+		}
 	
-	&:first-child .dijitButtonNode {
-		border-radius: $map-measurement-button-border-radius 0 0 $map-measurement-button-border-radius;
-	}
-	&:nth-child(3) .dijitButtonNode {
-		border-radius: 0 $map-measurement-button-border-radius $map-measurement-button-border-radius 0;
-	}
-}
-
-.esriButtonHover .dijitButtonNode {
-	background-image: none !important;
-	//button-hover-style();
-	background: darken($primary-color, 8%) !important; // fallback
-	background: linear-gradient(lighten($primary-color, 5%), darken($primary-color, 8%)) !important;
-}
-
-.esriButtonActive .dijitButtonNode {
-	button-active-style();
-	background-image: none !important;
-	background: darken($primary-color, 15%) !important; // fallback
-	background: linear-gradient($primary-color, $primary-color) !important;
-}
-
-.esriButtonChecked .dijitButtonNode {
-	button-active-style();
-	background-image: none !important;
-	background: darken($primary-color, 15%) !important; // fallback
-	background: linear-gradient($primary-color, $primary-color) !important;
-}
-
-/* Toggle Button */
-
-.esriToggleButton {
-	.dijitButtonNode {
-		button-style();
-		width: 100%;
-		height: $map-measurement-button-height;
-		padding: $padding 0 !important;	// Override esri's default padding, which uses "!important"
-		border: $map-measurement-button-border !important;		// Override esri's default border, which uses "!important"
-
-		.dijitArrowButtonInner {
-			_icon-core-style();
-
-			&:before {
-				content: "\f0d7";
-			}
+		&:first-child .dijitButtonNode {
+			border-radius: $map-measurement-button-border-radius 0 0 $map-measurement-button-border-radius;
+		}
+		&:nth-child(3) .dijitButtonNode {
+			border-radius: 0 $map-measurement-button-border-radius $map-measurement-button-border-radius 0;
 		}
 	}
-}
 
-.esriToggleButtonHover,
-.esriToggleButtonOpened {
-	.dijitButtonNode {
+	.esriButtonHover .dijitButtonNode {
 		background-image: none !important;
 		//button-hover-style();
 		background: darken($primary-color, 8%) !important; // fallback
 		background: linear-gradient(lighten($primary-color, 5%), darken($primary-color, 8%)) !important;
 	}
-}
 
-.esriToggleButtonDisabled .dijitButtonNode {
-	button-disabled-style();
-}
+	.esriButtonActive .dijitButtonNode {
+		button-active-style();
+		background-image: none !important;
+		background: darken($primary-color, 15%) !important; // fallback
+		background: linear-gradient($primary-color, $primary-color) !important;
+	}
 
-.esriMeasurement {
+	.esriButtonChecked .dijitButtonNode {
+		button-active-style();
+		background-image: none !important;
+		background: darken($primary-color, 15%) !important; // fallback
+		background: linear-gradient($primary-color, $primary-color) !important;
+	}
+
+	/* Toggle Button */
+
 	.esriToggleButton {
 		width: $map-measurement-toggle-button-width;
 		margin: 0 auto;
 		display: block;
+
+		.dijitButtonNode {
+			button-style();
+			width: 100%;
+			height: $map-measurement-button-height;
+			padding: $padding 0 !important;	// Override esri's default padding, which uses "!important"
+			border: $map-measurement-button-border !important;		// Override esri's default border, which uses "!important"
+
+			.dijitArrowButtonInner {
+				_icon-core-style();
+
+				&:before {
+					content: "\f0d7";
+				}
+			}
+		}
 	}
-}
 
-/* Result */
+	.esriToggleButtonHover,
+	.esriToggleButtonOpened {
+		.dijitButtonNode {
+			background-image: none !important;
+			//button-hover-style();
+			background: darken($primary-color, 8%) !important; // fallback
+			background: linear-gradient(lighten($primary-color, 5%), darken($primary-color, 8%)) !important;
+		}
+	}
 
-.esriMeasurement {
+	.esriToggleButtonDisabled .dijitButtonNode {
+		button-disabled-style();
+	}
+
+	/* Result */
+
 	.esriMeasurementResultLabel {
 		background: $super-light-gray-color;
 		margin-top: $map-measurement-result-label-margin-top;
@@ -196,4 +161,32 @@
 		font-weight: $map-measurement-result-value-font-weight;
 		text-align: center;
 	}
+
+	.esriMeasurementSeparator {
+		display: block;
+		width: 100%;
+		height: 1px;
+		padding: 0;
+		margin-top: $map-measurement-separator-margin-top;
+		margin-bottom: $map-measurement-separator-margin-bottom;
+		background: $map-measurement-separator-color;
+		font-size: 0;
+	}
+}
+.distanceIcon {
+	background-image: url(../images/Measure_Distance16.png);
+	width: 16px;
+	height: 16px;
+}
+
+.areaIcon {
+	background-image: url(../images/Measure_Area16.png);
+	width: 16px;
+	height: 16px;
+}
+
+.locationIcon {
+	background-image: url(../images/Measure_Point16.png);
+	width: 16px;
+	height: 16px;
 }

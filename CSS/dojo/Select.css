@@ -42,6 +42,8 @@
  * Select (most of styles are inherited from "form/Button")
  *********************************************************************/
 .dijitSelect {
+  border-style: solid;
+  border-width: 1px;
   padding: 4px 12px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -50,7 +52,7 @@
   line-height: 20px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.75);
   cursor: pointer;
-  border: 1px solid #d0d0d0;
+  border-color: #d0d0d0;
   background: #f5f5f5;
   background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
   background: -moz-linear-gradient(#f5f5f5, #f5f5f5);
@@ -128,6 +130,8 @@
  * Combobox (has styles inherited from "form/Textbox" and "form/Button")
  ***********************************************************************/
 .dijitComboBox .dijitButtonNode {
+  border-style: solid;
+  border-width: 1px;
   padding: 4px 12px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -136,7 +140,7 @@
   line-height: 20px;
   text-shadow: 0 1px 1px rgba(255,255,255,0.75);
   cursor: pointer;
-  border: 1px solid #d0d0d0;
+  border-color: #d0d0d0;
   background: #f5f5f5;
   background: -webkit-linear-gradient(#f5f5f5, #f5f5f5);
   background: -moz-linear-gradient(#f5f5f5, #f5f5f5);

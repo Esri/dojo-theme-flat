@@ -20,6 +20,7 @@
 .esriPopup {
   position: absolute;
   z-index: 40;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
 /* Title Pane */
 /* Content Pane */
@@ -30,7 +31,9 @@
   border: 0 none;
   padding: 0;
   background: #fff;
+  -webkit-box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
   box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 0 2px 3px rgba(0,0,0,0.25);
+  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 .esriPopup .hidden {
@@ -62,6 +65,7 @@
   line-height: 20px;
   padding: 8px 12px;
   padding-right: auto;
+  -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
   cursor: default;
   border: 0;
@@ -138,6 +142,7 @@
   background: #fff;
   border: 0;
   border-top: 0 none;
+  -webkit-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
 }
 .esriPopup .actionsPane .action {
@@ -150,9 +155,13 @@
   background: transparent;
   border-style: solid;
   border-color: #fff;
-  border-width: 8px;
   position: absolute;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
   transform: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .esriPopup .pointer.top {
@@ -193,28 +202,40 @@
   border-left: 0 none;
 }
 .esriPopup .pointer.topLeft {
+  height: 0;
+  width: 0;
   left: 13px;
   top: -15px;
+  border-width: 12px;
   border-right-color: transparent;
   border-top-color: transparent;
   background: transparent;
 }
 .esriPopup .pointer.topRight {
+  height: 0;
+  width: 0;
   right: 13px;
   top: -15px;
+  border-width: 12px;
   border-left-color: transparent;
   border-top-color: transparent;
   background: transparent;
 }
 .esriPopup .pointer.bottomRight {
+  height: 0;
+  width: 0;
   right: 13px;
+  border-width: 12px;
   bottom: -15px;
   border-left-color: transparent;
   border-bottom-color: transparent;
 }
 .esriPopup .pointer.bottomLeft {
+  height: 0;
+  width: 0;
   left: 13px;
   bottom: -15px;
+  border-width: 12px;
   border-right-color: transparent;
   border-bottom-color: transparent;
 }

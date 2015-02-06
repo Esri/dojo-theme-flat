@@ -52,6 +52,9 @@
   transition: all 0.15s ease-in-out;
 }
 /* This is the radio icon within a widget, e.g. toggle button */
+.dijitToggleButton .dijitRadioIcon {
+  display: inline-block;
+}
 .dijitButtonNode .dijitRadioIcon {
   border: 1px solid #d0d0d0;
   position: relative;

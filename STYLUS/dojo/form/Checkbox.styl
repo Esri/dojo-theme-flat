@@ -40,11 +40,13 @@
 	border: $checkbox-border;
 	width: $checkbox-width;
 	height: $checkbox-height;
+	line-height: 1;
 	padding: $checkbox-padding;
 	box-shadow: $checkbox-box-shadow;
 	border-radius: $checkbox-border-radius;
 	text-align: center;
 	position: relative;
+	overflow: visible;
 
 	input {
 		position: absolute;
@@ -59,20 +61,32 @@
 .dijitCheckBoxCheckedDisabled {
 	&:before {
 		_icon-core-style();
-		font-size: $checkbox-icon-size;
 		content: "\f00c";
+		line-height: $line-height;
+		color:$checkbox-checked-icon-color;
 	}
 }
 
 /* This is the checkbox icon within a widget, e.g. toggle button */
 .dijitCheckBoxIcon {
 	padding: $checkbox-icon-padding;
+
+	&:before {
+		color: $highlight-color;
+	}
+}
+
+.btn-alt {
+	.dijitCheckBoxIcon {
+		&:before {
+			color: $checkbox-checked-icon-color;
+		}
+	}
 }
 
 /* checked */
 
 .dijitCheckBoxChecked {
-	color:$checkbox-checked-icon-color;
 	background-color: $checkbox-checked-background-color;
 	border: $checkbox-checked-border;
 }

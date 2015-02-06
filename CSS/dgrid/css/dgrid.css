@@ -1,8 +1,7 @@
 /* This stylesheet provides the structural CSS for the dgrid */
 .dgrid {
   position: relative;
-  overflow: hidden;
-/* This is needed by IE to prevent crazy scrollbar flashing */
+  overflow: hidden; /* This is needed by IE to prevent crazy scrollbar flashing */
   border: 1px solid #d0d0d0;
   height: 30em;
   display: block;
@@ -10,6 +9,9 @@
 .dgrid-header {
   background-color: #f5f5f5;
   position: absolute;
+}
+.dgrid-header-row {
+  left: 0;
 }
 .dgrid-header-scroll {
   position: absolute;
@@ -49,10 +51,9 @@
   border: 1px solid #d0d0d0;
   border-top-style: none;
   border-left-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-.dgrid-cell .dijit {
-  width: auto;
 }
 .dgrid-cell-padding {
   padding: 4px;
@@ -66,8 +67,7 @@
   overflow-y: scroll;
   position: absolute;
   top: 0px;
-  margin-top: 25px;
-/* this will be adjusted programmatically to fit below the header*/
+  margin-top: 25px; /* this will be adjusted programmatically to fit below the header*/
   bottom: 0px;
   width: 100%;
 }
@@ -103,10 +103,18 @@
   height: 16px;
 }
 .dgrid-tree-container {
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
   transition-duration: 0.3s;
   overflow: hidden;
 }
 .dgrid-tree-container.dgrid-tree-resetting {
+  -webkit-transition-duration: 0;
+  -moz-transition-duration: 0;
+  -o-transition-duration: 0;
+  -ms-transition-duration: 0;
   transition-duration: 0;
 }
 /* Single Sort */
