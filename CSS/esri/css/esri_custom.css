@@ -18,3 +18,9 @@
 @import url("../dijit/css/Popup.css");
 /* Scalebar */
 @import url("../dijit/css/Scalebar.css");
+/* Home Button */
+@import url("../dijit/css/HomeButton.css");
+/* Locate Button */
+@import url("../dijit/css/LocateButton.css");
+/* Basemap Toggle */
+@import url("../dijit/css/BasemapToggle.css");

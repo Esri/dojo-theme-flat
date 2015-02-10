@@ -1,0 +1,43 @@
+@import "../../../variables";
+
+.BasemapToggle .toggleButton {
+    border: $map-simple-zoom-slider-border;
+    background: $map-simple-zoom-slider-background;
+    cursor: pointer;
+    padding: 1px;
+    user-select: none;
+    border-radius: $map-simple-zoom-slider-border-radius;
+    box-shadow: $map-simple-zoom-slider-box-shadow;
+}
+.BasemapToggle .basemapImage {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+.BasemapToggle .basemapImage img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    -o-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+}
+.BasemapToggle .basemapTitle {
+    color: #4C4C4C;
+    margin: 1px 0 0;
+    font-size: 11px;
+    line-height: 16px;
+    height: 16px;
+    display: block;
+    padding: 0;
+    text-align: center;
+    width: 60px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
