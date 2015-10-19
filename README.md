@@ -146,5 +146,5 @@ limitations under the License.
 A copy of the license is available in the repository's
 [license.txt](license.txt) file.
 
-[](Esri Tags: ArcGIS Defense and Intelligence Military Environment Planning Analysis Emergency Management )
-[](Esri Language: Python)
+[](Esri Tags: Dojo, CSS, theme)
+[](Esri Language: CSS)
