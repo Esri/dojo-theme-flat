@@ -1,3 +1,9 @@
+# DISCONTINUED
+
+It is time to move forward and embrace all the modern UI libraries / frameworks instead of sticking to Dojo dijits :ok_hand:
+
+--- Yiwei Ma
+
 # dojo-theme-flat
 
 This theme framework is customized for Dojo dijits, dgrid, as well as some of the ArcGIS API for JS widgets using [Stylus](http://learnboost.github.io/stylus/).
